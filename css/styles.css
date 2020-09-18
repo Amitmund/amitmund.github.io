@@ -6,8 +6,16 @@ h1 {
   color: cornflowerblue;
 }
 
+h2 {
+  color: white;
+}
+
 h3 {
   color: #AE4A57;
+}
+
+h4 {
+  color: white;
 }
 
 /* Make the image fully responsive */
