@@ -22,4 +22,5 @@ h4 {
 .carousel-inner img {
   width: 70%;
   height: 70%;
+  margin: auto;
 }
