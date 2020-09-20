@@ -38,11 +38,13 @@ h4 {
 
 .my-images img {
   width: 250px;
-  height: 250px;
+  height: auto;
   border: 1px solid #ddd;
   border-radius: 4px;
   padding: 5px;
   margin: auto;
+  display: flex;
+  flex-wrap: wrap;
   
 }
 
@@ -52,7 +54,16 @@ h4 {
   padding: 5px;
   padding-bottom: 10px;
   margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  
+/*
+  CSS Grid, Flex and Float.
+  https://www.youtube.com/watch?v=hYJvxsgnGMA
+  https://www.youtube.com/watch?v=hs3piaN4b5I
+  So, grid for layout, and Flex to get into line.
   float: left;
+*/
   
 }
 
