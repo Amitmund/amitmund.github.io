@@ -43,7 +43,7 @@ h4 {
   border-radius: 4px;
   padding: 5px;
   margin: auto;
-  display: flex;  
+  display: flex;
 }
 
 .my-youtube-videos {
@@ -52,7 +52,12 @@ h4 {
   padding: 5px;
   padding-bottom: 10px;
   margin: auto;
-  display: flex;  
+  display: flex;
+/*
+  flex-direction: row;
+  flex-flow: wrap;
+*/
+  flex-wrap: wrap;
 /*
   CSS Grid, Flex and Float.
   https://www.youtube.com/watch?v=hYJvxsgnGMA
