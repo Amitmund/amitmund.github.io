@@ -36,11 +36,12 @@ h4 {
   height: 100%;
 }
 
-.my-images-circle img {
+.my-images img {
   width: 304px;
   height: 304px;
   border: 1px solid #ddd;
   border-radius: 4px;
   padding: 5px;
+  margin: auto;
   
 }
