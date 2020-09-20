@@ -75,6 +75,7 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_grid_layout_named
 
 .gridHeader { 
   grid-area: header; 
+  text-align: center;
 }
 
 
@@ -109,7 +110,6 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_grid_layout_named
 
 .grid-container > div {
   background-color: rgba(255, 255, 255, 0.8);
-  text-align: center;
   padding: 20px 0;
 }
 
