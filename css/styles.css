@@ -20,13 +20,7 @@ h4 {
 
 /* Make the image fully responsive */
 .carousel-inner img {
-  /* margin-top: 20px;
-  margin-bottom: 20px;
-  margin-left: 20px;
-  margin-right: 20px;
-  align-self: start; */
-
-  height: auto;
-  width: 100%;
-  /* margin: auto; */
+  height: 100%;
+  width: auto;
+  margin: auto; 
 }
