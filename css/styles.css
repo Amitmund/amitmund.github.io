@@ -47,11 +47,13 @@ h4 {
 }
 
 .my-youtube-videos {
-  width: 460px;
+  width: 390px;
   height: auto;
   padding: 5px;
+  padding-bottom: 10px;
   margin: auto;
   float: left;
+  
 }
 
 .my-youtube-videos p {
