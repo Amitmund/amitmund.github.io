@@ -50,8 +50,6 @@ h4 {
   height: auto;
   padding: 5px;
   padding-bottom: 10px;
-  display: flex;
-  flex-wrap: wrap;
 }
 
 .flex-container {
