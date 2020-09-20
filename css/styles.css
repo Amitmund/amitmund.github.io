@@ -25,3 +25,13 @@ h4 {
 }
 
 
+
+.my-images {
+  my-images-c
+}
+
+.my-images-circle img {
+  width: 304;
+  height: auto;
+  border-radius: 50%;
+}
