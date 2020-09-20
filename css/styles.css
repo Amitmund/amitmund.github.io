@@ -100,7 +100,6 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_grid_layout_named
     'menu main main main main main'
     'footer footer footer footer footer footer';
   grid-gap: 10px;
-  background-color: #2196F3;
   padding: 10px;
 }
 
@@ -108,7 +107,6 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_grid_layout_named
   background-color: rgba(255, 255, 255, 0.8);
   text-align: center;
   padding: 20px 0;
-  font-size: 30px;
 }
 
 
