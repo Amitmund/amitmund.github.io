@@ -83,7 +83,8 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_grid_layout_named
 
 .gridMenu { 
   grid-area: menu;
-  text-align: justify;
+  text-align: Left;
+  padding-left: 10px;
   padding-right: 10px;
 }
 
