@@ -87,11 +87,6 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_grid_layout_named
 }
 
 
-.gridRight { 
-  grid-area: right; 
-}
-
-
 .gridFooter { 
   grid-area: footer; 
 }
@@ -102,11 +97,18 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_grid_layout_named
   display: grid;
   grid-template-areas:
     'header header header header header header'
-    'menu main main main main right'
+    'menu main main main main main'
     'footer footer footer footer footer footer';
   grid-gap: 10px;
-/*  background-color: #2196F3;*/
+  background-color: #2196F3;
   padding: 10px;
+}
+
+.grid-container > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
 }
 
 
