@@ -43,7 +43,6 @@ h4 {
   border-radius: 4px;
   padding: 5px;
   margin: auto;
-  display: flex;
 }
 
 .my-youtube-videos {
@@ -51,22 +50,27 @@ h4 {
   height: auto;
   padding: 5px;
   padding-bottom: 10px;
-  margin: auto;
   display: flex;
-/*
-  flex-direction: row;
-  flex-flow: wrap;
-*/
   flex-wrap: wrap;
+}
+
+
+  
 /*
   CSS Grid, Flex and Float.
   https://www.youtube.com/watch?v=hYJvxsgnGMA
   https://www.youtube.com/watch?v=hs3piaN4b5I
   So, grid for layout, and Flex to get into line.
   float: left;
+  grid: https://www.w3schools.com/cssref/tryit.asp?filename=trycss_grid3
+  
+  display: flex;
+  flex-direction: row;
+  flex-flow: wrap;
+  flex-wrap: wrap;
 */
   
-}
+
 
 .my-youtube-videos p {
   text-align: center;
