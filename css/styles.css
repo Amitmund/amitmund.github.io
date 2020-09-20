@@ -32,6 +32,6 @@ h4 {
 
 .my-images-circle img {
   width: 304;
-  height: auto;
+  height: 304;
   border-radius: 50%;
 }
