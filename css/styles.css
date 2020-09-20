@@ -79,11 +79,13 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_grid_layout_named
 
 
 .gridMenu { 
-  grid-area: menu; 
+  grid-area: menu;
+  text-align: justify;
 }
 
 .gridMain { 
-  grid-area: main; 
+  grid-area: main;
+  text-align: justify;
 }
 
 
