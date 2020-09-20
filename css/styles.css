@@ -90,9 +90,8 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_grid_layout_named
 
 .gridMain { 
   grid-area: main;
-  text-align: justify;
   padding-right: 20px;
-
+}
 
 .gridFooter { 
   grid-area: footer; 
