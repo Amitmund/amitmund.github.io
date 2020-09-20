@@ -25,7 +25,7 @@ h4 {
 }
 
 .my-images-circle img {
-  width: 304;
-  height: 304;
+  width: 304px;
+  height: 304px;
   border-radius: 50%;
 }
