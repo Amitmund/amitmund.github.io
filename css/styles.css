@@ -93,6 +93,16 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_grid_layout_named
   padding-right: 20px;
 }
 
+.gridMain1 { 
+  grid-area: main;
+  padding-right: 20px;
+}
+
+.gridMain2 { 
+  grid-area: main;
+  padding-right: 20px;
+}
+
 .gridFooter { 
   grid-area: footer; 
   text-align: center;
@@ -106,7 +116,7 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_grid_layout_named
   grid-template-areas:
     "header header header header header header header header header header header header"
     "menu menu main main main main main main main main main main"
-    "menu menu main1 main1 main1 main1 main2 main2 main2 main2 main2 main2"
+    "menu menu main1 main1 main1 main1 main1 main2 main2 main2 main2 main2"
     "footer footer footer footer footer footer footer footer footer footer footer footer";
   grid-gap: 10px;
   padding: 10px;
