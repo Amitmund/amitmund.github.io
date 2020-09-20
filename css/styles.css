@@ -77,12 +77,13 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_grid_layout_named
 .gridNotice { 
   grid-area: notice;
   text-align: center;
-  margin: 0px;
+  margin: 20px;
 }
 
 .gridHeader { 
   grid-area: header; 
   text-align: center;
+  margin: 20px
 }
 
 
@@ -96,21 +97,22 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_grid_layout_named
 .gridMain { 
   grid-area: main;
   padding-right: 20px;
+  margin-right: 20px;
 }
 
 .gridMain1 { 
   grid-area: main1;
-  padding-right: 20px;
+  margin-right: 20px
 }
 
 .gridMain2 { 
   grid-area: main2;
-  padding-right: 20px;
+  margin-right: 20px;
 }
 
 .gridFooter { 
   grid-area: footer; 
-  padding: 20px;
+  margin: 20px;
   text-align: center;
 }
 
@@ -123,7 +125,8 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_grid_layout_named
     "notice notice notice notice notice notice notice notice notice notice notice notice"
     "header header header header header header header header header header header header"
     "menu menu main main main main main main main main main main"
-    "menu menu main1 main1 main1 main1 main1 main2 main2 main2 main2 main2"
+    "main1 main1 main1 main1 main1 main1 main2 main2 main2 main2 main2 main2"
+    "logo1 logo1 logo1 logo2 logo2 logo2 logo3 logo3 logo3 logo4 logo4 logo4"
     "footer footer footer footer footer footer footer footer footer footer footer footer";
   grid-gap: 10px;
   padding: 10px;
