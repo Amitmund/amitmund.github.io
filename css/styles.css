@@ -74,6 +74,9 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_grid_layout_named
 */
 
 
+.gridNotice { 
+  grid-area: notice; 
+}
 
 .gridHeader { 
   grid-area: header; 
@@ -115,6 +118,7 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_grid_layout_named
 .grid-container {
   display: grid;
   grid-template-areas:
+    "notice notice notice notice notice notice notice notice notice notice notice notice"
     "header header header header header header header header header header header header"
     "menu menu main main main main main main main main main main"
     "menu menu main1 main1 main1 main1 main1 main2 main2 main2 main2 main2"
