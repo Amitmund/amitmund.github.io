@@ -73,6 +73,8 @@ Grid Layout. This is IMP.
 https://www.w3schools.com/css/tryit.asp?filename=trycss_grid_layout_named
 */
 
+
+
 .gridHeader { 
   grid-area: header; 
   text-align: center;
@@ -94,24 +96,28 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_grid_layout_named
 
 .gridFooter { 
   grid-area: footer; 
+  text-align: center;
 }
+
 
 /*Based on the above class, the following layout is designed.*/
 
 .grid-container {
   display: grid;
   grid-template-areas:
-    'header header header header header header header header header header header header'
-    'menu main main main main main main main main main main main'
-    'footer footer footer footer footer footer footer footer footer footer footer footer';
+    "header header header header header header header header header header header header"
+    "menu main main main main main main main main main main main"
+    "footer footer footer footer footer footer footer footer footer footer footer footer";
   grid-gap: 10px;
   padding: 10px;
 }
+
 
 .grid-container > div {
   background-color: rgba(255, 255, 255, 0.8);
   padding: 20px 0;
 }
+
 
 
 /*
