@@ -20,9 +20,8 @@ h4 {
 
 /* Make the image fully responsive */
 .carousel-inner img {
-  height: auto;
-  width: auto;
-  margin: auto; 
+  height: 100%;
+  width: 100%;
 }
 
 
