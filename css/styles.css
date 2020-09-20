@@ -75,7 +75,8 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_grid_layout_named
 
 
 .gridNotice { 
-  grid-area: notice; 
+  grid-area: notice;
+  text-align: center;
 }
 
 .gridHeader { 
