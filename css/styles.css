@@ -125,8 +125,7 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_grid_layout_named
     "notice notice notice notice notice notice notice notice notice notice notice notice"
     "header header header header header header header header header header header header"
     "menu menu main main main main main main main main main main"
-    "main1 main1 main1 main1 main1 main1 main2 main2 main2 main2 main2 main2"
-    "logo1 logo1 logo1 logo2 logo2 logo2 logo3 logo3 logo3 logo4 logo4 logo4"
+    "menu menu main1 main1 main1 main1 main1 main2 main2 main2 main2 main2"
     "footer footer footer footer footer footer footer footer footer footer footer footer";
   grid-gap: 10px;
   padding: 10px;
