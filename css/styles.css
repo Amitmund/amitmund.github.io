@@ -81,13 +81,13 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_grid_layout_named
 .gridMenu { 
   grid-area: menu;
   text-align: justify;
-  padding-right: 2em;
+  padding-right: 10px;
 }
 
 .gridMain { 
   grid-area: main;
   text-align: justify;
-  padding-right: 2em;
+  padding-right: 20px;
 }
 
 
