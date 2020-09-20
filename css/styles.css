@@ -26,6 +26,9 @@ h4 {
 
 .my-images-circle img {
   width: 304px;
-  height: 304px;
-  border-radius: 50%;
+  height: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+  
 }
