@@ -107,7 +107,7 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_grid_layout_named
   display: grid;
   grid-template-areas:
     "header header header header header header header header header header header header"
-    "menu main main main main main main main main main main main"
+    "menu menu main main main main main main main main main main"
     "footer footer footer footer footer footer footer footer footer footer footer footer";
   grid-gap: 10px;
   padding: 10px;
