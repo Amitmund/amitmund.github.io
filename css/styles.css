@@ -77,42 +77,33 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_grid_layout_named
 .gridNotice { 
   grid-area: notice;
   text-align: center;
-  margin: 20px;
 }
 
 .gridHeader { 
   grid-area: header; 
   text-align: center;
-  margin: 20px
 }
 
 
 .gridMenu { 
   grid-area: menu;
   text-align: Left;
-  padding-left: 20px;
-  padding-right: 20px;
 }
 
 .gridMain { 
   grid-area: main;
-  padding-right: 20px;
-  margin-right: 20px;
 }
 
 .gridMain1 { 
   grid-area: main1;
-  margin-right: 20px
 }
 
 .gridMain2 { 
   grid-area: main2;
-  margin-right: 20px;
 }
 
 .gridFooter { 
   grid-area: footer; 
-  margin: 20px;
   text-align: center;
 }
 
