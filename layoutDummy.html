@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>LayoutDummy</title>
+
+
+
+<!--
+############################################################################################################
+############################################################################################################
+-->
+  
+<head>
+
+  <meta charset="utf-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  
+  <!-- Popper JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  
+  <!-- To link the your own css -->
+  <link rel="stylesheet" href="https://amitmund.github.io/css/styles.css">
+
+  <!-- To link the your own js -->
+  <script src="https://amitmund.github.io/scripts/includeHTML.js"></script>
+
+  <!-- 
+    Note: If I use the above generic within a html file and then call them using my "includeHTML()" getting error with the search features.
+    So, just use the same head block at every pages.
+  -->
+
+</head>
+    
+
+<!--
+############################################################################################################
+############################################################################################################
+-->
+	
+<body>
+ 
+	<!--
+	############################################################################################################
+	############################################# Navigation ###################################################
+	############################################################################################################
+	### Note: Including the navigation.html, which work with includeHTML.js ###
+	-->
+		
+		
+	<div amitmund-include-html="https://amitmund.github.io/include_html/navigation.html"></div>
+	
+
+<!--
+############################################################################################################
+############################################################################################################
+-->
+
+<!--For all grid layout-->
+  
+<div class="grid-container">
+  
+  
+  <!--Fill the data that you want to be in Header  -->
+  <div class="gridHeader">
+    <h1> Data for Header section.</h1>
+  </div>
+  
+  
+  
+  <!--Fill the data that you want to be in left Menu  -->
+  <div class="gridMenu">
+    Data for Menu sections.
+  </div>
+  
+  
+  
+  <!--Fill the data that you want to be in Main Session-->
+  <div class="gridMain">
+    Data for Main Sections.
+  </div> 
+  
+  
+  <!--Fill the data that you want to be in Right Section-->
+  <div class="gridRight">
+    Data for Right side of the layout.
+  </div>
+  
+  
+  
+  <!--  Fill the data that you want to be in Footer Section-->
+  <div class="gridFooter">
+    Data for Footer.
+  </div>
+  
+  
+  
+</div>
+			
+
+<!--
+############################################################################################################
+############################################################################################################
+-->  
+
+<!-- A function includeHTML.js-->
+<script>
+  includeHTML();
+</script>
+
+  
+</body>
+
+    
+<!--
+############################################################################################################
+############################################################################################################
+-->
+  
+</html>

@@ -66,3 +66,51 @@ h4 {
   font-size: 22px;
   color: cornflowerblue;
 }
+
+
+/*
+Grid Layout. This is IMP.
+https://www.w3schools.com/css/tryit.asp?filename=trycss_grid_layout_named
+*/
+
+.gridHeader { 
+  grid-area: header; 
+}
+
+
+.gridMenu { 
+  grid-area: menu; 
+}
+
+.gridMain { 
+  grid-area: main; 
+}
+
+
+.gridRight { 
+  grid-area: right; 
+}
+
+
+.gridFooter { 
+  grid-area: footer; 
+}
+
+/*Based on the above class, the following layout is designed.*/
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'header header header header header header'
+    'menu main main main main right'
+    'footer footer footer footer footer footer';
+  grid-gap: 10px;
+/*  background-color: #2196F3;*/
+  padding: 10px;
+}
+
+
+/*
+End Of, Grid Layout.
+*/
+
