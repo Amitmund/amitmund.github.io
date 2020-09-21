@@ -109,20 +109,14 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_grid_layout_named
 
 .gridMain { 
   grid-area: main;
-  margin-left: 20px;
-  margin-right: 20px;
 }
 
 .gridMain1 { 
   grid-area: main1;
-  margin-left: 20px;
-  margin-right: 5px;
 }
 
 .gridMain2 { 
   grid-area: main2;
-  margin-left: 15px;
-  margin-right: 20px;
 }
 
 .gridFooter { 
@@ -138,11 +132,11 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_grid_layout_named
 .grid-container {
   display: grid;
   grid-template-areas:
-    "alert alert alert alert alert alert alert alert alert alert alert alert"
-    "header header header header header header header header header header header header"
-    "menu menu main main main main main main main main main1 main1"
-    "menu menu main main main main main main main main main2 main2"
-    "footer footer footer footer footer footer footer footer footer footer footer footer";
+    "alert alert alert alert alert alert"
+    "header header header header header header"
+    "menu main main main main main1"
+    "menu main main main main main2"
+    "footer footer footer footer footer footer";
 /*
   grid-gap: 10px;
   padding: 10px;
