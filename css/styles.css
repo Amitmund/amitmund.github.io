@@ -181,8 +181,8 @@ https://learncssgrid.com/
   grid-template-areas:
     "alert alert alert alert alert alert alert alert alert alert"
     "header header header header header header header header header header"
-    "menu menu main main main main main main main1 main1"
-    "menu menu main main main main main main main2 main2"
+    "menu menu main main main main main main1 main1 main1"
+    "menu menu main main main main main main2 main2 main2"
     "footer footer footer footer footer footer footer footer footer footer";
 /*
   grid-gap: 10px;
