@@ -178,7 +178,8 @@ https://learncssgrid.com/
 
 .grid-container {
   display: grid;
-  grid-template-columns: minmax(10%, 20%) 2fr 1fr;
+/*  grid-template-columns: minmax(10%, 20%) 2fr 1fr;*/
+  grid-template-columns: 15% 55% 30%;
   grid-gap: 10px;
   margin-top: 20px;
   grid-template-areas:
