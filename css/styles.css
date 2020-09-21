@@ -105,7 +105,6 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_grid_layout_named
 .gridMenu { 
   grid-area: menu;
   text-align: justify;
-  margin-left: 20px;
 }
 
 .gridMain { 
