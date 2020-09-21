@@ -92,14 +92,11 @@ h4 {
 .alert {
   padding: 20px;
   text-align: center;
-  color: white;
 }
 
 .closebtn {
   margin-left: 15px;
   float: right;
-  font-size: 22px;
-  line-height: 20px;
   cursor: pointer;
   transition: 0.3s;
 }
