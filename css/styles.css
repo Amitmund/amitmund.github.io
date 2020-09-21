@@ -171,21 +171,22 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_grid_layout_named
 }
 
 
-/*Based on the above class, the following layout is designed.*/
+/*
+Based on the above class, the following layout is designed.
+https://learncssgrid.com/
+*/
 
 .grid-container {
   display: grid;
-/*
-  grid-template-columns: 15fr 45fr 30fr;
-  grid-auto-columns: 1fr;
-*/
+  
+  grid-template-columns: 15fr 55fr 30fr;
+
   grid-template-areas:
-    "alert alert alert alert alert alert"
-    "header header header header header header"
-    "menu menu main main main main"
-    "menu menu main1 main1 main1 main1"
-    "menu menu main2 main2 main2 main2"
-    "footer footer footer footer footer footer";
+    "alert alert alert"
+    "header header header"
+    "menu main main1"
+    "menu menu main2""
+    "footer footer footer";
 /*
   grid-gap: 10px;
   padding: 10px;
