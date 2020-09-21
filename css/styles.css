@@ -104,7 +104,9 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_grid_layout_named
 }
 
 .gridFooter { 
-  grid-area: footer; 
+  grid-area: footer;
+  background-color: #343a40!important;
+  color: rgba(255,255,255,.5);
   text-align: center;
   border-top: 1px solid #555;
   padding-top: 30px;
