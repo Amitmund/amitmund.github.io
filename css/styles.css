@@ -133,8 +133,8 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_grid_layout_named
 */
 
 
-.gridAlert { 
-  grid-area: alert;
+.gridInfo { 
+  grid-area: info;
   text-align: center;
 }
 
@@ -183,7 +183,7 @@ https://learncssgrid.com/
   grid-gap: 10px;
   margin-top: 20px;
   grid-template-areas:
-    "alert alert alert"
+    "info info info"
     "header header header"
     "menu main main1"
     "menu main main2"
