@@ -138,8 +138,8 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_grid_layout_named
   grid-template-areas:
     "alert alert alert alert alert alert"
     "header header header header header header"
-    "menu main main main main1 main1"
-    "menu main main main main2 main2"
+    "menu main main main main main1"
+    "menu main main main main main2"
     "footer footer footer footer footer footer";
 /*
   grid-gap: 10px;
