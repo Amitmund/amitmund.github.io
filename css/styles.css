@@ -182,11 +182,11 @@ https://learncssgrid.com/
   grid-gap: 10px;
   margin-top: 20px;
   grid-template-areas:
-    "alert alert alert alert alert alert alert alert alert alert"
-    "header header header header header header header header header header"
-    "menu menu main main main main main main1 main1 main1"
-    "menu menu main main main main main main2 main2 main2"
-    "footer footer footer footer footer footer footer footer footer footer";
+    "alert alert alert"
+    "header header header"
+    "menu main main1"
+    "menu main main2"
+    "footer footer footer";
 /*
   grid-gap: 10px;
   padding: 10px;
