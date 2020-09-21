@@ -84,9 +84,35 @@ h4 {
   color: cornflowerblue;
 }
 
+
+
+/*For Alert message to the Website Visitor.*/
+
 .alert {
+  padding: 20px;
+  background-color: #f44336;
   text-align: center;
+  color: white;
 }
+
+.closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.closebtn:hover {
+  color: black;
+}
+
+/*For Alert message to the Website Visitor.*/
+
+
 
 /*
 Grid Layout. This is IMP.
