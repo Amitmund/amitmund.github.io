@@ -87,13 +87,18 @@ h4 {
 
 
 /* Modify the backgorund color */ 
+
 .navbar-custom { 
     background-color: black; 
 } 
 
 .navbar-custom .navbar-text { 
-    color: white; 
+    color: white !important; 
 } 
+
+/* Modify the backgorund color */
+
+
 
 
 /*For Alert message to the Website Visitor.*/
@@ -101,6 +106,7 @@ h4 {
 .alert {
   padding: 20px;
   text-align: center;
+  background-color: black;
 }
 
 .closebtn {
@@ -111,7 +117,7 @@ h4 {
 }
 
 .closebtn:hover {
-  color: black;
+  color: white;
 }
 
 /*For Alert message to the Website Visitor.*/
