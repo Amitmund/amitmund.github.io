@@ -84,6 +84,9 @@ h4 {
   color: cornflowerblue;
 }
 
+.alert {
+  text-align: center;
+}
 
 /*
 Grid Layout. This is IMP.
