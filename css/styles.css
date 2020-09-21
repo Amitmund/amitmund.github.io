@@ -75,8 +75,8 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_grid_layout_named
 */
 
 
-.gridNotice { 
-  grid-area: notice;
+.gridAlert { 
+  grid-area: alert;
   text-align: center;
 }
 
@@ -118,13 +118,15 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_grid_layout_named
 .grid-container {
   display: grid;
   grid-template-areas:
-    "notice notice notice notice notice notice notice notice notice notice notice notice"
+    "alert alert alert alert alert alert alert alert alert alert alert alert"
     "header header header header header header header header header header header header"
     "menu menu main main main main main main main main main main"
     "menu menu main1 main1 main1 main1 main1 main2 main2 main2 main2 main2"
     "footer footer footer footer footer footer footer footer footer footer footer footer";
+/*
   grid-gap: 10px;
   padding: 10px;
+*/
 }
 
 
