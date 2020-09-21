@@ -6,6 +6,11 @@
   font-family: sans-serif;
 }
 
+nav {
+  font-weight: 300;
+  font-family: sans-serif;
+}
+
 a {
   color: rgba(100, 149, 237, .99);
 }
