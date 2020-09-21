@@ -100,22 +100,25 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_grid_layout_named
 .gridMenu { 
   grid-area: menu;
   text-align: justify;
-  padding: 5px;
+  margin-left: 20px;
 }
 
 .gridMain { 
   grid-area: main;
-  padding: 5px;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 .gridMain1 { 
   grid-area: main1;
-    padding: 5px;
+  margin-left: 20px;
+  margin-right: 5px;
 }
 
 .gridMain2 { 
   grid-area: main2;
-  padding: 5px;
+  margin-left: 15px;
+  margin-right: 20px;
 }
 
 .gridFooter { 
