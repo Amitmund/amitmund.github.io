@@ -100,28 +100,29 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_grid_layout_named
 .gridMenu { 
   grid-area: menu;
   text-align: justify;
-  margin-right: 20px;
+  padding: 5px;
 }
 
 .gridMain { 
   grid-area: main;
+  padding: 5px;
 }
 
 .gridMain1 { 
   grid-area: main1;
+    padding: 5px;
 }
 
 .gridMain2 { 
   grid-area: main2;
+  padding: 5px;
 }
 
 .gridFooter { 
   grid-area: footer;
-  background-color: #black!important;
-  color: rgba(255,255,255,.5);
   text-align: center;
   border-top: 1px solid #555;
-  padding-top: 30px;
+  margin-top: 30px;
 }
 
 
