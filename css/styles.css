@@ -109,14 +109,17 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_grid_layout_named
 
 .gridMain { 
   grid-area: main;
+  text-align: justify;
 }
 
 .gridMain1 { 
   grid-area: main1;
+  text-align: justify;
 }
 
 .gridMain2 { 
   grid-area: main2;
+  text-align: justify;
 }
 
 .gridFooter { 
@@ -181,6 +184,14 @@ End Of, Grid Layout.
 
 
 /*
+
+mt-3 
+p-5
+col-xs-1
+center
+my-3
+border
+
 
 fixed-top:
 Use the .fixed-top class to make any element fixed/stay at the top of the page.
