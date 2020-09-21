@@ -179,14 +179,12 @@ https://learncssgrid.com/
 .grid-container {
   display: grid;
   
-  grid-template-columns: 15fr 55fr 30fr;
-
   grid-template-areas:
-    "alert alert alert"
-    "header header header"
-    "menu main main1"
-    "menu menu main2""
-    "footer footer footer";
+    "alert alert alert alert alert alert alert alert alert alert"
+    "header header header header header header header header header header"
+    "menu menu main main main main main main1 main1 main1"
+    "menu menu main main main main main main2 main2 main2"
+    "footer footer footer footer footer footer footer footer footer footer";
 /*
   grid-gap: 10px;
   padding: 10px;
