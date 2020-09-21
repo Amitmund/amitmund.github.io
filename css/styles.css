@@ -128,10 +128,12 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_grid_layout_named
 }
 
 
+/*
 .grid-container > div {
   background-color: rgba(255, 255, 255, 0.8);
   padding: 20px 0;
 }
+*/
 
 
 
@@ -141,8 +143,8 @@ End Of, Grid Layout.
 
 
 .author img {
-  width: 100px;
-  height: 100px;
+  width: 80px;
+  height: 80px;
   border: 1px solid #ddd;
   border-radius: 50%;
   padding: 1px;
