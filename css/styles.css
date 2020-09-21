@@ -89,7 +89,7 @@ h4 {
 /* Modify the backgorund color */ 
 
 .navbar-custom { 
-    background-color: black; 
+    background-color: rgba(0, 0, 0, 0.7); 
 } 
 
 .navbar-custom .navbar-text { 
