@@ -106,7 +106,8 @@ h4 {
 .alert {
   padding: 20px;
   text-align: center;
-  background-color: black;
+  background-color:#555;
+  color: rgba(255, 255, 255, 0.5)
 }
 
 .closebtn {
