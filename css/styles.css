@@ -131,8 +131,10 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_grid_layout_named
 
 .grid-container {
   display: grid;
+/*
   grid-template-columns: 15fr 45fr 30fr;
   grid-auto-columns: 1fr;
+*/
   grid-template-areas:
     "alert alert alert alert alert alert"
     "header header header header header header"
