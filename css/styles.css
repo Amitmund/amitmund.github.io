@@ -151,7 +151,7 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_grid_layout_named
 
 .gridMenu { 
   grid-area: menu;
-  text-align: justify;
+  text-align: center;
   padding-left: 1rem;
 }
 
