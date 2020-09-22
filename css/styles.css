@@ -3,8 +3,8 @@
   padding: 0;
   box-sizing: border-box;
   font-weight: 300;
-  font-family: serif;
-/*  font-family: sans-serif;*/
+/*  font-family: serif;*/
+  font-family: sans-serif;
 
 }
 
@@ -42,7 +42,6 @@ body {
 h1 {
   color: cornflowerblue;
   font-family: sans-serif;
-  font-size: 60px;
   font-weight: 100;
 }
 
