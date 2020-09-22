@@ -3,45 +3,42 @@
   padding: 0;
   box-sizing: border-box;
   font-weight: 300;
-/*  font-family: serif;*/
-  font-family: sans-serif;
-
+  font-family: sans-serif;  
 }
+
 
 nav .nav-link {
   font-weight: 300;
   font-family: sans-serif;
 }
 
+
 a {
   color: rgba(100, 149, 237, .99);
 }
+
 
 a:hover {
   color: #ff7b29;
 }
 
+
 html {
   background-color: white;
   color: #555;
+  text-rendering: optimizeLegibility;
 }
 
 body {
   background-color: white;
   font-size: 14px;
   line-height: 22px;
-/*  For alert to display. */
-  padding-top: 65px;
-/*  Line spaceing 150
-    line characters 78
-    
-*/
-  
+  padding-top: 65px; /*  For alert to display. */
 }
+
 
 h1 {
   color: cornflowerblue;
-  font-family: sans-serif;
   font-weight: 100;
 }
 
@@ -172,16 +169,6 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_grid_layout_named
   text-align: justify;
 }
 
-.gridMain1 { 
-  grid-area: main1;
-  text-align: justify;
-}
-
-.gridMain2 { 
-  grid-area: main2;
-  text-align: justify;
-}
-
 .gridFooter { 
   grid-area: footer;
   text-align: center;
@@ -196,20 +183,16 @@ https://learncssgrid.com/
 
 .grid-container {
   display: grid;
-/*  grid-template-columns: minmax(10%, 20%) 2fr 1fr;*/
-  grid-template-columns: 20% 50% 30%;
-  grid-gap: 10px;
-  margin-top: 20px;
-  grid-template-areas:
-    "info info info"
-    "header header header"
-    "menu main main1"
-    "menu main main2"
-    "footer footer footer";
+  grid-template-columns: 30% 70%;
 /*
   grid-gap: 10px;
-  padding: 10px;
+  margin-top: 20px;
 */
+  grid-template-areas:
+    "info info"
+    "header header"
+    "menu main"
+    "footer footer";
 }
 
 
