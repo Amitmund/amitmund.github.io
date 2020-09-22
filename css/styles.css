@@ -152,6 +152,7 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_grid_layout_named
 .gridMenu { 
   grid-area: menu;
   text-align: justify;
+  padding-left: 1rem;
 }
 
 .gridMain { 
@@ -184,7 +185,7 @@ https://learncssgrid.com/
 .grid-container {
   display: grid;
 /*  grid-template-columns: minmax(10%, 20%) 2fr 1fr;*/
-  grid-template-columns: 15% 55% 30%;
+  grid-template-columns: 20% 50% 30%;
   grid-gap: 10px;
   margin-top: 20px;
   grid-template-areas:
