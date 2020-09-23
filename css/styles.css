@@ -1,3 +1,6 @@
+/* ########################################################### */
+/* ########################################################### */
+
 * {
   margin: 0;
   padding: 0;
@@ -6,10 +9,28 @@
   font-family: sans-serif;  
 }
 
+html {
+  background-color: white;
+  color: #555;
+  text-rendering: optimizeLegibility;
+  align-self: stretch;
+}
+
+body {
+  background-color: white;
+  font-size: 14px;
+  line-height: 22px;
+  padding-top: 65px; /*  For alert to display. */
+}
+
+
+/* ########################################################### */
+/* ########################################################### */
+
 
 nav .nav-link {
-  font-weight: 300;
-  font-family: sans-serif;
+  font-weight: 300 !important;
+  font-family: sans-serif !important;
 }
 
 
@@ -23,18 +44,9 @@ a:hover {
 }
 
 
-html {
-  background-color: white;
-  color: #555;
-  text-rendering: optimizeLegibility;
-}
+/* ########################################################### */
+/* ########################################################### */
 
-body {
-  background-color: white;
-  font-size: 14px;
-  line-height: 22px;
-  padding-top: 65px; /*  For alert to display. */
-}
 
 
 h1 {
@@ -54,6 +66,11 @@ h4 {
   color: white;
 }
 
+
+/* ########################################################### */
+/* ########################################################### */
+
+
 /* Make the image fully responsive */
 .carousel-inner img {
   width: 100%;
@@ -69,6 +86,9 @@ h4 {
   margin: auto;
 }
 
+
+/* ########################################################### */
+/* ########################################################### */
 
 /*
   CSS Grid, Flex and Float.
@@ -93,6 +113,10 @@ h4 {
 }
 
 
+/* ########################################################### */
+/* ########################################################### */
+
+
 
 /* Modify the backgorund color */ 
 
@@ -106,6 +130,9 @@ h4 {
 /*    color: white !important; */
 /* Modify the backgorund color */
 
+
+/* ########################################################### */
+/* ########################################################### */
 
 
 
@@ -136,6 +163,8 @@ h4 {
 /*For Alert message to the Website Visitor.*/
 
 
+/* ########################################################### */
+/* ########################################################### */
 
 
 
@@ -144,22 +173,9 @@ Grid Layout. This is IMP.
 https://www.w3schools.com/css/tryit.asp?filename=trycss_grid_layout_named
 */
 
-
-.gridInfo { 
-  grid-area: info;
-  text-align: center;
-}
-
-.gridHeader { 
-  grid-area: header; 
-  text-align: center;
-}
-
-
 .gridMenu { 
   grid-area: menu;
   text-align: center justify;
-  px: 3;
 /*  padding: auto;*/
 /*  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);*/
 }
@@ -169,11 +185,7 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_grid_layout_named
   text-align: justify;
 }
 
-.gridFooter { 
-  grid-area: footer;
-  text-align: center;
-  border-top: 1px solid #555;
-}
+
 
 
 /*
@@ -189,11 +201,10 @@ https://learncssgrid.com/
   margin-top: 20px;
 */
   grid-template-areas:
-    "info info"
-    "header header"
     "menu main"
-    "footer footer";
 }
+
+
 
 
 /*
@@ -210,7 +221,19 @@ End Of, Grid Layout.
 */
 
 
+/* ########################################################### */
+/* ########################################################### */
+
+
+.complete-footer {
+  border-top: 1px solid #555;
+  text-align: center;
+  }
+
+
+
 .author img {
+  padding-top: 30px;
   width: 80px;
   height: 80px;
   border: 1px solid #ddd;
