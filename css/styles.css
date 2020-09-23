@@ -7,7 +7,7 @@
   box-sizing: border-box;
   font-weight: 300;
   font-family: sans-serif;
-  overflow: hidden;
+/*  overflow: hidden;*/
   max-width: 78ch;
   text-overflow: ellipsis;
 }
