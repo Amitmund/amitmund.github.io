@@ -261,10 +261,10 @@ code {
 }
 
 pre {
-  background-color: rgba(238, 238, 238, 0.6);
+  background-color: rgba(238, 238, 238, 0.3);
   color: #000;
   border-radius: 3px;
-  padding: 0 3px;
+  padding: 2px 3px;
   font-size: 100%;
   font-weight: 300 !important;
   font-family: sans-serif !important;
