@@ -252,6 +252,17 @@ End Of, Grid Layout.
 /* ########################################################### */
 
 
+pre {
+    background-color: #eee;
+    color: #000;
+    border-radius: 3px;
+    font-family: monospace;
+    padding: 0 3px;
+}
+
+
+
+
 .complete-footer {
   border-top: 1px solid #555;
   text-align: center;
