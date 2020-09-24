@@ -257,6 +257,7 @@ code {
   color: #000;
   font-size: 100%;
   font-weight: 300;
+  font-family: sans-serif;
 }
 
 pre {
@@ -267,6 +268,7 @@ pre {
   padding: 0 3px;
   font-size: 100%;
   font-weight: 300;
+  font-family: sans-serif;
 }
 
 
