@@ -1,3 +1,25 @@
+/*
+
+Keeping the layout though plan over here to help the site to look the same. 
+
+Why, over here, because for sure I will be reading this page for ever.
+
+- head
+- body
+  - Include of navigation
+  - alert-info
+  - Header
+  - menuMainAndAside
+    - grid {
+      - menu
+      - main
+      - aside
+    }
+  - footer
+
+  
+*/
+
 /* ########################################################### */
 /* ########################################################### */
 
