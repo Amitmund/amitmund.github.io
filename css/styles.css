@@ -256,19 +256,18 @@ code {
   background-color: #eee;
   color: #000;
   font-size: 100%;
-  font-weight: 300;
-  font-family: sans-serif;
+  font-weight: 300 !important;
+  font-family: sans-serif !important;
 }
 
 pre {
-
   background-color: #eee;
   color: #000;
   border-radius: 3px;
   padding: 0 3px;
   font-size: 100%;
-  font-weight: 300;
-  font-family: sans-serif;
+  font-weight: 300 !important;
+  font-family: sans-serif !important;
 }
 
 
