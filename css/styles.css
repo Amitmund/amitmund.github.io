@@ -8,8 +8,7 @@ Why, over here, because for sure I will be reading this page for ever.
 - body
   - Include of navigation
   - alert-info
-  - Header
-  - menuAndMain
+  - Place holder before menuAndMain [Something like Big image or so.. or a message only for that page.]
     - grid {
       - menu
       - [main, aside]
@@ -515,5 +514,21 @@ n2 - sets margin to -.5rem (-8px if font-size is 16px)
 n3 - sets margin to -1rem (-16px if font-size is 16px)
 n4 - sets margin to -1.5rem (-24px if font-size is 16px)
 n5 - sets margin to -3rem (-48px if font-size is 16px)
+
+
+
+############################################
+@media screen and (min-width:720px) => Phablet
+
+@media screen and (min-width:768px) => Tablet
+
+@media screen and (min-width:1024px) => Desktop
+https://cssgrid-generator.netlify.app/
+Abhinab Pattjoshi5:29 PM
+https://glitch.com/edit/#!/grid-cats
+Abhinab Pattjoshi5:32 PM
+https://css-tricks.com/
+http://www.responsivegridsystem.com/
+
 
 */
