@@ -9,11 +9,10 @@ Why, over here, because for sure I will be reading this page for ever.
   - Include of navigation
   - alert-info
   - Header
-  - menuMainAndAside
+  - menuAndMain
     - grid {
       - menu
-      - main
-      - aside
+      - [main, aside]
     }
   - footer
 
@@ -209,12 +208,6 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_grid_layout_named
 }
 
 
-.gridAside {
-  grid-area: aside
-  text-align: justify;
-}
-
-
 /*
 Based on the above class, the following layout is designed.
 https://learncssgrid.com/
@@ -222,13 +215,13 @@ https://learncssgrid.com/
 
 .grid-container {
   display: grid;
-  grid-template-columns: 20% 50% 30%;
+  grid-template-columns: 35% 65%;
 /*
   grid-gap: 10px;
   margin-top: 20px;
 */
   grid-template-areas:
-    "menu main aside"
+    "menu main"
 }
 
 

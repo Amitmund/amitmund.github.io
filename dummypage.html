@@ -97,8 +97,8 @@
 ############################################################################################################
 -->  
 
-<!-- ########## menuMainAndAside ########## -->
-<div class="container menuMainAndAside p-3 my-3">
+<!-- ########## menuAndMain ########## -->
+<div class="container menuAndMain p-3 my-3">
   
       <!--For all grid layout-->
       <div class="grid-container">
@@ -109,6 +109,7 @@
       -->    
 
 
+        
         <!--Fill the data that you want to be in left Menu  -->
         <div class="container px-3 gridMenu">
           <a href="#">Apple</a><br/>
@@ -125,31 +126,28 @@
 
 
         <!--Fill the data that you want to be in Main Session-->
-        <div class="container gridMain">
-          <h5> Part of the main grid.</h5>
-
-          <p>
-            Hello world in Golang.
-            
-            The first line <code>package main</code>, is telling you, as what package this code can be re-used as.
-            
-            <code>import</code>, this is use to import different packages. Example fmt.
-            
-            <code> package function_name</code>, over here we declare about logic of that function.
-          </p>
-
-        </div> 
-        <!--Fill the data that you want to be in Main Session-->
-
-
-        
-        
-        
-        <!-- Aside view from the grid, part of gridAside -->
-        <div class="container gridAside">
+        <div class="container px-3 Main">
           
-          <div class="myCode">
-            <pre>
+          <!-- myContent div-->
+          <div class="myContent">
+            <h5> Part of the main grid.</h5>
+
+            <p>
+              Hello world in Golang.
+
+              The first line <code>package main</code>, is telling you, as what package this code can be re-used as.
+
+              <code>import</code>, this is use to import different packages. Example fmt.
+
+              <code> package function_name</code>, over here we declare about logic of that function.
+            </p>
+            </div>
+          <!-- myContent div-->
+          
+          
+            <!-- myCode div-->
+            <div class="myCode">
+                <pre>
 
 package main
 
@@ -162,31 +160,21 @@ package main(){
 }
 
             </pre>
+
             </div>
+            <!-- myCode div-->
 
           
-            <div class="myCode">
-            <pre>
-
-package main
-
-include (
-  "fmt"
-)
-
-package Hello(){
-  fmt.Println("Hello Wold")
-}
-
-
-            </pre>
-            </div>
-
           
-        </div>
-        <!-- Aside view from the grid, part of gridAside -->
+          
+          
+          
+        </div> 
+        <!--Fill the data that you want to be in Main Session-->
+
+
         
-        
+      
       <!--
       ############################################################################################################
       -->  
@@ -202,7 +190,7 @@ package Hello(){
   
 
 </div>
-<!-- ########## menuMainAndAside ########## -->
+<!-- ########## menuAndMain ########## -->
   
 <!--
 ############################################################################################################
