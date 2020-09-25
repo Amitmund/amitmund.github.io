@@ -46,34 +46,38 @@ body {
 /* ########################################################### */
 /* ########################################################### */
 
-.Header {
+.header {
   width: 100%;
-  background-color: black;
-  opacity: .1;
+  opacity: 1;
   color: white;
+  font-size: 10px;
+  list-style: none;
+  margin-bottom: 10px;
+  position: relative;
+  z-index: 5;
   
 }
 
-.Header ul{
+.header ul{
+  background-color: black;
   margin: 0px;
   padding: 0px;
-  list-style: none;
+/*  list-style: none;*/
   text-align: center;
 }
 
-.Header ul li {
+.header ul li {
   display: inline-block;
-  float: left;
+/*  float: left;*/
 /* height: 40px;*/
- background-color: black;
-/* opacity: .8;*/
+ opacity: .8;
 /* line-height: 40px;*/
  text-align: center;
 }
 
 
 
-.Header ul li a{
+.header ul li a{
   display: block;
   text-decoration: none;
   text-transform: uppercase;
@@ -84,19 +88,19 @@ body {
 }
 
 
-.Header ul li a:hover{
-/*  background-color: #211b4385;*/
-  background-color: #ff7b29;
+.header ul li a:hover{
+  background-color: #211b4385;
+/*  background-color: #ff7b29;*/
 
 }
 
  /* So that the submenu should not display by default */
-.Header ul li ul li {
+.header ul li ul li {
     display:none; 
 }
   
-.Header ul li:hover ul li{
-    display: block;  
+.header ul li:hover ul li{
+  display: block;
 }
 
 /* ########################################################### */
