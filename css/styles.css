@@ -46,26 +46,31 @@ body {
 /* ########################################################### */
 /* ########################################################### */
 
-
 .header {
   width: 100%;
   background-color: black;
   opacity: .8;
   color: white;
-/*  font-size: 14px;*/
   
 }
 
 .header ul{
-  text-align: center;
+  margin: 0px;
+  padding: 0px;
   list-style: none;
+  text-align: center;
 }
 
 .header ul li {
   display: inline-block;
   float: left;
-  line-height: 40px;
+ height: 40px;
+ background-color: black;
+ opacity: .8;
+ line-height: 40px;
+ text-align: center;
 }
+
 
 
 .header ul li a{
@@ -90,9 +95,9 @@ body {
     display:none; 
 }
   
-  .header ul li:hover ul li{
+.header ul li:hover ul li{
     display: block;  
-  }
+}
 
 /* ########################################################### */
 /* ########################################################### */
