@@ -49,27 +49,24 @@ body {
 
 .header {
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.2);
+  height: 30px;
+  background-color: black;
+  opacity: .8;
+  color: white;
   
 }
 
 .header ul{
   text-align: center;
-}
-
-.header ol{
-  text-align: left;
+  list-style: none;
 }
 
 .header ul li {
-  list-style: none;
   display: inline-block;
+  float: left;
+  line-height: 40px;
 }
 
-.header ol li {
-  list-style: none;
-  display: list-item;
-}
 
 .header ul li a{
   display: block;
@@ -82,25 +79,20 @@ body {
 }
 
 
-.header ol li a{
-  display: block;
-  text-decoration: none;
-  text-transform: uppercase;
-  color: #fff;
-  letter-spacing: 2px;
-  padding: 15px;
-  transition: all ease 0.5s;
-}
-
-
 .header ul li a:hover{
-  background-color: #211b4385;
+/*  background-color: #211b4385;*/
+  background-color: #ff7b29;
+
 }
 
-.header ol li a:hover{
-  background-color: #211b4385;
+ /* So that the submenu should not display by default */
+.header ul li ul li {
+    display:none; 
 }
-
+  
+  .header ul li:hover ul li{
+    display: block;  
+  }
 
 /* ########################################################### */
 /* ########################################################### */
