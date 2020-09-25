@@ -46,7 +46,7 @@ body {
 /* ########################################################### */
 /* ########################################################### */
 
-.amundHeader {
+.Header {
   width: 100%;
   background-color: black;
   opacity: .1;
@@ -54,14 +54,14 @@ body {
   
 }
 
-.amundHeader ul{
+.Header ul{
   margin: 0px;
   padding: 0px;
   list-style: none;
   text-align: center;
 }
 
-.amundHeader ul li {
+.Header ul li {
   display: inline-block;
   float: left;
 /* height: 40px;*/
@@ -73,7 +73,7 @@ body {
 
 
 
-.amundHeader ul li a{
+.Header ul li a{
   display: block;
   text-decoration: none;
   text-transform: uppercase;
@@ -84,18 +84,18 @@ body {
 }
 
 
-.amundHeader ul li a:hover{
+.Header ul li a:hover{
 /*  background-color: #211b4385;*/
   background-color: #ff7b29;
 
 }
 
  /* So that the submenu should not display by default */
-.amundHeader ul li ul li {
+.Header ul li ul li {
     display:none; 
 }
   
-.amundHeader ul li:hover ul li{
+.Header ul li:hover ul li{
     display: block;  
 }
 
