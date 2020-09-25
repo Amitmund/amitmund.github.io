@@ -58,17 +58,17 @@ body {
 }
 
 .header ol{
-  text-align: center;
+  text-align: left;
 }
 
-.header ul ol li {
+.header ul li {
   list-style: none;
   display: inline-block;
 }
 
 .header ol li {
   list-style: none;
-  display: inline-block;
+  display: list-item;
 }
 
 .header ul li a{
