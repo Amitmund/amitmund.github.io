@@ -13,7 +13,9 @@
 
   <meta charset="utf-8">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <meta http-equiv="X-UA-Compatible" content="ie=edge"
   
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
@@ -32,7 +34,6 @@
 
   <!-- To link the your own css -->
   <link rel="stylesheet" href="./css/styles.css">
-
   
   <!-- To link the your own js -->
   <script src="https://amitmund.github.io/scripts/includeHTML.js"></script>
@@ -59,7 +60,8 @@
 	### Note: Including the navigation.html, which work with includeHTML.js ###
 	-->
 		
-    <div amitmund-include-html="./include_html/amitmundNavigation.html"></div>
+    <div amitmund-include-html="./include_html/navigation.html"></div>
+  
 
 <!--
 ############################################################################################################
@@ -109,6 +111,7 @@
           <a href="#">SpaceX</a><br/>
           <a href="#">Tesla</a><br/>
           <a href="#">checking for a long string</a><br/>
+          <a href="javascript:void(0);" onclick="aboutpage();">About</a><br/>
         </div>
         <!--Fill the data that you want to be in left Menu  -->
 
@@ -288,6 +291,14 @@ package main(){
 <!-- A function includeHTML.js-->
 <script>
   includeHTML();
+</script>
+
+<script>
+  $(document).ready(function(){
+    $('.gridMenu').click(function(){
+      $('.$Main').load('aboutus.html');
+    });
+  });
 </script>
 
   

@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Reading Links</title>
+
+
+
+<!--
+############################################################################################################
+############################################################################################################
+-->
+  
+<head>
+
+  <meta charset="utf-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  
+  <!-- Popper JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  
+  <!-- To link the your own css -->
+  <link rel="stylesheet" href="https://amitmund.github.io/css/styles.css">
+
+  <!-- To link the your own js -->
+  <script src="https://amitmund.github.io/scripts/includeHTML.js"></script>
+
+  <!-- 
+    Note: If I use the above generic within a html file and then call them using my "includeHTML()" getting error with the search features.
+    So, just use the same head block at every pages.
+  -->
+
+</head>
+    
+
+<!--
+############################################################################################################
+############################################################################################################
+-->
+  
+  
+<body>
+ 
+<!--
+############################################################################################################
+############################################# Navigation ###################################################
+############################################################################################################
+### Note: Including the navigation.html, which work with includeHTML.js ###
+-->
+  
+<div class="nav-manu"> 
+<div amitmund-include-html="https://amitmund.github.io/include_html/navigation.html"></div>
+</div> 
+
+<!--
+############################################################################################################
+############################################################################################################
+-->
+    
+<!--For Searching Features.-->
+<!--  
+https://www.w3schools.com/bootstrap4/bootstrap_utilities.asp
+
+-->
+<div class="container mt-3 p-5">
+  <div class="col-xs-1" align="center" >
+    <h1>Bookmarks Search</h1>
+  </div>
+  <input class="form-control" id="myInput" type="text" placeholder="Search..">
+  
+  <!-- This jquery script is needed. 
+      Keeping the same script at the end of this page.
+      A script to search with id="mySearch"
+  -->
+  
+<!--
+  <script>
+$(document).ready(function(){
+  $("#myInput").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#mySearch *").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
+</script>
+  
+-->
+<!--Here is Ends-->
+  
+</div>
+  
+  
+<!--
+############################################################################################################
+############################################################################################################
+-->
+  
+  <div class="container p-3 my-3">
+  <h1>Learning Links</h1>
+  </div>
+  
+  <div id="mySearch" class="container p-3 my-3">
+      
+ 
+<!--
+############################################################################################################
+-->  
+  
+  <br/>
+  <h3>Quick Reading Links</h3>
+  <div class="row" id ="quickReadingLinks">
+    
+    <div class="col-sm-3" >
+      <a class="text-info" href="https://news.ycombinator.com/" target="_blank">Hacker News</a>
+    </div>
+    
+    <div class="col-sm-3" >
+      <a class="text-info" href="https://medium.com" target="_blank">Medium</a>
+    </div>
+    
+    
+    
+  </div>    
+    
+    
+<!--
+############################################################################################################
+-->  
+  
+  <br/>
+  <h3>Golang</h3>
+  <div class="row" id ="Golang">
+    
+    <div class="col-sm-3" >
+      <a class="text-info" href="https://gobyexample.com/" target="_blank">Go by Example</a>
+    </div>
+
+    <div class="col-sm-3" >
+      <a class="text-info" href="https://tutorialedge.net/golang/" target="_blank">Golang Best 1</a>
+    </div>    
+    
+    <div class="col-sm-3" >
+      <a class="text-info" href="https://www.digitalocean.com/community/tutorial_series/how-to-code-in-go" target="_blank">Golang digitalocean</a>
+    </div>    
+    
+    
+    
+    <div class="col-sm-3" >
+      <a class="text-info" href="https://github.com/golang/go/wiki/Learn" target="_blank">Golang Learn Links</a>
+    </div>
+    
+    
+    <div class="col-sm-3" >
+      <a class="text-info" href="https://github.com/golang" target="_blank">Go Source Code Git Link</a>
+    </div>
+    
+    
+    <div class="col-sm-3" >
+      <a class="text-info" href="https://gifm.dev/" target="_blank">Go in 5 minutes</a>
+    </div>
+    
+      <div class="col-sm-3" >
+      <a class="text-info" href="https://www.tutorialspoint.com/go/index.htm" target="_blank">Golang tutorial point</a>
+    </div>
+    
+    <div class="col-sm-3" >
+      <a class="text-info" href="https://exlskills.com/learn-en/courses/aap-learn-go-golang--learn_golang_asap" target="_blank">Exlskills Golang Learn Links</a>
+    </div>
+    
+    
+    <div class="col-sm-3" >
+      <a class="text-info" href="https://hackr.io/tutorials/learn-golang" target="_blank">Hacker.io Golang Learn Links</a>
+    </div>    
+    
+    
+    <div class="col-sm-3" >
+      <a class="text-info" href="http://www.golangbootcamp.com/book/" target="_blank">Golang boot camp book</a>
+    </div>  
+    
+    <div class="col-sm-3" >
+      <a class="text-info" href="https://golangbot.com/learn-golang-series/" target="_blank">Golang bot</a>
+    </div>  
+    
+    
+    <div class="col-sm-3" >
+      <a class="text-info" href="https://gophercises.com/" target="_blank">Golang exercises</a>
+    </div>  
+    
+    <div class="col-sm-3" >
+      <a class="text-info" href="https://yourbasic.org/" target="_blank">Algorithms to Go</a>
+    </div>  
+    
+    <div class="col-sm-3" >
+      <a class="text-info" href="https://www.youtube.com/playlist?list=PLzUGFf4GhXBL4GHXVcMMvzgtO8-WEJIoY" target="_blank">Golang rest api</a>
+    </div>  
+    
+    <div class="col-sm-3" >
+      <a class="text-info" href="https://www.youtube.com/watch?v=G3PvTWRIhZA&list=PLQVvvaa0QuDeF3hP0wQoSxpkqgRcgxMqX" target="_blank"> Sentdex
+ Golang Youtube</a>
+    </div>      
+    
+    
+    <div class="col-sm-3" >
+      <a class="text-info" href="https://tutorialedge.net/course/golang/" target="_blank">Golang tutorialedge</a>
+    </div>  
+    
+  </div>
+
+  
+<!--
+############################################################################################################
+-->  
+  
+  <br/>
+  <h3>Cassandra</h3>
+  <div class="row" id ="Cassandra">
+    
+    <div class="col-sm-3" >
+      <a class="text-info" href=# target="_blank">Cassandra Topic1</a>
+    </div>
+    
+  </div>
+    
+    
+
+<!--
+############################################################################################################
+-->  
+  
+  <br/>
+  <h3>Kubernetes</h3>
+  <div class="row" id ="Kubernetes">
+    
+    <div class="col-sm-3" >
+      <a class="text-info" href=# target="_blank">Kubernetes Topic1</a>
+    </div>
+    
+  </div>
+    
+
+<!--
+############################################################################################################
+-->  
+  
+  <br/>
+  <h3>Security</h3>
+  <div class="row" id ="Security">
+    
+    <div class="col-sm-3" >
+      <a class="text-info" href=# target="_blank">Security Topic1</a>
+    </div>
+    
+  </div>
+    
+ 
+<!--
+############################################################################################################
+-->  
+  
+  <br/>
+  <h3>Ansible</h3>
+  <div class="row" id ="Ansible">
+    
+    <div class="col-sm-3" >
+      <a class="text-info" href=# target="_blank">Ansible Topics1</a>
+    </div>
+    
+  </div>
+
+    
+<!--
+############################################################################################################
+-->  
+  
+  <br/>
+  <h3>Networking</h3>
+  <div class="row" id ="Networking">
+    
+    <div class="col-sm-3" >
+      <a class="text-info" href=# target="_blank">Network Topics1</a>
+    </div>
+    
+  </div>
+        
+
+  
+<!--
+############################################################################################################
+-->  
+  
+<br/>
+<h3>Web Development</h3>
+<div class="row" id ="Networking">
+  
+  <div class="col-sm-3" >
+    <a class="text-info" href="https://www.w3schools.com/html/tryit.asp?filename=tryhtml5_aside2" target="_blank">aside</a>
+  </div>
+  
+  <div class="col-sm-3" >
+    <a class="text-info" href="https://www.w3schools.com/html/html5_semantic_elements.asp" target="_blank">html5 semantic</a>
+  </div>
+
+  <div class="col-sm-3" >
+    <a class="text-info" href="https://www.w3schools.com/tags/tag_comment.asp" target="_blank">html tags</a>
+  </div>
+
+  <div class="col-sm-3" >
+    <a class="text-info" href="https://www.w3schools.com/tags/tryit.asp?filename=tryhtml5_details" target="_blank">click to expand with details tag</a>
+  </div>
+  
+  <div class="col-sm-3" >
+    <a class="text-info" href="https://www.w3schools.com/bootstrap4/bootstrap_utilities.asp" target="_blank">Bootstrap 4 Utilities</a>
+  </div>
+
+  
+  <div class="col-sm-3" >
+    <a class="text-info" href="https://www.silex.me/" target="_blank">silex web designer</a>
+  </div>
+  
+  <div class="col-sm-3" >
+    <a class="text-info" href="https://scrimba.com/learn/R8PTE" target="_blank"> css grid video tutorial1 </a>
+  </div>
+  
+  <div class="col-sm-3" >
+    <a class="text-info" href="https://cssgrid.io/" target="_blank"> css grid video tutorial1 </a>
+  </div>
+
+</div>
+
+
+<!--
+############################################################################################################
+-->  
+    
+</div>
+    
+
+
+<!--
+############################################################################################################
+############################################################################################################
+-->
+  
+  
+<!--
+<div class="container p-3 my-3 bg-dark text-white">
+  <h1>By Topics</h1>
+  <p>This container has a dark background color and a white text, and some extra padding and margins.</p>
+</div>
+  
+-->
+
+<!--
+############################################################################################################
+############################################################################################################
+-->  
+
+<!-- A script to search with id="mySearch"-->
+<!-- This need to be after the includeHTML() and combining both.-->
+<script>
+  $(document).ready(function(){
+      $("#myInput").on("keyup", function() {
+        var value = $(this).val().toLowerCase();
+        $("#mySearch *").filter(function() {
+          $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+        });
+      });
+    });
+  </script>
+  
+  <!--Here is Ends-->
+
+
+<!-- A function includeHTML.js-->
+<script>
+  includeHTML();
+</script>
+
+  
+  
+
+  <!--  Fill the data that you want to be in Footer Section-->
+  <div class="container">
+    
+    <div amitmund-include-html="https://amitmund.github.io/include_html/footer.html"></div>
+  
+  </div>
+  <!--  Fill the data that you want to be in Footer Section-->  
+  
+  
+  
+</body>
+
+<!--
+############################################################################################################
+############################################################################################################
+-->
+  
+</html>
+
+
+<!--
+############################################################################################################
+######################################## NOTES ARE DOWN FROM HERE ##########################################
+############################################################################################################
+-->
+
+<!--
+    This is for the example of the content of "styles.css"
+
+    body {
+        background-color: white;
+    }
+    h1 {
+      color: blue;
+    }
+    p {
+      color: red;
+    }
+-->
+
+
+
+<!-- 
+For Comment 
+
+jQuery and Popper?
+Bootstrap 4 use jQuery and Popper.js for JavaScript components (like modals, tooltips, popovers etc). However, if you just use the CSS part of Bootstrap, you don't need them.
+
+
+The width=device-width part sets the width of the page to follow the screen-width of the device (which will vary depending on the device).
+The initial-scale=1 part sets the initial zoom level when the page is first loaded by the browser.
+
+The .container class provides a responsive fixed width container
+The .container-fluid class provides a full width container, spanning the entire width of the viewport
+
+
+By default, containers have 15px left and right padding, with no top or bottom padding. Therefore, we often use spacing utilities, such as extra padding and margins to make them look even better. For example, .pt-3 means "add a top padding of 16px":
+
+<div class="container pt-3"></div>
+
+
+Bootstrap's grid system is built with flexbox and allows up to 12 columns across the page.
+
+
+    <div class="col" style="background-color:lavender;">.col</div>
+    <div class="col" style="background-color:orange;">.col</div>
+
+
+### Text color:
+
+<div class="container">
+  <h2>Contextual Colors</h2>
+  <p>Use the contextual classes to provide "meaning through colors":</p>
+  <p class="text-muted">This text is muted.</p>
+  <p class="text-primary">This text is important.</p>
+  <p class="text-success">This text indicates success.</p>
+  <p class="text-info">This text represents some information.</p>
+  <p class="text-warning">This text represents a warning.</p>
+  <p class="text-danger">This text represents danger.</p>
+  <p class="text-secondary">Secondary text.</p>
+  <p class="text-dark">This text is dark grey.</p>
+  <p class="text-body">Default body color (often black).</p>
+  <p class="text-light">This text is light grey (on white background).</p>
+  <p class="text-white">This text is white (on white background).</p>
+</div>
+
+
+## For hyperlink:
+ <a href="#" class="text-info">Info link.</a>
+
+
+<div class="container">
+  <h2>Contextual Backgrounds</h2>
+  <p>Use the contextual background classes to provide "meaning through colors".</p>
+  <p>Note that you can also add a .text-* class if you want a different text color:</p>
+  <p class="bg-primary text-white">This text is important.</p>
+  <p class="bg-success text-white">This text indicates success.</p>
+  <p class="bg-info text-white">This text represents some information.</p>
+  <p class="bg-warning text-white">This text represents a warning.</p>
+  <p class="bg-danger text-white">This text represents danger.</p>
+  <p class="bg-secondary text-white">Secondary background color.</p>
+  <p class="bg-dark text-white">Dark grey background color.</p>
+  <p class="bg-light text-dark">Light grey background color.</p>
+</div>
+
+
+## https://www.w3schools.com/bootstrap4/bootstrap_alerts.asp
+
+  <div class="alert alert-success">
+    <strong>Success!</strong> This alert box could indicate a successful or positive action.
+  </div>
+  <div class="alert alert-info">
+    <strong>Info!</strong> This alert box could indicate a neutral informative change or action.
+  </div>
+  <div class="alert alert-warning">
+    <strong>Warning!</strong> This alert box could indicate a warning that might need attention.
+  </div>
+  <div class="alert alert-danger">
+    <strong>Danger!</strong> This alert box could indicate a dangerous or potentially negative action.
+  </div>
+  <div class="alert alert-primary">
+    <strong>Primary!</strong> Indicates an important action.
+  </div>
+  <div class="alert alert-secondary">
+    <strong>Secondary!</strong> Indicates a slightly less important action.
+  </div>
+  <div class="alert alert-dark">
+    <strong>Dark!</strong> Dark grey alert.
+  </div>
+  <div class="alert alert-light">
+    <strong>Light!</strong> Light grey alert.
+  </div>
+</div>
+
+
+## https://www.w3schools.com/bootstrap4/bootstrap_buttons.asp
+
+  <button type="button" class="btn">Basic</button>
+  <button type="button" class="btn btn-primary">Primary</button>
+  <button type="button" class="btn btn-secondary">Secondary</button>
+  <button type="button" class="btn btn-success">Success</button>
+  <button type="button" class="btn btn-info">Info</button>
+  <button type="button" class="btn btn-warning">Warning</button>
+  <button type="button" class="btn btn-danger">Danger</button>
+  <button type="button" class="btn btn-dark">Dark</button>
+  <button type="button" class="btn btn-light">Light</button>
+  <button type="button" class="btn btn-link">Link</button>
+
+
+
+## https://www.w3schools.com/bootstrap4/bootstrap_badges.asp
+
+<span class="badge badge-primary">Primary</span>
+<span class="badge badge-secondary">Secondary</span>
+<span class="badge badge-success">Success</span>
+<span class="badge badge-danger">Danger</span>
+<span class="badge badge-warning">Warning</span>
+<span class="badge badge-info">Info</span>
+<span class="badge badge-light">Light</span>
+<span class="badge badge-dark">Dark</span>
+
+
+### https://www.w3schools.com/bootstrap4/bootstrap_progressbars.asp
+
+<div class="progress">
+  <div class="progress-bar" style="width:70%"></div>
+</div>
+
+
+  <div class="progress">
+    <div class="progress-bar progress-bar-striped progress-bar-animated" style="width:40%"></div>
+  </div>
+
+
+### https://www.w3schools.com/bootstrap4/bootstrap_spinners.asp
+
+  <div class="spinner-border text-muted"></div>
+  <div class="spinner-border text-primary"></div>
+  <div class="spinner-border text-success"></div>
+  <div class="spinner-border text-info"></div>
+  <div class="spinner-border text-warning"></div>
+  <div class="spinner-border text-danger"></div>
+  <div class="spinner-border text-secondary"></div>
+  <div class="spinner-border text-dark"></div>
+  <div class="spinner-border text-light"></div>
+
+
+### https://www.w3schools.com/bootstrap4/bootstrap_dropdowns.asp
+
+<div class="dropdown">
+  <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+    Dropdown button
+  </button>
+  <div class="dropdown-menu">
+    <a class="dropdown-item" href="#">Link 1</a>
+    <a class="dropdown-item" href="#">Link 2</a>
+    <a class="dropdown-item" href="#">Link 3</a>
+  </div>
+</div>
+
+
+
+### For filtering
+
+https://www.w3schools.com/bootstrap4/bootstrap_filters.asp
+
+
+
+
+
+-->
+
+
+
+<!--
+    <div class="container">
+        <h1>My Readme Notes</h1>
+        <p>This is some text.</p>
+    </div>
+-->
+
+
+
+<!--
+############################################################################################################
+############################################## NOTES ENDS HERE #############################################
+############################################################################################################
+-->
+
+
