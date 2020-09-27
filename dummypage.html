@@ -111,8 +111,14 @@
           <a href="#">SpaceX</a><br/>
           <a href="#">Tesla</a><br/>
           <a href="#">checking for a long string</a><br/>
-          <a href="javascript:void(0);" onclick="aboutpage();">About</a><br/>
+          <a class="gridMenuaAboutPage " href="javascript:void(0);" onclick="aboutpage();">About</a><br/>
         </div>
+
+        <!-- <div class="container px-3 gridMenu1">
+          
+        </div>
+         -->
+
         <!--Fill the data that you want to be in left Menu  -->
 
 
@@ -160,89 +166,7 @@ package main(){
 <!-- myCode div-->
 
  
-          
-<!--   again       -->
-          
-<!-- myContent div-->
-<div class="myContent">
-<h5> Part of the main grid.</h5>
-
-<p>
-Hello world in Golang.
-
-The first line <code>package main</code>, is telling you, as what package this code can be re-used as.
-
-<code>import</code>, this is use to import different packages. Example fmt.
-
-<code> package function_name</code>, over here we declare about logic of that function.
-</p>
-</div>
-<!-- myContent div-->
-          
-          
-<!-- myCode div-->
-<div class="myCode">
-<pre>
-
-package main
-
-include (
-  "fmt"
-)
-
-package main(){
-  fmt.Println("Hello Wold")
-}
-
-</pre>
-
-</div>
-<!-- myCode div-->
-
-<!--   again       -->
-          
- 
-<!--   again       -->
-          
-<!-- myContent div-->
-<div class="myContent">
-<h5> Part of the main grid.</h5>
-
-<p>
-Hello world in Golang.
-
-The first line <code>package main</code>, is telling you, as what package this code can be re-used as.
-
-<code>import</code>, this is use to import different packages. Example fmt.
-
-<code> package function_name</code>, over here we declare about logic of that function.
-</p>
-</div>
-<!-- myContent div-->
-          
-          
-<!-- myCode div-->
-<div class="myCode">
-<pre>
-
-package main
-
-include (
-  "fmt"
-)
-
-package main(){
-  fmt.Println("Hello Wold")
-}
-
-</pre>
-
-</div>
-<!-- myCode div-->
-
-<!--   again       -->
-          
-          
+                  
         </div> 
         <!--Fill the data that you want to be in Main Session-->
 
@@ -293,15 +217,47 @@ package main(){
   includeHTML();
 </script>
 
+
+        <!-- 
+          <div class="container px-3 gridMenu">
+          <a href="#">Apple</a><br/>
+          <a href="#">Amazon</a><br/>
+          <a href="#">Google</a><br/>
+          <a href="#">Facebook</a><br/>
+          <a href="#">LinkedIn</a><br/>
+          <a href="#">SpaceX</a><br/>
+          <a href="#">Tesla</a><br/>
+          <a href="#">checking for a long string</a><br/>
+          <a class="gridMenuaAboutPage " href="javascript:void(0);" onclick="aboutpage();">About</a><br/>       
+ </div> 
+-->
+
+
+
+<!-- <script>
+  $(document).ready(
+    function(){
+      $('.gridMenu1').click(
+        function(){
+        $('.$Main').load('aboutus.html');
+        }
+      );
+    }
+  );
+</script> -->
+
+  <!--OR for the above script  -->
+
 <script>
   $(document).ready(function(){
-    $('.gridMenu').click(function(){
-      $('.$Main').load('aboutus.html');
-    });
+      $('.gridMenu').click(function(){
+        $(.'Main').load('https://amitmund.github.io/aboutius.html')
+      })
   });
+
 </script>
 
-  
+
 </body>
 
     
