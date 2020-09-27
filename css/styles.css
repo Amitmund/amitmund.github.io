@@ -27,7 +27,6 @@ Why, over here, because for sure I will be reading this page for ever.
   box-sizing: border-box;
   font-weight: 300;
   font-family: sans-serif;
-  height: 100%;
 }
 
 html {
@@ -41,6 +40,7 @@ body {
   background-color: white;
   font-size: 14px;
   line-height: 22px;
+  height: 100%;
 }
 
 
