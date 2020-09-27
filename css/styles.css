@@ -29,6 +29,8 @@ Why, over here, because for sure I will be reading this page for ever.
   font-family: sans-serif;
 }
 
+
+
 html {
   background-color: white;
   color: #555;
@@ -40,6 +42,7 @@ body {
   background-color: white;
   font-size: 14px;
   line-height: 22px;
+  min-height: 100%;
 }
 
 
