@@ -331,7 +331,6 @@ pre {
 }
 
 
-
 .author img {
   padding-top: 30px;
   width: 80px;
@@ -340,12 +339,17 @@ pre {
   border-radius: 50%;
   padding: 1px;
   float: left;
+  background-color: #343a40!important;
+  color: rgba(255, 255, 255, 0.5);
 }
+
 
 .footer-text {
   padding: 20px;
   padding-left: 10px;
   float: left;
+  background-color: #343a40!important;
+  color: rgba(255, 255, 255, 0.5);
 
 }
 
