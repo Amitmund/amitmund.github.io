@@ -8,27 +8,27 @@
 $(document).ready(function(){
 
 	// for golangIntroduction class.
-	$('#id_golangIntroduction').click(function(){
+	$('#golangIntroduction').click(function(){
 		$('.Main').load('https://amitmund.github.io/blog/learnings/golang/golangIntroduction.html')
 	});
 
 	// and so on for rest of the links.
-	$('#id_golangEnvironmentSetup').click(function(){
+	$('#golangEnvironmentSetup').click(function(){
 		$('.Main').load('https://amitmund.github.io/blog/learnings/golang/golangEnvironmentSetup.html')
 	});
 
 	// and so on for rest of the links.
-	$('#id_golangBuild').click(function(){
+	$('#golangBuild').click(function(){
 		$('.Main').load('https://amitmund.github.io/blog/learnings/golang/golangBuild.html')
 	 });
 
 	// and so on for rest of the links.
-	$('#id_golangVariables').click(function(){
+	$('#golangVariables').click(function(){
 		$('.Main').load('https://amitmund.github.io/blog/learnings/golang/golangVariables.html')
 	 });
 
 	// and so on for rest of the links.
-	$('#id_golangPackage').click(function(){
+	$('#golangPackage').click(function(){
 		$('.Main').load('https://amitmund.github.io/blog/learnings/golang/golangPackage.html')
 	});
 
