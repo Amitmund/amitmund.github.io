@@ -267,7 +267,7 @@ https://learncssgrid.com/
 
 .grid-container {
   display: grid;
-  grid-template-columns: 35% 65%;
+  grid-template-columns: 20% auto;
 /*
   grid-gap: 10px;
   margin-top: 20px;

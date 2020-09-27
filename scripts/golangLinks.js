@@ -7,6 +7,9 @@ $(document).ready(function(){
 	$('#golangIntroduction').click(function(){
 		$('.Main').load('https://amitmund.github.io/blog/learnings/golang/golangIntroduction.html')
 	});
+});
+
+$(document).ready(function(){
 
 	// and so on for rest of the links.
 	$('#golangEnvironmentSetup').click(function(){
