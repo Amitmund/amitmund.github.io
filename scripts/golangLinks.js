@@ -1,3 +1,5 @@
+// https://stackoverflow.com/questions/17600264/why-jquery-click-doesnt-work-when-included-in-a-separate-file
+
 $(document).ready(function(){
 
 	$('golangIntroduction').click(function(){
