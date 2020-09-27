@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Golang</title>
+
+
+
+<!--
+############################################################################################################
+############################################################################################################
+-->
+  
+<head>
+
+  <meta charset="utf-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <meta http-equiv="X-UA-Compatible" content="ie=edge"
+  
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  
+  <!-- Popper JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  
+  <!-- To link the your own css -->
+ <link rel="stylesheet" href="https://amitmund.github.io/css/styles.css">
+  
+  <!-- To link the your own js -->
+  <script src="https://amitmund.github.io/scripts/includeHTML.js"></script>
+
+	  <!-- To link the your own js -->
+		<script src="https://amitmund.github.io/scripts/golangLinks.js"></script>
+
+  <!-- 
+    Note: If I use the above generic within a html file and then call them using my "includeHTML()" getting error with the search features.
+    So, just use the same head block at every pages.
+  -->
+
+</head>
+    
+
+<!--
+############################################################################################################
+############################################################################################################
+-->
+	
+<body>
+ 
+  	<!--
+	############################################################################################################
+	############################################# Navigation ###################################################
+	############################################################################################################
+	### Note: Including the navigation.html, which work with includeHTML.js ###
+	-->
+		
+    <div amitmund-include-html="./include_html/navigation.html"></div>
+  
+
+<!--
+############################################################################################################
+############################################################################################################
+-->
+
+    <!--A place holder before the Header  -->
+  <div class="container-fluid">
+    
+<!--
+    <div class="alert alert-info">
+    <strong>Note!</strong> We are still in development of this page.
+    </div>
+  
+-->
+    
+  </div>
+  <!--Fill the data that you want to be in notice  -->
+  
+  
+ 
+<!--
+############################################################################################################
+############################################################################################################
+-->  
+
+<!-- ########## menuAndMain ########## -->
+<div class="container menuAndMain p-3 my-3">
+  
+      <!--For all grid layout-->
+      <div class="grid-container">
+
+
+      <!--
+      ############################################################################################################
+      -->    
+
+
+        
+        <!--Fill the data that you want to be in left Menu  -->
+        <div class="container px-3 gridMenu">
+          <a class="golangIntroduction" href="javascript:void(0);" onclick="golangIntroduction();">Introduction</a><br/>
+          <a class="golangEnvironmentSetup" href="javascript:void(0);" onclick="golangEnvironmentSetup();">EnvironmentSetup</a><br/>
+          <a class="golangBuild" href="javascript:void(0);" onclick="golangBuiding();">Build</a><br/>
+          <a class="golangVariables" href="javascript:void(0);" onclick="golangVariables();">Variables</a><br/>
+          <a class="golangPackage" href="javascript:void(0);" onclick="golangPackaging();">Packaging</a><br/>
+          <a class="golangPackaging" href="javascript:void(0);" onclick="golangPackaging();">Array</a><br/>
+        </div>
+
+        <!-- <div class="container px-3 gridMenu1">
+          
+        </div>
+         -->
+
+        <!--Fill the data that you want to be in left Menu  -->
+
+
+        
+        
+
+        <!--Fill the data that you want to be in Main Session-->
+        <div class="container px-3 Main">
+          
+          
+<!-- myContent div-->
+<div class="myContent">
+<h5> Part of the main grid.</h5>
+
+<p>
+Hello world in Golang.
+
+The first line <code>package main</code>, is telling you, as what package this code can be re-used as.
+
+<code>import</code>, this is use to import different packages. Example fmt.
+
+<code> package function_name</code>, over here we declare about logic of that function.
+</p>
+</div>
+<!-- myContent div-->
+          
+          
+<!-- myCode div-->
+<div class="myCode">
+<pre>
+
+package main
+
+include (
+  "fmt"
+)
+
+package main(){
+  fmt.Println("Hello Wold")
+}
+
+</pre>
+
+</div>
+<!-- myCode div-->
+
+ 
+                  
+        </div> 
+        <!--Fill the data that you want to be in Main Session-->
+
+
+        
+      
+      <!--
+      ############################################################################################################
+      -->  
+
+
+      </div>
+      <!--For all grid layout-->	
+
+
+      <!--
+      ############################################################################################################
+      -->  
+  
+
+</div>
+<!-- ########## menuAndMain ########## -->
+  
+<!--
+############################################################################################################
+############################################################################################################
+-->  
+  
+  
+  <!--  Fill the data that you want to be in Footer Section-->
+  <div class="container">
+    
+    <div amitmund-include-html="https://amitmund.github.io/include_html/footer.html"></div>
+  
+  </div>
+  <!--  Fill the data that you want to be in Footer Section-->
+
+  
+
+  
+<!--
+############################################################################################################
+############################################################################################################
+-->  
+
+<!-- A function includeHTML.js-->
+<script>
+  includeHTML();
+</script>
+
+
+<!-- <script>
+  $(document).ready(function(){
+      $('.gridMenuaAboutPage').click(function(){
+        $('.Main').load('https://amitmund.github.io/aboutus.html')
+			})
+  });
+</script> -->
+
+
+</body>
+
+    
+<!--
+############################################################################################################
+############################################################################################################
+-->
+  
+</html>
