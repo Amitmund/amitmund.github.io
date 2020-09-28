@@ -305,13 +305,14 @@ code {
 }
 
 pre {
-  background-color: rgb(239, 254, 206);
+  background-color: rgb(238, 254, 206);
   color: rgb(46, 46, 46);
 /*  border-radius: 3px;*/
 /*  padding: 2rem 3px;*/
   padding-left: 2rem;
   font-weight: 300 !important;
-  font-family: 'Fira Code', monospace;
+  /* font-family: monospace,SFMono-Regular,"Fira Code", "menlo"; */
+  
 }
 
 
