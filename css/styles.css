@@ -305,7 +305,7 @@ code {
 }
 
 pre {
-  background-color: rgb(231, 242, 250);
+  background-color: rgba(231, 242, 250, 0.8);
   color: rgb(46, 46, 46);
   /* background-color: rgb(238, 254, 206);
   color: rgb(46, 46, 46); */
