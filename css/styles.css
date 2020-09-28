@@ -313,7 +313,8 @@ pre {
   color: rgb(238, 238, 238); */
   padding-left: 2rem;
   font-weight: 300 !important;
-  /* font-family: monospace,SFMono-Regular,"Fira Code", "menlo"; */
+  font-family: "Fira Code",monospace,SFMono-Regular;
+  font-size: 16px;
   
 }
 
