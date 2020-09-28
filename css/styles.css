@@ -305,8 +305,8 @@ code {
 }
 
 pre {
-  background-color: rgba(238, 238, 238, 0.1);
-  color: #000;
+  background-color: rgb(239, 254, 206);
+  color: rgb(46, 46, 46);
 /*  border-radius: 3px;*/
 /*  padding: 2rem 3px;*/
   padding-left: 2rem;
