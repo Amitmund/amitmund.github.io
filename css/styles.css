@@ -280,7 +280,7 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_grid_layout_named
 /* to pushing the footer at the bottom */
   flex-direction: column;
   display: flex;
-  min-height: 100vh;
+  min-height: 80vh;
 }
 
 .gridMain { 
