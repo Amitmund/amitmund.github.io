@@ -325,7 +325,7 @@ code {
   color: #ff7b29;
   font-size: 100%;
   font-weight: 300 !important;
-  font-family: sans-serif !important;
+  font-family: "Fira Code",monospace,SFMono-Regular !important;
 }
 
 pre {
