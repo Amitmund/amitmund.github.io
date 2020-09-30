@@ -9,7 +9,7 @@ $(document).ready(function(){
 
 	// For the links.
 	$('#readmeGod22Steps').click(function(){
-		$('.Main').load('https://amitmund.github.io/blog/readme/god/22Steps.html')
+		$('.Main').load('https://amitmund.github.io/blog/readme/god/22Steps.html');
 	});
 
 
