@@ -282,7 +282,8 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_grid_layout_named
   display: flex;
   min-height: 70vh;
   overflow-x: hidden;
-  overflow-y: scroll;
+  overflow-y: auto;
+  position: fixed !important;
 }
 
 .gridMain { 
