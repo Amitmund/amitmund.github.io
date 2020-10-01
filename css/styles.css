@@ -198,7 +198,7 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_grid_layout_named
 .gridMenu { 
   grid-area: menu;
   text-align: justify;
-  padding-left: 25%;
+  padding-left: 10px;
   padding-top: 2rem;
 /*  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);*/
 /* to pushing the footer at the bottom */
