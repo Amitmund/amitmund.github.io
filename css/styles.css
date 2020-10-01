@@ -281,7 +281,11 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_grid_layout_named
   flex-direction: column;
   display: flex;
   min-height: 70vh;
-  overflow: scroll;
+  position: fixed;
+  width: 150px;
+  overflow-y: scroll;
+  top: 0;
+  bottom: 0;
 }
 
 .gridMain { 
