@@ -11,8 +11,10 @@
 
 
 html {
-  background-color: white;
-  color: #555;
+  background-color: rgba(45, 47, 61);
+  color: rgba(233, 236, 251);
+  /* background-color: white;
+  color: #555; */
   text-rendering: optimizeLegibility;
   align-self: stretch;
 }
@@ -33,7 +35,7 @@ body {
 
 
 a {
-  color: rgba(100, 149, 237, .99);
+  color: rgba(22, 147, 134);
 }
 
 
