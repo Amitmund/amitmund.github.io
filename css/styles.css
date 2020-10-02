@@ -244,6 +244,7 @@ code {
 
 pre {
   background-color: rgba(37,42,51);
+  color: rgba(233, 236, 251);
   padding-left: 2rem;
   font-weight: 300 !important;
   font-family: "Fira Code",monospace,SFMono-Regular;
