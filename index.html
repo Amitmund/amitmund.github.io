@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<title>Reading Links</title>
+<title>Amit Mund</title>
 
 
 
@@ -18,6 +18,9 @@
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   
+  <!-- To link the your own css -->
+  <link rel="stylesheet" href="css/styles.css">
+
   <!-- jQuery library -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   
@@ -27,9 +30,6 @@
   <!-- Latest compiled JavaScript -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   
-  <!-- To link the your own css -->
-  <link rel="stylesheet" href="./css/styles.css">
-
   <!-- To link the your own js -->
   <script src="./scripts/includeHTML.js"></script>
 
@@ -57,7 +57,7 @@
 -->
   
 <div class="nav-menu"> 
-  <div amitmund-include-html="./include_html/navigation.html"></div>
+  <div amitmund-include-html="https://amitmund.github.io/include_html/navigation.html"></div>
 </div> 
 
 <!--
@@ -74,7 +74,7 @@ https://www.w3schools.com/bootstrap4/bootstrap_utilities.asp
   <div class="col-xs-1" align="center" >
     <h1 style="color:cornflowerblue; text-align:center">Bookmarks Search</h1>
   </div>
-  <input class="form-control" id="myInput" type="text" placeholder="Search..">
+  <input class="form-control" id="myInput" type="text" placeholder="Bookmarks Search..">
   
   <!-- This jquery script is needed. 
       Keeping the same script at the end of this page.
@@ -460,6 +460,22 @@ $(document).ready(function(){
 ############################################################################################################
 -->  
 
+
+
+  <!--  Fill the data that you want to be in Footer Section-->
+  <div class="container-fluid">
+    
+    <div amitmund-include-html="https://amitmund.github.io/include_html/footer.html"></div>
+  
+  </div>
+  <!--  Fill the data that you want to be in Footer Section-->  
+  
+<!-- 
+ ----------------------------------------------------------------------------------------------------------------------
+ -->
+  
+<!-- scripts -->
+
 <!-- A script to search with id="mySearch"-->
 <!-- This need to be after the includeHTML() and combining both.-->
 <script>
@@ -481,16 +497,6 @@ $(document).ready(function(){
   includeHTML();
 </script>
 
-  
-  
-
-  <!--  Fill the data that you want to be in Footer Section-->
-  <div class="container-fluid">
-    
-    <div amitmund-include-html="./include_html/footer.html"></div>
-  
-  </div>
-  <!--  Fill the data that you want to be in Footer Section-->  
   
   
   
