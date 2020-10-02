@@ -23,21 +23,35 @@ html {
 body {
   background-color: rgba(45, 47, 61);
   color: rgba(233, 236, 251);
-  font-size: 16px;
+  font-size: 15px;
   line-height: 22px;
 }
 
+/* ----------------------------------------------------------- */
+/* ----------------------------------------------------------- */
 
-.navbar-dark .bg-dark{
+.dropdown-menu {
   background-color: rgba(45, 47, 61) !important;
-  color: rgba(233, 236, 251) !important;
 }
 
-.nav .nav-link {
+
+.dropdown-item {
+  font-weight: 300;
+}
+
+/* this is for the navbar settings */
+.nav, .nav-link, .navbar {
   font-weight: 300 !important;
-  font-family: sans-serif !important;  
+  font-family: sans-serif !important;
+  background-color: rgba(22, 147, 134) !important;
+  color: rgba(233, 236, 251) !important;  
 }
 
+.navbar a:hover {
+  color: rgba(45, 47, 61) !important;
+}
+/* ----------------------------------------------------------- */
+/* ----------------------------------------------------------- */
 
 a {
   color: rgba(22, 147, 134) !important;
@@ -45,7 +59,10 @@ a {
 
 
 a:hover {
-  color: #ff7b29 !important;
+  color: rgba(255,255,255)!important;
+  /* color: #ff7b29 !important; */
+  /* color: cornflowerblue !important; */
+
 }
 
 /* ----------------------------------------------------------- */
@@ -56,9 +73,9 @@ h1 {
 }
 
 
-h3 {
+/* h3 {
   color: #AE4A57;
-}
+} */
 
 
 
@@ -236,6 +253,8 @@ code {
 }
 
 pre {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
   background-color: rgba(37,42,51);
   color: rgba(233, 236, 251);
   padding-left: 2rem;
@@ -244,6 +263,9 @@ pre {
   
 }
 
+body ul, body ol {
+  padding-left: 2rem;
+}
 
 /* ----------------------------------------------------------- */
 /* ----------------------------------------------------------- */
