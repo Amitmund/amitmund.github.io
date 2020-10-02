@@ -27,11 +27,14 @@ body {
 }
 
 
+.navbar-dark .bg-dark{
+  background-color: rgba(45, 47, 61) !important;
+  color: rgba(233, 236, 251) !important;
+}
+
 .nav .nav-link {
   font-weight: 300 !important;
-  font-family: sans-serif !important;
-  background-color: transparent !important;
-  
+  font-family: sans-serif !important;  
 }
 
 
