@@ -20,7 +20,8 @@ html {
 }
 
 body {
-  background-color: white;
+  background-color: rgba(45, 47, 61);
+  color: rgba(233, 236, 251);
   font-size: 14px;
   line-height: 22px;
 }
