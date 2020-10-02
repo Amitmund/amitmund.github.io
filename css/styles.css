@@ -13,15 +13,13 @@
 html {
   background-color: rgba(45, 47, 61);
   color: rgba(233, 236, 251);
-  /* background-color: white;s
+  /* background-color: white;
   color: #555; */
   text-rendering: optimizeLegibility;
   align-self: stretch;
 }
 
 body {
-  background-color: rgba(45, 47, 61);
-  color: rgba(233, 236, 251);
   font-size: 14px;
   line-height: 22px;
 }
@@ -147,24 +145,6 @@ img {
 
 
 
-/* Modify the backgorund color */ 
-
-.navbar-custom { 
-    background-color: rgba(0, 0, 0, 0.7); 
-} 
-
-.navbar-custom .navbar-text { 
-  color: white
-} 
-/*    color: white !important; */
-/* Modify the backgorund color */
-
-
-/* ----------------------------------------------------------- */
-/* ----------------------------------------------------------- */
-
-
-
 /*For Alert message to the Website Visitor.*/
 
 .alert{
@@ -239,17 +219,6 @@ https://learncssgrid.com/
   grid-template-areas:
     "menu main"
 }
-
-
-
-
-/*
-.grid-container > div {
-  background-color: rgba(255, 255, 255, 0.8);
-  padding: 20px 0;
-}
-*/
-
 
 
 /*
