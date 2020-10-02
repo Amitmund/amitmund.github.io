@@ -6,7 +6,10 @@
   padding: 0;
   box-sizing: border-box;
   font-weight: 300;
-  font-family: sans-serif;
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  font-size: .5rem;
+  line-height: 22px;
 }
 
 
@@ -22,8 +25,6 @@ html {
 body {
   background-color: rgba(45, 47, 61);
   color: rgba(233, 236, 251);
-  font-size: 14px;
-  line-height: 22px;
 }
 
 
