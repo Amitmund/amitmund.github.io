@@ -7,8 +7,7 @@
   box-sizing: border-box;
   font-weight: 300;
   font-family: 'Roboto', sans-serif;
-  font-size: 18px;
-  line-height: 22px;
+
 }
 
 
@@ -24,6 +23,8 @@ html {
 body {
   background-color: rgba(45, 47, 61);
   color: rgba(233, 236, 251);
+  font-size: 18px;
+  line-height: 22px;
 }
 
 
