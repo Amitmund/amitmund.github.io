@@ -248,7 +248,7 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_grid_layout_named
 .gridMenu { 
   grid-area: menu;
   text-align: justify;
-  padding-left: 1vh;
+  padding-left: 8vw;
   padding-top: 14vh;
 /*  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);*/
 /* to pushing the footer at the bottom */
@@ -521,7 +521,7 @@ https://stackoverflow.com/questions/44093352/image-floor-fade-color-blend-with-b
   /* ----------------------------------------------------------- */
 
  body {
-  font-size: 13px;
+  font-size: 11px;
   line-height: 19px;
   }
   
@@ -535,6 +535,21 @@ https://stackoverflow.com/questions/44093352/image-floor-fade-color-blend-with-b
 }
   /* ----------------------------------------------------------- */
 
+.gridMenu { 
+  grid-area: menu;
+  text-align: justify;
+  padding-left: 1px;
+  padding-top: 14vh;
+  flex-direction: column;
+  display: flex;
+  min-height: 88vh; 
+  overflow-y: scroll;
+  top: 0;
+  bottom: 0;
+}
+  /* ----------------------------------------------------------- */
+  
+  
 .gridMain { 
   grid-area: main;
   text-align: justify;
@@ -543,6 +558,14 @@ https://stackoverflow.com/questions/44093352/image-floor-fade-color-blend-with-b
   padding-right: 0px;
   }
   
+  /* ----------------------------------------------------------- */
+pre {
+  padding-left: 1px;
+  padding-right: 1px;
+  font-weight: 300 !important;
+  font-family: "Fira Code",monospace,SFMono-Regular;
+}
+
   /* ----------------------------------------------------------- */
 
   
