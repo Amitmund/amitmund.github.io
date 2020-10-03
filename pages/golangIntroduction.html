@@ -13,54 +13,53 @@
 			<h5> Golang Introduction</h5>
 
 			<p>
-			Lets see a quick <b>Hello World</b> example. Overhere you will see something like <b>package main</b>,which is telling you, as what package this b can be re-used as.
-			
-			<ul>
-
-				<li>
-					<b>import</b>, this is use to import different packages. Example fmt.
-				</li> 
-				<li>
-					<b> package function_name</b>, over here we declare about logic of that function.
-				</li>
-				
-			</ul>
-
-			<ol>
-
-				<li>
-					<b>import</b>, this is use to import different packages. Example fmt.
-				</li> 
-				<li>
-					<b> package function_name</b>, over here we declare about logic of that function.
-				</li>
-				
-			</ol>
-
+			Lets go through the following <b>Hello World</b> example. 
 			</p>
+		</section>
 
-			<backquote>
-				import</b>, this is use to import different packages. Example fmt.
-			</backquote>
+			
 
-		</section>	
-
-		<section>
+<section>
 <pre>
 
 package main
 
-include (
+import (
 	"fmt"
 )
 
-package main(){
+func main() {
 	fmt.Println("Hello Wold")
 }
 
 </pre>
+</section>
+
+
+
+		<section>
+
+			<blockquote>
+					Program execution begins by initializing the <b>main package</b>  and then invoking the <b>function main</b>. When that function invocation returns, the program exits. It does <b>not wait</b> for other (non-main) goroutines to complete.
+			</blockquote>
+		
+		<ul>
+
+			<li>
+				To <b>run</b> the program, you can copy this code to <b>helloWorld.go</b>, and later you can use <b>go run helloWorld.go</b>. 
+			</li> 
+
+			<li>
+				<b>import</b>, this is used to import different packages. Example fmt.
+			</li> 
+			
+		</ul>
+
 		</section>
 
+		<blockquote>
+			<b>import</b>, this is use to import different packages. Example fmt.
+		</blockquote>
 
 	</article>
 </div>
