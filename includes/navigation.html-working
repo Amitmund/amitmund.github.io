@@ -1,3 +1,5 @@
+## Latest working one ##
+
 
 <!-- ------------------------------------------------------------------------------------------------------------ -->  
 
@@ -22,9 +24,8 @@
 
 <!--Top Navigation -->
 <!--<nav class="navbar navbar-expand-sm navbar-custom fixed-top">-->
-<!--<nav class="navbar navbar-expand-md navbar-dark bg-dark">-->
- <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
- 
+<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+  
     <!-- ----------------------------------------------------------------------- -->  
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsingNavbar">
         <span class="navbar-toggler-icon"></span>
@@ -90,14 +91,12 @@
       
           <!-- ----------------------------------------------------------------------- -->  
           <!--For Right side-->
-          <!--https://getbootstrap.com/docs/4.5/components/dropdowns/#menu-alignment-->
         <ul class="navbar-nav ml-auto">
               <a class="nav-link dropdown-toggle" href="" id="navbardrop" data-toggle="dropdown">About</a>
-              <div class="dropdown-menu dropdown-menu-right">
-                <a class="dropdown-item" href="">AmitMund</a>
-                <a class="dropdown-item" href="">Works</a>
-                <!-- <div class="dropdown-divider"></div> -->
-                <a class="dropdown-item" href="">Organization</a>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="">Me</a>
+                <a class="dropdown-item" href="">Myself</a>
+                <a class="dropdown-item" href="">And</a>
               </div>
         </ul>
       
@@ -113,4 +112,109 @@
 
 
 <!-- ------------------------------------------------------------------------------------------------------------ -->  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## First gen ##
+<!-- ------------------------------------------------------------------------------------------------------------ -->  
+
+<!--For the alert message for your website visitor.-->
+<!--Comment or Uncomment the following, based message to be needed.-->
+
+  <!-- ------------------------------------------------------------------------------------------------------------ -->  
+
+  <!-- <div class="alert alert-danger ">
+    <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;
+    </span> 
+    <strong>Note!</strong> Upcoming maintenance on Newyear Day.
+  </div> -->
+
+  <!-- ------------------------------------------------------------------------------------------------------------ -->  
+
+
+<!--For the alert message for your website visitor.-->
+
+<!-- ------------------------------------------------------------------------------------------------------------ -->  
+
+
+<!--Top Navigation -->
+<!--<nav class="navbar navbar-expand-sm navbar-custom fixed-top">-->
+<nav class="navbar navbar-expand-sm  bg-dark navbar-dark sticky-top">
+
+  <!-- Links -->
+  <ul class="navbar-nav"> 
+    
+    <li class="nav-item">
+      <a class="nav-link" href="/">Home</a>
+    </li>
+
+    <!-- Dropdown -->
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown"> Learnings </a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="/pages/golang.html">Golang</a>
+        <a class="dropdown-item" href="/pages/html.html">Html</a>
+        <a class="dropdown-item" href="#">Linux</a>
+        <a class="dropdown-item" href="#">Templates</a>
+      </div>
+    </li>
+
+
+
+    <!-- Dropdown -->
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown"> Memories </a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="#">Samvrita</a>
+        <a class="dropdown-item" href="#">Family</a>
+      </div>
+    </li>
+
+
+
+    <!-- Dropdown -->
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown"> KldBlr </a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="#">Nuakhai 2019</a>
+        <a class="dropdown-item" href="#">Nuakhai 2018</a>
+      </div>
+    </li>
+
+
+    
+    <!-- Dropdown -->
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown"> ReadMe </a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="#">God</a>
+        <a class="dropdown-item" href="#">Abcd</a>
+        <a class="dropdown-item" href="#">Health</a>
+      </div>
+    </li>
+
+  </ul>
+  
+</nav>
+<!--Top Navigation -->
+
+
+
+
+
+
+
+
 

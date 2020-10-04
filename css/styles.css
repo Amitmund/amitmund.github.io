@@ -115,6 +115,9 @@ body {
 
 .dropdown-menu {
   background-color: rgba(45, 47, 61) !important;
+  padding:0;
+  margin:0;
+  border-style: none;  
 }
 
 
@@ -122,6 +125,10 @@ body {
 .dropdown-item {
   font-weight: 300;
   font-size: 15px;
+/*
+  background-color: rgba(22, 147, 134) !important;
+  color: rgba(233, 236, 251) !important;  
+*/
 }
 
 
@@ -161,7 +168,8 @@ body {
   font-weight: 300 !important;
   font-family: sans-serif !important;
   background-color: rgba(22, 147, 134) !important;
-  color: rgba(233, 236, 251) !important;  
+  color: rgba(233, 236, 251) !important; 
+  border-style: none;
 }
 
 .navbar a:hover {
