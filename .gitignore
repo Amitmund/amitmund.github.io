@@ -20,6 +20,7 @@ bin/
 */bin/*
 */.vscode/
 .vscode/
+.DS_Store
 
 # Unignore all `.jar` in `bin` dir
 !*/bin/*.jar
