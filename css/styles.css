@@ -219,14 +219,18 @@ body {
 /* ----------------------------------------------------------- */
 /* ----------------------------------------------------------- */
 
+
 .dropdown-menu {
   background-color: rgba(45, 47, 61) !important;
-  padding:0;
-  margin:0;
   border-style: none;  
 }
 
 
+/* for auto dropdown, But getting some issue because of click and auto drop */
+/* .dropdown:hover>.dropdown-menu {
+  display: block;
+} */
+/* for auto dropdown */
 
 .dropdown-item {
   font-weight: 300;
@@ -237,6 +241,13 @@ body {
 */
 }
 
+.dropdown-menu {
+  margin-top: 8px;
+}
+
+.dropdown-menu-right {
+  padding-left: 5rem;
+}
 
 /* ----------------------------------------------------------- */
 
