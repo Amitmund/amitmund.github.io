@@ -212,6 +212,27 @@ body {
 
 /* ----------------------------------------------------------- */
 
+#headingNote {
+  /* background-image: linear-gradient(to bottom right, rgba(45, 47, 61), rgba(22, 147, 134), rgba(45, 47, 61)); */
+  background-image: linear-gradient(to bottom right, #67b267, #4ca2cd);
+  /* background-image: linear-gradient(to bottom right, rgba(22, 147, 134), #4ca2cd, rgba(22, 147, 134)); */
+  /* background-image: linear-gradient(to bottom right, #4ca2cd, rgba(22, 147, 134), #4ca2cd ); */
+  font-weight: 400;
+  display: flex;
+  /* flex: 1; */
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  /* To keep the letter in center */
+  margin-top: 5vh !important;
+  /* padding: 0   !important; */
+  box-sizing: border-box;
+  height: 15vh;
+  margin: auto;
+  color:rgba(233, 236, 251);
+  border-radius: 4px;
+  box-shadow: 0 30px 80px 10px rgba(0,0,0,.2);
+}
 
 
 
@@ -285,6 +306,7 @@ body {
   font-weight: 300 !important;
   font-family: sans-serif !important;
   background-color: rgba(22, 147, 134) !important;
+  /* background-color: linear-gradient(to bottom right, #67b267, #4ca2cd) !important; */
   color: rgba(233, 236, 251) !important; 
   border-style: none;
 }
@@ -510,7 +532,7 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_grid_layout_named
 }
 
 
-.gridMain h1 {
+.page-main-h1, .gridMain h1 {
   text-align: center;
   color: rgba(22, 147, 134);
 }

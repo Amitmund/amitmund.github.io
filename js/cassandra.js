@@ -1,5 +1,4 @@
 // You can put individual links in the following main block.
-// You can put individual links in the following main block.
 // Make sure to use '.' for class and '#' for id
 
 // changed the id name not to match as onclick function name. 
@@ -19,10 +18,13 @@
 
 $(document).ready(function(){
 
-	// for golangIntroduction class.
-	$('#htmlQuickNote').click(function(){
-		$('#loadData').load('/pages/htmlQuickNote.html');
+	$('#cassandraIntroduction').click(function(){
+		$('#loadData').load('/pages/cassandraIntroduction.html');
 	});
 
+	$('#cassandraNodetoolRepair').click(function(){
+		$('#loadData').load('/pages/cassandraNodetoolRepair.html');
+	});
 
+	
 });
