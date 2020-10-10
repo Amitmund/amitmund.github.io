@@ -132,8 +132,6 @@ You can search my css for .hrLine1
 <!-- ----------------------------------------------------------------------- -->
 
 
-
-
 <hr>
 
 
@@ -174,48 +172,186 @@ You can search my css for .hrLine1
   </div>
 </div>
 
-<hr>
 
 <!-- ----------------------------------------------------------------------- -->
+<hr>
+
 
 <h2>Example for presenting your skills</h2>
 
 <pre>
-&lt;div&gt;
+&lt;!-- Subject foo --&gt;
+ &lt;div&gt;
 
   &lt;div&gt;
   &lt;p style=&quot;float:left; padding-right: 10px&quot;&gt;html&lt;/p&gt;
   &lt;/div&gt; 
 
   &lt;div class=&quot;progress&quot; style=&quot;max-width: 20vw&quot;&gt;
-    &lt;div class=&quot;progress-bar&quot; style=&quot;width:50%&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;progress-bar amundBG&quot; style=&quot;width:50%&quot;&gt;&lt;/div&gt;
   &lt;/div&gt;
 
 &lt;/div&gt;
-&lt;br&gt;  
-&lt;!-- you need to give this above br, if not the aligement is doing some wrong. --&gt;
+&lt;br&gt;
 
+&lt;!-- Subject foo --&gt;
+&lt;div&gt;
+
+  &lt;div&gt;
+  &lt;p style=&quot;float:left; padding-right: 10px&quot;&gt;Linux&lt;/p&gt;
+  &lt;/div&gt; 
+
+  &lt;div class=&quot;progress&quot; style=&quot;max-width: 20vw&quot;&gt;
+    &lt;div class=&quot;progress-bar amundBG&quot; style=&quot;width:70%&quot;&gt;&lt;/div&gt;
+  &lt;/div&gt;
+
+&lt;/div&gt;
+&lt;br&gt;
+
+
+&lt;!-- you need to give this above br, if not the aligement is doing some wrong. --&gt;
 </pre>
 
+<!-- Subject foo -->
  <div>
 
   <div>
-  <p style="float:left; padding-right: 10px">html</p>
+  <p style="float:left; margin-right: 10px;">html</p>
   </div> 
 
   <div class="progress" style="max-width: 20vw">
-    <div class="progress-bar" style="width:70%"></div>
+    <div class="progress-bar amundBG" style="width:50%"></div>
   </div>
 
 </div>
-<br>  
+<br>
+
+<!-- Subject foo -->
+<div>
+
+  <div>
+  <p style="float:left; margin-right: 10px;">Linux</p>
+  </div> 
+
+  <div class="progress" style="max-width: 20vw">
+    <div class="progress-bar amundBG" style="width:70%"></div>
+  </div>
+
+</div>
+<br>
+
+
+
 <!-- you need to give this above br, if not the aligement is doing some wrong. -->
+
+<!-- ----------------------------------------------------------------------- -->
+<hr>
+
+<h2>Example of above with Flexbox</h2>
+
+<!-- Subject foo -->
+<div class="d-flex">
+
+  <div class="p-2">
+  <p style="float:left; padding-right: 10px">Linux</p>
+  </div> 
+
+  <div class="progress" class="p-2" style="max-width: 20vw">
+    <div class="progress-bar amundBG" style="width:70%"></div>
+  </div>
+
+</div>
+<br>
+
+<!-- ----------------------------------------------------------------------- -->
+<hr>
+
+<h2>Example of flexbox</h2>
+
+<a href="https://getbootstrap.com/docs/4.4/utilities/flex/" target="_blank">flex box bootstrap4</a>
+
+
+<div class="d-flex">
+  <div class="p-2">Flex item</div>
+  <div class="p-2">Second flex item</div>
+  <div class="p-2">Third flex item</div>
+  <div class="p-2">Fourth flex item</div>
+  <div class="p-2">Fifth flex item</div>
+  <div class="p-2">foo1</div>
+</div>
+
 
 <!-- ----------------------------------------------------------------------- -->
 
 <hr>
 
+<h2>Example for presenting your skills</h2>
 
+<pre>
+  &lt;div class=&quot;progress&quot; style=&quot;max-width: 20vw&quot;&gt;
+  &lt;div class=&quot;progress-bar amundBG active&quot; role=&quot;progressbar&quot;
+  aria-valuenow=&quot;40&quot; aria-valuemin=&quot;0&quot; aria-valuemax=&quot;100&quot; style=&quot;width:60%&quot;&gt;
+    HTML
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;br&gt;
+
+&lt;div class=&quot;progress&quot; style=&quot;max-width: 20vw&quot;&gt;
+  &lt;div class=&quot;progress-bar amundBG active&quot; role=&quot;progressbar&quot;
+  aria-valuenow=&quot;40&quot; aria-valuemin=&quot;0&quot; aria-valuemax=&quot;100&quot; style=&quot;width:30%&quot;&gt;
+    CSS
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;br&gt;
+
+&lt;div class=&quot;progress&quot; style=&quot;max-width: 20vw&quot;&gt;
+  &lt;div class=&quot;progress-bar amundBG active&quot; role=&quot;progressbar&quot;
+  aria-valuenow=&quot;40&quot; aria-valuemin=&quot;0&quot; aria-valuemax=&quot;100&quot; style=&quot;width:10%&quot;&gt;
+    JS
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;br&gt;
+
+&lt;div class=&quot;progress&quot; style=&quot;max-width: 20vw&quot;&gt;
+  &lt;div class=&quot;progress-bar amundBG active&quot; role=&quot;progressbar&quot;
+  aria-valuenow=&quot;40&quot; aria-valuemin=&quot;0&quot; aria-valuemax=&quot;100&quot; style=&quot;width:70%&quot;&gt;
+    Linux
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;br&gt;
+</pre>
+
+<div class="progress" style="max-width: 20vw">
+  <div class="progress-bar amundBG active" role="progressbar"
+  aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:60%">
+    HTML
+  </div>
+</div>
+<br>
+
+<div class="progress" style="max-width: 20vw">
+  <div class="progress-bar amundBG active" role="progressbar"
+  aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:30%">
+    CSS
+  </div>
+</div>
+<br>
+
+<div class="progress" style="max-width: 20vw">
+  <div class="progress-bar amundBG active" role="progressbar"
+  aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:10%">
+    JS
+  </div>
+</div>
+<br>
+
+<div class="progress" style="max-width: 20vw">
+  <div class="progress-bar amundBG active" role="progressbar"
+  aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:70%">
+    Linux
+  </div>
+</div>
+<br>
 
 <!-- ----------------------------------------------------------------------- -->
 
@@ -346,21 +482,48 @@ You can search my css for .hrLine1
 
 <hr>
 
+<h2>Example of expand and collapse</h2>
+
+<pre>
+&lt;div class=&quot;container&quot;&gt;
+  &lt;a href=&quot;#expandExample&quot; class=&quot;btn btn-link&quot; data-toggle=&quot;collapse&quot;&gt;Expand Example&lt;/a&gt;
+  
+  &lt;div id=&quot;expandExample&quot; class=&quot;collapse&quot;&gt;
+
+    &lt;p&gt; is a place, where we can, where you can keep the data, that you want to keep within Expand example.&lt;/p&gt;
+
+    &lt;p&gt;This is a new line within this.&lt;/p&gt;
+
+    &lt;pre&gt;
+    Some bootstrap notes:
+    &lt;a href=&quot;https://www.w3schools.com/bootstrap/&quot; target=&quot;_blank&quot;&gt;bootstrap expand collapse&lt;/a&gt;
+    &lt;a href=&quot;https://www.w3schools.com/bootstrap/bootstrap_buttons.asp&quot; target=&quot;_blank&quot;&gt;bootstrap expand collapse with buttons&lt;/a&gt;
+    &lt;a href=&quot;https://getbootstrap.com/docs/4.0/components/collapse/&quot; target=&quot;_blank&quot;&gt;bootstrap collapse&lt;/a&gt;
+    &lt;/pre&gt;
+    
+	&lt;/div&gt;
+	
+&lt;/div&gt;
+
+</pre>
+
+
 <div class="container">
   <a href="#expandExample" class="btn btn-link" data-toggle="collapse">Expand Example</a>
   
   <div id="expandExample" class="collapse">
-		<pre>
-This is a place, where we can, where you can keep the data, that you want to keep within Expand example.
 
-This is a new line within this.
+    <p> is a place, where we can, where you can keep the data, that you want to keep within Expand example.</p>
 
-Some bootstrap notes:
-https://www.w3schools.com/bootstrap/
-https://www.w3schools.com/bootstrap/bootstrap_buttons.asp
+    <p>This is a new line within this.</p>
 
+    <pre>
+    Some bootstrap notes:
+    <a href="https://www.w3schools.com/bootstrap/" target="_blank">bootstrap expand collapse</a>
+    <a href="https://www.w3schools.com/bootstrap/bootstrap_buttons.asp" target="_blank">bootstrap expand collapse with buttons</a>
+    <a href="https://getbootstrap.com/docs/4.0/components/collapse/" target="_blank">bootstrap collapse</a>
+    </pre>
 
-		</pre>
 	</div>
 	
 </div>
@@ -908,6 +1071,98 @@ alt="samvritaInFog">
 </pre>
 
 
+<!-- ----------------------------------------------------------------------- -->
+
+
+
+<hr>
+
+<h2>Example of Blur</h2>
+
+<pre>
+
+<u>CSS</u>
+
+.amundBlur {
+  filter: blur(5px);
+}
+
+<u>HTML</u>
+
+&lt;div class=&quot;amundBlur&quot;&gt;
+&lt;img src=&quot;/images/samvritaInFog.jpg&quot; style=&quot;max-width:100%;height:auto;&quot; 
+alt=&quot;samvritaInFog&quot;&gt;
+&lt;/div&gt;
+
+</pre>
+
+<div class="amundBlur">
+<img src="/images/samvritaInFog.jpg" style="max-width:100%;height:auto;" 
+alt="samvritaInFog">
+</div>
+
+<!-- ----------------------------------------------------------------------- -->
+
+<hr>
+
+<h2>Example of embeding youtube Videos</h2>
+
+<pre>
+
+  &lt;div class=&quot;container&quot;&gt;
+    &lt;p&gt;First Stage Program by Samvrita&lt;/p&gt;
+    &lt;div class=&quot;embed-responsive embed-responsive-16by9&quot;&gt;
+        &lt;iframe class=&quot;embed-responsive-item&quot; src=&quot;https://www.youtube.com/embed/_WmUKXeWMbA&quot; allowfullscreen&gt;&lt;/iframe&gt;
+      &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;hr&gt;
+
+  &lt;div class=&quot;container&quot;&gt;
+    &lt;p&gt;A to Z by Samvrita&lt;/p&gt;
+    &lt;div class=&quot;embed-responsive embed-responsive-16by9&quot;&gt;
+        &lt;iframe src=&quot;https://www.youtube.com/embed/JEKQFCxH91w&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;/iframe&gt;
+      &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;hr&gt;
+
+  &lt;div class=&quot;container&quot;&gt;
+    &lt;p&gt;7BillionHumans by Samvrita&lt;/p&gt;
+    &lt;div class=&quot;embed-responsive embed-responsive-16by9&quot;&gt;
+        &lt;iframe src=&quot;https://www.youtube.com/embed/0YEdc4ZClfQ&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;/iframe&gt;
+      &lt;/div&gt;
+  &lt;/div&gt;
+
+</pre>
+
+  <div class="container">
+    <p>First Stage Program by Samvrita</p>
+    <div class="embed-responsive embed-responsive-16by9">
+        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/_WmUKXeWMbA" allowfullscreen></iframe>
+      </div>
+  </div>
+
+  <hr>
+
+  <div class="container">
+    <p>A to Z by Samvrita</p>
+    <div class="embed-responsive embed-responsive-16by9">
+        <iframe src="https://www.youtube.com/embed/JEKQFCxH91w" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+  </div>
+
+  <hr>
+
+  <div class="container">
+    <p>7BillionHumans by Samvrita</p>
+    <div class="embed-responsive embed-responsive-16by9">
+        <iframe src="https://www.youtube.com/embed/0YEdc4ZClfQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+  </div>
+
+
+<!-- ----------------------------------------------------------------------- -->
 <hr>
 
 <!-- accordion example -->
@@ -941,7 +1196,9 @@ alt="samvritaInFog">
 
 
 <!-- accordion Example -->
+<!-- ----------------------------------------------------------------------- -->
 
+<hr>
 
 
 </article>

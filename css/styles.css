@@ -209,10 +209,21 @@ body {
   
 }
 
+/* ----------------------------------------------------------- */
+
 .amundBG {
   background: rgba(22, 147, 134);
 }
 
+.amundCenterText, .amundTextCenter{
+  text-align: center;
+  /* text-justify: ; */
+}
+
+/* to blur image */
+.amundBlur {
+  filter: blur(5px);
+}
 /* ----------------------------------------------------------- */
 
 #headingNote {
@@ -303,6 +314,11 @@ body {
 
 /* ----------------------------------------------------------- */
 
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
 
 /* this is for the navbar settings */
 .nav, .nav-link, .navbar {
@@ -466,20 +482,20 @@ img {
   grid: https://www.w3schools.com/cssref/tryit.asp?filename=trycss_grid3
 */
 
-.my-youtube-videos {
+/* .my-youtube-videos {
   width: 390px;
+  width: auto;
   height: auto;
   padding: 5px;
   padding-bottom: 10px;
   margin: auto;
-  float: left;
 }
 
 .my-youtube-videos p {
   text-align: center;
   font-size: 22px;
   color: cornflowerblue;
-}
+} */
 
 
 /* ----------------------------------------------------------- */
@@ -493,6 +509,10 @@ img {
   text-align: center;
   margin: 0px;
 } */
+
+.alert {
+  height:10vh;    
+}
 
 .broadcast-message {
   padding: 20px;
