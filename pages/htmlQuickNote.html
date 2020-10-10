@@ -23,11 +23,18 @@
        </article>
         </div>
 
- 
+
 <div class="container-fluid article">
 
-<article>
 
+<article>
+<br>
+<br>
+
+<!-- ----------------------------------------------------------------------- -->
+<hr>
+
+<h2> Example of inline css</h2>
 Example: <b>title</b> property with in <b>p</b> tag and having <b>inline css style</b>.
 
 <pre>
@@ -38,10 +45,118 @@ Example: <b>title</b> property with in <b>p</b> tag and having <b>inline css sty
 
 </pre>  
 
+<!-- ----------------------------------------------------------------------- -->
+
+
+<hr>
+
+<h2>Example of gradient</h2>
+
+<pre>
+
+<u>Related css</u>
+
+#headingNote {
+  background-image: linear-gradient(to bottom right, #67b267, #4ca2cd);
+  font-weight: 400;
+  /* To keep the letter in center */
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  /* To keep the letter in center */
+  margin-top: 5vh !important;
+  /* padding: 0   !important; */
+  box-sizing: border-box;
+  height: 15vh;
+  margin: auto;
+  color:rgba(233, 236, 251);
+  border-radius: 4px;
+  box-shadow: 0 30px 80px 10px rgba(0,0,0,.2);
+}
+
+<u>HTML code</u>
+
+&lt;div id=&quot;headingNote&quot;&gt;
+&lt;h3&gt;Quick Note on Golang&lt;/h3&gt;
+&lt;/div&gt;
+
+
+</pre>
+
+
+  <!-- For keeping the image with text on the page heading. -->
+    <div id="headingNote">
+      <h1>Quick Note on Golang</h1>
+    </div>  
+  <!-- For keeping the image with text on the page heading. -->
+
+<!-- ----------------------------------------------------------------------- -->
+
+<hr>
+
+<h2>Example of new lines</h2>
+
+
+One I like:
+
+<pre>
+Its css:
+
+hr {
+  background-image: linear-gradient(to right, rgba(0,123,153), rgba(255,255,255));
+  height: 10px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+Its html:
+&lt;hr&gt;
+</pre>
+
+<hr>
+
+<pre>
+Another type:
+You can search my css for .hrLine1
+
+&lt;hr class=&quot;hrLine1&quot;&gt;
+</pre>
+
+
+<hr class="hrLine1">
+
+
+<br>
+<br>
+<!-- ----------------------------------------------------------------------- -->
+
 
 
 
 <hr>
+
+
+<h2>Example of Progress-bar</h2>
+
+<pre>
+&lt;div class=&quot;container&quot;&gt;
+  Html
+  &lt;div class=&quot;progress&quot;&gt;
+    &lt;div class=&quot;progress-bar&quot; role=&quot;progressbar&quot; aria-valuenow=&quot;70&quot; aria-valuemin=&quot;0&quot; aria-valuemax=&quot;100&quot; style=&quot;width:50%&quot;&gt;
+      &lt;span class=&quot;sr-only&quot;&gt;50% Complete&lt;/span&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  
+  Cassandra
+  &lt;div class=&quot;progress&quot;&gt;
+    &lt;div class=&quot;progress-bar&quot; role=&quot;progressbar&quot; aria-valuenow=&quot;70&quot; aria-valuemin=&quot;0&quot; aria-valuemax=&quot;100&quot; style=&quot;width:80%&quot;&gt;
+      &lt;span class=&quot;sr-only&quot;&gt;80% Complete&lt;/span&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+</pre>
 
 <div class="container">
   Html
@@ -59,10 +174,83 @@ Example: <b>title</b> property with in <b>p</b> tag and having <b>inline css sty
   </div>
 </div>
 
+<hr>
 
+<!-- ----------------------------------------------------------------------- -->
+
+<h2>Example for presenting your skills</h2>
+
+<pre>
+&lt;div&gt;
+
+  &lt;div&gt;
+  &lt;p style=&quot;float:left; padding-right: 10px&quot;&gt;html&lt;/p&gt;
+  &lt;/div&gt; 
+
+  &lt;div class=&quot;progress&quot; style=&quot;max-width: 20vw&quot;&gt;
+    &lt;div class=&quot;progress-bar&quot; style=&quot;width:50%&quot;&gt;&lt;/div&gt;
+  &lt;/div&gt;
+
+&lt;/div&gt;
+&lt;br&gt;  
+&lt;!-- you need to give this above br, if not the aligement is doing some wrong. --&gt;
+
+</pre>
+
+ <div>
+
+  <div>
+  <p style="float:left; padding-right: 10px">html</p>
+  </div> 
+
+  <div class="progress" style="max-width: 20vw">
+    <div class="progress-bar" style="width:70%"></div>
+  </div>
+
+</div>
+<br>  
+<!-- you need to give this above br, if not the aligement is doing some wrong. -->
+
+<!-- ----------------------------------------------------------------------- -->
+
+<hr>
+
+
+
+<!-- ----------------------------------------------------------------------- -->
 
 
 <hr>
+
+
+<h2>Example of a different colored progress bar</h2>
+
+<pre>
+ &lt;div class=&quot;progress&quot;&gt;
+  &lt;div class=&quot;progress-bar bg-info&quot; style=&quot;width:30%&quot;&gt;&lt;/div&gt;
+&lt;/div&gt; 
+</pre>
+
+
+<!-- Turquoise -->
+<div class="progress">
+  <div class="progress-bar bg-info" style="width:30%"></div>
+</div>
+
+<!-- ----------------------------------------------------------------------- -->
+
+
+<hr>
+
+<h2>Example of progress-bar with striped</h2>
+<pre>
+&lt;div class=&quot;progress&quot;&gt;
+  &lt;div class=&quot;progress-bar progress-bar-striped active&quot; role=&quot;progressbar&quot;
+  aria-valuenow=&quot;40&quot; aria-valuemin=&quot;0&quot; aria-valuemax=&quot;100&quot; style=&quot;width:40%&quot;&gt;
+    40%
+  &lt;/div&gt;
+&lt;/div&gt;
+</pre>
 
 <div class="progress">
   <div class="progress-bar progress-bar-striped active" role="progressbar"
@@ -73,14 +261,24 @@ Example: <b>title</b> property with in <b>p</b> tag and having <b>inline css sty
 
 
 
-<hr>
-<!-- Turquoise -->
-<div class="progress">
-  <div class="progress-bar bg-info" style="width:30%"></div>
-</div>
+<!-- ----------------------------------------------------------------------- -->
 
 
 <hr>
+
+<h2>Example of Spinner example</h2>
+<pre>
+&lt;div class=&quot;spinner-border text-muted&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;spinner-border text-primary&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;spinner-border text-success&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;spinner-border text-info&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;spinner-border text-warning&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;spinner-border text-danger&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;spinner-border text-secondary&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;spinner-border text-dark&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;spinner-border text-light&quot;&gt;&lt;/div&gt;
+</pre>
+
 <div class="spinner-border text-muted"></div>
 <div class="spinner-border text-primary"></div>
 <div class="spinner-border text-success"></div>
@@ -91,9 +289,28 @@ Example: <b>title</b> property with in <b>p</b> tag and having <b>inline css sty
 <div class="spinner-border text-dark"></div>
 <div class="spinner-border text-light"></div>
 
+<!-- ----------------------------------------------------------------------- -->
+
 
 
 <hr>
+
+<h2>Example of Spinner-grow</h2>
+
+<pre>
+
+&lt;div class=&quot;spinner-grow text-muted&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;spinner-grow text-primary&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;spinner-grow text-success&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;spinner-grow text-info&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;spinner-grow text-warning&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;spinner-grow text-danger&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;spinner-grow text-secondary&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;spinner-grow text-dark&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;spinner-grow text-light&quot;&gt;&lt;/div&gt;  
+
+</pre>
+
 <div class="spinner-grow text-muted"></div>
 <div class="spinner-grow text-primary"></div>
 <div class="spinner-grow text-success"></div>
@@ -103,6 +320,8 @@ Example: <b>title</b> property with in <b>p</b> tag and having <b>inline css sty
 <div class="spinner-grow text-secondary"></div>
 <div class="spinner-grow text-dark"></div>
 <div class="spinner-grow text-light"></div>
+
+<!-- ----------------------------------------------------------------------- -->
 
 
 <hr>
