@@ -1165,6 +1165,65 @@ alt="samvritaInFog">
 <!-- ----------------------------------------------------------------------- -->
 <hr>
 
+<h2>Example of crossfade transition with Images</h2>
+
+<pre>
+
+ <u>CSS</u> 
+
+ #cf {
+  position:relative;
+  height:281px;
+  width:450px;
+  margin:0 auto;
+}
+
+#cf img {
+  position:absolute;
+  left:0;
+  -webkit-transition: opacity 1s ease-in-out;
+  -moz-transition: opacity 1s ease-in-out;
+  -o-transition: opacity 1s ease-in-out;
+  transition: opacity 1s ease-in-out;
+}
+
+#cf img.top:hover {
+  opacity:0;
+}
+
+
+<u>html</u>
+
+&lt;div id=&quot;cf&quot;&gt;
+  &lt;!-- &lt;img class=&quot;bottom&quot; src=&quot;/images/author.jpg&quot; /&gt;
+  &lt;img class=&quot;top&quot; src=&quot;/images/samvritaInFog.jpg&quot; /&gt;
+  &lt;img class=&quot;top&quot; src=&quot;/images/samvrita1Y1.jpg&quot; /&gt;
+  &lt;img class=&quot;top&quot; src=&quot;/images/samvrita2Y1.jpg&quot; /&gt;
+  &lt;img class=&quot;top&quot; src=&quot;/images/samvrita6Y1.jpg&quot; /&gt; --&gt;
+  &lt;img class=&quot;top&quot; src=&quot;/images/samvritaFirstStageDance.jpg&quot; /&gt;
+  &lt;img class=&quot;top&quot; src=&quot;/images/samvritaHaircut.jpg&quot; /&gt;
+&lt;/div&gt;  
+
+&lt;!-- Not sure yet, why not more then 2 image --&gt;
+
+</pre>
+
+
+
+<div id="cf">
+  <!-- <img class="bottom" src="/images/author.jpg" />
+  <img class="top" src="/images/samvritaInFog.jpg" />
+  <img class="top" src="/images/samvrita1Y1.jpg" />
+  <img class="top" src="/images/samvrita2Y1.jpg" />
+  <img class="top" src="/images/samvrita6Y1.jpg" /> -->
+  <img class="top" src="/images/samvritaFirstStageDance.jpg" />
+  <img class="top" src="/images/samvritaHaircut.jpg" />
+</div>  
+
+
+<!-- ----------------------------------------------------------------------- -->
+<hr>
+
 <!-- accordion example -->
 <!-- http://jsfiddle.net/a6Cu7/ -->
 <!-- https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_collapsible -->
