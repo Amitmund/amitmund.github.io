@@ -18,9 +18,12 @@
 
 $(document).ready(function(){
 
-	// for golangIntroduction class.
 	$('#god22Steps').click(function(){
 		$('#loadData').load('/pages/god22Steps.html');
 	});
 
+	$('#godRudraksha').click(function(){
+		$('#loadData').load('/pages/godRudraksha.html');
+	});
+	
 });
