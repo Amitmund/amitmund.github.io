@@ -111,13 +111,20 @@ input, select {
 /* ----------------------------------------------------------- */
 
 * {
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
   font-weight: 300;
   font-family: 'Roboto', sans-serif;
 
 }
+
+/* css from: https://tobiasahlin.com/ */
+html,div,span,object,iframe,h2,h3,h4,h5,h6,p,blockquote,pre,a,code,del,em,img,small,strong,ol,ul,li,label,table {
+  border: 0;
+  vertical-align: baseline;
+  margin: 0;
+  padding: 0
+}
+
 
 /* ----------------------------------------------------------- */
 
@@ -147,6 +154,8 @@ html {
   color: #555; */
   text-rendering: optimizeLegibility;
   align-self: stretch;
+  scroll-behavior: smooth;
+  height: 100%
 }
 
 /* ----------------------------------------------------------- */
@@ -174,6 +183,12 @@ body {
   color: rgba(233, 236, 251);
   font-size: 16px;
   line-height: 22px;
+  /* css from: https://tobiasahlin.com/ */  
+  position: relative;
+  /* font: normal 16px/1.9em "Inter", "Source Sans Pro","Helvetica Neue", Arial, sans-serif; */
+  margin: 0;
+  padding: 0;
+  height: 100%
 }
 
 
@@ -352,6 +367,7 @@ a:hover {
 
 h1, h2, h3, h4, h5, h6{
   font-weight: 100;
+  vertical-align: baseline;
 }
 
 
@@ -388,6 +404,9 @@ blockquote {
 }
 
 
+p {
+  margin-bottom: 2em;
+}
 
 /* ----------------------------------------------------------- */
 /* ----------------------------------------------------------- */
@@ -511,7 +530,8 @@ img {
 } */
 
 .alert {
-  height:10vh;    
+  margin: 20px;
+  padding: 20px;   
 }
 
 .broadcast-message {
