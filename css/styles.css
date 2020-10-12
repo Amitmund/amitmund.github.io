@@ -554,10 +554,12 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_grid_layout_named
 /* to pushing the footer at the bottom */
   flex-direction: column;
   display: flex;
-   min-height: 88vh; 
-  overflow-y: scroll;
+  min-height: 88vh; 
+  /* overflow-y: scroll;
   top: 0;
-  bottom: 0;
+  bottom: 0; */
+  /* https://stackoverflow.com/questions/43879208/add-scroll-to-each-column-in-css-grid-layout */
+  overflow: auto;
 }
 
 
