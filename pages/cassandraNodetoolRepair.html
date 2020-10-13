@@ -18,6 +18,7 @@
 			
 			<div class="container-fluid article">
 			<article>
+	
 				<p>
 					On this page, I will update few quick notes related to the <b>Cassandra Nodetool Repair</b>. The following link is the original Cassandra Nodetool repair link of Cassandra Release 3.0. You can go through the following link and later navigate on other details from the following URL.	
 				</p>
@@ -204,6 +205,14 @@ INFO  [RepairJobTask:1] 2014-07-24 22:23:10,740 RepairJob.java:145
   for events (to [/192.168.2.103, /192.168.2.101])
 . . .
 </pre>
+
+<h5>Some related learning</h5>
+
+For some need, if you have to take away 2 Cassandra Nodes, in that case you have, you need to do <b>nodetool decommission</b> them first. But note, you cann't decommission 2 node at the same time, because if the 1st decommssion node, moving its date to the second node, then if you try to decommission the second node, then the second node will give some an update error.
+
+<div class="alert alert-primary">
+	nodetool: Unsupported operation: data is currently moving to this node; unable to leave the ring
+</div>
 
 <hr>
 			</article>
