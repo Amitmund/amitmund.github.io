@@ -409,6 +409,16 @@ p {
   margin-bottom: 2em;
 }
 
+
+
+
+details summary{
+  /* color: #ff7b29; */
+=  margin-bottom: 1em;
+  /* background-color: rgba(37,42,51); */
+  color: rgba(22, 147, 134) !important;
+  font-size: large;
+}
 /* ----------------------------------------------------------- */
 /* ----------------------------------------------------------- */
 
@@ -582,6 +592,14 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_grid_layout_named
   /* https://stackoverflow.com/questions/43879208/add-scroll-to-each-column-in-css-grid-layout */
   overflow: auto;
 }
+
+.gridMenu summary {
+  margin-top: .1em;
+}
+.gridMenu li {
+  list-style-type:none;
+}
+
 
 
 
