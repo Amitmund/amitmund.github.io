@@ -486,14 +486,23 @@ You can search my css for .hrLine1
 Related CSS:
 
 details summary{
-  margin-bottom: 1em;
   color: rgba(22, 147, 134) !important;
-  font-size: large;
+}
+
+  details pre {
+    background-color: rgba(37,42,51,.2) !important;
   }
+  
+  .amundDetails {
+    margin-bottom: 1em;
+    background-color: rgba(37,42,51,.4) !important;
+    border: 1px solid;
+    border-color: rgba(22, 147, 134, .2) !important;
+  }  
 
 Related HTML:
 
-&lt;details&gt;
+&lt;details class=&quot;amundDetails&quot;&gt;
   &lt;summary&gt;See More&lt;/summary&gt;
   This text will be hidden if your browser supports it.
 &lt;pre&gt;
@@ -507,7 +516,7 @@ line3
 
 </pre>
 
-<details>
+<details class="amundDetails">
   <summary>See More</summary>
   This text will be hidden if your browser supports it.
 <pre>

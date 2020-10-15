@@ -400,22 +400,21 @@ p {
 
 details summary{
   /* color: #ff7b29; */
-  margin-bottom: .1em;
+  /* margin-bottom: .1em; */
   /* background-color: rgba(37,42,51,.1); */
   color: rgba(22, 147, 134) !important;
   /* font-size: large; */
 }
 
-/* Commenting, because the sidenav also getting the similar structure. */
-/* details {
-  background-color: rgba(37,42,51,.4) !important;
-  border: 1px solid;
-  /* border-style: inset; */
-  border-color: rgba(22, 147, 134, .2) !important;
-} */
-
 details pre {
   background-color: rgba(37,42,51,.2) !important;
+}
+
+.amundDetails {
+  margin-bottom: 1em;
+  background-color: rgba(37,42,51,.4) !important;
+  border: 1px solid;
+  border-color: rgba(22, 147, 134, .2) !important;
 }
 /* ----------------------------------------------------------- */
 /* ----------------------------------------------------------- */
