@@ -606,7 +606,10 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_grid_layout_named
   /* text-align: justify; */
   padding-left: 0;
   padding-top: 9vh;
-  padding-right: 20vw;
+  /* padding-right: 20vw; */
+  padding-right: 12vw;
+  padding-left: 8vw;
+
 }
 
 
@@ -661,7 +664,8 @@ End Of, Grid Layout.
 .gridMenu { 
   grid-area: menu;
   /* text-align: justify; */
-  padding-left: 10px;
+  /* padding-left: 10px; */
+  padding-left: 10vh;
   padding-top: 14vh;
   flex-direction: column;
   display: flex;
@@ -678,7 +682,9 @@ End Of, Grid Layout.
   /* text-align: justify; */
   padding-left: 0;
   padding-top: 9vh;
-  padding-right: 15vw;
+  /* padding-right: 15vw; */
+  padding-right: 12vw;
+  padding-left: 8vw;
   /* max-width: 60ch; */
   }
   
@@ -718,7 +724,10 @@ End Of, Grid Layout.
   /* text-align: justify; */
   padding-left: 0;
   padding-top: 9vh;
-  padding-right: 10vw;
+  /* padding-right: 10vw; */
+  padding-right: 12vw;
+  padding-left: 8vw;
+  
   }
   
 }
@@ -760,7 +769,9 @@ End Of, Grid Layout.
   /* text-align: justify; */
   padding-left: 0;
   padding-top: 9vh;
-  padding-right: 0px;
+  /* padding-right: 0px; */
+  padding-right: 6vw;
+  padding-left: 8vw;
   }
   
 }
