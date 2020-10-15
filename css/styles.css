@@ -145,6 +145,9 @@ html,div,span,object,iframe,h2,h3,h4,h5,h6,p,blockquote,pre,a,code,del,em,img,sm
 
 }
 
+@media (max-width: 600px) {
+
+}
 /* ----------------------------------------------------------- */
 
 html {
@@ -159,23 +162,6 @@ html {
 }
 
 /* ----------------------------------------------------------- */
-
-/*For responsive */
-
-@media (max-width: 1280px) {
-
-}
-
-
-@media (max-width: 1024px) {
-
-}
-
-
-@media (max-width: 780px) {
-
-}
-
 /* ----------------------------------------------------------- */
 
 body {
@@ -197,8 +183,8 @@ body {
 @media (max-width: 1280px) {
 
    body {
-  font-size: 14px;
-  line-height: 21px;
+  font-size: 16px;
+  line-height: 22px;
   }
   
 }
@@ -207,8 +193,8 @@ body {
 @media (max-width: 1024px) {
 
    body {
-  font-size: 13px;
-  line-height: 19px;
+  font-size: 14px;
+  line-height: 21px;
   }
   
 }
@@ -306,7 +292,7 @@ body {
 @media (max-width: 1280px) {
   .dropdown-item {
   font-weight: 300;
-  font-size: 14px;
+  font-size: 16px;
   }
 
 }
@@ -315,7 +301,7 @@ body {
 @media (max-width: 1024px) {
 .dropdown-item {
   font-weight: 300;
-  font-size: 13px;
+  font-size: 14px;
   }
 }
 
@@ -323,7 +309,7 @@ body {
 @media (max-width: 780px) {
 .dropdown-item {
   font-weight: 300;
-  font-size: 12px;
+  font-size: 13px;
   }
 }
 
@@ -414,10 +400,22 @@ p {
 
 details summary{
   /* color: #ff7b29; */
-=  margin-bottom: 1em;
-  /* background-color: rgba(37,42,51); */
+  margin-bottom: .1em;
+  /* background-color: rgba(37,42,51,.1); */
   color: rgba(22, 147, 134) !important;
-  font-size: large;
+  /* font-size: large; */
+}
+
+/* Commenting, because the sidenav also getting the similar structure. */
+/* details {
+  background-color: rgba(37,42,51,.4) !important;
+  border: 1px solid;
+  /* border-style: inset; */
+  border-color: rgba(22, 147, 134, .2) !important;
+} */
+
+details pre {
+  background-color: rgba(37,42,51,.2) !important;
 }
 /* ----------------------------------------------------------- */
 /* ----------------------------------------------------------- */
@@ -627,7 +625,8 @@ https://learncssgrid.com/
 
 .grid-container {
   display: grid;
-  grid-template-columns: 20% 80%;
+  /* grid-template-columns: 20% 80%; */
+  grid-template-columns: 20% 110ch;
 /*
   grid-gap: 10px;
   margin-top: 20px;
@@ -653,7 +652,8 @@ End Of, Grid Layout.
 
   .grid-container {
   display: grid;
-  grid-template-columns: 20% 80%;
+  /* grid-template-columns: 20% 80%; */
+  grid-template-columns: 20% 95ch;
   grid-template-areas:
     "menu main"
 }
@@ -680,6 +680,7 @@ End Of, Grid Layout.
   padding-left: 0;
   padding-top: 9vh;
   padding-right: 15vw;
+  /* max-width: 60ch; */
   }
   
 }
@@ -691,7 +692,8 @@ End Of, Grid Layout.
 
 .grid-container {
   display: grid;
-  grid-template-columns: 15% 85%;
+  /* grid-template-columns: 15% 85%; */
+  grid-template-columns: 15% 90ch;
   grid-template-areas:
     "menu main"
 }
@@ -732,7 +734,8 @@ End Of, Grid Layout.
     
 .grid-container {
   display: grid;
-  grid-template-columns: 10% 90%;
+  /* grid-template-columns: 10% 90%; */
+  grid-template-columns: 10% 80ch;
   grid-template-areas:
     "menu main"
 }
@@ -764,6 +767,44 @@ End Of, Grid Layout.
 }
 
 
+@media (max-width: 600px) {
+
+    
+  .grid-container {
+    display: grid;
+    grid-template-columns: 10% 90%;
+    /* grid-template-columns: 10% 80ch; */
+    grid-template-areas:
+      "menu main"
+  }
+    /* ----------------------------------------------------------- */
+  
+  .gridMenu { 
+    grid-area: menu;
+    /* text-align: justify; */
+    padding-left: 1px;
+    padding-top: 14vh;
+    flex-direction: column;
+    display: flex;
+    min-height: 88vh; 
+    overflow-y: scroll;
+    top: 0;
+    bottom: 0;
+  }
+    /* ----------------------------------------------------------- */
+    
+    
+  .gridMain { 
+    grid-area: main;
+    /* text-align: justify; */
+    padding-left: 0;
+    padding-top: 9vh;
+    padding-right: 0px;
+    margin-left: 0;
+    }
+    
+  }
+  
 
 /* ----------------------------------------------------------- */
 /* ----------------------------------------------------------- */
