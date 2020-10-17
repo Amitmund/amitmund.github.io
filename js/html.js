@@ -19,7 +19,6 @@
 
 $(document).ready(function(){
 
-	// for golangIntroduction class.
 	$('#htmlQuickNote').click(function(){
 		$('#loadData').load('/pages/htmlQuickNote.html');
 	});
