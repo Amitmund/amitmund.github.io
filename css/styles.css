@@ -396,25 +396,29 @@ p {
 }
 
 
-
-
 details summary{
   /* color: #ff7b29; */
   /* margin-bottom: .1em; */
   /* background-color: rgba(37,42,51,.1); */
   color: rgba(22, 147, 134) !important;
   /* font-size: large; */
+  /* margin-bottom: 1em; */
 }
 
-details pre {
+/* details pre {
   background-color: rgba(37,42,51,.2) !important;
-}
+} */
 
 .amundDetails {
+  margin-top: 1rem;
   margin-bottom: 1em;
-  background-color: rgba(37,42,51,.4) !important;
-  border: 1px solid;
-  border-color: rgba(22, 147, 134, .2) !important;
+  /* background-color: rgba(37,42,51,.4) !important; */
+  /* border: 1px solid #555; */
+  /* border: 1px solid rgba(22, 147, 134, .2) !important; */
+}
+
+.amundDetails summary{
+   margin-bottom: 1em;
 }
 /* ----------------------------------------------------------- */
 /* ----------------------------------------------------------- */
@@ -830,14 +834,31 @@ code {
 }
 
 pre {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
   background-color: rgba(37,42,51);
   color: rgba(233, 236, 251);
   padding-left: 2rem;
   padding-right: 2rem;
   font-weight: 300 !important;
   font-family: "Fira Code",monospace,SFMono-Regular;
+  /* border: 1px solid;
+  border-color: darkcyan; */
+
+  /* https://www.devdungeon.com/ */
+  display: block;
+  min-width: 600px;
+  /* margin-bottom: .75em; */
+ 
+  
+  /* box-sizing: content-box;
+  border: 1px solid rgba(22, 147, 134);
+  border-radius: 4px; */
+
+  box-sizing: border-box;
+  border: 1px solid #555;
+  /* border: 1px solid rgba(22, 147, 134); */
+  border-radius: 4px;
 }
 
 
@@ -1097,55 +1118,6 @@ https://stackoverflow.com/questions/44093352/image-floor-fade-color-blend-with-b
   opacity:0;
 }
 
-
-
-/* flipbook related */
-/* https://medium.com/creative-technology-concepts-code/responsive-magazine-using-turn-js-ea793e599e0c */
-
-.wrapper {
-  align-items: center;
-  display: flex;
-  height: 90%;
-  justify-content: center;
-  margin: 5%;
-  width: 90%;
-}
-
-.aspect {
-  padding-bottom: 70%;
-  position: relative;
-  width: 100%;
-}
-
-.aspect-inner {
-  bottom: 0;
-  left: 0;
-  position: absolute;
-  right: 0;
-  top: 0;
-}
-
-.flipbook {
-  height: 100%;
-  transition: margin-left 0.25s ease-out;
-  width: 100%;
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-.flipbook .page {
-  height: 100%;
-  width: 100%;
-}
-
-.flipbook .page img {
-  max-width: 100%;
-  height: 100%;
-}
 
 
 /* ----------------------------------------------------------- */
