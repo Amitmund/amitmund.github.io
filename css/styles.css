@@ -838,7 +838,8 @@ pre {
   margin-bottom: 2rem;
   background-color: rgba(37,42,51);
   color: rgba(233, 236, 251);
-  padding-left: 2rem;
+  /* padding-left: 2rem; */
+  padding-left:3px;
   padding-right: 2rem;
   font-weight: 300 !important;
   font-family: "Fira Code",monospace,SFMono-Regular;
@@ -847,7 +848,8 @@ pre {
 
   /* https://www.devdungeon.com/ */
   display: block;
-  min-width: 600px;
+  /* min-width: 600px; */
+  min-width: auto;
   /* margin-bottom: .75em; */
  
   
