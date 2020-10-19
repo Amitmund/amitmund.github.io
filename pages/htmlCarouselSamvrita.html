@@ -1,0 +1,181 @@
+<!-- ------------------------------------------------------------------------------------------------------------ -->  
+<!--Fill the data that you want to be in Main Session because of id="loadData" and your page js-->
+
+
+	<!-- ------------------------------------------------------------------------------------------------------------ -->  
+	<div class="myContent">
+      
+
+      
+		<div class="container-fluid section">
+		<section>
+		
+				<div class="container-fluid subpage-main-h1">
+				<h1>html Carousel</h1>
+				</div>
+			
+			
+			<div class="container-fluid article">
+			<article>
+								
+				<div id="carouselPage" class="carousel slide carousel-fade" data-ride="carousel">
+					<ul class="carousel-indicators">
+						<li data-target="#carouselPage" data-slide-to="0" class="active"></li>
+						<li data-target="#carouselPage" data-slide-to="1"></li>
+						<li data-target="#carouselPage" data-slide-to="2"></li>
+					</ul>
+					
+					<div class="carousel-inner">
+						<div class="carousel-item active">
+							<img src="/images/samvrita1Y1.jpg" alt="samvrita1Y1">
+							<div class="carousel-caption">
+								<h3>1st year</h3>
+								<p>A picture of when she was 1 year.</p>
+							</div>   
+						</div>
+						
+						<div class="carousel-item">
+							<img src="/images/samvrita2Y1.jpg" alt="samvrita2Y1">
+							<div class="carousel-caption">
+								<h3>2nd year</h3>
+								<p>A picture of when she was 1 year.</p>
+							</div>   
+						</div>
+						<div class="carousel-item">
+							<img src="/images/samvritaHaircut.jpg" alt="haircut">
+							<div class="carousel-caption">
+								<h3>haircut</h3>
+								<p>On her 1st Haircut</p>
+							</div>   
+						</div>
+					</div>
+
+
+					<a class="carousel-control-prev" href="#carouselPage" data-slide="prev">
+						<span class="carousel-control-prev-icon"></span>
+					</a>
+					
+					<a class="carousel-control-next" href="#carouselPage" data-slide="next">
+						<span class="carousel-control-next-icon"></span>
+					</a>
+					
+				</div>
+
+
+				<!-- for time. -->
+				<script>
+					$('.carousel').carousel({
+						interval: 0
+					})
+				</script>
+					
+
+					<hr>
+
+<pre>
+	&lt;article&gt;
+								
+	&lt;div id=&quot;carouselPage&quot; class=&quot;carousel slide carousel-fade&quot; data-ride=&quot;carousel&quot;&gt;
+		&lt;ul class=&quot;carousel-indicators&quot;&gt;
+			&lt;li data-target=&quot;#carouselPage&quot; data-slide-to=&quot;0&quot; class=&quot;active&quot;&gt;&lt;/li&gt;
+			&lt;li data-target=&quot;#carouselPage&quot; data-slide-to=&quot;1&quot;&gt;&lt;/li&gt;
+			&lt;li data-target=&quot;#carouselPage&quot; data-slide-to=&quot;2&quot;&gt;&lt;/li&gt;
+		&lt;/ul&gt;
+		
+		&lt;div class=&quot;carousel-inner&quot;&gt;
+			&lt;div class=&quot;carousel-item active&quot;&gt;
+				&lt;img src=&quot;/images/samvrita1Y1.jpg&quot; alt=&quot;samvrita1Y1&quot;&gt;
+				&lt;div class=&quot;carousel-caption&quot;&gt;
+					&lt;h3&gt;1st year&lt;/h3&gt;
+					&lt;p&gt;A picture of when she was 1 year.&lt;/p&gt;
+				&lt;/div&gt;   
+			&lt;/div&gt;
+			
+			&lt;div class=&quot;carousel-item&quot;&gt;
+				&lt;img src=&quot;/images/samvrita2Y1.jpg&quot; alt=&quot;samvrita2Y1&quot;&gt;
+				&lt;div class=&quot;carousel-caption&quot;&gt;
+					&lt;h3&gt;2nd year&lt;/h3&gt;
+					&lt;p&gt;A picture of when she was 1 year.&lt;/p&gt;
+				&lt;/div&gt;   
+			&lt;/div&gt;
+			&lt;div class=&quot;carousel-item&quot;&gt;
+				&lt;img src=&quot;/images/samvritaHaircut.jpg&quot; alt=&quot;haircut&quot;&gt;
+				&lt;div class=&quot;carousel-caption&quot;&gt;
+					&lt;h3&gt;haircut&lt;/h3&gt;
+					&lt;p&gt;On her 1st Haircut&lt;/p&gt;
+				&lt;/div&gt;   
+			&lt;/div&gt;
+		&lt;/div&gt;
+
+
+		&lt;a class=&quot;carousel-control-prev&quot; href=&quot;#carouselPage&quot; data-slide=&quot;prev&quot;&gt;
+			&lt;span class=&quot;carousel-control-prev-icon&quot;&gt;&lt;/span&gt;
+		&lt;/a&gt;
+		
+		&lt;a class=&quot;carousel-control-next&quot; href=&quot;#carouselPage&quot; data-slide=&quot;next&quot;&gt;
+			&lt;span class=&quot;carousel-control-next-icon&quot;&gt;&lt;/span&gt;
+		&lt;/a&gt;
+		
+	&lt;/div&gt;
+
+
+	&lt;!-- for time. --&gt;
+	&lt;script&gt;
+		$(&#39;.carousel&#39;).carousel({
+			interval: 0
+		})
+	&lt;/script&gt;
+		
+&lt;/article&gt;
+</pre>
+
+			</article>
+			</div>
+			
+		
+
+			<div class="container-fluid article">
+			<article>
+			
+			</article>
+			</div>
+				
+			<h2>Quick note</h2>
+			<pre>
+				- Don’t autoplay
+				- https://webflow.com/blog/carousel-slider-design-best-practices
+				- Card style slider
+
+				- https://mdbootstrap.com/docs/jquery/javascript/carousel/
+				- The .active class needs to be added to one of the slides otherwise the .carousel will not be visible
+				- Also be sure to set a unique id on the .carousel for optional controls, especially if you’re using multiple carousels on a single page
+				- class="carousel slide carousel-fade"
+
+				- Add captions to your slides easily with the .carousel-caption element within any .carousel-item.
+
+				- Add .carousel-fade to your carousel to animate slides with a fade transition instead of a slide.
+				- class="carousel slide carousel-fade"
+
+				- https://getbootstrap.com/docs/4.0/components/carousel/
+				
+				- Options can be passed via data attributes or JavaScript. For data attributes, append the option name to data-, as in data-interval="".
+				- interval	number	5000.	The amount of time to delay between automatically cycling an item. If false, carousel will not automatically cycle.
+				- keyboard	boolean	true.	Whether the carousel should react to keyboard events.
+				- 
+				$('.carousel').carousel({
+					interval: 2000
+				})
+
+
+			</pre>
+		
+		</section>
+		</div>
+		
+	<!-- write your subpage content over here -->
+	<!-- This will include your notes, images, programming data as pre -->
+
+</div>
+<!-- myContent div-->
+<!-- ------------------------------------------------------------------------------------------------------------ -->  
+									

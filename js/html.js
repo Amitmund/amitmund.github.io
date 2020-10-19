@@ -23,5 +23,7 @@ $(document).ready(function(){
 		$('#loadData').load('/pages/htmlQuickNote.html');
 	});
 
-
+	$('#htmlCarouselSamvrita').click(function(){
+		$('#loadData').load('/pages/htmlCarouselSamvrita.html');
+	});
 });
