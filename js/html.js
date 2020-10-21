@@ -26,4 +26,9 @@ $(document).ready(function(){
 	$('#htmlCarouselSamvrita').click(function(){
 		$('#loadData').load('/pages/htmlCarouselSamvrita.html');
 	});
+
+	$('#htmlWasm1').click(function(){
+		$('#loadData').load('/pages/htmlWasm1.html');
+	});
+
 });

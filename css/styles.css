@@ -865,7 +865,7 @@ pre {
   /* display: block; */
   /* min-width: 600px; */
   min-width: auto;
-  white-space: pre-wrap;
+  /* white-space: pre-wrap; */
  
   
   /* box-sizing: content-box;

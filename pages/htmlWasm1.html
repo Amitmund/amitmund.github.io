@@ -1,0 +1,62 @@
+<!-- ------------------------------------------------------------------------------------------------------------ -->  
+<!--Fill the data that you want to be in Main Session because of id="loadData" and your page js-->
+
+
+	<!-- ------------------------------------------------------------------------------------------------------------ -->  
+	<div class="myContent">
+      
+
+      
+		<div class="container-fluid section">
+		<section>
+		
+				<div class="container-fluid subpage-main-h1">
+				<h1>wasm example1 First</h1>
+				</div>
+			
+			
+			<div class="container-fluid article">
+			<article>
+				
+				<script src="/wasm/wasm_exec.js"></script>
+        <script>
+            // const go = new Go();
+            // WebAssembly.instantiateStreaming(fetch("/wasm/golang.wasm"), go.importObject).then((result) => {
+            //     go.run(result.instance);
+						// });
+						
+						const go = new Go();
+      			let mod, inst;
+      			WebAssembly.instantiateStreaming(
+              fetch("/wasm/goAlert.wasm", {cache: 'no-cache'}), go.importObject).then((result) => {
+              mod = result.module;
+              inst = result.instance;
+              run();
+      			});
+			
+						async function run() {
+              await go.run(inst);
+      			};
+        </script>
+
+				
+			</article>
+			</div>
+			
+			
+			<div class="container-fluid article">
+			<article>
+			
+			</article>
+			</div>
+				
+		</section>
+		</div>
+		
+	<!-- write your subpage content over here -->
+	<!-- This will include your notes, images, programming data as pre -->
+
+</div>
+<!-- myContent div-->
+<!-- ------------------------------------------------------------------------------------------------------------ -->  
+									
