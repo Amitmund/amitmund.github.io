@@ -789,11 +789,11 @@ End Of, Grid Layout.
 .gridMain { 
   grid-area: main;
   /* text-align: justify; */
-  padding-left: 0;
   padding-top: 9vh;
   /* padding-right: 0px; */
   padding-right: 6vw;
   padding-left: 8vw;
+  min-height: 80vh;
   }
   
 }
@@ -834,10 +834,11 @@ End Of, Grid Layout.
   .gridMain { 
     grid-area: main;
     /* text-align: justify; */
-    padding-left: 0;
     padding-top: 9vh;
-    padding-right: 0px;
     margin-left: 0;
+    padding-right: 6vw;
+    padding-left: 8vw;
+    min-height: 80vh;
     }
     
   }
