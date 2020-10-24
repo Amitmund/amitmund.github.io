@@ -31,4 +31,8 @@ $(document).ready(function(){
 		$('#loadData').load('/pages/htmlWasm1.html');
 	});
 
+	$('#htmlWasm2').click(function(){
+		$('#loadData').load('/pages/htmlWasm2.html');
+	});
+
 });
