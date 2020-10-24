@@ -195,7 +195,7 @@ body {
 @media (max-width: 1024px) {
 
    body {
-  font-size: 14px;
+  font-size: 16px;
   }
   
 }
@@ -204,7 +204,7 @@ body {
 @media (max-width: 780px) {
   
  body {
-  font-size: 13px;
+  font-size: 16px;
   }
   
   
@@ -270,7 +270,7 @@ body {
 
 .dropdown-item {
   font-weight: 300;
-  font-size: 15px;
+  font-size: 16px;
 /*
   background-color: rgba(22, 147, 134) !important;
   color: rgba(233, 236, 251) !important;  
@@ -301,7 +301,7 @@ body {
 @media (max-width: 1024px) {
 .dropdown-item {
   font-weight: 300;
-  font-size: 14px;
+  font-size: 16px;
   }
 }
 
@@ -309,7 +309,7 @@ body {
 @media (max-width: 780px) {
 .dropdown-item {
   font-weight: 300;
-  font-size: 13px;
+  font-size: 16px;
   }
 }
 
@@ -670,7 +670,7 @@ End Of, Grid Layout.
   .grid-container {
   display: grid;
   /* grid-template-columns: 20% 80%; */
-  grid-template-columns: 20% 95ch;
+  grid-template-columns: 20% 90ch;
   grid-template-areas:
     "menu main"
 }
@@ -713,7 +713,8 @@ End Of, Grid Layout.
 .grid-container {
   display: grid;
   /* grid-template-columns: 15% 85%; */
-  grid-template-columns: 15% 90ch;
+  /* grid-template-columns: 15% 85ch; */
+  grid-template-columns: 15% minmax(65ch, 85ch);
   grid-template-areas:
     "menu main"
 }
@@ -758,7 +759,8 @@ End Of, Grid Layout.
 .grid-container {
   display: grid;
   /* grid-template-columns: 10% 90%; */
-  grid-template-columns: 10% 80ch;
+  /* grid-template-columns: 20% 50ch; */
+  grid-template-columns: 20% 80%;
   grid-template-areas:
     "menu main"
 }
@@ -797,7 +799,7 @@ End Of, Grid Layout.
     
   .grid-container {
     display: grid;
-    grid-template-columns: 10% 90%;
+    grid-template-columns: 30% 70%;
     /* grid-template-columns: 10% 80ch; */
     grid-template-areas:
       "menu main"
