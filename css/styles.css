@@ -757,7 +757,9 @@ End Of, Grid Layout.
 
     
 .grid-container {
-  display: grid;
+  /* display: grid; */
+  /* to display in block and not in grid so that side menu and main will stay in stack*/
+  display: block;
   /* grid-template-columns: 10% 90%; */
   /* grid-template-columns: 20% 50ch; */
   grid-template-columns: 20% 80%;
@@ -773,7 +775,9 @@ End Of, Grid Layout.
   padding-top: 14vh;
   flex-direction: column;
   display: flex;
-  min-height: 88vh; 
+  /* When the screen size is small, we can reduce the min-hight */
+  /* min-height: 88vh; */
+  min-height: 10vh;
   overflow-y: scroll;
   top: 0;
   bottom: 0;
@@ -798,7 +802,9 @@ End Of, Grid Layout.
 
     
   .grid-container {
-    display: grid;
+    /* display: grid; */
+    /* to display in block and not in grid */
+    display: block;
     grid-template-columns: 30% 70%;
     /* grid-template-columns: 10% 80ch; */
     grid-template-areas:
@@ -813,7 +819,9 @@ End Of, Grid Layout.
     padding-top: 14vh;
     flex-direction: column;
     display: flex;
-    min-height: 88vh; 
+    /* When the screen size is small, we can reduce the min-hight */
+    /* min-height: 88vh; */
+    min-height: 10vh; 
     overflow-y: scroll;
     top: 0;
     bottom: 0;
