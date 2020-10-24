@@ -772,7 +772,8 @@ End Of, Grid Layout.
   grid-area: menu;
   /* text-align: justify; */
   padding-left: 1px;
-  padding-top: 14vh;
+  /* padding-top: 14vh; */
+  padding-top: 1em;
   flex-direction: column;
   display: flex;
   /* When the screen size is small, we can reduce the min-hight */
@@ -816,7 +817,8 @@ End Of, Grid Layout.
     grid-area: menu;
     /* text-align: justify; */
     padding-left: 1px;
-    padding-top: 14vh;
+    /* padding-top: 14vh; */
+    padding-top: 1em;
     flex-direction: column;
     display: flex;
     /* When the screen size is small, we can reduce the min-hight */
