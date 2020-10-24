@@ -15,29 +15,12 @@
 				</div>
 			
 			
-			<div id='wasm' class="container-fluid article">
+			<div class="container-fluid article">
 			<article>
-				
+
+				<!-- for wasm -->
 				<script src="/wasm/wasmAmund.js"></script>
-        <!-- <script>
-            // const go = new Go();
-            // WebAssembly.instantiateStreaming(fetch("/wasm/golang.wasm"), go.importObject).then((result) => {
-            //     go.run(result.instance);
-						// });
-						
-						const go = new Go();
-      			let mod, inst;
-      			WebAssembly.instantiateStreaming(
-              fetch("/wasm/goAlert.wasm", {cache: 'no-cache'}), go.importObject).then((result) => {
-              mod = result.module;
-              inst = result.instance;
-              run();
-      			});
-			
-						async function run() {
-              await go.run(inst);
-      			};
-        </script> -->
+				<label id='wasm'></label>
 
 				
 			</article>

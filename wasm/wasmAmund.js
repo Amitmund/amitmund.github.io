@@ -1,7 +1,16 @@
 if ('WebAssembly' in window) {
-	WebAssembly.instantiateStreaming(fetch('/wasm/goAlert.wasm'))
+	WebAssembly.instantiateStreaming(fetch('/wasm/amund.wasm'))
 	.then(result => 
 		document.getElementById('wasm').innerHTML = 
 		result.instance.exports._main()
 		);
 }
+
+
+// if ('WebAssembly' in window) {
+//   WebAssembly.instantiateStreaming(fetch('seven.wasm'))
+//     .then(result => 
+//       document.getElementById('wasm').innerHTML = 
+//       'Output: ' + result.instance.exports._seven()      
+//   );
+// }
