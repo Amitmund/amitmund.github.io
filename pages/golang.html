@@ -20,7 +20,16 @@
 
   <!-- highlight.js for syntax highlight -->
   <!-- <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/default.min.css"> -->
-  
+  <!-- i am using a different Styles(arta) we are all good. -->
+  <!-- you just have to update the name in place of default or arta to the new one if you want to change. -->
+  <!-- https://highlightjs.org/static/demo/ -->
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/arta.min.css">
+  <!-- <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/androidstudio.min.css"> -->
+  <!-- <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/hopscotch.min.css"> -->
+  <!-- <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/railscasts.min.css"> -->
+
+
+
   <!-- To link the your own css -->
   <link rel="stylesheet" href="/css/styles.css">
 
@@ -103,7 +112,33 @@
 					<!-- content of Main -->
 					<!-- This is where your loadData works, loading your mainpageSubpage -->
           
+<pre>
+<code class="golang">
+<!-- <meta author="Amit"> -->
+package main
 
+import (
+	"fmt"
+)
+
+func main() {
+	fmt.Println("Hello Wold")
+}
+
+</code>
+</pre> 
+
+
+<pre>
+<code class="html">
+&lt;!-- I am not sure, yet, why the subpage is not working with these highlight.js --&gt;
+&lt;!-- https://highlightjs.org/static/demo/ --&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/arta.min.css&quot;&gt;
+&lt;!-- highlight.js for syntax highlight --&gt;
+&lt;script src=&quot;//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js&quot;&gt;&lt;/script&gt;
+&lt;script&gt;hljs.initHighlightingOnLoad();&lt;/script&gt;
+</code> 
+</pre>
             <div class="container-fluid section">
             <section>
               
@@ -165,8 +200,8 @@
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
             
       <!-- highlight.js for syntax highlight -->
-      <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js"></script>
-      <script>hljs.initHighlightingOnLoad();</script> -->
+      <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script>
 
       <!-- To link the your own js -->
 			<script src="/js/includeHtml.js"></script>
