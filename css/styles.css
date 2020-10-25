@@ -422,10 +422,10 @@ pre {
   /* background-color: rgba(37,42,51); */
   color: rgba(171, 178, 191);
   /* color: rgba(233, 236, 251); */
-  padding-top: 1em;
+  /* padding-top: 1em;
   padding-bottom: 1em;
   padding-left: 1em;
-  padding-right: 1em;
+  padding-right: 1em; */
   font-weight: 300 !important;
   /* font-family: monospace,SFMono-Regular; */
   font-family: "Courier New","Fira Code",monospace,SFMono-Regular;
@@ -434,7 +434,7 @@ pre {
   border-color: darkcyan; */
   /* border: 1px solid rgba(22, 147, 134, .1); */
   border-top: 30px solid rgba(22, 147, 134);
-  border-radius: 20px;
+  /* border-radius: 20px; */
   /* border-top-left-radius: 10%;
   border-top-right-radius: 10%; */
   /* border-top-right-radius: 200px;
@@ -458,9 +458,20 @@ pre {
 /* https://developer.mozilla.org/en-US/docs/Web/CSS/unset */
 /* https://www.w3schools.com/csSref/css3_pr_all.asp */
 /* Now that highlight.js working, we don't need this one. */
-/* pre code {
-  all: unset;
- } */
+pre code {
+  /* color: #ff7b29; */
+  background-color: unset;
+  color: unset;
+  padding-left: unset; /*5px;*/
+  padding-right: unset; /*5px;*/
+  font-family: unset; /*"Courier New";*/
+  font-weight: unset;
+  /* -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', 'HelveticaNeue-Light', 'Ubuntu', 'Droid Sans', sans-serif */
+  font-size: 100%;
+  font-weight: 300 !important;
+  /* font-family: "Courier New","Fira Code",monospace,SFMono-Regular !important; */
+  font-family: unset;
+ }
 
 blockquote {
     position: relative;
