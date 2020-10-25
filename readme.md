@@ -98,34 +98,39 @@ So, only for the `index.html` the referance would be different. Rest all would b
 These setting need to be there in the page including the sub-pages. to work for this feature.
 
 ```
-/* https://highlightjs.org */
-/* https://www.inmotionhosting.com/support/website/how-to-add-highlight-js-to-your-website/ */
-/* https://jmblog.github.io/color-themes-for-highlightjs/ */
+  /* https://highlightjs.org */
+  /* https://www.inmotionhosting.com/support/website/how-to-add-highlight-js-to-your-website/ */
+  /* https://jmblog.github.io/color-themes-for-highlightjs/ */
 
-/* Few them that I liked */
-/* https://highlightjs.org/static/demo/ */
-/*  
-An Old Hope
-Androidstudio
-Arta **
-Atom One Dark * same background.
-*/
+  /* Few them that I liked */
+  /* https://highlightjs.org/static/demo/ */
+  /*  
+  An Old Hope
+  Androidstudio
+  Arta **
+  Atom One Dark * same background.
+  */
 ```
 
 ```
-<!-- highlight.js for syntax highlight -->
-<!-- <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/default.min.css"> -->
-<!-- i am using a different Styles(arta) we are all good. -->
-<!-- you just have to update the name in place of default or arta to the new one if you want to change. -->
-<!-- https://highlightjs.org/static/demo/ -->
-<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/arta.min.css">
+  <!-- highlight.js for syntax highlight -->
+  <!-- <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/default.min.css"> -->
+  <!-- i am using a different Styles(arta) we are all good. -->
+  <!-- you just have to update the name in place of default or arta to the new one if you want to change. -->
+  <!-- https://highlightjs.org/static/demo/ -->
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/arta.min.css">
 
 
-<!-- highlight.js for syntax highlight -->
-<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js"></script>
-<script>hljs.initHighlightingOnLoad();</script>
+  <!-- highlight.js for syntax highlight -->
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+```
 
-
+Some more css:
+```
+  <!-- <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/androidstudio.min.css"> -->
+  <!-- <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/hopscotch.min.css"> -->
+  <!-- <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/railscasts.min.css"> -->
 ```
 
 
