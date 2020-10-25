@@ -2,7 +2,7 @@ if ('WebAssembly' in window) {
 	WebAssembly.instantiateStreaming(fetch('/wasm/amund.wasm'))
 	.then(result => 
 		document.getElementById('wasm').innerHTML = 
-		result.instance.exports._main()
+		result.instance.exports._amund()
 		);
 }
 

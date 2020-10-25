@@ -341,6 +341,11 @@ a {
   color: rgba(22, 147, 134) !important;
 }
 
+.gridMain a {
+  color: rgba(22, 147, 134) !important;
+  text-decoration: underline;
+}
+
 a:hover {
   color: rgba(255,255,255)!important;
   /* color: #ff7b29 !important; */
@@ -370,7 +375,29 @@ h1, h2, h3, h4, h5, h6{
 
 /* Formatting of text */
 
-b {
+/* fieldset legend{
+  border-top: 30px solid rgba(22, 147, 134);
+  border-radius: 30px;
+} */
+
+
+
+code {
+    /* color: #ff7b29; */
+  background-color: rgba(57,62,74);
+  color: rgba(248, 248, 248);
+  padding-left: 5px;
+  padding-right: 5px;
+  font-family: "Courier New";
+  font-weight: 200;
+  /* -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', 'HelveticaNeue-Light', 'Ubuntu', 'Droid Sans', sans-serif */
+  font-size: 100%;
+  font-weight: 300 !important;
+  font-family: "Courier New","Fira Code",monospace,SFMono-Regular !important;
+}
+
+/* used to print output */
+samp{
   /* color: #ff7b29; */
   background-color: rgba(57,62,74);
   color: rgba(248, 248, 248);
@@ -379,6 +406,59 @@ b {
   font-family: "Courier New";
   font-weight: 200;
   /* -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', 'HelveticaNeue-Light', 'Ubuntu', 'Droid Sans', sans-serif */
+  font-size: 100%;
+  font-weight: 300 !important;
+  font-family: "Courier New","Fira Code",monospace,SFMono-Regular !important;
+}
+
+/* https://highlightjs.org */
+/* https://www.inmotionhosting.com/support/website/how-to-add-highlight-js-to-your-website/ */
+/* https://stackoverflow.com/questions/4611591/code-vs-pre-vs-samp-for-inline-and-block-code-snippets */
+/* https://www.w3schools.com/CSSref/css3_pr_border-radius.asp */
+pre {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  background-color: rgba(49,54,63);
+  /* background-color: rgba(37,42,51); */
+  color: rgba(171, 178, 191);
+  /* color: rgba(233, 236, 251); */
+  padding-top: 1em;
+  padding-bottom: 1em;
+  padding-left: 1em;
+  padding-right: 1em;
+  font-weight: 300 !important;
+  /* font-family: monospace,SFMono-Regular; */
+  font-family: "Courier New","Fira Code",monospace,SFMono-Regular;
+  font-size: 80%;
+  /* border: 1px solid;
+  border-color: darkcyan; */
+  border-top: 30px solid rgba(22, 147, 134);
+  border-radius: 30px;
+  /* border-top-left-radius: 10%;
+  border-top-right-radius: 10%; */
+  /* border-top-right-radius: 200px;
+  border-top-left-radius: 200px; */
+  /* https://www.devdungeon.com/ */
+  /* display: block; */
+  /* min-width: 600px; */
+  min-width: auto;
+  /* white-space: pre-wrap; */
+ 
+  
+  /* box-sizing: content-box;
+  border: 1px solid rgba(22, 147, 134);
+  border-radius: 4px; */
+  /* box-sizing: border-box;
+  border: 1px solid #555; */
+  /* border: 1px solid rgba(22, 147, 134); */
+  /* border-radius: 4px; */
+}
+
+pre code {
+  /* https://developer.mozilla.org/en-US/docs/Web/CSS/unset */
+  /* https://www.w3schools.com/csSref/css3_pr_all.asp */
+  /* all: initial; */
+  all: unset;
 }
 
 blockquote {
@@ -413,6 +493,16 @@ details summary{
   /* font-size: large; */
   /* margin-bottom: 1em; */
 }
+
+/* https://www.w3schools.com/Css/css_combinators.asp */
+.gridMain > details > summary{
+  text-decoration: underline !important;
+}
+
+.myContent > details > summary{
+  text-decoration: underline !important;
+}
+
 
 /* details pre {
   background-color: rgba(37,42,51,.2) !important;
@@ -846,51 +936,6 @@ End Of, Grid Layout.
 
 /* ----------------------------------------------------------- */
 /* ----------------------------------------------------------- */
-
-/* https://stackoverflow.com/questions/4611591/code-vs-pre-vs-samp-for-inline-and-block-code-snippets */
-
-code {
-  color: #ff7b29;
-  font-size: 100%;
-  font-weight: 300 !important;
-  font-family: "Courier New","Fira Code",monospace,SFMono-Regular !important;
-}
-
-
-pre {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-  background-color: rgba(49,54,63);
-  /* background-color: rgba(37,42,51); */
-  color: rgba(171, 178, 191);
-  /* color: rgba(233, 236, 251); */
-  padding-top: 1em;
-  padding-bottom: 1em;
-  padding-left: 1em;
-  padding-right: 1em;
-  font-weight: 300 !important;
-  /* font-family: monospace,SFMono-Regular; */
-  font-family: "Courier New","Fira Code",monospace,SFMono-Regular;
-  font-size: 80%;
-  /* border: 1px solid;
-  border-color: darkcyan; */
-  /* https://www.devdungeon.com/ */
-  /* display: block; */
-  /* min-width: 600px; */
-  min-width: auto;
-  /* white-space: pre-wrap; */
- 
-  
-  /* box-sizing: content-box;
-  border: 1px solid rgba(22, 147, 134);
-  border-radius: 4px; */
-  /* box-sizing: border-box;
-  border: 1px solid #555; */
-  /* border: 1px solid rgba(22, 147, 134); */
-  border-radius: 4px;
-}
-
-
 /* ----------------------------------------------------------- */
 
 /* For responsive */

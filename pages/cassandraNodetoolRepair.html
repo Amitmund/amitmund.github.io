@@ -20,19 +20,19 @@
 			<article>
 	
 				<p>
-					On this page, I will update few quick notes related to the <b>Cassandra Nodetool Repair</b>. The following link is the original Cassandra Nodetool repair link of Cassandra Release 3.0. You can go through the following link and later navigate on other details from the following URL.	
+					On this page, I will update few quick notes related to the <code>Cassandra Nodetool Repair</code>. The following link is the original Cassandra Nodetool repair link of Cassandra Release 3.0. You can go through the following link and later navigate on other details from the following URL.	
 				</p>
 
 				<p>
-					Cassandra nodetool command provides a nodetool command to run repairs.  The repair command uses an <b>Anti-Entropy</b> service which <b>detects inconsistencies</b> and repairs data across all replicas of the specified endpoint.  Cassandra provides high availability and durability by storing multiple copies (replicas) of data. Data inconsistencies can occur <b>due to</b> server, <b>disk failures</b> or <b>network errors or latency</b>.  <b>network errors or latency</b> is executed on a specified endpoint in the cluster and provides several options to control the amount of data to be repaired.
+					Cassandra nodetool command provides a nodetool command to run repairs.  The repair command uses an <code>Anti-Entropy</code> service which <code>detects inconsistencies</code> and repairs data across all replicas of the specified endpoint.  Cassandra provides high availability and durability by storing multiple copies (replicas) of data. Data inconsistencies can occur <code>due to</code> server, <code>disk failures</code> or <code>network errors or latency</code>.  <code>network errors or latency</code> is executed on a specified endpoint in the cluster and provides several options to control the amount of data to be repaired.
 				</p>
 
 				<p>
-					Cassandra data is <b>organized into keyspaces</b> and <b>column families</b> and distributed to the nodes using a <b>data partitioning scheme</b>. The repair on a specified <b>column family</b> or <b>all column families in a specified keyspace</b> or <b>repair all column families from all keyspaces</b>.
+					Cassandra data is <code>organized into keyspaces</code> and <code>column families</code> and distributed to the nodes using a <code>data partitioning scheme</code>. The repair on a specified <code>column family</code> or <code>all column families in a specified keyspace</code> or <code>repair all column families from all keyspaces</code>.
 				</p>
 
 				<p> 
-					At storage layer, each <b>column family data</b> is stored separately in <b>SSTables</b>.  A column family contains a set of rows.  Each row is mapped to a <b>token</b> using its key and it is assigned to a node using data partitioning scheme.<b>Rows in a column family are sorted based on their token order in SSTables</b>. Rows are replicated to other nodes using <b>replication strategy</b>and the number of replicas are determined by <b>replication factor</b>.  
+					At storage layer, each <code>column family data</code> is stored separately in <code>SSTables</code>.  A column family contains a set of rows.  Each row is mapped to a <code>token</code> using its key and it is assigned to a node using data partitioning scheme.<code>Rows in a column family are sorted based on their token order in SSTables</code>. Rows are replicated to other nodes using <code>replication strategy</code>and the number of replicas are determined by <code>replication factor</code>.  
 					
 					<div class="alert alert-primary">
 					Each keyspace can have different replication strategies, so Cassandra repairs each keyspace data separately.
@@ -64,7 +64,7 @@
 
 				<hr>
 
-				<b>Control how the repair runs:</b>
+				<code>Control how the repair runs:</code>
 				<br>
 				<br>
 				<ul>
@@ -86,6 +86,9 @@
 				<br>
 
 <hr>
+
+<details>
+	<summary>nodetool repair help</summary>
 
 <pre>
 nodetool 
@@ -126,31 +129,30 @@ repair
 
 [keyspace [--] tables...]
 </pre>
+</details>
 
 <hr>
 
-<b>Main Options</b>
+<code>Main Options</code>
 
 <pre>
-
 -h	--host		Hostname or IP address.
 -p	--port		Port number.
 -pwf	--password-file	Password file path.
 -pw	--password	Password.
 -u	--username	Username.
-
 </pre>
 
 <hr>
 
-<b>Example</b>
+<code>Example</code>
 <pre>
 nodetool -u username -pw password command command_options
 </pre>
 
 <hr>
 
-<b>Example</b>
+<code>Example</code>
 <br>
 All nodetool repair arguments are optional.
 <br>
@@ -168,15 +170,15 @@ nodetool repair -pr -hosts 10.2.2.20 10.2.2.21
 </pre>
 
 <hr>
-To restrict the repair to the local datacenter, use the <b>-dc</b> option followed by the name of the datacenter. 
+To restrict the repair to the local datacenter, use the <code>-dc</code> option followed by the name of the datacenter. 
 
 <div class="alert alert-primary">
-	Issue the command from a node in the datacenter you want to repair. It mean, if you want to repair <b>DC1</b>, then you need to run the repair command from one of the node from <b>DC1</b>. 
+	Issue the command from a node in the datacenter you want to repair. It mean, if you want to repair <code>DC1</code>, then you need to run the repair command from one of the node from <code>DC1</code>. 
 </div>
 
 <hr>
 
-<b>Output Example:</b>
+<code>Output Example:</code>
 <pre>
 [2014-07-24 21:59:55,326] Nothing to repair for keyspace 'system'
 [2014-07-24 21:59:55,617] Starting repair command #2, repairing 490 ranges 
@@ -191,10 +193,10 @@ To restrict the repair to the local datacenter, use the <b>-dc</b> option follow
 <hr>
 
 <div class="alert alert-primary">
-	And an inspection of the <b>system.log</b> shows repair taking place only on IP addresses in DC1.
+	And an inspection of the <code>system.log</code> shows repair taking place only on IP addresses in DC1.
 </div>
 
-<b>Output Example of system.log</b>
+<code>Output Example of system.log</code>
 <pre>
 . . .
 INFO  [AntiEntropyStage:1] 2014-07-24 22:23:10,708 RepairSession.java:171 
@@ -208,7 +210,7 @@ INFO  [RepairJobTask:1] 2014-07-24 22:23:10,740 RepairJob.java:145
 
 <h5>Some related learning</h5>
 
-For some need, if you have to take away 2 Cassandra Nodes, in that case you have, you need to do <b>nodetool decommission</b> them first. But note, you cann't decommission 2 node at the same time, because if the 1st decommssion node, moving its date to the second node, then if you try to decommission the second node, then the second node will give some an update error.
+For some need, if you have to take away 2 Cassandra Nodes, in that case you have, you need to do <code>nodetool decommission</code> them first. But note, you cann't decommission 2 node at the same time, because if the 1st decommssion node, moving its date to the second node, then if you try to decommission the second node, then the second node will give some an update error.
 
 <div class="alert alert-primary">
 	nodetool: Unsupported operation: data is currently moving to this node; unable to leave the ring
