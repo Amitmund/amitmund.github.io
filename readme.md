@@ -128,9 +128,18 @@ These setting need to be there in the page including the sub-pages. to work for 
 
 Some more css:
 ```
+If the style have space and have Capital Letter, then the name would be: (E.g: Atom One Dark Reasonable -> atom-one-dark-reasonable )
+  <!-- highlight.js for syntax highlight -->
+  <!-- <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/default.min.css"> -->
+  <!-- i am using a different Styles(arta) we are all good. -->
+  <!-- you just have to update the name in place of default or arta to the new one if you want to change. -->
+  <!-- https://highlightjs.org/static/demo/ -->
+  <!-- Atelier Cave Dark, Atelier Lakeside Dark,Atom One Dark Reasonable  -->
+  <!-- <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/arta.min.css"> -->
   <!-- <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/androidstudio.min.css"> -->
   <!-- <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/hopscotch.min.css"> -->
   <!-- <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/railscasts.min.css"> -->
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/atom-one-dark-reasonable.min.css">
 ```
 
 

@@ -415,62 +415,55 @@ samp{
 
 /* https://stackoverflow.com/questions/4611591/code-vs-pre-vs-samp-for-inline-and-block-code-snippets */
 /* https://www.w3schools.com/CSSref/css3_pr_border-radius.asp */
+/* https://getcssscan.com/css-box-shadow-examples */
 pre {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-  background-color: rgba(49,54,63);
-  /* background-color: rgba(37,42,51); */
-  color: rgba(171, 178, 191);
-  /* color: rgba(233, 236, 251); */
-  /* padding-top: 1em;
-  padding-bottom: 1em;
-  padding-left: 1em;
-  padding-right: 1em; */
+  margin-top: 2em;
+  margin-bottom: 2em;
   font-weight: 300 !important;
-  /* font-family: monospace,SFMono-Regular; */
   font-family: "Courier New","Fira Code",monospace,SFMono-Regular;
   font-size: 80%;
-  /* border: 1px solid;
-  border-color: darkcyan; */
-  /* border: 1px solid rgba(22, 147, 134, .1); */
-  border-top: 30px solid rgba(22, 147, 134);
-  /* border-radius: 20px; */
-  /* border-top-left-radius: 10%;
-  border-top-right-radius: 10%; */
-  /* border-top-right-radius: 200px;
-  border-top-left-radius: 200px; */
-  /* https://www.devdungeon.com/ */
-  /* display: block; */
-  /* min-width: 600px; */
   min-width: auto;
-  /* white-space: pre-wrap; */
- 
-  
-  /* box-sizing: content-box;
-  border: 1px solid rgba(22, 147, 134);
-  border-radius: 4px; */
-  /* box-sizing: border-box;
-  border: 1px solid #555; */
-  /* border: 1px solid rgba(22, 147, 134); */
-  /* border-radius: 4px; */
+  /* padding: 1em; */
+  color: rgba(171, 178, 191);
+  box-shadow: rgba(0, 0, 0, 0.0980392) 0px 4px 12px;
+
 }
 
 /* https://developer.mozilla.org/en-US/docs/Web/CSS/unset */
 /* https://www.w3schools.com/csSref/css3_pr_all.asp */
 /* Now that highlight.js working, we don't need this one. */
 pre code {
-  /* color: #ff7b29; */
-  background-color: unset;
-  color: unset;
-  padding-left: unset; /*5px;*/
-  padding-right: unset; /*5px;*/
-  font-family: unset; /*"Courier New";*/
-  font-weight: unset;
-  /* -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', 'HelveticaNeue-Light', 'Ubuntu', 'Droid Sans', sans-serif */
+
+  background-color: rgba(40, 44, 52);
+  color: rgba(171, 178, 191);
+  font-size: 16px;
+  line-height:1.6;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  padding-left: 1em;
+  padding-right: 1em;
+  font-weight: 200;
   font-size: 100%;
   font-weight: 300 !important;
-  /* font-family: "Courier New","Fira Code",monospace,SFMono-Regular !important; */
+  font-family: "Courier New","Fira Code",monospace,SFMono-Regular !important;
+
+
+
+  /* color: #ff7b29; */
+  /* background-color: unset;
+  color: unset;
+  padding-left: unset;
+  padding-right: unset;
   font-family: unset;
+  font-weight: unset;
+  font-size: 100%;
+  font-weight: 300 !important;
+  font-family: unset; */
+  /* -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', 'HelveticaNeue-Light', 'Ubuntu', 'Droid Sans', sans-serif */
+  /* font-family: "Courier New","Fira Code",monospace,SFMono-Regular !important; */
+
  }
 
 blockquote {
@@ -991,7 +984,7 @@ End Of, Grid Layout.
 
 
 body ul, body ol {
-  padding-left: 2rem;
+  padding-left: 1em;
 }
 
 
