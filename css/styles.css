@@ -225,6 +225,30 @@ body {
 .amundBlur {
   filter: blur(5px);
 }
+
+.amundDetails {
+  margin-top: 1rem;
+  margin-bottom: 1em;
+  /* background-color: rgba(37,42,51,.4) !important; */
+  /* border: 1px solid #555; */
+  /* border: 1px solid rgba(22, 147, 134, .2) !important; */
+}
+
+.amundDetails summary{
+   margin-bottom: 1em;
+}
+
+
+.amundBorder {
+  margin-top: 2em;
+  margin-bottom: 2em;
+  font-weight: 300 !important;
+  min-width: auto;
+  padding: 1em;
+  color: rgba(171, 178, 191);
+  box-shadow: rgba(0, 0, 0, 0.0980392) 0px 4px 12px;
+}
+
 /* ----------------------------------------------------------- */
 
 #headingNote {
@@ -429,6 +453,7 @@ pre {
 
 }
 
+
 /* https://developer.mozilla.org/en-US/docs/Web/CSS/unset */
 /* https://www.w3schools.com/csSref/css3_pr_all.asp */
 /* Now that highlight.js working, we don't need this one. */
@@ -513,17 +538,7 @@ details summary{
   background-color: rgba(37,42,51,.2) !important;
 } */
 
-.amundDetails {
-  margin-top: 1rem;
-  margin-bottom: 1em;
-  /* background-color: rgba(37,42,51,.4) !important; */
-  /* border: 1px solid #555; */
-  /* border: 1px solid rgba(22, 147, 134, .2) !important; */
-}
 
-.amundDetails summary{
-   margin-bottom: 1em;
-}
 /* ----------------------------------------------------------- */
 /* ----------------------------------------------------------- */
 
