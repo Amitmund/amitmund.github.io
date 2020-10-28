@@ -177,7 +177,7 @@ body {
   /* font: normal 16px/1.9em "Inter", "Source Sans Pro","Helvetica Neue", Arial, sans-serif; */
   margin: 0;
   padding: 0;
-  height: 100%
+  height: 100%;
 }
 
 
@@ -445,7 +445,7 @@ pre {
   margin-bottom: 2em;
   font-weight: 300 !important;
   font-family: "Courier New","Fira Code",monospace,SFMono-Regular;
-  font-size: 80%;
+  font-size: 90%;
   min-width: auto;
   /* padding: 1em; */
   color: rgba(171, 178, 191);
@@ -696,21 +696,29 @@ Grid Layout. This is IMP.
 https://www.w3schools.com/css/tryit.asp?filename=trycss_grid_layout_named
 */
 
+.grid-container {
+  /* http://1linelayouts.glitch.me */
+  /* grid-template-columns: minmax(100px, 20%) 1fr; */
+  /* grid-template-columns: 1fr 3fr; */
+  /* grid-template-columns: 20% 80%; */
+  display: grid;
+  grid-template-columns: 20% 110ch;
+  grid-template-areas:
+    "menu main"
+}
+
+/* https://stackoverflow.com/questions/43879208/add-scroll-to-each-column-in-css-grid-layout */
+/* https://medium.com/@beyondborders/beginner-css-grid-sticky-navigation-scrolling-content-7c4de0a8d1dc */
 .gridMenu { 
   grid-area: menu;
-  /* text-align: justify; */
-  padding-left: 8vw;
-  padding-top: 14vh;
-/*  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);*/
-/* to pushing the footer at the bottom */
-  flex-direction: column;
+  padding: 1em;
+  margin: 1em;
+  padding-top: 4em;
   display: flex;
+  flex-direction: column;
   min-height: 88vh; 
-  /* overflow-y: scroll;
-  top: 0;
-  bottom: 0; */
-  /* https://stackoverflow.com/questions/43879208/add-scroll-to-each-column-in-css-grid-layout */
-  overflow: auto;
+  height: 99vh;
+  overflow: scroll;
 }
 
 .gridMenu summary {
@@ -721,17 +729,17 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_grid_layout_named
 }
 
 
-
-
-
 .gridMain { 
   grid-area: main;
   /* text-align: justify; */
-  padding-left: 0;
-  padding-top: 9vh;
-  /* padding-right: 20vw; */
+  /* padding-left: 0;
+  padding-top: 2em;
   padding-right: 12vw;
-  padding-left: 8vw;
+  padding-left: 8vw; */
+  padding: 2em;
+  margin: 1em;
+  height: 99vh;
+  overflow: auto;
 }
 
 
@@ -747,20 +755,7 @@ Based on the above class, the following layout is designed.
 https://learncssgrid.com/
 */
 
-.grid-container {
-  display: grid;
-  /* grid-template-columns: 20% 80%; */
-  grid-template-columns: 20% 110ch;
-  /* http://1linelayouts.glitch.me */
-  /* grid-template-columns: minmax(100px, 20%) 1fr; */
 
-/*
-  grid-gap: 10px;
-  margin-top: 20px;
-*/
-  grid-template-areas:
-    "menu main"
-}
 
 
 /*
@@ -788,16 +783,14 @@ End Of, Grid Layout.
 
 .gridMenu { 
   grid-area: menu;
-  /* text-align: justify; */
-  /* padding-left: 10px; */
-  padding-left: 10vh;
-  padding-top: 14vh;
-  flex-direction: column;
+  padding: 1em;
+  margin: 1em;
+  padding-top: 4em;
   display: flex;
+  flex-direction: column;
   min-height: 88vh; 
-  overflow-y: scroll;
-  top: 0;
-  bottom: 0;
+  height: 99vh;
+  overflow: scroll;
 }
   /* ----------------------------------------------------------- */
   
@@ -805,11 +798,12 @@ End Of, Grid Layout.
 .gridMain { 
   grid-area: main;
   /* text-align: justify; */
-  padding-left: 0;
-  padding-top: 9vh;
-  /* padding-right: 15vw; */
+  /* padding-left: 0;
+  padding-top: 2em;
   padding-right: 12vw;
-  padding-left: 8vw;
+  padding-left: 8vw; */
+  padding: 2em;
+  margin: 1em;
   /* max-width: 60ch; */
   }
   
@@ -832,15 +826,14 @@ End Of, Grid Layout.
 
 .gridMenu { 
   grid-area: menu;
-  /* text-align: justify; */
-  padding-left: 10px;
-  padding-top: 14vh;
-  flex-direction: column;
+  padding: 1em;
+  margin: 1em;
+  padding-top: 4em;
   display: flex;
+  flex-direction: column;
   min-height: 88vh; 
-  overflow-y: scroll;
-  top: 0;
-  bottom: 0;
+  height: 99vh;
+  overflow: scroll;
 }
   /* ----------------------------------------------------------- */
   
@@ -848,11 +841,12 @@ End Of, Grid Layout.
 .gridMain { 
   grid-area: main;
   /* text-align: justify; */
-  padding-left: 0;
-  padding-top: 9vh;
-  /* padding-right: 10vw; */
+  /* padding-left: 0;
+  padding-top: 2em;
   padding-right: 12vw;
-  padding-left: 8vw;
+  padding-left: 8vw; */
+  padding: 2em;
+  margin: 1em;
   
   }
   
@@ -867,9 +861,9 @@ End Of, Grid Layout.
 
     
 .grid-container {
-  /* display: grid; */
+  display: grid;
   /* to display in block and not in grid so that side menu and main will stay in stack*/
-  display: block;
+  /* display: block; */
   /* grid-template-columns: 10% 90%; */
   /* grid-template-columns: 20% 50ch; */
   grid-template-columns: 20% 80%;
@@ -880,18 +874,14 @@ End Of, Grid Layout.
 
 .gridMenu { 
   grid-area: menu;
-  /* text-align: justify; */
-  padding-left: 1px;
-  /* padding-top: 14vh; */
-  padding-top: 1em;
-  flex-direction: column;
+  padding: 1em;
+  margin: 1em;
+  padding-top: 4em;
   display: flex;
-  /* When the screen size is small, we can reduce the min-hight */
-  /* min-height: 88vh; */
-  min-height: 10vh;
-  overflow-y: scroll;
-  top: 0;
-  bottom: 0;
+  flex-direction: column;
+  min-height: 88vh; 
+  height: 99vh;
+  overflow: scroll;
 }
   /* ----------------------------------------------------------- */
   
@@ -899,10 +889,11 @@ End Of, Grid Layout.
 .gridMain { 
   grid-area: main;
   /* text-align: justify; */
-  padding-top: 9vh;
-  /* padding-right: 0px; */
+  /* padding-top: 2em;
   padding-right: 6vw;
-  padding-left: 8vw;
+  padding-left: 8vw; */
+  padding: 2em;
+  margin: 1em;
   min-height: 80vh;
   }
   
@@ -913,41 +904,37 @@ End Of, Grid Layout.
 
     
   .grid-container {
-    /* display: grid; */
+    display: grid;
     /* to display in block and not in grid */
-    display: block;
-    grid-template-columns: 30% 70%;
+    /* display: block; */
+    grid-template-columns: 20% 80%;
     /* grid-template-columns: 10% 80ch; */
     grid-template-areas:
       "menu main"
   }
     /* ----------------------------------------------------------- */
   
-  .gridMenu { 
-    grid-area: menu;
-    /* text-align: justify; */
-    padding-left: 1px;
-    /* padding-top: 14vh; */
-    padding-top: 1em;
-    flex-direction: column;
-    display: flex;
-    /* When the screen size is small, we can reduce the min-hight */
-    /* min-height: 88vh; */
-    min-height: 10vh; 
-    overflow-y: scroll;
-    top: 0;
-    bottom: 0;
-  }
+.gridMenu { 
+  grid-area: menu;
+  padding: 1em;
+  margin: 1em;
+  padding-top: 4em;
+  display: flex;
+  flex-direction: column;
+  min-height: 88vh; 
+  height: 99vh;
+  overflow: scroll;
+}
     /* ----------------------------------------------------------- */
     
     
   .gridMain { 
     grid-area: main;
     /* text-align: justify; */
-    padding-top: 9vh;
-    margin-left: 0;
-    padding-right: 6vw;
-    padding-left: 8vw;
+    padding: 2em;
+    margin: 1em;
+    /* padding-right: 6vw;
+    padding-left: 8vw; */
     min-height: 80vh;
     }
     
