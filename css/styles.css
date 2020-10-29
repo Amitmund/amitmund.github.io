@@ -255,6 +255,35 @@ body {
   padding-top: unset !important;
   /* display: block !important; */
 }
+
+
+.amundTable {
+  all: unset !important;
+  margin: 0 auto;
+  
+}
+
+.amundTable thead {
+  padding: 0;
+  margin: 0;
+  background: rgba(22, 147, 134);
+  color: rgba(255, 255, 255);
+  max-height: 10px;
+}
+
+.amundTable thead th {
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold; 
+}
+
+.amundTable tbody td {
+  padding: 1em;
+  border: solid 1px rgba(22,147,134);
+}
+
 /* ----------------------------------------------------------- */
 
 #headingNote {
