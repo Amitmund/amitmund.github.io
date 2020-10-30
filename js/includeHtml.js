@@ -39,16 +39,12 @@ function includeHTML() {
 // 	hljs.initHighlighting()
 // });
 
-// $( document ).mouseover(function() {
-// 	hljs.initHighlighting()
-// });
-
-
-// Just calls once! 
-// https://api.jquery.com/one/
-$( document ).one( "mousemove", function() {
-  hljs.initHighlighting()
+$( document ).mouseover(function() {
+	hljs.initHighlighting()
 });
+
+
+
 
 // --------------------------------------------------------------------------------
 // --------------------------------------------------------------------------------
