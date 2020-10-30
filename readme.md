@@ -143,6 +143,22 @@ If the style have space and have Capital Letter, then the name would be: (E.g: A
 ```
 
 
+### On highlightjs 
+
+ - https://groups.google.com/g/highlightjs/c/REilbMmgK0M?pli=1
+
+ ```
+ jQuery(document).on('keyup', 'pre code.editor', function(event) {
+  jQuery('pre code.result').html(this.innerText);
+  hljs.highlightBlock(jQuery('pre code.result')[0],'  ', false);
+});
+```
+
+```
+
+```
+
+
 ### Quick git command
 > git add *; git status; git commit -m "update."; git push
 

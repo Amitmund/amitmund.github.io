@@ -35,47 +35,6 @@ $(document).ready(function(){
 });
 
 
-// ----------------------------------------------------------------------------
-// ----------------------------------------------------------------------------
-
-
-// $(document).ready(function(){
-//   contentContainer.effect("highlight");
-//   hljs.initHighlightingOnLoad();
-// });
-
-
-// // Checking if syntax hightlight will work.
-// $(document).ready(function(){
-// 	hljs.initHighlightingOnLoad();
-// });
-
-// https://highlightjs.org/usage/
-
-
-// <!-- highlight.js for syntax highlight -->
-// <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/atom-one-dark-reasonable.min.css">
-
-
-// <!-- highlight.js for syntax highlight -->
-// <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js"></script>
-// <script>hljs.initHighlightingOnLoad();</script>
-
-
-
-// <div class="container-fluid gridMenu ">
-// <a id="golangIntroduction" href="javascript:void(0);">Introduction</a>
-// </div>
-
-
-
-
-
-{/* <script>
-	hljs.configure({useBR: true});
-	hljs.highlightBlock($('div').get(0));
-</script> */}
-
 
 // ----------------------------------------------------------------------------
 // ----------------------------------------------------------------------------

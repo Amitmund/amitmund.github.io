@@ -1,44 +1,7 @@
 <!-- ------------------------------------------------------------------------------------------------------------ -->  
 <!--Fill the data that you want to be in Main Session because of id="loadData" and your page js-->
 
-<!DOCTYPE html>
 
-
-<!-- ------------------------------------------------------------------------------------------------------------ -->  
-<!-- ------------------------------------------------------------------------------------------------------------ -->  
-
-<!-- HEAD: No changes needed for this article -->
-<head>
-
-  <meta charset="utf-8">
-
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <html lang="en">
-
-  <title>Amit Mund</title>
-  
-  <!-- Latest compiled and minified CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-
-  <!-- highlight.js for syntax highlight -->
-  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/atom-one-dark-reasonable.min.css">
-
-  <!-- To link the your own css -->
-	<link rel="stylesheet" href="/css/styles.css">
-	
-
-
-</head>
-
-	<!-- ------------------------------------------------------------------------------------------------------------ -->  
-
-
-<body onload="hljs.initHighlighting()">
-
-
-
-	<!-- ------------------------------------------------------------------------------------------------------------ -->  
 	<!-- ------------------------------------------------------------------------------------------------------------ -->  
 	<div class="myContent">
 
@@ -151,36 +114,12 @@ func main() {
 <!-- ------------------------------------------------------------------------------------------------------------ -->  
 <!-- ------------------------------------------------------------------------------------------------------------ -->  
 
+<!-- highlight.js for syntax highlight -->
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/atom-one-dark-reasonable.min.css">
 <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/highlight.min.js"></script>
 
-<!-- working on the 2nd click -->
-<script>
-	hljs.initHighlighting()
-</script>
-
-<!-- <script>
-	// $('.myContent').ready(function(){
-		hljs.initHighlighting();
-	// });
-    
-</script> -->
-
-<!-- <script>
-	$('.myContent').ready(hljs.initHighlighting()); 
-</script> -->
-
-<!-- <script>
-$(document).ready(function(){
-  $(".myContent").bind (hljs.initHighlighting())
-});
-</script> -->
-
+<!-- For hljs to load hljs.initHighlighting() on mouse move. -->
+<!-- But we need to add this includeHtml.js -->
+<script src="/js/includeHtml.js"></script>
 
 <!-- ------------------------------------------------------------------------------------------------------------ -->  
-
-
-</body>
-
-<!-- ------------------------------------------------------------------------------------------------------------ -->  
-  
-</html>

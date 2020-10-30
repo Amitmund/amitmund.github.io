@@ -25,3 +25,10 @@ function includeHTML() {
     }
   }
 };
+
+
+// For hljs to load hljs.initHighlighting() on mouse move.
+// But we need to add this includeHtml.js
+$( document ).mousemove(function() {
+	hljs.initHighlighting()
+});
