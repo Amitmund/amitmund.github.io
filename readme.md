@@ -145,19 +145,51 @@ If the style have space and have Capital Letter, then the name would be: (E.g: A
 
 ### On highlightjs 
 
- - https://groups.google.com/g/highlightjs/c/REilbMmgK0M?pli=1
-
- ```
- jQuery(document).on('keyup', 'pre code.editor', function(event) {
-  jQuery('pre code.result').html(this.innerText);
-  hljs.highlightBlock(jQuery('pre code.result')[0],'  ', false);
+```
+// For hljs to load hljs.initHighlighting() on mouse move.
+// But we need to add this includeHtml.js
+$( document ).mousemove(function() {
+	hljs.initHighlighting()
 });
 ```
 
-```
+
+### jquery 
 
 ```
 
+// quick jquery note //
+
+// Basic syntax is: $(selector).action()
+
+// A $ sign to define/access jQuery
+// A (selector) to "query (or find)" HTML elements
+// A jQuery action() to be performed on the element(s)
+
+
+// Examples:
+
+// $(this).hide() - hides the current element.
+
+// $("p").hide() - hides all <p> elements.
+
+// $(".test").hide() - hides all elements with class="test".
+
+// $("#test").hide() - hides the element with id="test".
+
+
+
+// $(document).ready(function(){
+
+//   // jQuery methods go here...
+
+// });
+
+
+// So: $(selector).action()
+
+
+```
 
 ### Quick git command
 > git add *; git status; git commit -m "update."; git push
