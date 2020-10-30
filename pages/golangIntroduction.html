@@ -21,18 +21,20 @@
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 
-  <!-- highlight.js for syntax highlight
-  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/atom-one-dark-reasonable.min.css"> -->
+  <!-- highlight.js for syntax highlight -->
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/atom-one-dark-reasonable.min.css">
 
   <!-- To link the your own css -->
-  <link rel="stylesheet" href="/css/styles.css">
+	<link rel="stylesheet" href="/css/styles.css">
+	
+
 
 </head>
 
 	<!-- ------------------------------------------------------------------------------------------------------------ -->  
 
 
-<body>
+<body onload="hljs.initHighlighting()">
 
 
 
@@ -148,15 +150,30 @@ func main() {
 <!-- myContent div-->
 <!-- ------------------------------------------------------------------------------------------------------------ -->  
 <!-- ------------------------------------------------------------------------------------------------------------ -->  
-									
-<!-- highlight.js for syntax highlight -->
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/highlight.min.js"></script>
+
+<!-- working on the 2nd click -->
 <script>
-	document.addEventListener('DOMContentLoaded', (event) => {
-		document.querySelectorAll('pre code').forEach((block) => {
-			hljs.highlightBlock(block);
-		});
-	});
+	hljs.initHighlighting()
 </script>
+
+<!-- <script>
+	// $('.myContent').ready(function(){
+		hljs.initHighlighting();
+	// });
+    
+</script> -->
+
+<!-- <script>
+	$('.myContent').ready(hljs.initHighlighting()); 
+</script> -->
+
+<!-- <script>
+$(document).ready(function(){
+  $(".myContent").bind (hljs.initHighlighting())
+});
+</script> -->
 
 
 <!-- ------------------------------------------------------------------------------------------------------------ -->  
