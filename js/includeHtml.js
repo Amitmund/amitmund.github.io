@@ -39,14 +39,28 @@ function includeHTML() {
 // 	hljs.initHighlighting()
 // });
 
-$( document ).mouseover(function() {
-	hljs.initHighlighting()
+// $( document ).mouseover(function() {
+// 	hljs.initHighlighting()
+// });
+
+$(this).mouseleave(function(){
+  hljs.initHighlighting()
 });
 
 // For mobile devices.
 $(document).scroll(function(){
   hljs.initHighlighting()
 });
+
+
+// --------------------------------------------------------------------------------
+// --------------------------------------------------------------------------------
+
+// For fun:
+
+// $(".author").hover(function(){
+//   alert("Thank you :) ")
+// });
 
 
 // --------------------------------------------------------------------------------
