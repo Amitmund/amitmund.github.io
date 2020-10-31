@@ -191,6 +191,64 @@ $( document ).mousemove(function() {
 
 ```
 
+
+### Feq jquery
+
+```
+
+// --------------------------------------------------------------------------------
+// --------------------------------------------------------------------------------
+
+// For fun:
+
+// $(".author").hover(function(){
+//   alert("Thank you :) ")
+// });
+
+
+// --------------------------------------------------------------------------------
+
+
+// for .gridMenu
+
+// $(document).ready(function(){
+//   $("#gridMenuHide").click(function(){
+//     $(".gridMenu").hide();
+//   });
+//   $("#gridMenuShow").click(function(){
+//     $(".gridMenu").show();
+//   });
+// });
+
+
+
+
+//  You might like to put this on your topic Main page to work. 
+// <!-- To Hide / Show SideMenu -->
+// <!-- <div>
+//   <button id="gridMenuHide">Hide SideMenu</button>
+//   <button id="gridMenuShow">Show SideMenu</button>
+// </div> -->
+
+
+// $(document).ready(function(){
+//   $("button").click(function(){
+//     $("p").toggle();
+//   });
+// });
+
+// --------------------------------------------------------------------------------
+// --------------------------------------------------------------------------------
+
+//  Few jquery links:
+// https://www.w3schools.com/jquery/tryit.asp?filename=tryjquery_slide_toggle
+// https://www.w3schools.com/jquery/jquery_dom_set.asp
+
+// --------------------------------------------------------------------------------
+// --------------------------------------------------------------------------------
+
+```
+
 ### Quick git command
 > git add *; git status; git commit -m "update."; git push
 
