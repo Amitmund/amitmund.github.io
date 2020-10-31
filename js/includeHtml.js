@@ -43,7 +43,10 @@ $( document ).mouseover(function() {
 	hljs.initHighlighting()
 });
 
-
+// For mobile devices.
+$(document).scroll(function(){
+  hljs.initHighlighting()
+});
 
 
 // --------------------------------------------------------------------------------
