@@ -52,5 +52,36 @@ $(document).scroll(function(){
   hljs.initHighlighting()
 });
 
+
+// $('pre > code').each(function() {
+//   hljs.highlightBlock(this);
+// });
+
 // --------------------------------------------------------------------------------
 // --------------------------------------------------------------------------------
+
+
+
+// function Validate(control)
+//  {
+//     var limit = 10;
+//     var v = control.value; //var v = $(this).val();
+//     var vl = v.replace(/(\r\n|\n|\r)/gm,"").length;
+//     var newtext="";
+//     for (var i = 0; i < v.length ; i++)
+//     {
+//     if (i%limit==0){
+//         v = v.replace(/(\r\n|\n|\r)/gm,"");
+//         var n = v.substr(i,limit)
+//             n= n + '\n';
+//         newtext += n;
+//         }
+//     }
+//     control.value = newtext;
+// }
+
+
+
+// --------------------------------------------------------------------------------
+// --------------------------------------------------------------------------------
+
