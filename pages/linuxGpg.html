@@ -11,7 +11,7 @@
 		<section>
 		
 				<div class="container-fluid subpage-main-h1">
-				<h1>GPG</h1>
+				<h1>Quick Notes On GPG</h1>
 				</div>
 			
 			
@@ -19,22 +19,112 @@
 			<article>
 
 
-				<h2>Example </h2>
+
+				<h5>Checking if your system have gpg</h5>
 <pre>
-<code class="golang">
-package main
-
-import (
-"fmt"
-)
-
-func main() {
-fmt.Println("Hello Wold")
-}
+<code>
+gpg --help
 </code>
-</pre>           
-				
-				<h2>For Notes</h2>
+</pre>
+
+				If the system have gpg, you should get the output something like the following. 
+
+
+<details class="amundDetails">
+	<summary>gpg --help output</summary>
+<pre>
+<code>
+$ gpg --help
+gpg (GnuPG) 2.2.21
+libgcrypt 1.8.6
+Copyright (C) 2020 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <https://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+
+Home: /Users/amund/.gnupg
+Supported algorithms:
+Pubkey: RSA, ELG, DSA, ECDH, ECDSA, EDDSA
+Cipher: IDEA, 3DES, CAST5, BLOWFISH, AES, AES192, AES256, TWOFISH,
+        CAMELLIA128, CAMELLIA192, CAMELLIA256
+Hash: SHA1, RIPEMD160, SHA256, SHA384, SHA512, SHA224
+Compression: Uncompressed, ZIP, ZLIB, BZIP2
+
+Syntax: gpg [options] [files]
+Sign, check, encrypt or decrypt
+Default operation depends on the input data
+
+Commands:
+
+ -s, --sign                  make a signature
+     --clear-sign            make a clear text signature
+ -b, --detach-sign           make a detached signature
+ -e, --encrypt               encrypt data
+ -c, --symmetric             encryption only with symmetric cipher
+ -d, --decrypt               decrypt data (default)
+     --verify                verify a signature
+ -k, --list-keys             list keys
+     --list-signatures       list keys and signatures
+     --check-signatures      list and check key signatures
+     --fingerprint           list keys and fingerprints
+ -K, --list-secret-keys      list secret keys
+     --generate-key          generate a new key pair
+     --quick-generate-key    quickly generate a new key pair
+     --quick-add-uid         quickly add a new user-id
+     --quick-revoke-uid      quickly revoke a user-id
+     --quick-set-expire      quickly set a new expiration date
+     --full-generate-key     full featured key pair generation
+     --generate-revocation   generate a revocation certificate
+     --delete-keys           remove keys from the public keyring
+     --delete-secret-keys    remove keys from the secret keyring
+     --quick-sign-key        quickly sign a key
+     --quick-lsign-key       quickly sign a key locally
+     --sign-key              sign a key
+     --lsign-key             sign a key locally
+     --edit-key              sign or edit a key
+     --change-passphrase     change a passphrase
+     --export                export keys
+     --send-keys             export keys to a keyserver
+     --receive-keys          import keys from a keyserver
+     --search-keys           search for keys on a keyserver
+     --refresh-keys          update all keys from a keyserver
+     --import                import/merge keys
+     --card-status           print the card status
+     --edit-card             change data on a card
+     --change-pin            change a card's PIN
+     --update-trustdb        update the trust database
+     --print-md              print message digests
+     --server                run in server mode
+     --tofu-policy VALUE     set the TOFU policy for a key
+
+Options:
+
+ -a, --armor                 create ascii armored output
+ -r, --recipient USER-ID     encrypt for USER-ID
+ -u, --local-user USER-ID    use USER-ID to sign or decrypt
+ -z N                        set compress level to N (0 disables)
+     --textmode              use canonical text mode
+ -o, --output FILE           write output to FILE
+ -v, --verbose               verbose
+ -n, --dry-run               do not make any changes
+ -i, --interactive           prompt before overwriting
+     --openpgp               use strict OpenPGP behavior
+
+(See the man page for a complete listing of all commands and options)
+
+Examples:
+
+ -se -r Bob [file]          sign and encrypt for user Bob
+ --clear-sign [file]        make a clear text signature
+ --detach-sign [file]       make a detached signature
+ --list-keys [names]        show keys
+ --fingerprint [names]      show fingerprints
+
+Please report bugs to <https://bugs.gnupg.org>.
+</code>
+</pre>
+</details>	
+
 
 				<!-- For the note section -->
 				<div class="table-responsive d-flex justify-content-center">          
@@ -47,7 +137,91 @@ fmt.Println("Hello Wold")
 						<tbody>
 							<tr>
 								<td>
-									If you are seeing this is for the note part using table to keep note section.
+									You might also like to check, if not <code>gpg</code> is <code>gpg2</code> is there on your system. Both are almost same. But over here I will be having quick note on <code>gpg</code>.
+									<br>
+									If you don't have gpg on your system, please do search on how to install <code>gpg</code> for your OS.
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					</div>
+					<!-- For the note section -->
+
+<hr>
+
+<h5>Quick installation guide</h5>
+
+<br>
+
+<b>To install on MAC</b>
+
+<pre>
+<code>
+brew install gnupg
+</code>	
+</pre>
+
+<b>To install on Ubuntu Type system</b>
+
+<pre>
+<code>
+sudo apt-get install gpg
+</code>
+</pre>
+
+<hr>
+
+<h5>To check the current public keys on your system</h5>
+<pre>
+<code class="golang">
+gpg --list-keys
+</code>
+</pre>           
+				
+<h5>Tp check the current private keys on your system</h5>
+<pre>
+<code>
+gpg --list-secret-keys
+</code>
+</pre>
+
+
+<h5>Output example</h5>
+<pre>
+<code>
+$ gpg --list-keys
+/Users/amund/.gnupg/pubring.kbx
+-------------------------------
+pub   rsa2048 2020-05-28 [SC] [expires: 2022-05-28]
+      6920A638DA52DA2B4D86862413B2847600AD774F
+uid           [ultimate] Amit Mund < Masked Email ID >
+sub   rsa2048 2020-05-28 [E] [expires: 2022-05-28]
+
+pub   rsa4096 2020-11-01 [SC]
+      AC047DF788B99E934E9740496F4D1BEC8EF93D94
+uid           [ unknown] AmitKumarMund < Email ID >
+sub   rsa4096 2020-11-01 [E]
+</code>
+</pre>
+
+				<!-- For the note section -->
+				<div class="table-responsive d-flex justify-content-center">          
+					<table class="amundTable">
+						<thead>
+							<tr>
+								<th>Your keys ID</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>
+								On the above command <code>list-keys</code> or <code>list-secret-keys</code>, you will get a <b>hexadecimal key ID</b> and this ID you can use, when you have to perform the command related to that keys. But note that, You can also use the <code>Name</code> or <code>email id</code> too. 
+
+								<br>
+
+								In the following quick command I might be using the either ID or email-id as per the example.
+
+								
 								</td>
 							</tr>
 						</tbody>
@@ -56,6 +230,87 @@ fmt.Println("Hello Wold")
 					<!-- For the note section -->
 
 
+<hr>
+
+<h5>To create your key pair</h5>
+<pre>
+<code>
+gpg --full-generate-key
+</code>
+</pre>
+
+Or you might like to use just the following <code>command</code>
+<pre>
+<code>
+gpg --gen-key
+</code>
+</pre>
+
+
+<hr>
+
+<h5>Exporting your Public Key</h5>
+<pre>
+<code>
+gpg --output public.pgp --armor <b>--export</b> username@email
+</code>
+</pre>
+
+
+<h5>Exporting your Private Key</h5>
+<pre>
+<code>
+gpg --output private.pgp --armor <b>--export-secret-key</b> username@email
+</code>
+</pre>
+
+
+
+				<!-- For the note section -->
+				<div class="table-responsive d-flex justify-content-center">          
+					<table class="amundTable">
+						<thead>
+							<tr>
+								<th>Note</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>
+								Note, you can either use the <code>given email id</code> or <code>haxadecimal id</code>.
+								<br>
+								Also, <b>Note</b>, you can use <code>-a</code> in place of <code>--armor</code>.
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					</div>
+					<!-- For the note section -->
+
+									<!-- For the note section -->
+				<div class="table-responsive d-flex justify-content-center">          
+					<table class="amundTable">
+						<thead>
+							<tr>
+								<th>Important Information </th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>
+								Also, note you might like to set a <code>strong</code> password while creating your key-pair, and I believe for personal use, I wpould like to keep my key <code>not to get expire for ever.</code>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					</div>
+					<!-- For the note section -->
+<hr>
+
+
+<p>
+	What we can do, by <code>exporting</code> these keys. Keep it safe the <code>privatekey</code> and with the <code>publickey</code>, we can upload the same to a gpg <code>publickey</code> server, so that it can be used by other, if they want, you should be able to open that file and no one else, because, the original file is Signed by your <code>publickey</code> and you are the only one having the related <code>privatekey</code>. 
+</p>
 			</article>
 			</div>
 			
