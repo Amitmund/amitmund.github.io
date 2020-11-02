@@ -339,6 +339,125 @@ gpg:               imported: 1
 	Once the key is fatched, you can check the same, using <code>gpg --list-keys</code>, which can be used later to encrypt the file, that can be shared to the owner of that public key.
 </p>
 
+<hr>
+
+
+<h5>Cross checking the fingerprint</h5>
+
+<p>
+	Sometime, when you might have to be sure, that the public key and private key are part of the same key-pair. And using the following command, you should be able to find the same.
+</p>
+
+<pre>
+<code>
+gpg --with-colons --import-options show-only --import --fingerprint < my-private-gpg-key.asc | awk -F: '$1 == "fpr" {print $10;}'
+xxxx8EF93D94
+xxxxxxB48C92
+
+
+gpg --with-colons --import-options show-only --import --fingerprint < my-public-gpg-key.asc | awk -F: '$1 == "fpr" {print $10;}'
+xxxx8EF93D94
+xxxxxxB48C92
+</code>
+</pre>
+
+<p>
+	From the above command you should be able to recheck, if the keys are from same key-pair or not.
+</p>
+
+
+
+									<!-- For the note section -->
+									<div class="table-responsive d-flex justify-content-center">          
+										<table class="amundTable">
+											<thead>
+												<tr>
+													<th>Note</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>
+													There would be two <code>fpr</code>key. One is the primary finger print and another one for the intermediate.
+													</td>
+												</tr>
+											</tbody>
+										</table>
+										</div>
+										<!-- For the note section -->
+
+<hr>										
+
+<h5>Deleting keys</h5>
+
+<p>
+	Just incase, if you need to delete the keys, following commands will help you the same. Note, if you have both the private and public key of the key-pair, you need to delete the <code>private key </code> first, before deleting the <code>public key</code>.
+</p>
+
+
+<pre>
+<code>
+# For Private keys:
+# Use the ID listed with --list-secret-keys
+gpg --delete-secret-keys XXXXXXXX
+
+# Public keys:
+# Use the ID listed with --list-keys
+gpg --delete-keys XXXXXXXX
+</code>
+</pre>
+
+
+<hr>
+
+<h5>Encrypting the file.</h5>
+<p>
+	You need provide the <code>recipient</code> details, so, you should be having the <code>public key</code> of the recipent, before you want to encrypt the file for the recipent. The recipent, can you you too.
+</p>
+
+
+									<!-- For the note section -->
+									<div class="table-responsive d-flex justify-content-center">          
+										<table class="amundTable">
+											<thead>
+												<tr>
+													<th>Very Important</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>
+													Unless you have your <code>private key</code> on your system, even if the file is encrypt, with your public key and even if you know your password, you will not be able to decrypt the file. So, Please keep your <code>private key</code> safe and secure.
+													</td>
+												</tr>
+											</tbody>
+										</table>
+										</div>
+										<!-- For the note section -->
+
+
+<pre>
+<code>
+# Quick example:
+gpg -r <b>email-id-of-recipent</b> -e -a<code>file-to-encrypt</code>
+</code>
+</pre>
+
+<p>
+	if you are using <code>-a</code> option, <code>Which I would suggest</code>, you will get the encrypted file with and extention of <code>.asc</code>. Without <code>-a</code> options, the file extention will become <code>.gpg</code> file. Which is a binary file.
+</p>
+
+<h5>To decrypt the file</h5>
+<pre>
+<code>
+gpg -d<code>your-encrypted-file</code>
+</code>
+</pre>
+
+
+<hr>
+
+
 			</article>
 			</div>
 			
