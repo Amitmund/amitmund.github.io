@@ -173,7 +173,7 @@ sudo apt-get install gpg
 
 <h5>To check the current public keys on your system</h5>
 <pre>
-<code class="golang">
+<code>
 gpg --list-keys
 </code>
 </pre>           
@@ -311,6 +311,34 @@ gpg --output private.pgp --armor <b>--export-secret-key</b> username@email
 <p>
 	What we can do, by <code>exporting</code> these keys. Keep it safe the <code>privatekey</code> and with the <code>publickey</code>, we can upload the same to a gpg <code>publickey</code> server, so that it can be used by other, if they want, you should be able to open that file and no one else, because, the original file is Signed by your <code>publickey</code> and you are the only one having the related <code>privatekey</code>. 
 </p>
+
+
+<h5>Sharing your Public key</h5>
+
+<p>
+	Now that we know, how to export our public key and private key, lets share out <code>public key</code> so that it can be used by other to encrypt the file or message, so that only you can able decrypt the same.
+</p>
+
+<p>
+	You can use some of the gpg key server, example <a href="http://keys.gnupg.net/">keys.gnupg.net</a> to upload your <code>public keys</code>, which can be fetch later by other as per the following example.
+</p>
+
+<h5>Fetching public key</h5>
+<pre>
+<code>
+
+gpg --keyserver keys.gnupg.net --recv-keys 6F4D1BEC8EF93D94
+gpg: key 6F4D1BEC8EF93D94: public key "AmitKumarMund < email id >" imported
+gpg: Total number processed: 1
+gpg:               imported: 1
+
+</code>
+</pre>
+
+<p>
+	Once the key is fatched, you can check the same, using <code>gpg --list-keys</code>, which can be used later to encrypt the file, that can be shared to the owner of that public key.
+</p>
+
 			</article>
 			</div>
 			
