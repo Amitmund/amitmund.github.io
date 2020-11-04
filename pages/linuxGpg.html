@@ -193,12 +193,12 @@ $ gpg --list-keys
 /Users/amund/.gnupg/pubring.kbx
 -------------------------------
 pub   rsa2048 2020-05-28 [SC] [expires: 2022-05-28]
-      6920A638DA52DA2B4D86862413B2847600AD774F
+      xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 uid           [ultimate] Amit Mund < Masked Email ID >
 sub   rsa2048 2020-05-28 [E] [expires: 2022-05-28]
 
 pub   rsa4096 2020-11-01 [SC]
-      AC047DF788B99E934E9740496F4D1BEC8EF93D94
+			xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 uid           [ unknown] AmitKumarMund < Email ID >
 sub   rsa4096 2020-11-01 [E]
 </code>
@@ -351,13 +351,13 @@ gpg:               imported: 1
 <pre>
 <code>
 gpg --with-colons --import-options show-only --import --fingerprint < my-private-gpg-key.asc | awk -F: '$1 == "fpr" {print $10;}'
-xxxx8EF93D94
-xxxxxxB48C92
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
 
 gpg --with-colons --import-options show-only --import --fingerprint < my-public-gpg-key.asc | awk -F: '$1 == "fpr" {print $10;}'
-xxxx8EF93D94
-xxxxxxB48C92
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 </code>
 </pre>
 
