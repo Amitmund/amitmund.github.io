@@ -18,8 +18,8 @@
 
 $(document).ready(function(){
 
-	$('#cassandraIntroduction').click(function(){
-		$('#loadData').load('/pages/cassandraIntroduction.html');
+	$('#cassandraDS101Chapter1').click(function(){
+		$('#loadData').load('/pages/cassandraDS101Chapter1.html');
 	});
 
 	$('#cassandraNodetoolRepair').click(function(){
