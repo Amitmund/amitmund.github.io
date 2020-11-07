@@ -300,6 +300,13 @@ body {
   flex-direction: column;
   float: right;
 }
+
+.amundFloaterFlex1Center{
+  display: flex;
+  flex-direction: column;
+  float: center;
+}
+
 /* ----------------------------------------------------------- */
 
 #headingNote {
