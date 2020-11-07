@@ -295,6 +295,11 @@ body {
   float: right;
 }
 
+.amundFloaterFlex1Right{
+  display: flex;
+  flex-direction: column;
+  float: right;
+}
 /* ----------------------------------------------------------- */
 
 #headingNote {
