@@ -301,10 +301,12 @@ body {
   float: Left;
 }
 
-.amundFloaterFlex1Right{
+.amundFloaterFlex2Left{
   display: flex;
   flex-direction: column;
-  float: right;
+  float: Left;
+  margin-left: 1em;
+  text-align: left;
 }
 
 .amundFloaterFlex1Center{
@@ -312,6 +314,14 @@ body {
   flex-direction: column;
   float: center;
 }
+
+.amundFloaterFlex1Right{
+  display: flex;
+  flex-direction: column;
+  float: right;
+}
+
+
 
 /* ----------------------------------------------------------- */
 
