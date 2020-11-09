@@ -27,6 +27,10 @@ $(document).ready(function(){
 	});
 
 	
+	$('#golangStaticWebsite').click(function(){
+		$('#loadData').load('/pages/golangStaticWebsite.html');
+	});
+	
 
 });
 
