@@ -288,15 +288,17 @@ body {
   /* border: solid 1px #169386; */
 }
 
+/* ----------------------------------------------------------- */
+
+/* for amundNote */
 .amundNote {
 
   -moz-border-radius: 6px;
   -webkit-border-radius: 6px;
   background-image: url(/images/icons/note.png);
-  /* mc-auto-number-format: '{b}Note: {/b}'; */
   background-position: 9px 9px;
   background-repeat: no-repeat;
-  
+
   border-radius: 6px;
   line-height: 18px;
   overflow: hidden;
@@ -306,30 +308,237 @@ body {
   margin-bottom: 2em;
   font-weight: 300 !important;
   
-
   color: rgba(171, 178, 191);
   box-shadow: rgba(0, 0, 0, 0.0980392) 0px 4px 12px;
 
-  /* background-color: #f0f7fb; */
-  /* border: solid 1px rgba(22,147,134); */
-  /* min-width: auto; */
-  /* padding: 1em; */
-  /* color: rgba(255, 255, 255); */
+}
+
+.amundNote::before {
+  content: "Note:";
+  color: #169386;
+  font-weight: bold;
+  display: block;
+  padding-bottom: 1em;
+}
+
+/* for amundNote */
+
+/* ----------------------------------------------------------- */
+
+
+/* for amundTodo */
+.amundTodo {
+
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  background-image: url(/images/icons/todo.png);
+  background-position: 9px 9px;
+  background-repeat: no-repeat;
+
+  border-radius: 6px;
+  line-height: 18px;
+  overflow: hidden;
+  padding: 15px 60px;
+  
+  margin-top: 2em;
+  margin-bottom: 2em;
+  font-weight: 300 !important;
+  
+  color: rgba(171, 178, 191);
+  box-shadow: rgba(0, 0, 0, 0.0980392) 0px 4px 12px;
 
 }
 
-div.note
-{
-     -moz-border-radius: 6px;
-     -webkit-border-radius: 6px;
-     background-color: #f0f7fb;
-     border: solid 1px #3498db;
-     border-radius: 6px;
-     line-height: 18px;
-     mc-auto-number-format: '{b}Note: {/b}';
-     overflow: hidden;
-     padding: 12px;
+.amundTodo::before {
+  content: "Todo:";
+  color: #169386;
+  font-weight: bold;
+  display: block;
+  padding-bottom: 1em;
 }
+
+/* for amundTODO */
+
+/* ----------------------------------------------------------- */
+
+
+/* for amundReferance */
+.amundReferance {
+
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  background-image: url(/images/icons/book.png);
+  background-position: 9px 9px;
+  background-repeat: no-repeat;
+
+  border-radius: 6px;
+  line-height: 18px;
+  overflow: hidden;
+  padding: 15px 60px;
+  
+  margin-top: 2em;
+  margin-bottom: 2em;
+  font-weight: 300 !important;
+  
+  color: rgba(171, 178, 191);
+  box-shadow: rgba(0, 0, 0, 0.0980392) 0px 4px 12px;
+
+}
+
+.amundReferance::before {
+  content: "Referance:";
+  color: #169386;
+  font-weight: bold;
+  display: block;
+  padding-bottom: 1em;
+}
+
+/* for amundReferance */
+
+/* ----------------------------------------------------------- */
+
+
+/* for amundIdea */
+.amundIdea {
+
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  background-image: url(/images/icons/idea.png);
+  background-position: 9px 9px;
+  background-repeat: no-repeat;
+
+  border-radius: 6px;
+  line-height: 18px;
+  overflow: hidden;
+  padding: 15px 60px;
+  
+  margin-top: 2em;
+  margin-bottom: 2em;
+  font-weight: 300 !important;
+  
+  color: rgba(171, 178, 191);
+  box-shadow: rgba(0, 0, 0, 0.0980392) 0px 4px 12px;
+
+}
+
+.amundIdea::before {
+  content: "Idea:";
+  color: #169386;
+  font-weight: bold;
+  display: block;
+  padding-bottom: 1em;
+}
+
+/* for amundIdea */
+
+
+/* for amundCorrect */
+.amundCorrect {
+
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  background-image: url(/images/icons/correct.png);
+  background-position: 9px 9px;
+  background-repeat: no-repeat;
+
+  border-radius: 6px;
+  line-height: 18px;
+  overflow: hidden;
+  padding: 15px 60px;
+  
+  margin-top: 2em;
+  margin-bottom: 2em;
+  font-weight: 300 !important;
+  
+  color: rgba(171, 178, 191);
+  box-shadow: rgba(0, 0, 0, 0.0980392) 0px 4px 12px;
+
+}
+
+.amundCorrect::before {
+  content: "Correct:";
+  color: #169386;
+  font-weight: bold;
+  display: block;
+  padding-bottom: 1em;
+}
+
+/* for amundCorrect */
+
+/* ----------------------------------------------------------- */
+
+
+/* for amundMessage */
+.amundMessage {
+
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  background-image: url(/images/icons/message.png);
+  background-position: 9px 9px;
+  background-repeat: no-repeat;
+
+  border-radius: 6px;
+  line-height: 18px;
+  overflow: hidden;
+  padding: 15px 60px;
+  
+  margin-top: 2em;
+  margin-bottom: 2em;
+  font-weight: 300 !important;
+  
+  color: rgba(171, 178, 191);
+  box-shadow: rgba(0, 0, 0, 0.0980392) 0px 4px 12px;
+
+}
+
+.amundMessage::before {
+  content: "Message:";
+  color: #169386;
+  font-weight: bold;
+  display: block;
+  padding-bottom: 1em;
+}
+
+/* for amundMessage */
+
+/* ----------------------------------------------------------- */
+
+
+/* for amundHelp */
+.amundHelp {
+
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  background-image: url(/images/icons/help.png);
+  background-position: 9px 9px;
+  background-repeat: no-repeat;
+
+  border-radius: 6px;
+  line-height: 18px;
+  overflow: hidden;
+  padding: 15px 60px;
+  
+  margin-top: 2em;
+  margin-bottom: 2em;
+  font-weight: 300 !important;
+  
+  color: rgba(171, 178, 191);
+  box-shadow: rgba(0, 0, 0, 0.0980392) 0px 4px 12px;
+
+}
+
+.amundHelp::before {
+  content: "Help:";
+  color: #169386;
+  font-weight: bold;
+  display: block;
+  padding-bottom: 1em;
+}
+
+/* for amundHelp */
+
+/* ----------------------------------------------------------- */
+
 
 .amundFloatLeft img {
   float:left;
