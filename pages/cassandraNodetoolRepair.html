@@ -34,95 +34,59 @@
 
 				<p> 
 					At storage layer, each <code>column family data</code> is stored separately in <code>SSTables</code>.  A column family contains a set of rows.  Each row is mapped to a <code>token</code> using its key and it is assigned to a node using data partitioning scheme.<code>Rows in a column family are sorted based on their token order in SSTables</code>. Rows are replicated to other nodes using <code>replication strategy</code>and the number of replicas are determined by <code>replication factor</code>.  
-					
-						<!-- For the note section -->
-						<div class="table-responsive d-flex justify-content-center">          
-							<table class="amundTable">
-								<thead>
-									<tr>
-										<th>Note</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td>
-											Each keyspace can have different replication strategies, so Cassandra repairs each keyspace data separately.
-										</td>
-									</tr>
-								</tbody>
-							</table>
-							</div>
-						<!-- For the note section -->
-
-
 				</p>
-	<!-- ------------------------------------------------------------------------------------------------------------ -->  
 
-				<hr>
-				<h2>Few Related links:</h2>
-				<br>
-			
-				<div class="quickLinks">
-					<a href="https://docs.datastax.com/en/cassandra-oss/3.0/cassandra/tools/toolsRepair.html" target="_blank">Cassandra Nodetool Repair</a>
-					<br>
-					<a href="https://docs.datastax.com/en/cassandra-oss/3.0/cassandra/operations/opsRepairNodesManualRepair.html" target="_blank">opsRepairNodesManualRepair</a>
+				<div class="amundNote">
+					Each keyspace can have different replication strategies, so Cassandra repairs each keyspace data separately.
 				</div>
-				<hr>
-			
-				<h2>nodetool repair</h2>
-				<br>
-				<ul>
-					<li>The repair command repairs one or more nodes in a cluster.</li>
-					<li>Performing an anti-entropy node repair on a regular basis is important.</li>
-					<li>Especially in an environment that deletes data frequently.</li>
-				</ul>
-			
-
-						<!-- For the note section -->
-						<div class="table-responsive d-flex justify-content-center">          
-							<table class="amundTable">
-								<thead>
-									<tr>
-										<th>Important</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td>
-											Ensure that all involved replicas are up and accessible before running a repair. If repair encounters a down replica, an error occurs and the process halts. Re-run repair after bringing all replicas back online.
-										</td>
-									</tr>
-								</tbody>
-							</table>
-							</div>
-							<!-- For the note section -->
 
 	<!-- ------------------------------------------------------------------------------------------------------------ -->  
 
-				<hr>
 
-				<h2>Control how the repair runs:</h2>
-				<br>
-				<br>
-				<ul>
-					<li>Number of nodes performing a repair:</li>
-						<ul>
-							<li>Parallel runs repair on all nodes with the same replica data at the same time. (Default behavior in Cassandra 3.0.)</li>
-							<li>Sequential (-seq, --sequential) runs repair on one node after another. (Default behavior in Cassandra 2.1 and earlier.)</li>
-							<li>Datacenter parallel (-dcpar, --dc-parallel) combines sequential and parallel by simultaneously running a sequential repair in all datacenters; a single node in each datacenter runs repair, one after another until the repair is complete.</li>
-						</ul>
-						<br>
-					<li>Amount of data that is repaired:</li>
-					<ul>
-						<li>Full repair (default) compares all replicas of the data stored on the node where the command runs and updates each replica to the newest version. Does not mark the data as repaired or unrepaired. Default for Cassandra 3.0. To switch to incremental repairs, see Migrating to incremental repairs.</li>
-						<li>Full repair with partitioner range (-pr, --partitioner-range) repairs only the primary replicas of the data stored on the node where the command runs. Recommended for routine maintenance.</li>
-						<li>Incremental repair (-inc) splits the data into repaired and unrepaired SSTables, only repairs unrepaired data. Marks the data as repaired or unrepaired. Default behavior in DSE 5.0.0-5.0.9.</li>
-					</ul>
-				</ul>
 
-				<br>
+				<!-- My class to have ul li type feel, but only for first level. -->
+				<div class="amundPoint">
+					<h5>nodetool repair</h5>
+					<p>The repair command repairs one or more nodes in a cluster.</p>
+					<p>Performing an anti-entropy node repair on a regular basis is important.</p>
+					<p>Especially in an environment that deletes data frequently.</p>
+				</div>
+			
+		
+				<div class="amundKeyNote">
+					Ensure that all involved replicas are up and accessible before running a repair. If repair encounters a down replica, an error occurs and the process halts. Re-run repair after bringing all replicas back online.
+				</div>
+	<!-- ------------------------------------------------------------------------------------------------------------ -->  
 
-					<!-- ------------------------------------------------------------------------------------------------------------ -->  
+			
+				<div class="amundPoint">
+					<p>To have a quick key points.</p>
+					<p>To have a quick key points. To have a quick key points. To have a quick key points. To have a quick key points. To have a quick key points. To have a quick key points.</p>
+				</div>
+
+
+<div class="amundPoint">
+	<h5>Control how the repair runs:</h5>
+	
+	<h5><code>Number of nodes performing a repair:</code></h5>
+
+		<p>Parallel runs repair on all nodes with the same replica data at the same time. (Default behavior in Cassandra 3.0.)</p>
+
+		<p>Sequential (-seq, --sequential) runs repair on one node after another. (Default behavior in Cassandra 2.1 and earlier.)</p>
+
+		<p>Datacenter parallel (-dcpar, --dc-parallel) combines sequential and parallel by simultaneously running a sequential repair in all datacenters; a single node in each datacenter runs repair, one after another until the repair is complete.</p>
+
+	<h5><code>Amount of data that is repaired:</code></h5>
+
+		<p>Full repair (default) compares all replicas of the data stored on the node where the command runs and updates each replica to the newest version. Does not mark the data as repaired or unrepaired. Default for Cassandra 3.0. To switch to incremental repairs, see Migrating to incremental repairs.</p>
+		<p>Full repair with partitioner range (-pr, --partitioner-range) repairs only the primary replicas of the data stored on the node where the command runs. Recommended for routine maintenance.</p>
+		<p>Incremental repair (-inc) splits the data into repaired and unrepaired SSTables, only repairs unrepaired data. Marks the data as repaired or unrepaired. Default behavior in DSE 5.0.0-5.0.9.</p>
+
+</div>
+
+
+
+<!-- ------------------------------------------------------------------------------------------------------------ -->  
 
 <hr>
 
@@ -178,7 +142,7 @@ repair
 
 <hr>
 
-<h2>Main Options</h2>
+<h5>Main Options</h5>
 
 <pre>
 <code>
@@ -192,14 +156,14 @@ repair
 
 <hr>
 
-<h3>Example</h3>
+<h5>Example</h5>
 <pre>
 nodetool -u username -pw password command command_options
 </pre>
 
 <hr>
 
-<h3>Example</h3>
+<h5>Example</h5>
 <br>
 All nodetool repair arguments are optional.
 <br>
@@ -219,31 +183,12 @@ nodetool repair -pr -hosts 10.2.2.20 10.2.2.21
 <hr>
 To restrict the repair to the local datacenter, use the <code>-dc</code> option followed by the name of the datacenter. 
 
-
-						<!-- For the note section -->
-						<div class="table-responsive d-flex justify-content-center">          
-							<table class="amundTable">
-								<thead>
-									<tr>
-										<th>Note</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td>
-											Issue the command from a node in the datacenter you want to repair. It mean, if you want to repair <code>DC1</code>, then you need to run the repair command from one of the node from <code>DC1</code>.
-										</td>
-									</tr>
-								</tbody>
-							</table>
-							</div>
-							<!-- For the note section -->
+<div class="amundNote">
+	Issue the command from a node in the datacenter you want to repair. It mean, if you want to repair <code>DC1</code>, then you need to run the repair command from one of the node from <code>DC1</code>.
+</div>
 
 
-
-<hr>
-
-<h3>Output Example:</h3>
+<h5>Output Example:</h5>
 <pre>
 <code>
 [2014-07-24 21:59:55,326] Nothing to repair for keyspace 'system'
@@ -257,34 +202,16 @@ To restrict the repair to the local datacenter, use the <code>-dc</code> option 
 </code>
 </pre>
 
-<hr>
 
-<!-- For the note section -->
-<div class="table-responsive d-flex justify-content-center">          
-	<table class="amundTable">
-		<thead>
-			<tr>
-				<th>Note</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr>
-				<td>
-					And an inspection of the <code>system.log</code> shows repair taking place only on IP addresses in DC1.
-				</td>
-			</tr>
-		</tbody>
-	</table>
-	</div>
-	<!-- For the note section -->
-
-
+<div class="amundNote">
+	And an inspection of the <code>system.log</code> shows repair taking place only on IP addresses in DC1.
+</div>
 
 </article>
 </div>
 
 
-<h2>Output Example of system.log</h2>
+<h5>Output Example of system.log</h5>
 
 <pre>
 <code>
@@ -299,34 +226,22 @@ INFO  [RepairJobTask:1] 2014-07-24 22:23:10,740 RepairJob.java:145
 </code>
 </pre>
 
-<h2>Some related learning</h2>
+<h5>Some related learning</h5>
 
 For some need, if you have to take away 2 Cassandra Nodes, in that case you have, you need to do <code>nodetool decommission</code> them first. But note, you cann't decommission 2 node at the same time, because if the 1st decommssion node, moving its date to the second node, then if you try to decommission the second node, then the second node will give some an update error.
 
-<hr>
 
-						<!-- For the note section -->
-						<div class="table-responsive d-flex justify-content-center">          
-							<table class="amundTable">
-								<thead>
-									<tr>
-										<th>Note</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td>
-											nodetool: Unsupported operation: data is currently moving to this node; unable to leave the ring
-										</td>
-									</tr>
-								</tbody>
-							</table>
-							</div>
-							<!-- For the note section -->
+			<div class="amundNote">
+				nodetool: Unsupported operation: data is currently moving to this node; unable to leave the ring
+			</div>
 
+			
+			<div class="amundReferance">
+				<a href="https://docs.datastax.com/en/cassandra-oss/3.0/cassandra/tools/toolsRepair.html" target="_blank">Cassandra Nodetool Repair</a>
+				<br>
+				<a href="https://docs.datastax.com/en/cassandra-oss/3.0/cassandra/operations/opsRepairNodesManualRepair.html" target="_blank">opsRepairNodesManualRepair</a>
+			</div>
 
-
-<hr>
 			</article>
 			</div>
 			
