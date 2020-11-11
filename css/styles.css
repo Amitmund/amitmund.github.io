@@ -310,6 +310,7 @@ body {
   
   color: rgba(171, 178, 191);
   box-shadow: rgba(0, 0, 0, 0.0980392) 0px 4px 12px;
+  font-size: 90%;
 
 }
 
@@ -346,7 +347,7 @@ body {
   
   color: rgba(171, 178, 191);
   box-shadow: rgba(0, 0, 0, 0.0980392) 0px 4px 12px;
-
+  font-size: 85%;
 }
 
 .amundTodo::before {
@@ -382,7 +383,7 @@ body {
   
   color: rgba(171, 178, 191);
   box-shadow: rgba(0, 0, 0, 0.0980392) 0px 4px 12px;
-
+  font-size: 85%;
 }
 
 .amundReferance::before {
@@ -418,7 +419,7 @@ body {
   
   color: rgba(171, 178, 191);
   box-shadow: rgba(0, 0, 0, 0.0980392) 0px 4px 12px;
-
+  font-size: 85%;
 }
 
 .amundIdea::before {
@@ -430,6 +431,8 @@ body {
 }
 
 /* for amundIdea */
+
+/* ----------------------------------------------------------- */
 
 
 /* for amundCorrect */
@@ -452,7 +455,7 @@ body {
   
   color: rgba(171, 178, 191);
   box-shadow: rgba(0, 0, 0, 0.0980392) 0px 4px 12px;
-
+  font-size: 85%;
 }
 
 .amundCorrect::before {
@@ -488,7 +491,7 @@ body {
   
   color: rgba(171, 178, 191);
   box-shadow: rgba(0, 0, 0, 0.0980392) 0px 4px 12px;
-
+  font-size: 85%;
 }
 
 .amundMessage::before {
@@ -524,7 +527,7 @@ body {
   
   color: rgba(171, 178, 191);
   box-shadow: rgba(0, 0, 0, 0.0980392) 0px 4px 12px;
-
+  font-size: 85%;
 }
 
 .amundHelp::before {
@@ -581,6 +584,31 @@ body {
   align-items: inherit;
 }
 
+
+.myContent ul li{
+  list-style-type: none;
+  list-style-image: url('/images/icons/rightHand16.png');
+  margin-top: 1em;
+  margin-left: 2em;
+}
+
+/* .myContent ul li::before {
+  content: '✓ ';
+  display: inline-block;
+  background-image: url('/images/icons/rightHand16.png');
+  color: #169386;
+} */
+
+/* ul li:first-child:before {
+  content: '';
+  display: inline-block;
+  height: 25px;
+  width: 35px;
+  background-image: url('/images/icons/rightHand16.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-left: -35px;
+} */
 /* ----------------------------------------------------------- */
 
 #headingNote {
@@ -740,16 +768,16 @@ h1, h2, h3, h4, h5, h6{
 
 code {
     /* color: #ff7b29; */
-  background-color: rgba(57,62,74);
-  color: rgba(248, 248, 248);
+  /* background-color: rgba(57,62,74);
+  color: rgba(248, 248, 248); */
+  color: rgba(22, 147, 134);
   padding-left: 5px;
   padding-right: 5px;
   font-family: "Courier New";
   font-weight: 200;
-  /* -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', 'HelveticaNeue-Light', 'Ubuntu', 'Droid Sans', sans-serif */
   font-size: 100%;
   font-weight: 300 !important;
-  font-family: "Courier New","Fira Code",monospace,SFMono-Regular !important;
+  /* font-family: "Courier New","Fira Code",monospace,SFMono-Regular !important; */
 }
 
 /* used to print output */
@@ -922,7 +950,7 @@ hr{
 /* updated the hr to the following, so that it will look clean and not to hurt eyes. */
 hr {
   box-shadow: rgba(0, 0, 0, 0.0980392) 0px 4px 12px;
-  height: 20px;
+  height: 5px;
   margin-top: 40px;
   margin-bottom: 20px;
   border: 0;
