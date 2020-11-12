@@ -642,6 +642,13 @@ body {
 }
 /* ----------------------------------------------------------- */
 
+.amundTable thead {
+  font-weight: bold;
+  color: #169386;
+}
+
+
+/* ----------------------------------------------------------- */
 
 .amundFloatLeft img {
   float:left;
@@ -935,7 +942,7 @@ pre code {
   padding-left: 1em;
   padding-right: 1em;
   font-weight: 200;
-  font-size: 100%;
+  font-size: 110%;
   font-weight: 300 !important;
   font-family: "Courier New","Fira Code",monospace,SFMono-Regular !important;
 

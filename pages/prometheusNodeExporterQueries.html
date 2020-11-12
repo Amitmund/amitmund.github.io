@@ -1,0 +1,1047 @@
+<!-- ------------------------------------------------------------------------------------------------------------ -->  
+<!--Fill the data that you want to be in Main Session because of id="loadData" and your page js-->
+
+
+	<!-- ------------------------------------------------------------------------------------------------------------ -->  
+	<div class="myContent">
+      
+
+      
+		<div class="container-fluid section">
+		<section>
+		
+				<div class="container-fluid subpage-main-h1">
+				<h1>Prometheus Node Exporter Quick Queries</h1>
+				</div>
+			
+			
+			<div class="container-fluid article">
+			<article>
+
+
+				<h5>node_cpu</h5>
+<pre>
+<code>
+node_cpu_seconds_total{mode=~"user|system|idle|iowait"}
+</code>
+</pre>           
+		
+
+
+<table class="amundTable">
+<thead><tr><th>command</th>
+<th>About</th>
+</tr></thead>
+<tbody><tr>
+<td>go_gc_duration_seconds</td>
+<td>   A summary of the GC invocation durations.</td>
+</tr>
+<tr>
+<td>go_goroutines</td>
+<td>   Number of goroutines that currently exist.</td>
+</tr>
+<tr>
+<td>go_info</td>
+<td>   Information about the Go environment.</td>
+</tr>
+<tr>
+<td>go_memstats_alloc_bytes</td>
+<td>   Number of bytes allocated and still in use.</td>
+</tr>
+<tr>
+<td>go_memstats_alloc_bytes_total</td>
+<td>   Total number of bytes allocated, even if freed.</td>
+</tr>
+<tr>
+<td>go_memstats_buck_hash_sys_bytes</td>
+<td>   Number of bytes used by the profiling bucket hash table.</td>
+</tr>
+<tr>
+<td>go_memstats_frees_total</td>
+<td>   Total number of frees.</td>
+</tr>
+<tr>
+<td>go_memstats_gc_cpu_fraction</td>
+<td>   The fraction of this program&#39;s available CPU time used by the GC since the program started.</td>
+</tr>
+<tr>
+<td>go_memstats_gc_sys_bytes</td>
+<td>   Number of bytes used for garbage collection system metadata.</td>
+</tr>
+<tr>
+<td>go_memstats_heap_alloc_bytes</td>
+<td>   Number of heap bytes allocated and still in use.</td>
+</tr>
+<tr>
+<td>go_memstats_heap_idle_bytes</td>
+<td>   Number of heap bytes waiting to be used.</td>
+</tr>
+<tr>
+<td>go_memstats_heap_inuse_bytes</td>
+<td>   Number of heap bytes that are in use.</td>
+</tr>
+<tr>
+<td>go_memstats_heap_objects</td>
+<td>   Number of allocated objects.</td>
+</tr>
+<tr>
+<td>go_memstats_heap_released_bytes</td>
+<td>   Number of heap bytes released to OS.</td>
+</tr>
+<tr>
+<td>go_memstats_heap_sys_bytes</td>
+<td>   Number of heap bytes obtained from system.</td>
+</tr>
+<tr>
+<td>go_memstats_last_gc_time_seconds</td>
+<td>   Number of seconds since 1970 of last garbage collection.</td>
+</tr>
+<tr>
+<td>go_memstats_lookups_total</td>
+<td>   Total number of pointer lookups.</td>
+</tr>
+<tr>
+<td>go_memstats_mallocs_total</td>
+<td>   Total number of mallocs.</td>
+</tr>
+<tr>
+<td>go_memstats_mcache_inuse_bytes</td>
+<td>   Number of bytes in use by mcache structures.</td>
+</tr>
+<tr>
+<td>go_memstats_mcache_sys_bytes</td>
+<td>   Number of bytes used for mcache structures obtained from system.</td>
+</tr>
+<tr>
+<td>go_memstats_mspan_inuse_bytes</td>
+<td>   Number of bytes in use by mspan structures.</td>
+</tr>
+<tr>
+<td>go_memstats_mspan_sys_bytes</td>
+<td>   Number of bytes used for mspan structures obtained from system.</td>
+</tr>
+<tr>
+<td>go_memstats_next_gc_bytes</td>
+<td>   Number of heap bytes when next garbage collection will take place.</td>
+</tr>
+<tr>
+<td>go_memstats_other_sys_bytes</td>
+<td>   Number of bytes used for other system allocations.</td>
+</tr>
+<tr>
+<td>go_memstats_stack_inuse_bytes</td>
+<td>   Number of bytes in use by the stack allocator.</td>
+</tr>
+<tr>
+<td>go_memstats_stack_sys_bytes</td>
+<td>   Number of bytes obtained from system for stack allocator.</td>
+</tr>
+<tr>
+<td>go_memstats_sys_bytes</td>
+<td>   Number of bytes obtained from system.</td>
+</tr>
+<tr>
+<td>go_threads</td>
+<td>   Number of OS threads created.</td>
+</tr>
+<tr>
+<td>node_arp_entries</td>
+<td>   ARP entries by device</td>
+</tr>
+<tr>
+<td>node_boot_time_seconds</td>
+<td>   Node boot time, in unixtime.</td>
+</tr>
+<tr>
+<td>node_context_switches_total</td>
+<td>   Total number of context switches.</td>
+</tr>
+<tr>
+<td>node_cpu_guest_seconds_total</td>
+<td>   Seconds the cpus spent in guests (VMs) for each mode.</td>
+</tr>
+<tr>
+<td>node_cpu_seconds_total</td>
+<td>   Seconds the cpus spent in each mode.</td>
+</tr>
+<tr>
+<td>node_disk_io_now</td>
+<td>   The number of I/Os currently in progress.</td>
+</tr>
+<tr>
+<td>node_disk_io_time_seconds_total</td>
+<td>   Total seconds spent doing I/Os.</td>
+</tr>
+<tr>
+<td>node_disk_io_time_weighted_seconds_total</td>
+<td>   The weighted # of seconds spent doing I/Os.</td>
+</tr>
+<tr>
+<td>node_disk_read_bytes_total</td>
+<td>   The total number of bytes read successfully.</td>
+</tr>
+<tr>
+<td>node_disk_read_time_seconds_total</td>
+<td>   The total number of seconds spent by all reads.</td>
+</tr>
+<tr>
+<td>node_disk_reads_completed_total</td>
+<td>   The total number of reads completed successfully.</td>
+</tr>
+<tr>
+<td>node_disk_reads_merged_total</td>
+<td>   The total number of reads merged.</td>
+</tr>
+<tr>
+<td>node_disk_write_time_seconds_total</td>
+<td>   This is the total number of seconds spent by all writes.</td>
+</tr>
+<tr>
+<td>node_disk_writes_completed_total</td>
+<td>   The total number of writes completed successfully.</td>
+</tr>
+<tr>
+<td>node_disk_writes_merged_total</td>
+<td>   The number of writes merged.</td>
+</tr>
+<tr>
+<td>node_disk_written_bytes_total</td>
+<td>   The total number of bytes written successfully.</td>
+</tr>
+<tr>
+<td>node_entropy_available_bits</td>
+<td>   Bits of available entropy.</td>
+</tr>
+<tr>
+<td>node_exporter_build_info</td>
+<td>   A metric with a constant &#39;1&#39; value labeled by version, revision, branch, and goversion from which node_exporter was built.</td>
+</tr>
+<tr>
+<td>node_filefd_allocated</td>
+<td>   File descriptor statistics: allocated.</td>
+</tr>
+<tr>
+<td>node_filefd_maximum</td>
+<td>   File descriptor statistics: maximum.</td>
+</tr>
+<tr>
+<td>node_filesystem_avail_bytes</td>
+<td>   Filesystem space available to non-root users in bytes.</td>
+</tr>
+<tr>
+<td>node_filesystem_device_error</td>
+<td>   Whether an error occurred while getting statistics for the given device.</td>
+</tr>
+<tr>
+<td>node_filesystem_files</td>
+<td>   Filesystem total file nodes.</td>
+</tr>
+<tr>
+<td>node_filesystem_files_free</td>
+<td>   Filesystem total free file nodes.</td>
+</tr>
+<tr>
+<td>node_filesystem_free_bytes</td>
+<td>   Filesystem free space in bytes.</td>
+</tr>
+<tr>
+<td>node_filesystem_readonly</td>
+<td>   Filesystem read-only status.</td>
+</tr>
+<tr>
+<td>node_filesystem_size_bytes</td>
+<td>   Filesystem size in bytes.</td>
+</tr>
+<tr>
+<td>node_forks_total</td>
+<td>   Total number of forks.</td>
+</tr>
+<tr>
+<td>node_intr_total</td>
+<td>   Total number of interrupts serviced.</td>
+</tr>
+<tr>
+<td>node_load1</td>
+<td>   1m load average.</td>
+</tr>
+<tr>
+<td>node_load15</td>
+<td>   15m load average.</td>
+</tr>
+<tr>
+<td>node_load5</td>
+<td>   5m load average.</td>
+</tr>
+<tr>
+<td>node_memory_Active_anon_bytes</td>
+<td>   Memory information field Active_anon_bytes.</td>
+</tr>
+<tr>
+<td>node_memory_Active_bytes</td>
+<td>   Memory information field Active_bytes.</td>
+</tr>
+<tr>
+<td>node_memory_Active_file_bytes</td>
+<td>   Memory information field Active_file_bytes.</td>
+</tr>
+<tr>
+<td>node_memory_AnonHugePages_bytes</td>
+<td>   Memory information field AnonHugePages_bytes.</td>
+</tr>
+<tr>
+<td>node_memory_AnonPages_bytes</td>
+<td>   Memory information field AnonPages_bytes.</td>
+</tr>
+<tr>
+<td>node_memory_Bounce_bytes</td>
+<td>   Memory information field Bounce_bytes.</td>
+</tr>
+<tr>
+<td>node_memory_Buffers_bytes</td>
+<td>   Memory information field Buffers_bytes.</td>
+</tr>
+<tr>
+<td>node_memory_Cached_bytes</td>
+<td>   Memory information field Cached_bytes.</td>
+</tr>
+<tr>
+<td>node_memory_CmaFree_bytes</td>
+<td>   Memory information field CmaFree_bytes.</td>
+</tr>
+<tr>
+<td>node_memory_CmaTotal_bytes</td>
+<td>   Memory information field CmaTotal_bytes.</td>
+</tr>
+<tr>
+<td>node_memory_CommitLimit_bytes</td>
+<td>   Memory information field CommitLimit_bytes.</td>
+</tr>
+<tr>
+<td>node_memory_Committed_AS_bytes</td>
+<td>   Memory information field Committed_AS_bytes.</td>
+</tr>
+<tr>
+<td>node_memory_DirectMap1G_bytes</td>
+<td>   Memory information field DirectMap1G_bytes.</td>
+</tr>
+<tr>
+<td>node_memory_DirectMap2M_bytes</td>
+<td>   Memory information field DirectMap2M_bytes.</td>
+</tr>
+<tr>
+<td>node_memory_DirectMap4k_bytes</td>
+<td>   Memory information field DirectMap4k_bytes.</td>
+</tr>
+<tr>
+<td>node_memory_Dirty_bytes</td>
+<td>   Memory information field Dirty_bytes.</td>
+</tr>
+<tr>
+<td>node_memory_HardwareCorrupted_bytes</td>
+<td>   Memory information field HardwareCorrupted_bytes.</td>
+</tr>
+<tr>
+<td>node_memory_HugePages_Free</td>
+<td>   Memory information field HugePages_Free.</td>
+</tr>
+<tr>
+<td>node_memory_HugePages_Rsvd</td>
+<td>   Memory information field HugePages_Rsvd.</td>
+</tr>
+<tr>
+<td>node_memory_HugePages_Surp</td>
+<td>   Memory information field HugePages_Surp.</td>
+</tr>
+<tr>
+<td>node_memory_HugePages_Total</td>
+<td>   Memory information field HugePages_Total.</td>
+</tr>
+<tr>
+<td>node_memory_Hugepagesize_bytes</td>
+<td>   Memory information field Hugepagesize_bytes.</td>
+</tr>
+<tr>
+<td>node_memory_Inactive_anon_bytes</td>
+<td>   Memory information field Inactive_anon_bytes.</td>
+</tr>
+<tr>
+<td>node_memory_Inactive_bytes</td>
+<td>   Memory information field Inactive_bytes.</td>
+</tr>
+<tr>
+<td>node_memory_Inactive_file_bytes</td>
+<td>   Memory information field Inactive_file_bytes.</td>
+</tr>
+<tr>
+<td>node_memory_KernelStack_bytes</td>
+<td>   Memory information field KernelStack_bytes.</td>
+</tr>
+<tr>
+<td>node_memory_Mapped_bytes</td>
+<td>   Memory information field Mapped_bytes.</td>
+</tr>
+<tr>
+<td>node_memory_MemAvailable_bytes</td>
+<td>   Memory information field MemAvailable_bytes.</td>
+</tr>
+<tr>
+<td>node_memory_MemFree_bytes</td>
+<td>   Memory information field MemFree_bytes.</td>
+</tr>
+<tr>
+<td>node_memory_MemTotal_bytes</td>
+<td>   Memory information field MemTotal_bytes.</td>
+</tr>
+<tr>
+<td>node_memory_Mlocked_bytes</td>
+<td>   Memory information field Mlocked_bytes.</td>
+</tr>
+<tr>
+<td>node_memory_NFS_Unstable_bytes</td>
+<td>   Memory information field NFS_Unstable_bytes.</td>
+</tr>
+<tr>
+<td>node_memory_PageTables_bytes</td>
+<td>   Memory information field PageTables_bytes.</td>
+</tr>
+<tr>
+<td>node_memory_SReclaimable_bytes</td>
+<td>   Memory information field SReclaimable_bytes.</td>
+</tr>
+<tr>
+<td>node_memory_SUnreclaim_bytes</td>
+<td>   Memory information field SUnreclaim_bytes.</td>
+</tr>
+<tr>
+<td>node_memory_ShmemHugePages_bytes</td>
+<td>   Memory information field ShmemHugePages_bytes.</td>
+</tr>
+<tr>
+<td>node_memory_ShmemPmdMapped_bytes</td>
+<td>   Memory information field ShmemPmdMapped_bytes.</td>
+</tr>
+<tr>
+<td>node_memory_Shmem_bytes</td>
+<td>   Memory information field Shmem_bytes.</td>
+</tr>
+<tr>
+<td>node_memory_Slab_bytes</td>
+<td>   Memory information field Slab_bytes.</td>
+</tr>
+<tr>
+<td>node_memory_SwapCached_bytes</td>
+<td>   Memory information field SwapCached_bytes.</td>
+</tr>
+<tr>
+<td>node_memory_SwapFree_bytes</td>
+<td>   Memory information field SwapFree_bytes.</td>
+</tr>
+<tr>
+<td>node_memory_SwapTotal_bytes</td>
+<td>   Memory information field SwapTotal_bytes.</td>
+</tr>
+<tr>
+<td>node_memory_Unevictable_bytes</td>
+<td>   Memory information field Unevictable_bytes.</td>
+</tr>
+<tr>
+<td>node_memory_VmallocChunk_bytes</td>
+<td>   Memory information field VmallocChunk_bytes.</td>
+</tr>
+<tr>
+<td>node_memory_VmallocTotal_bytes</td>
+<td>   Memory information field VmallocTotal_bytes.</td>
+</tr>
+<tr>
+<td>node_memory_VmallocUsed_bytes</td>
+<td>   Memory information field VmallocUsed_bytes.</td>
+</tr>
+<tr>
+<td>node_memory_WritebackTmp_bytes</td>
+<td>   Memory information field WritebackTmp_bytes.</td>
+</tr>
+<tr>
+<td>node_memory_Writeback_bytes</td>
+<td>   Memory information field Writeback_bytes.</td>
+</tr>
+<tr>
+<td>node_netstat_Icmp6_InErrors</td>
+<td>   Statistic Icmp6InErrors.</td>
+</tr>
+<tr>
+<td>node_netstat_Icmp6_InMsgs</td>
+<td>   Statistic Icmp6InMsgs.</td>
+</tr>
+<tr>
+<td>node_netstat_Icmp6_OutMsgs</td>
+<td>   Statistic Icmp6OutMsgs.</td>
+</tr>
+<tr>
+<td>node_netstat_Icmp_InErrors</td>
+<td>   Statistic IcmpInErrors.</td>
+</tr>
+<tr>
+<td>node_netstat_Icmp_InMsgs</td>
+<td>   Statistic IcmpInMsgs.</td>
+</tr>
+<tr>
+<td>node_netstat_Icmp_OutMsgs</td>
+<td>   Statistic IcmpOutMsgs.</td>
+</tr>
+<tr>
+<td>node_netstat_Ip6_InOctets</td>
+<td>   Statistic Ip6InOctets.</td>
+</tr>
+<tr>
+<td>node_netstat_Ip6_OutOctets</td>
+<td>   Statistic Ip6OutOctets.</td>
+</tr>
+<tr>
+<td>node_netstat_IpExt_InOctets</td>
+<td>   Statistic IpExtInOctets.</td>
+</tr>
+<tr>
+<td>node_netstat_IpExt_OutOctets</td>
+<td>   Statistic IpExtOutOctets.</td>
+</tr>
+<tr>
+<td>node_netstat_Ip_Forwarding</td>
+<td>   Statistic IpForwarding.</td>
+</tr>
+<tr>
+<td>node_netstat_TcpExt_ListenDrops</td>
+<td>   Statistic TcpExtListenDrops.</td>
+</tr>
+<tr>
+<td>node_netstat_TcpExt_ListenOverflows</td>
+<td>   Statistic TcpExtListenOverflows.</td>
+</tr>
+<tr>
+<td>node_netstat_TcpExt_SyncookiesFailed</td>
+<td>   Statistic TcpExtSyncookiesFailed.</td>
+</tr>
+<tr>
+<td>node_netstat_TcpExt_SyncookiesRecv</td>
+<td>   Statistic TcpExtSyncookiesRecv.</td>
+</tr>
+<tr>
+<td>node_netstat_TcpExt_SyncookiesSent</td>
+<td>   Statistic TcpExtSyncookiesSent.</td>
+</tr>
+<tr>
+<td>node_netstat_TcpExt_TCPSynRetrans</td>
+<td>   Statistic TcpExtTCPSynRetrans.</td>
+</tr>
+<tr>
+<td>node_netstat_Tcp_ActiveOpens</td>
+<td>   Statistic TcpActiveOpens.</td>
+</tr>
+<tr>
+<td>node_netstat_Tcp_CurrEstab</td>
+<td>   Statistic TcpCurrEstab.</td>
+</tr>
+<tr>
+<td>node_netstat_Tcp_InErrs</td>
+<td>   Statistic TcpInErrs.</td>
+</tr>
+<tr>
+<td>node_netstat_Tcp_InSegs</td>
+<td>   Statistic TcpInSegs.</td>
+</tr>
+<tr>
+<td>node_netstat_Tcp_OutSegs</td>
+<td>   Statistic TcpOutSegs.</td>
+</tr>
+<tr>
+<td>node_netstat_Tcp_PassiveOpens</td>
+<td>   Statistic TcpPassiveOpens.</td>
+</tr>
+<tr>
+<td>node_netstat_Tcp_RetransSegs</td>
+<td>   Statistic TcpRetransSegs.</td>
+</tr>
+<tr>
+<td>node_netstat_Udp6_InDatagrams</td>
+<td>   Statistic Udp6InDatagrams.</td>
+</tr>
+<tr>
+<td>node_netstat_Udp6_InErrors</td>
+<td>   Statistic Udp6InErrors.</td>
+</tr>
+<tr>
+<td>node_netstat_Udp6_NoPorts</td>
+<td>   Statistic Udp6NoPorts.</td>
+</tr>
+<tr>
+<td>node_netstat_Udp6_OutDatagrams</td>
+<td>   Statistic Udp6OutDatagrams.</td>
+</tr>
+<tr>
+<td>node_netstat_UdpLite6_InErrors</td>
+<td>   Statistic UdpLite6InErrors.</td>
+</tr>
+<tr>
+<td>node_netstat_UdpLite_InErrors</td>
+<td>   Statistic UdpLiteInErrors.</td>
+</tr>
+<tr>
+<td>node_netstat_Udp_InDatagrams</td>
+<td>   Statistic UdpInDatagrams.</td>
+</tr>
+<tr>
+<td>node_netstat_Udp_InErrors</td>
+<td>   Statistic UdpInErrors.</td>
+</tr>
+<tr>
+<td>node_netstat_Udp_NoPorts</td>
+<td>   Statistic UdpNoPorts.</td>
+</tr>
+<tr>
+<td>node_netstat_Udp_OutDatagrams</td>
+<td>   Statistic UdpOutDatagrams.</td>
+</tr>
+<tr>
+<td>node_network_address_assign_type</td>
+<td>   address_assign_type value of /sys/class/net/&lt;iface&gt;.</td>
+</tr>
+<tr>
+<td>node_network_carrier</td>
+<td>   carrier value of /sys/class/net/&lt;iface&gt;.</td>
+</tr>
+<tr>
+<td>node_network_carrier_changes_total</td>
+<td>   carrier_changes_total value of /sys/class/net/&lt;iface&gt;.</td>
+</tr>
+<tr>
+<td>node_network_carrier_down_changes_total</td>
+<td>   carrier_down_changes_total value of /sys/class/net/&lt;iface&gt;.</td>
+</tr>
+<tr>
+<td>node_network_carrier_up_changes_total</td>
+<td>   carrier_up_changes_total value of /sys/class/net/&lt;iface&gt;.</td>
+</tr>
+<tr>
+<td>node_network_device_id</td>
+<td>   device_id value of /sys/class/net/&lt;iface&gt;.</td>
+</tr>
+<tr>
+<td>node_network_dormant</td>
+<td>   dormant value of /sys/class/net/&lt;iface&gt;.</td>
+</tr>
+<tr>
+<td>node_network_flags</td>
+<td>   flags value of /sys/class/net/&lt;iface&gt;.</td>
+</tr>
+<tr>
+<td>node_network_iface_id</td>
+<td>   iface_id value of /sys/class/net/&lt;iface&gt;.</td>
+</tr>
+<tr>
+<td>node_network_iface_link</td>
+<td>   iface_link value of /sys/class/net/&lt;iface&gt;.</td>
+</tr>
+<tr>
+<td>node_network_iface_link_mode</td>
+<td>   iface_link_mode value of /sys/class/net/&lt;iface&gt;.</td>
+</tr>
+<tr>
+<td>node_network_info</td>
+<td>   Non-numeric data from /sys/class/net/&lt;iface&gt;, value is always 1.</td>
+</tr>
+<tr>
+<td>node_network_mtu_bytes</td>
+<td>   mtu_bytes value of /sys/class/net/&lt;iface&gt;.</td>
+</tr>
+<tr>
+<td>node_network_name_assign_type</td>
+<td>   name_assign_type value of /sys/class/net/&lt;iface&gt;.</td>
+</tr>
+<tr>
+<td>node_network_net_dev_group</td>
+<td>   net_dev_group value of /sys/class/net/&lt;iface&gt;.</td>
+</tr>
+<tr>
+<td>node_network_protocol_type</td>
+<td>   protocol_type value of /sys/class/net/&lt;iface&gt;.</td>
+</tr>
+<tr>
+<td>node_network_receive_bytes_total</td>
+<td>   Network device statistic receive_bytes.</td>
+</tr>
+<tr>
+<td>node_network_receive_compressed_total</td>
+<td>   Network device statistic receive_compressed.</td>
+</tr>
+<tr>
+<td>node_network_receive_drop_total</td>
+<td>   Network device statistic receive_drop.</td>
+</tr>
+<tr>
+<td>node_network_receive_errs_total</td>
+<td>   Network device statistic receive_errs.</td>
+</tr>
+<tr>
+<td>node_network_receive_fifo_total</td>
+<td>   Network device statistic receive_fifo.</td>
+</tr>
+<tr>
+<td>node_network_receive_frame_total</td>
+<td>   Network device statistic receive_frame.</td>
+</tr>
+<tr>
+<td>node_network_receive_multicast_total</td>
+<td>   Network device statistic receive_multicast.</td>
+</tr>
+<tr>
+<td>node_network_receive_packets_total</td>
+<td>   Network device statistic receive_packets.</td>
+</tr>
+<tr>
+<td>node_network_speed_bytes</td>
+<td>   speed_bytes value of /sys/class/net/&lt;iface&gt;.</td>
+</tr>
+<tr>
+<td>node_network_transmit_bytes_total</td>
+<td>   Network device statistic transmit_bytes.</td>
+</tr>
+<tr>
+<td>node_network_transmit_carrier_total</td>
+<td>   Network device statistic transmit_carrier.</td>
+</tr>
+<tr>
+<td>node_network_transmit_colls_total</td>
+<td>   Network device statistic transmit_colls.</td>
+</tr>
+<tr>
+<td>node_network_transmit_compressed_total</td>
+<td>   Network device statistic transmit_compressed.</td>
+</tr>
+<tr>
+<td>node_network_transmit_drop_total</td>
+<td>   Network device statistic transmit_drop.</td>
+</tr>
+<tr>
+<td>node_network_transmit_errs_total</td>
+<td>   Network device statistic transmit_errs.</td>
+</tr>
+<tr>
+<td>node_network_transmit_fifo_total</td>
+<td>   Network device statistic transmit_fifo.</td>
+</tr>
+<tr>
+<td>node_network_transmit_packets_total</td>
+<td>   Network device statistic transmit_packets.</td>
+</tr>
+<tr>
+<td>node_network_transmit_queue_length</td>
+<td>   transmit_queue_length value of /sys/class/net/&lt;iface&gt;.</td>
+</tr>
+<tr>
+<td>node_network_up</td>
+<td>   Value is 1 if operstate is &#39;up&#39;, 0 otherwise.</td>
+</tr>
+<tr>
+<td>node_nf_conntrack_entries</td>
+<td>   Number of currently allocated flow entries for connection tracking.</td>
+</tr>
+<tr>
+<td>node_nf_conntrack_entries_limit</td>
+<td>   Maximum size of connection tracking table.</td>
+</tr>
+<tr>
+<td>node_procs_blocked</td>
+<td>   Number of processes blocked waiting for I/O to complete.</td>
+</tr>
+<tr>
+<td>node_procs_running</td>
+<td>   Number of processes in runnable state.</td>
+</tr>
+<tr>
+<td>node_scrape_collector_duration_seconds</td>
+<td>   node_exporter: Duration of a collector scrape.</td>
+</tr>
+<tr>
+<td>node_scrape_collector_success</td>
+<td>   node_exporter: Whether a collector succeeded.</td>
+</tr>
+<tr>
+<td>node_sockstat_FRAG_inuse</td>
+<td>   Number of FRAG sockets in state inuse.</td>
+</tr>
+<tr>
+<td>node_sockstat_FRAG_memory</td>
+<td>   Number of FRAG sockets in state memory.</td>
+</tr>
+<tr>
+<td>node_sockstat_RAW_inuse</td>
+<td>   Number of RAW sockets in state inuse.</td>
+</tr>
+<tr>
+<td>node_sockstat_TCP_alloc</td>
+<td>   Number of TCP sockets in state alloc.</td>
+</tr>
+<tr>
+<td>node_sockstat_TCP_inuse</td>
+<td>   Number of TCP sockets in state inuse.</td>
+</tr>
+<tr>
+<td>node_sockstat_TCP_mem</td>
+<td>   Number of TCP sockets in state mem.</td>
+</tr>
+<tr>
+<td>node_sockstat_TCP_mem_bytes</td>
+<td>   Number of TCP sockets in state mem_bytes.</td>
+</tr>
+<tr>
+<td>node_sockstat_TCP_orphan</td>
+<td>   Number of TCP sockets in state orphan.</td>
+</tr>
+<tr>
+<td>node_sockstat_TCP_tw</td>
+<td>   Number of TCP sockets in state tw.</td>
+</tr>
+<tr>
+<td>node_sockstat_UDPLITE_inuse</td>
+<td>   Number of UDPLITE sockets in state inuse.</td>
+</tr>
+<tr>
+<td>node_sockstat_UDP_inuse</td>
+<td>   Number of UDP sockets in state inuse.</td>
+</tr>
+<tr>
+<td>node_sockstat_UDP_mem</td>
+<td>   Number of UDP sockets in state mem.</td>
+</tr>
+<tr>
+<td>node_sockstat_UDP_mem_bytes</td>
+<td>   Number of UDP sockets in state mem_bytes.</td>
+</tr>
+<tr>
+<td>node_sockstat_sockets_used</td>
+<td>   Number of sockets sockets in state used.</td>
+</tr>
+<tr>
+<td>node_textfile_scrape_error</td>
+<td>   1 if there was an error opening or reading a file, 0 otherwise</td>
+</tr>
+<tr>
+<td>node_time_seconds</td>
+<td>   System time in seconds since epoch (1970).</td>
+</tr>
+<tr>
+<td>node_timex_estimated_error_seconds</td>
+<td>   Estimated error in seconds.</td>
+</tr>
+<tr>
+<td>node_timex_frequency_adjustment_ratio</td>
+<td>   Local clock frequency adjustment.</td>
+</tr>
+<tr>
+<td>node_timex_loop_time_constant</td>
+<td>   Phase-locked loop time constant.</td>
+</tr>
+<tr>
+<td>node_timex_maxerror_seconds</td>
+<td>   Maximum error in seconds.</td>
+</tr>
+<tr>
+<td>node_timex_offset_seconds</td>
+<td>   Time offset in between local system and reference clock.</td>
+</tr>
+<tr>
+<td>node_timex_pps_calibration_total</td>
+<td>   Pulse per second count of calibration intervals.</td>
+</tr>
+<tr>
+<td>node_timex_pps_error_total</td>
+<td>   Pulse per second count of calibration errors.</td>
+</tr>
+<tr>
+<td>node_timex_pps_frequency_hertz</td>
+<td>   Pulse per second frequency.</td>
+</tr>
+<tr>
+<td>node_timex_pps_jitter_seconds</td>
+<td>   Pulse per second jitter.</td>
+</tr>
+<tr>
+<td>node_timex_pps_jitter_total</td>
+<td>   Pulse per second count of jitter limit exceeded events.</td>
+</tr>
+<tr>
+<td>node_timex_pps_shift_seconds</td>
+<td>   Pulse per second interval duration.</td>
+</tr>
+<tr>
+<td>node_timex_pps_stability_exceeded_total</td>
+<td>   Pulse per second count of stability limit exceeded events.</td>
+</tr>
+<tr>
+<td>node_timex_pps_stability_hertz</td>
+<td>   Pulse per second stability, average of recent frequency changes.</td>
+</tr>
+<tr>
+<td>node_timex_status</td>
+<td>   Value of the status array bits.</td>
+</tr>
+<tr>
+<td>node_timex_sync_status</td>
+<td>   Is clock synchronized to a reliable server (1 = yes, 0 = no).</td>
+</tr>
+<tr>
+<td>node_timex_tai_offset_seconds</td>
+<td>   International Atomic Time (TAI) offset.</td>
+</tr>
+<tr>
+<td>node_timex_tick_seconds</td>
+<td>   Seconds between clock ticks.</td>
+</tr>
+<tr>
+<td>node_uname_info</td>
+<td>   Labeled system information as provided by the uname system call.</td>
+</tr>
+<tr>
+<td>node_vmstat_oom_kill</td>
+<td>   /proc/vmstat information field oom_kill.</td>
+</tr>
+<tr>
+<td>node_vmstat_pgfault</td>
+<td>   /proc/vmstat information field pgfault.</td>
+</tr>
+<tr>
+<td>node_vmstat_pgmajfault</td>
+<td>   /proc/vmstat information field pgmajfault.</td>
+</tr>
+<tr>
+<td>node_vmstat_pgpgin</td>
+<td>   /proc/vmstat information field pgpgin.</td>
+</tr>
+<tr>
+<td>node_vmstat_pgpgout</td>
+<td>   /proc/vmstat information field pgpgout.</td>
+</tr>
+<tr>
+<td>node_vmstat_pswpin</td>
+<td>   /proc/vmstat information field pswpin.</td>
+</tr>
+<tr>
+<td>node_vmstat_pswpout</td>
+<td>   /proc/vmstat information field pswpout.</td>
+</tr>
+<tr>
+<td>process_cpu_seconds_total</td>
+<td>   Total user and system CPU time spent in seconds.</td>
+</tr>
+<tr>
+<td>process_max_fds</td>
+<td>   Maximum number of open file descriptors.</td>
+</tr>
+<tr>
+<td>process_open_fds</td>
+<td>   Number of open file descriptors.</td>
+</tr>
+<tr>
+<td>process_resident_memory_bytes</td>
+<td>   Resident memory size in bytes.</td>
+</tr>
+<tr>
+<td>process_start_time_seconds</td>
+<td>   Start time of the process since unix epoch in seconds.</td>
+</tr>
+<tr>
+<td>process_virtual_memory_bytes</td>
+<td>   Virtual memory size in bytes.</td>
+</tr>
+<tr>
+<td>process_virtual_memory_max_bytes</td>
+<td>   Maximum amount of virtual memory available in bytes.</td>
+</tr>
+<tr>
+<td>promhttp_metric_handler_requests_in_flight</td>
+<td>   Current number of scrapes being served.</td>
+</tr>
+<tr>
+<td>promhttp_metric_handler_requests_total</td>
+<td>   Total number of scrapes by HTTP status code.</td>
+</tr>
+</tbody></table>
+
+
+<div class="amundNote">
+This is amundNote.
+</div>
+
+<div class="amundKeyNote">
+This is amundKeyNote.
+</div>
+
+<div class="amundAlert">
+This is amundAlert.
+</div>
+
+<div class="amundTodo">
+This is amundTodo.
+</div>
+
+
+
+<div class="amundIdea">
+This is amundIdea.
+</div>
+
+<div class="amundCorrect">
+This is amundCorrect.
+</div>
+
+<div class="amundMessage">
+This is amundMessage.
+</div>
+
+<div class="amundHelp">
+This is amundHelp.
+</div>
+
+
+<div class="amundReferance">
+	<a href="https://promlabs.com/promql-cheat-sheet/" target="_blank">Prometheus query cheat sheet</a>
+	<br>
+	<a href="https://promlens.com/" target="_blank">To check Queries</a>
+	<br>
+</div>
+
+<div class="amundPoint">
+<!-- For multi level you can use something line following example -->
+<h5><code>Multi-level-headings</code></h5>
+<p>To have a quick key points.</p>
+</div>
+
+			</article>
+			</div>
+			
+			
+			<div class="container-fluid article">
+			<article>
+			
+			</article>
+			</div>
+				
+		</section>
+		</div>
+		
+	<!-- write your subpage content over here -->
+	<!-- This will include your notes, images, programming data as pre -->
+
+</div>
+<!-- myContent div-->
+<!-- ------------------------------------------------------------------------------------------------------------ -->  
+<!-- ------------------------------------------------------------------------------------------------------------ -->  
+
+<!-- highlight.js for syntax highlight -->
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/atom-one-dark-reasonable.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/highlight.min.js"></script>
+
+<!-- For hljs to load hljs.initHighlighting() on mouse move. -->
+<!-- But we need to add this includeHtml.js -->
+<script src="/js/includeHtml.js"></script>
+
+<!-- ------------------------------------------------------------------------------------------------------------ -->  
