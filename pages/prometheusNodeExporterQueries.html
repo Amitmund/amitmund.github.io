@@ -27,6 +27,38 @@ node_cpu_seconds_total{mode=~"user|system|idle|iowait"}
 </pre>           
 		
 
+<h5>Few quick good command</h5>
+<pre>
+<code>
+node_memory_MemFree_bytes
+node_cpu_seconds_total
+node_filesystem_avail_bytes
+rate(node_cpu_seconds_total{mode="system"}[1m]) 
+rate(node_network_receive_bytes_total[1m])
+
+http_requests_total
+http_requests_total{job="apiserver", handler="/api/comments"}
+http_requests_total{job="apiserver", handler="/api/comments"}[5m]
+
+http_requests_total{status!~"4.."}
+
+
+</code>
+</pre>
+
+<br>
+<h5>With Rate and Time Range</h5>
+<p>Return the <code>5-minute rate</code> of the http_requests_total metric for the <code>past 30 minutes</code>, with a resolution of 1 minute.</p>
+<pre>
+<code>
+rate(http_requests_total[5m])[30m:1m]
+</code>
+</pre>
+
+
+
+
+
 
 <table class="amundTable">
 <thead><tr><th>command</th>
@@ -1007,6 +1039,10 @@ This is amundHelp.
 	<br>
 	<a href="https://promlens.com/" target="_blank">To check Queries</a>
 	<br>
+	<a href="https://prometheus.io/docs/prometheus/latest/querying/example" target="_blank">Prometheus Querying Example</a>
+	<br>
+
+	
 </div>
 
 <div class="amundPoint">
