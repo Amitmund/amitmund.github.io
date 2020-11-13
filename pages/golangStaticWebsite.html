@@ -44,7 +44,7 @@ import (
 
 func main() {
 	http.Handle("/", http.FileServer(http.Dir("./amitmund.github.io")))
-	http.ListenAndServe(":3000", nil)
+	http.ListenAndServe(":3333", nil)
 }
 </code>
 </pre> 
@@ -54,7 +54,30 @@ Using the above example code, you can run a static website on a configured port.
 </div>
 
 
+<pre>
+<code>
+package main
 
+import (
+	"fmt"
+	"net/http"
+)
+
+func helloWorld(w http.ResponseWriter, r *http.Request) {
+	fmt.Fprintf(w, "Hello World")
+}
+
+func main() {
+	http.Handle("/", http.FileServer(http.Dir("./amitmund.github.io")))
+	http.HandleFunc("/dynamic/helloWorld", helloWorld)
+	http.ListenAndServe(":3333", nil)
+}
+</code>
+</pre>
+
+<div class="amundNote">
+  Using the above example code, you can run a static website on a configured port. Along with having your own route set, which will in return given you back an response back on the website.
+</div>
         </article>
         </div>
         

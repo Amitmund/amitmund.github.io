@@ -31,7 +31,11 @@ $(document).ready(function(){
 		$('#loadData').load('/pages/golangStaticWebsite.html');
 	});
 	
+	$('#golangWebapp1').click(function(){
+		$('#loadData').load('/dynamic/helloWorld');
+	});
 
+	
 });
 
 

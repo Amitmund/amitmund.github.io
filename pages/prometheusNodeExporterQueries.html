@@ -56,6 +56,33 @@ rate(http_requests_total[5m])[30m:1m]
 </pre>
 
 
+<br>
+
+<pre>
+<code>
+$ curl 'http://localhost:9090/api/v1/query_range?query=up&start=2015-07-01T20:10:30.781Z&end=2015-07-01T20:11:00.781Z&step=15s'
+api/v1/query_range?query=up&start=2020-11-08T20:10:30.781Z&end=2020-11-09T20:11:00.781Z&step=15s'
+</code>
+</pre>
+
+
+<br>
+
+<pre>
+<code>
+# To know used memory:
+node_memory_MemTotal_bytes - node_memory_MemAvailable_bytes
+</code>
+</pre>
+
+<br>
+
+<pre>
+<code>
+# For used memory with instance regex with ~. for hosts ( 192.168.1.* )
+node_memory_MemTotal_bytes {instance=~"192.168.1.*"} - node_memory_MemAvailable_bytes {instance=~"192.168.1.*"} 
+</code>
+</pre>
 
 
 
@@ -1041,8 +1068,13 @@ This is amundHelp.
 	<br>
 	<a href="https://prometheus.io/docs/prometheus/latest/querying/example" target="_blank">Prometheus Querying Example</a>
 	<br>
-
-	
+	<a href="https://prometheus.io/docs/prometheus/latest/querying/functions/" target="_blank">Prometheus functions</a>
+	<br>
+	<a href="https://medium.com/kartbites/process-level-monitoring-and-alerting-in-prometheus-915ed7508058" target="_blank">Prometheus doc1</a>
+	<br>
+	<a href="https://grafana.com/docs/grafana/latest/installation/docker/"" target="_blank">docker grafana</a>
+	<br>
+		
 </div>
 
 <div class="amundPoint">
