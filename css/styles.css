@@ -213,6 +213,28 @@ body {
 
 /* ----------------------------------------------------------- */
 
+a {
+  color: rgba(22, 147, 134) !important;
+  cursor: pointer;
+}
+
+.gridMain a {
+  color: rgba(22, 147, 134) !important;
+  text-decoration: underline;
+}
+
+details summary:hover,
+a:hover {
+  color: rgba(255,255,255)!important;
+  /* color: #ff7b29 !important; */
+  /* color: cornflowerblue !important; */
+
+}
+
+/* ----------------------------------------------------------- */
+/* ----------------------------------------------------------- */
+/* ----------------------------------------------------------- */
+
 .amundBG {
   background: rgba(22, 147, 134);
 }
@@ -748,8 +770,9 @@ body {
 
 
 .dropdown-menu {
-  background-color: rgba(45, 47, 61) !important;
+  background-color: rgba(40,44,52) !important;
   border-style: none;  
+  box-shadow: rgba(0, 0, 0, 0.0980392) 0px 4px 12px;
 }
 
 
@@ -828,24 +851,7 @@ body {
 /* ----------------------------------------------------------- */
 /* ----------------------------------------------------------- */
 
-a {
-  color: rgba(22, 147, 134) !important;
-}
 
-.gridMain a {
-  color: rgba(22, 147, 134) !important;
-  text-decoration: underline;
-}
-
-a:hover {
-  color: rgba(255,255,255)!important;
-  /* color: #ff7b29 !important; */
-  /* color: cornflowerblue !important; */
-
-}
-
-/* ----------------------------------------------------------- */
-/* ----------------------------------------------------------- */
 
 h1, h2, h3, h4, h5, h6{
   color: rgba(248, 248, 248);
