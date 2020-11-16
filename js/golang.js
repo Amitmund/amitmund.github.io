@@ -35,6 +35,9 @@ $(document).ready(function(){
 		$('#loadData').load('/dynamic/helloWorld');
 	});
 
+	$('#golangWebapp2').click(function(){
+		$('#loadData').load('/dynamic/ls');
+	});
 	
 });
 
