@@ -19,10 +19,37 @@
 			<article>
 
 
-				<h5>node_cpu</h5>
+<h5>noad_load5</h5>				
 <pre>
 <code>
-node_cpu_seconds_total{mode=~"user|system|idle|iowait"}
+node_load5
+node_load5 {vm_name=~"vm-app-exampple.*"}
+</code>
+</pre>
+
+
+
+
+<h5>node_cpu</h5>
+<pre>
+<code>
+# mode
+mode=~"user|system|idle|iowait"}
+
+# idle
+# For idle, its good to deduct from 100.
+100 - (avg by (vm_name,instance) (irate(node_cpu_seconds_total{mode="idle", vm_name=~"vm-appxyz-vm.*"}[5m])) * 100)
+
+# iowait
+(avg by (vm_name,instance) (irate(node_cpu_seconds_total{mode="iowait", vm_name=~"vm-appxyz-vm.*"}[5m])) * 100)
+
+# iowait > 20 
+(avg by (vm_name,instance) (irate(node_cpu_seconds_total{mode="iowait", vm_name=~"vm-appxyz-vm.*"}[5m])) * 100) > 20
+
+# system
+(avg by (vm_name,instance) (irate(node_cpu_seconds_total{mode="system", vm_name=~"vm-appxyz-vm.*"}[5m])) * 100)
+
+# user:
 </code>
 </pre>           
 		
@@ -83,6 +110,8 @@ node_memory_MemTotal_bytes - node_memory_MemAvailable_bytes
 node_memory_MemTotal_bytes {instance=~"192.168.1.*"} - node_memory_MemAvailable_bytes {instance=~"192.168.1.*"} 
 </code>
 </pre>
+
+
 
 
 
