@@ -44,15 +44,54 @@ mode=~"user|system|idle|iowait"}
 (avg by (vm_name,instance) (irate(node_cpu_seconds_total{mode="iowait", vm_name=~"vm-appxyz-vm.*"}[5m])) * 100)
 
 # iowait > 20 
-(avg by (vm_name,instance) (irate(node_cpu_seconds_total{mode="iowait", vm_name=~"vm-appxyz-vm.*"}[5m])) * 100) > 20
+(avg by (vm_name,instance) (irate(node_cpu_seconds_total{mode="iowait", vm_name=~"vm-appxyz-vm.*"}[5m])) * 100) > 20me
 
 # system
 (avg by (vm_name,instance) (irate(node_cpu_seconds_total{mode="system", vm_name=~"vm-appxyz-vm.*"}[5m])) * 100)
 
 # user:
+(avg by (vm_name,instance) (irate(node_cpu_seconds_total{mode="user", vm_name=~"vm-appxyz-vm.*"}[5m])) * 100)
+
 </code>
 </pre>           
-		
+
+
+
+<h5>Memory</h5>
+
+<pre>
+<code>
+node_memory_MemFree_bytes {vm_name=~"vm-appxyz-vm.*"}
+
+# Memory used:
+(node_memory_MemTotal_bytes {vm_name=~"vm-appxyz-vm.*"}) - (node_memory_MemFree_bytes {vm_name=~"vm-appxyz-vm.*"}) 
+
+
+</code>
+</pre>
+
+
+<h5>process related</h5>
+<pre>
+<code>
+	rate(process_cpu_seconds_total{vm_name=~"vm-appxyz-vm.*"}[10m])
+</code>
+</pre>
+
+
+<h5>network</h5>
+<pre>
+<code>
+	rate(node_network_transmit_bytes_total {device="eth0", vm_name=~"vm-appxyz-vm.*"}[5m])
+
+	rate(node_network_receive_bytes_total {device="eth0", vm_name=~"vm-appxyz-vm.*"}[5m])
+
+	rate(node_network_receive_drop_total {device="eth0", vm_name=~"vm-appxyz-vm.*"}[5m])
+
+	rate(node_network_receive_errs_total {device="eth0", vm_name=~"vm-appxyz-vm.*"}[5m])
+
+</code>
+</pre>
 
 <h5>Few quick good command</h5>
 <pre>
@@ -1101,8 +1140,13 @@ This is amundHelp.
 	<br>
 	<a href="https://medium.com/kartbites/process-level-monitoring-and-alerting-in-prometheus-915ed7508058" target="_blank">Prometheus doc1</a>
 	<br>
-	<a href="https://grafana.com/docs/grafana/latest/installation/docker/"" target="_blank">docker grafana</a>
+	<a href="https://grafana.com/docs/grafana/latest/installation/docker/" target="_blank">docker grafana</a>
 	<br>
+	<a href="http://demo.robustperception.io:9100/metrics" target="_blank">prometheus metrics demo</a>
+	<br>
+	<a href="https://www.robustperception.io/" target="_blank">prometheus related notes</a>
+
+	
 		
 </div>
 
