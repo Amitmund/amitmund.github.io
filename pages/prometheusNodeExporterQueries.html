@@ -93,6 +93,27 @@ node_memory_MemFree_bytes {vm_name=~"vm-appxyz-vm.*"}
 </code>
 </pre>
 
+
+
+
+<h5>Tcp connection </h5>
+<pre>
+<code>
+rate(node_sockstat_TCP_inuse {vm_name=~"vm-appxyz-vm.*"}[5m])
+</code>
+</pre>
+
+
+<h5>process running</h5>
+<pre>
+<code>
+
+# you should not be using rate() on this.
+node_procs_running {vm_name=~"vm-appxyz-vm.*"}
+</code>
+</pre>
+
+
 <h5>Few quick good command</h5>
 <pre>
 <code>
