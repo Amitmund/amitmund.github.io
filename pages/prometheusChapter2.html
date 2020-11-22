@@ -20,56 +20,40 @@
 
 <!--  -->
 
-<h5>Installing Prometheus Server</h5>
+<h5> Configuring an Exporter</h5>
+
+Exporters are sources of metric data that Prometheus periodically collects. Over here, We will install <code>Node Exporter</code> on the server and <code>configure Prometheus</code> to <code>scrape metrics from that exporter</code>. so what we can query Prometheus, with <code>PromQL</code>for the metric data.
 <pre>
 <code>
-sudo useradd -M -r -s /bin/false prometheus
+sudo useradd -M -r -s /bin/false node_exporter
 
-sudo mkdir /etc/prometheus /var/lib/prometheus
+wget https://github.com/prometheus/node_exporter/releases/download/v0.18.1/node_exporter-0.18.1.linux-amd64.tar.gz
 
-wget https://github.com/prometheus/prometheus/releases/download/v2.16.0/prometheus-2.16.0.linux-amd64.tar.gz
-
-tar xzf prometheus-2.16.0.linux-amd64.tar.gz prometheus-2.16.0.linux-amd64/
-
-sudo cp prometheus-2.16.0.linux-amd64/{prometheus,promtool} /usr/local/bin/
-
-sudo chown prometheus:prometheus /usr/local/bin/{prometheus,promtool}
-
-sudo cp -r prometheus-2.16.0.linux-amd64/{consoles,console_libraries} /etc/prometheus/
-
-sudo cp prometheus-2.16.0.linux-amd64/prometheus.yml /etc/prometheus/prometheus.yml
-
-sudo chown -R prometheus:prometheus /etc/prometheus
-
-sudo chown prometheus:prometheus /var/lib/prometheus
-
-prometheus --config.file=/etc/prometheus/prometheus.yml
+tar xvfz node_exporter-0.18.1.linux-amd64.tar.gz
 
 
+sudo cp node_exporter-0.18.1.linux-amd64/node_exporter /usr/local/bin/
+sudo chown node_exporter:node_exporter /usr/local/bin/node_exporter
 </code>
 </pre>  
 
 
 <!--  -->
 
-<h5>For systemd</h5>
-sudo vi /etc/systemd/system/prometheus.service
+<h5>node exporter systemd</h5>
+sudo vi /etc/systemd/system/node_exporter.service
 <pre>
 <code>
 [Unit]
-Description=Prometheus Time Series Collection and Processing Server
+Description=Prometheus Node Exporter
 Wants=network-online.target
 After=network-online.target
 
 [Service]
-User=prometheus
-Group=prometheus
+User=node_exporter
+Group=node_exporter
 Type=simple
-ExecStart=/usr/local/bin/prometheus \
-    --config.file /etc/prometheus/prometheus.yml \
-    --storage.tsdb.path /var/lib/prometheus/ \
-    --web.console.templates=/etc/prometheus/consoles \
-    --web.console.libraries=/etc/prometheus/console_libraries
+ExecStart=/usr/local/bin/node_exporter
 
 [Install]
 WantedBy=multi-user.target
@@ -79,35 +63,29 @@ WantedBy=multi-user.target
 
 <!--  -->
 
-<div class="amundKeyNote">
-	Passing the config.file information at the previous systemd file.
-	<br>
-	<code>--config.file /etc/prometheus/prometheus.yml</code>
-</div>
-
-<!--  -->
-
-<h5>To start and enable prometheus</h5>
+<h5>To start and enable the node_exporter service</h5>
 
 <pre>
 <code>
 sudo systemctl daemon-reload
 
-sudo systemctl start prometheus
+sudo systemctl start node_exporter
 
-sudo systemctl enable prometheus
+sudo systemctl enable node_exporter
 </code>
 </pre>
 
 <!--  -->
 
 <h5>Quick test</h5>
+
+To retrieve the metrics served by <code>Node Exporter</code>.
 <pre>
 <code>
-curl localhost:9090
+curl localhost:9100/metrics
 
 Or from your browser
-http://{{PROMETHEUS_SERVER_PUBLIC_IP}}:9090.
+http://{{node_exporter_installed_node}}:9100/metrics
 
 </code>
 </pre>
@@ -116,14 +94,19 @@ http://{{PROMETHEUS_SERVER_PUBLIC_IP}}:9090.
 
 <hr>
 
-<h5>Prometheus configuration file</h5>
+<h5>Configure Prometheus to Scrape Metrics</h5>
 sudo vi /etc/prometheus/prometheus.yml
 
-You can update the <code>scrape_interval</code> to <code>10s</code> at the config file.
+At <code>scrape_configs</code> section and add a new entry under that section. You will need to supply the private IP address of your new node for targets.
 <pre>
 <code>
-global:
-	scrape_interval: 10s	
+	...
+
+	- job_name: 'Node Exporter'
+		static_configs:
+		- targets: ['<PRIVATE_IP_ADDRESS_OF_NEW_NODE>:9100']
+	
+	...	
 </code>
 </pre>
 
@@ -139,22 +122,13 @@ sudo killall -HUP prometheus
 
 <!--  -->
 
-<h5>General way to restart prometheus</h5>
+<h5>Now, at your prometheus_server:9090</h5>
+Run some <code>PromQL</code> queries.
 <pre>
 <code>
-sudo systemctl restart prometheus	
-</code>
-</pre>
+up
 
-<!--  -->
-
-<h5>Query the Prometheus API to verify your changes took effect</h5>
-<pre>
-<code>
-curl localhost:9090/api/v1/status/config
-
-And:
-You should see global:\n scrape_interval: 10s in the output.
+node_filesystem_avail_bytes
 </code>
 </pre>
 
@@ -181,14 +155,15 @@ This is amundTodo.
 <!--  -->
 
 <div class="amundReferance">
-<a href="https://prometheus.io/docs" target="_blank">Prometheus Documentation</a>
+<a href="https://prometheus.io/docs/prometheus/latest/configuration/configuration/#scrape_config" target="_blank">Scrape Config</a>
 <br>
-<a href="https://prometheus.io/docs/introduction/overview/" target="_blank">Prometheus Introduction and Overview</a>
+<a href="https://prometheus.io/docs/guides/node-exporter/" target="_blank">node exporter</a>
 <br>
-<a href="https://prometheus.io/docs/prometheus/latest/configuration/configuration/" target="_blank">Prometheus Configuration</a>
+<a href="http://demo.robustperception.io:9090/" target="_blank">demo prometheus server</a>
 <br>
-<a href="https://github.com/prometheus/prometheus/blob/release-2.15/config/testdata/conf.good.yml" target="_blank">Example Prometheus Config File</a>
+<a href="http://demo.robustperception.io:9100/metrics" target="_blank">prometheus metrics demo</a>
 <br>
+
 
 </div>
 
