@@ -9,6 +9,8 @@ $(document).ready(function(){
 		$('#loadData').load('/pages/prometheusChapter1.html');
 	});	
 	
-
+	$('#prometheusChapter2').click(function(){
+		$('#loadData').load('/pages/prometheusChapter2.html');
+	});	
 
 });
