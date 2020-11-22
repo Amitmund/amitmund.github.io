@@ -1,0 +1,224 @@
+<!-- ------------------------------------------------------------------------------------------------------------ -->  
+<!--Fill the data that you want to be in Main Session because of id="loadData" and your page js-->
+
+
+	<!-- ------------------------------------------------------------------------------------------------------------ -->  
+	<div class="myContent">
+      
+
+      
+		<div class="container-fluid section">
+		<section>
+		
+				<div class="container-fluid subpage-main-h1">
+				<h1>Prometheus Chapter1</h1>
+				</div>
+			
+			
+			<div class="container-fluid article">
+			<article>
+
+
+<h5>Installing Prometheus Server</h5>
+<pre>
+<code class="golang">
+sudo useradd -M -r -s /bin/false prometheus
+
+sudo mkdir /etc/prometheus /var/lib/prometheus
+
+wget https://github.com/prometheus/prometheus/releases/download/v2.16.0/prometheus-2.16.0.linux-amd64.tar.gz
+
+tar xzf prometheus-2.16.0.linux-amd64.tar.gz prometheus-2.16.0.linux-amd64/
+
+sudo cp prometheus-2.16.0.linux-amd64/{prometheus,promtool} /usr/local/bin/
+
+sudo chown prometheus:prometheus /usr/local/bin/{prometheus,promtool}
+
+sudo cp -r prometheus-2.16.0.linux-amd64/{consoles,console_libraries} /etc/prometheus/
+
+sudo cp prometheus-2.16.0.linux-amd64/prometheus.yml /etc/prometheus/prometheus.yml
+
+sudo chown -R prometheus:prometheus /etc/prometheus
+
+sudo chown prometheus:prometheus /var/lib/prometheus
+
+prometheus --config.file=/etc/prometheus/prometheus.yml
+
+
+</code>
+</pre>  
+
+<h5>For systemd</h5>
+sudo vi /etc/systemd/system/prometheus.service
+<pre>
+<code>
+[Unit]
+Description=Prometheus Time Series Collection and Processing Server
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+User=prometheus
+Group=prometheus
+Type=simple
+ExecStart=/usr/local/bin/prometheus \
+    --config.file /etc/prometheus/prometheus.yml \
+    --storage.tsdb.path /var/lib/prometheus/ \
+    --web.console.templates=/etc/prometheus/consoles \
+    --web.console.libraries=/etc/prometheus/console_libraries
+
+[Install]
+WantedBy=multi-user.target
+</code>
+</pre>
+
+
+<h5>To start and enable prometheus</h5>
+
+<pre>
+<code>
+sudo systemctl daemon-reload
+
+sudo systemctl start prometheus
+
+sudo systemctl enable prometheus
+</code>
+</pre>
+
+
+<h5>Quick test</h5>
+<pre>
+<code>
+curl localhost:9090
+
+Or from your browser
+http://{{PROMETHEUS_SERVER_PUBLIC_IP}}:9090.
+
+</code>
+</pre>
+
+
+
+<hr>
+
+<h5>Prometheus configuration file</h5>
+sudo vi /etc/prometheus/prometheus.yml
+
+You can update the <code>scrape_interval</code> to <code>10s</code> at the config file.
+<pre>
+<code>
+global:
+	scrape_interval: 10s	
+</code>
+</pre>
+
+
+<h5>Reload the Prometheus configuration</h5>
+<pre>
+<code>
+sudo killall -HUP prometheus	
+</code>
+</pre>
+
+
+
+<h5>Another way to restart prometheus</h5>
+<pre>
+<code>
+sudo systemctl restart prometheus	
+</code>
+</pre>
+
+
+<h5>Query the Prometheus API to verify your changes took effect</h5>
+<pre>
+<code>
+curl localhost:9090/api/v1/status/config
+
+And:
+You should see global:\n scrape_interval: 10s in the output.
+</code>
+</pre>
+
+
+<div class="amundNote">
+This is amundNote.
+</div>
+
+
+
+<div class="amundKeyNote">
+This is amundKeyNote.
+</div>
+
+<div class="amundAlert">
+This is amundAlert.
+</div>
+
+<div class="amundTodo">
+This is amundTodo.
+</div>
+
+<div class="amundReferance">
+<a href="https://prometheus.io/docs" target="_blank">Prometheus Documentation</a>
+<a href="https://prometheus.io/docs/introduction/overview/" target="_blank">Prometheus Introduction and Overview</a>
+<a href="https://prometheus.io/docs/prometheus/latest/configuration/configuration/" target="_blank">Prometheus Configuration</a>
+<a href="https://github.com/prometheus/prometheus/blob/release-2.15/config/testdata/conf.good.yml" target="_blank">Example Prometheus Config File</a>
+
+</div>
+
+
+
+<div class="amundIdea">
+This is amundIdea.
+</div>
+
+<div class="amundCorrect">
+This is amundCorrect.
+</div>
+
+<div class="amundMessage">
+This is amundMessage.
+</div>
+
+<div class="amundHelp">
+This is amundHelp.
+</div>
+
+
+<div class="amundPoint">
+<!-- For multi level you can use something line following example -->
+<h5><code>Multi-level-headings</code></h5>
+<p>To have a quick key points.</p>
+</div>
+
+			</article>
+			</div>
+			
+			
+			<div class="container-fluid article">
+			<article>
+			
+			</article>
+			</div>
+				
+		</section>
+		</div>
+		
+	<!-- write your subpage content over here -->
+	<!-- This will include your notes, images, programming data as pre -->
+
+</div>
+<!-- myContent div-->
+<!-- ------------------------------------------------------------------------------------------------------------ -->  
+<!-- ------------------------------------------------------------------------------------------------------------ -->  
+
+<!-- highlight.js for syntax highlight -->
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/atom-one-dark-reasonable.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/highlight.min.js"></script>
+
+<!-- For hljs to load hljs.initHighlighting() on mouse move. -->
+<!-- But we need to add this includeHtml.js -->
+<script src="/js/includeHtml.js"></script>
+
+<!-- ------------------------------------------------------------------------------------------------------------ -->  
