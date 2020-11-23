@@ -37,6 +37,7 @@ Example:
 MakeNegative(1)    # return -1
 MakeNegative(-5)   # return -5
 MakeNegative(0)    # return 0
+
 Notes:
 
 The number can be negative already, in which case no change is required.
@@ -139,21 +140,153 @@ var _ = Describe("Test Example", func() {
 
 </code>
 </pre>
+
+
+<!--  -->
+
 <hr>
+
+
+
 <!--  -->
 
 
+<h5>Summation</h5>
+
+<b>Question</b>
+<p>	
+	Write a program that finds the summation of every number from 1 to num. The number will always be a positive integer greater than 0.
+</p>
 
 
+<pre>
+<code class="golang">
+
+Example:
+
+summation(2) -> 3
+1 + 2
+
+summation(8) -> 36
+1 + 2 + 3 + 4 + 5 + 6 + 7 + 8
+
+</code>
+</pre>           
 
 
+<!--  -->
+
+<b>Answer</b>
+<pre>
+<code class="golang">
+package kata
+
+func Summation(n int) int {
+  return n * (n+1) / 2
+  }
+</code>
+</pre>
+
+<!--  -->
 
 
+<b>Testcase</b>
+<pre>
+<code class="golang">
+package kata_test
+
+import (
+    "fmt"
+    . "github.com/onsi/ginkgo"
+    . "github.com/onsi/gomega"
+    . "codewarrior/kata"
+)
+
+var _ = Describe("Basic Tests",func() {
+    examples := [...][2]int{
+        {1,1},
+        {8,36},
+        {22,253},
+        {100,5050},
+        {213,22791},
+    }
+    for i := 0; i < len(examples); i++ {
+        v := examples[i]
+        It(fmt.Sprintf("Testing for %d",v[0]),func() {
+            Expect(Summation(v[0])).To(Equal(v[1]))
+        })
+    }
+})
+</code>
+</pre>
 
 
-
+<!--  -->
 
 <hr>
+
+<!--  -->
+
+
+<h5>hourToMili</h5>
+
+<b>Question</b>
+<p>	
+	Clock shows 'h' hours, 'm' minutes and 's' seconds after midnight. Your task is to make 'Past' function which returns time converted to milliseconds.
+</p>
+
+
+<pre>
+<code class="golang">
+
+Example:
+
+past(0, 1, 1) == 61000
+</code>
+</pre>           
+
+
+<!--  -->
+
+<b>Answer</b>
+<pre>
+<code class="golang">
+package kata
+
+func Past(h, m, s int) int {
+  return ((h * 3600) + (m * 60) + s ) * 1000
+}
+</code>
+</pre>
+
+<!--  -->
+
+
+<b>Testcase</b>
+<pre>
+<code>
+package kata_test
+
+import (
+  . "github.com/onsi/ginkgo"
+  . "github.com/onsi/gomega"
+  . "codewarrior/kata"
+)
+
+var _ = Describe("Basic tests", func() {
+    It("Past(0, 1, 1)", func() { Expect(Past(0, 1, 1)).To(Equal(61000)) })
+    It("Past(1, 1, 1)", func() { Expect(Past(1, 1, 1)).To(Equal(3661000)) })
+    It("Past(0, 0, 0)", func() { Expect(Past(0, 0, 0)).To(Equal(0)) })
+    It("Past(1, 0, 1)", func() { Expect(Past(1, 0, 1)).To(Equal(3601000)) })
+    It("Past(1, 0, 0)", func() { Expect(Past(1, 0, 0)).To(Equal(3600000)) })
+})
+</code>
+</pre>
+
+<!--  -->
+
+<hr>
+
 <!--  -->
 
 <div class="amundNote">
