@@ -21,6 +21,80 @@
 
 <!--  -->
 
+<h5>Unit testing in golang</h5>
+
+
+<pre>
+<code>
+package main
+
+func Sum(x int, y int) int {
+    return x + y
+}
+
+func main() {
+    Sum(5, 5)
+}
+</code>
+</pre>
+
+
+<!--  -->
+
+<b>Testing code.</b>
+
+<pre>
+<code>
+package main
+
+import "testing"
+
+func TestSum(t *testing.T) {
+    total := Sum(5, 5)
+    if total != 10 {
+       t.Errorf("Sum was incorrect, got: %d, want: %d.", total, 10)
+    }
+}
+</code>
+</pre>
+
+
+<!--  -->
+
+<div class="amundPoint">
+  <!-- For multi level you can use something line following example -->
+  <h5><code>Test case quick note</code></h5>
+  
+  <p>The first and only parameter needs to be <code>t *testing.T</code></p>
+
+  <p>It begins with the word <code> Test </code> followed by a word or phrase starting with a capital letter.</p>
+
+  <p>(usually the method under test i.e. TestValidateClient)</p>
+
+  <p>Calls t.Error or t.Fail to indicate a failure (I called t.Errorf to provide more details)</p>
+
+  <p>t.Log can be used to provide non-failing debug information</p>
+
+  <p>Must be saved in a file named something_test.go such as: addition_test.go</p>
+
+</div>
+
+
+
+
+<!--  -->
+
+<div class="amundReferance">
+  <a href="https://blog.alexellis.io/golang-writing-unit-tests/" target="_blank">writing unit tests for golang</a>
+  <br>
+</div>
+  
+
+
+<!--  -->
+
+
+
 <h5>Trainning1</h5>
 
 <b>Question</b>
@@ -77,69 +151,6 @@ func MakeNegative(x int) int {
 
 
 
-<b>Testcase</b>
-<pre>
-<code class="golang">
-package kata_test
-import (
-  . "github.com/onsi/ginkgo"
-  . "github.com/onsi/gomega"
-  . "codewarrior/kata"
-)
-var _ = Describe("Test Example", func() {
-  It("should test that the solution returns the correct value", func() {
-    Expect(MakeNegative(42)).To(Equal(-42))
-  })
-})
-</code>
-</pre>
-
-
-
-
-<b>Testcase 1</b>
-<pre>
-<code class="golang">
-package kata_test
-import (
-  . "github.com/onsi/ginkgo"
-  . "github.com/onsi/gomega"
-  . "codewarrior/kata"
-  "math/rand"
-)
-
-func abs(x int) int {
-  m := x >> 31
-  return (x + m) ^ m
-}
-
-const NUM_RANDOM_TESTS = 10
-const MAX_X = 1000
-
-var _ = Describe("Test Example", func() {
-  It("should test that the MakeNegative returns the negative value", func() {
-    Expect(MakeNegative(42)).To(Equal(-42))
-    Expect(MakeNegative(-9)).To(Equal(-9))
-    Expect(MakeNegative(0)).To(Equal(0))
-    Expect(MakeNegative(1)).To(Equal(-1))
-    Expect(MakeNegative(-1)).To(Equal(-1))
-  })
-  It("random positives", func() {
-    for i:=0; i < NUM_RANDOM_TESTS; i++ {
-      x := rand.Intn(MAX_X - 1) + 1
-      Expect(MakeNegative(x)).To(Equal(-abs(x)))
-    }
-  })
-  It("random negatives", func() {
-    for i:=0; i < NUM_RANDOM_TESTS; i++ {
-      x := -rand.Intn(MAX_X)
-      Expect(MakeNegative(x)).To(Equal(-abs(x)))
-    }
-  })
-})
-
-</code>
-</pre>
 
 
 <!--  -->
@@ -187,38 +198,6 @@ func Summation(n int) int {
 </code>
 </pre>
 
-<!--  -->
-
-
-<b>Testcase</b>
-<pre>
-<code class="golang">
-package kata_test
-
-import (
-    "fmt"
-    . "github.com/onsi/ginkgo"
-    . "github.com/onsi/gomega"
-    . "codewarrior/kata"
-)
-
-var _ = Describe("Basic Tests",func() {
-    examples := [...][2]int{
-        {1,1},
-        {8,36},
-        {22,253},
-        {100,5050},
-        {213,22791},
-    }
-    for i := 0; i < len(examples); i++ {
-        v := examples[i]
-        It(fmt.Sprintf("Testing for %d",v[0]),func() {
-            Expect(Summation(v[0])).To(Equal(v[1]))
-        })
-    }
-})
-</code>
-</pre>
 
 
 <!--  -->
@@ -259,29 +238,6 @@ func Past(h, m, s int) int {
 </code>
 </pre>
 
-<!--  -->
-
-
-<b>Testcase</b>
-<pre>
-<code>
-package kata_test
-
-import (
-  . "github.com/onsi/ginkgo"
-  . "github.com/onsi/gomega"
-  . "codewarrior/kata"
-)
-
-var _ = Describe("Basic tests", func() {
-    It("Past(0, 1, 1)", func() { Expect(Past(0, 1, 1)).To(Equal(61000)) })
-    It("Past(1, 1, 1)", func() { Expect(Past(1, 1, 1)).To(Equal(3661000)) })
-    It("Past(0, 0, 0)", func() { Expect(Past(0, 0, 0)).To(Equal(0)) })
-    It("Past(1, 0, 1)", func() { Expect(Past(1, 0, 1)).To(Equal(3601000)) })
-    It("Past(1, 0, 0)", func() { Expect(Past(1, 0, 0)).To(Equal(3600000)) })
-})
-</code>
-</pre>
 
 <!--  -->
 
@@ -289,9 +245,11 @@ var _ = Describe("Basic tests", func() {
 
 <!--  -->
 
+
 <div class="amundNote">
-This is amundNote.
-</div>
+  text with amundNote.
+ </div>
+   
 
 <div class="amundKeyNote">
 This is amundKeyNote.
