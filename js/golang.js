@@ -30,7 +30,20 @@ $(document).ready(function(){
 	$('#golangStaticWebsite').click(function(){
 		$('#loadData').load('/pages/golangStaticWebsite.html');
 	});
+
+
+	$('#golangCodewarsChapter1').click(function(){
+		$('#loadData').load('/pages/golangCodewarsChapter1.html');
+	});
+
+
+
+
+
 	
+	// ----------------------------------------------------------------------------
+
+	//  for dynamic webapp.
 	$('#golangWebapp1').click(function(){
 		$('#loadData').load('/dynamic/helloWorld');
 	});
@@ -39,9 +52,12 @@ $(document).ready(function(){
 		$('#loadData').load('/dynamic/ls');
 	});
 	
+	// ----------------------------------------------------------------------------
+
+
+
+
 });
-
-
 
 // ----------------------------------------------------------------------------
 // ----------------------------------------------------------------------------

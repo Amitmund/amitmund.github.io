@@ -1,0 +1,233 @@
+<!-- ------------------------------------------------------------------------------------------------------------ -->  
+<!--Fill the data that you want to be in Main Session because of id="loadData" and your page js-->
+
+
+	<!-- ------------------------------------------------------------------------------------------------------------ -->  
+	<div class="myContent">
+      
+
+      
+		<div class="container-fluid section">
+		<section>
+		
+				<div class="container-fluid subpage-main-h1">
+				<h1>Codewars Chapter1</h1>
+				</div>
+			
+			
+			<div class="container-fluid article">
+			<article>
+
+
+<!--  -->
+
+<h5>Trainning1</h5>
+
+<b>Question</b>
+<p>	
+	In this simple assignment you are given a number and have to make it negative. But maybe the number is already negative?
+</p>
+
+
+<pre>
+<code class="golang">
+
+Example:
+
+MakeNegative(1)    # return -1
+MakeNegative(-5)   # return -5
+MakeNegative(0)    # return 0
+Notes:
+
+The number can be negative already, in which case no change is required.
+Zero (0) is not checked for any specific sign. Negative zeros make no mathematical sense.
+</code>
+</pre>           
+				
+
+
+<b>Answer</b>
+<pre>
+<code class="golang">
+package kata
+
+func MakeNegative(x int) int {
+  if x > 0 {
+    return -x
+  }
+  return x
+}
+</code>
+</pre>
+
+
+<b>Another Answer</b>
+<pre>
+<code class="golang">
+package kata
+
+import "math"
+
+func MakeNegative(x int) int {
+  return -int(math.Abs(float64(x)))
+}
+</code>
+</pre>
+
+
+
+<b>Testcase</b>
+<pre>
+<code class="golang">
+package kata_test
+import (
+  . "github.com/onsi/ginkgo"
+  . "github.com/onsi/gomega"
+  . "codewarrior/kata"
+)
+var _ = Describe("Test Example", func() {
+  It("should test that the solution returns the correct value", func() {
+    Expect(MakeNegative(42)).To(Equal(-42))
+  })
+})
+</code>
+</pre>
+
+
+
+
+<b>Testcase 1</b>
+<pre>
+<code class="golang">
+package kata_test
+import (
+  . "github.com/onsi/ginkgo"
+  . "github.com/onsi/gomega"
+  . "codewarrior/kata"
+  "math/rand"
+)
+
+func abs(x int) int {
+  m := x >> 31
+  return (x + m) ^ m
+}
+
+const NUM_RANDOM_TESTS = 10
+const MAX_X = 1000
+
+var _ = Describe("Test Example", func() {
+  It("should test that the MakeNegative returns the negative value", func() {
+    Expect(MakeNegative(42)).To(Equal(-42))
+    Expect(MakeNegative(-9)).To(Equal(-9))
+    Expect(MakeNegative(0)).To(Equal(0))
+    Expect(MakeNegative(1)).To(Equal(-1))
+    Expect(MakeNegative(-1)).To(Equal(-1))
+  })
+  It("random positives", func() {
+    for i:=0; i < NUM_RANDOM_TESTS; i++ {
+      x := rand.Intn(MAX_X - 1) + 1
+      Expect(MakeNegative(x)).To(Equal(-abs(x)))
+    }
+  })
+  It("random negatives", func() {
+    for i:=0; i < NUM_RANDOM_TESTS; i++ {
+      x := -rand.Intn(MAX_X)
+      Expect(MakeNegative(x)).To(Equal(-abs(x)))
+    }
+  })
+})
+
+</code>
+</pre>
+<hr>
+<!--  -->
+
+
+
+
+
+
+
+
+
+
+
+
+<hr>
+<!--  -->
+
+<div class="amundNote">
+This is amundNote.
+</div>
+
+<div class="amundKeyNote">
+This is amundKeyNote.
+</div>
+
+<div class="amundAlert">
+This is amundAlert.
+</div>
+
+<div class="amundTodo">
+This is amundTodo.
+</div>
+
+<div class="amundReferance">
+<a href="https://docs.datastax.com/en/cassandra-oss/3.0/cassandra/tools/toolsRepair.html" target="_blank">Cassandra Nodetool Repair</a>
+<br>
+<a href="https://docs.datastax.com/en/cassandra-oss/3.0/cassandra/operations/opsRepairNodesManualRepair.html" target="_blank">opsRepairNodesManualRepair</a>
+</div>
+
+<div class="amundIdea">
+This is amundIdea.
+</div>
+
+<div class="amundCorrect">
+This is amundCorrect.
+</div>
+
+<div class="amundMessage">
+This is amundMessage.
+</div>
+
+<div class="amundHelp">
+This is amundHelp.
+</div>
+
+
+<div class="amundPoint">
+<!-- For multi level you can use something line following example -->
+<h5><code>Multi-level-headings</code></h5>
+<p>To have a quick key points.</p>
+</div>
+
+			</article>
+			</div>
+			
+			
+			<div class="container-fluid article">
+			<article>
+			
+			</article>
+			</div>
+				
+		</section>
+		</div>
+		
+	<!-- write your subpage content over here -->
+	<!-- This will include your notes, images, programming data as pre -->
+
+</div>
+<!-- myContent div-->
+<!-- ------------------------------------------------------------------------------------------------------------ -->  
+<!-- ------------------------------------------------------------------------------------------------------------ -->  
+
+<!-- highlight.js for syntax highlight -->
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/atom-one-dark-reasonable.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/highlight.min.js"></script>
+
+<!-- For hljs to load hljs.initHighlighting() on mouse move. -->
+<!-- But we need to add this includeHtml.js -->
+<script src="/js/includeHtml.js"></script>
+
+<!-- ------------------------------------------------------------------------------------------------------------ -->  
