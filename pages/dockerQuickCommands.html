@@ -1,0 +1,178 @@
+<!-- ------------------------------------------------------------------------------------------------------------ -->  
+<!--Fill the data that you want to be in Main Session because of id="loadData" and your page js-->
+
+
+	<!-- ------------------------------------------------------------------------------------------------------------ -->  
+	<div class="myContent">
+      
+
+      
+      <div class="container-fluid section">
+      <section>
+      
+          <div class="container-fluid subpage-main-h1">
+          <h1>Docker Quick Commands</h1>
+          </div>
+        
+        
+        <div class="container-fluid article">
+        <article>
+
+
+<h5>Docker Quick Commands</h5>
+<pre>
+<code class="bash">
+
+# Docker Run example
+docker run --name web_server -d -p 8080:80 -v someDirectory/public_html:/usr/share/nginx/html nginx
+
+
+# Docker Run another example
+docker run -it --name oracleClient -v ~/Downloads/oracle_client:/root ubuntu /bin/bash
+
+
+# To remove stopped docker instances
+docker rm $(docker ps -aq)
+
+
+# To create a image from a running instance
+docker commit container_id container_name_amund:latest
+
+
+# From docker image to <b>tar</b> file
+https://docs.docker.com/engine/reference/commandline/save/
+
+docker save busybox > busybox.tar
+or
+docker save --output busybox.tar busybox
+
+docker save container_name_amund:latest > container_name_amund.tar
+
+
+# From docker image to <b>tar.gz</b>
+docker save myimage:latest | gzip > myimage_latest.tar.gz
+
+
+# from <b>tar</b>> file to image:
+docker load --input fedora.tar
+
+
+
+# <b>copying</b> from <b>instance</b> to <b>local</b>
+docker cp containerId:/file/path/within/container /host/path/target
+
+# <b>copying</b> from <b>local</b> to <b>instance</b>
+docker cp foo.txt mycontainer:/foo.txt
+
+
+
+## volume mount
+
+docker run -d \
+-it \
+--name golang \
+-v "$(pwd)":/gocode \
+golang:latest
+
+
+
+</code>
+</pre>           
+    
+
+<!--  -->
+<hr>
+
+
+<h5>Docker quick commands</h5>
+
+<pre>
+<code class="bash">
+
+#<b>Containers</b>
+Use docker container my_command
+
+create — Create a container from an image.
+start — Start an existing container.
+run — Create a new container and start it.
+ls — List running containers.
+inspect — See lots of info about a container.
+logs — Print logs.
+stop — Gracefully stop running container.
+kill —Stop main process in container abruptly.
+rm— Delete a stopped container.
+
+
+# <b>Images</b>
+Use docker image my_command
+build — Build an image.
+push — Push an image to a remote registry.
+ls — List images.
+history — See intermediate image info
+inspect — See lots of info about an image, including the layers.
+rm — Delete an image.
+
+
+# <b>Misc</b>
+docker version — List info about your Docker Client and Server versions.
+docker login — Log in to a Docker registry.
+docker system prune — Delete all unused containers, unused networks, and dangling images.
+
+</code>
+</pre>
+
+
+
+<div class="amundReferance">
+  <a href="https://docker-curriculum.com/" target="_blank">docker curriculum</a>
+  <br>
+  <a href="https://www.tutorialspoint.com/docker/docker_images.htm" target="_blank">docker images</a>
+  <br>
+  <a href="https://dzone.com/articles/the-basics-of-the-docker-run-command-via-codeship" target="_blank">docker run command</a>
+  <br>
+  <a href="https://coderwall.com/p/2es5jw/docker-cheat-sheet-with-examples" target="_blank">docker cheet sheet</a>
+  <br>
+  <a href="https://devcenter.bitrise.io/tutorials/docker/run-your-build-locally-in-docker/" target="_blank">docker build</a>
+  <br>
+  <a href="https://stackoverflow.com/questions/25267372/correct-way-to-detach-from-a-container-without-stopping-it" target="_blank">docker detach</a>
+  <br>
+  <a href="https://docs.docker.com/engine/examples/running_ssh_service/" target="_blank">docker ssh service</a>
+  <br>
+  <a href="https://docs.docker.com/engine/reference/run/" target="_blank">docker run</a>
+  <br>
+  <a href="https://github.com/corbinu/ssh-server/blob/master/Dockerfile" target="_blank">Dockerfile</a>
+  <br>
+</div>
+
+
+
+        </article>
+        </div>
+        
+        
+        <div class="container-fluid article">
+        <article>
+        
+        </article>
+        </div>
+          
+      </section>
+      </div>
+      
+		<!-- write your subpage content over here -->
+		<!-- This will include your notes, images, programming data as pre -->
+
+	</div>
+	<!-- myContent div-->
+	<!-- ------------------------------------------------------------------------------------------------------------ -->  
+  <!-- ------------------------------------------------------------------------------------------------------------ -->  
+
+<!-- highlight.js for syntax highlight -->
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/atom-one-dark-reasonable.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/highlight.min.js"></script>
+
+<!-- For hljs to load hljs.initHighlighting() on mouse move. -->
+<!-- But we need to add this includeHtml.js -->
+<script src="/js/includeHtml.js"></script>
+
+<!-- ------------------------------------------------------------------------------------------------------------ -->  
