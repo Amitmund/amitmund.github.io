@@ -39,7 +39,7 @@ docker rm $(docker ps -aq)
 docker commit container_id container_name_amund:latest
 
 
-# From docker image to <b>tar</b> file
+# From docker image to <strong>tar</strong> file
 https://docs.docker.com/engine/reference/commandline/save/
 
 docker save busybox > busybox.tar
@@ -49,24 +49,24 @@ docker save --output busybox.tar busybox
 docker save container_name_amund:latest > container_name_amund.tar
 
 
-# From docker image to <b>tar.gz</b>
+# From docker image to <strong>tar.gz</strong>
 docker save myimage:latest | gzip > myimage_latest.tar.gz
 
 
-# from <b>tar</b>> file to image:
+# from <strong>tar</strong> file to image:
 docker load --input fedora.tar
 
 
 
-# <b>copying</b> from <b>instance</b> to <b>local</b>
+# <strong>copying</strong> from <strong>instance</strong> to <strong>local</strong>
 docker cp containerId:/file/path/within/container /host/path/target
 
-# <b>copying</b> from <b>local</b> to <b>instance</b>
+# <strong>copying</strong> from <strong>local</strong> to <strong>instance</strong>
 docker cp foo.txt mycontainer:/foo.txt
 
 
 
-## volume mount
+# volume mount
 
 docker run -d \
 -it \
@@ -89,7 +89,7 @@ golang:latest
 <pre>
 <code class="bash">
 
-#<b>Containers</b>
+# <b>Containers</b>
 Use docker container my_command
 
 create — Create a container from an image.
