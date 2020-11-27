@@ -670,6 +670,7 @@ a:hover {
 }
 
 
+
 /* ----------------------------------------------------------- */
 
 .amundFloatLeft img {
@@ -763,6 +764,30 @@ a:hover {
 }
 
 
+/* ----------------------------------------------------------- */
+
+
+
+.profile h5,b {
+  margin-top: 10px !important;
+  color: rgba(22, 147, 134);
+}
+
+.profile a {
+  padding-left: 2em;
+  font-size: 90%;
+}
+
+
+/* https://css-tricks.com/left-align-and-right-align-text-on-the-same-line/ */
+.amundAlignleft {
+	float: left;
+}
+.amundAlignright {
+	float: right;
+}
+/* Note: at html, you need to clear the style */
+/* https://css-tricks.com/left-align-and-right-align-text-on-the-same-line/ */
 
 
 /* ----------------------------------------------------------- */
@@ -884,8 +909,8 @@ code {
   /* background-color: rgba(57,62,74);
   color: rgba(248, 248, 248); */
   color: rgba(22, 147, 134);
-  padding-left: .4em;
-  padding-right: .4em;
+  padding-left: .1em;
+  padding-right: .1em;
   font-weight: 200;
   font-size: 100%;
   font-weight: 200 !important;
