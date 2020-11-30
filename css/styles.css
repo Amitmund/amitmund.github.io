@@ -780,8 +780,30 @@ a:hover {
 
 .profile ul{
   /* padding-top: 1em; */
+  list-style: none;
   padding-left: 4em;
 }
+
+.profile ul li b {
+  text-decoration: underline;
+  color: #4ca2cd;
+  
+}
+
+.profile ul li b::before {
+  content: url('/images/icons/idea-16.png');
+  margin-right: 1em;
+}
+
+.profile ul li b::after {
+  /* content: ""; */
+  display: inline;
+  padding-bottom: .2em;
+}
+
+
+
+
 
 /* https://css-tricks.com/left-align-and-right-align-text-on-the-same-line/ */
 .amundAlignleft {
