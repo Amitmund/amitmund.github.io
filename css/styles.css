@@ -778,6 +778,10 @@ a:hover {
   font-size: 90%;
 }
 
+.profile ul{
+  /* padding-top: 1em; */
+  padding-left: 4em;
+}
 
 /* https://css-tricks.com/left-align-and-right-align-text-on-the-same-line/ */
 .amundAlignleft {
