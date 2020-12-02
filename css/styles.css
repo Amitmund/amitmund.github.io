@@ -768,6 +768,14 @@ a:hover {
 /* ----------------------------------------------------------- */
 
 
+
+.amundLoadData { 
+  min-height: 80vh; 
+  height: 80vh;
+  overflow: scroll;
+  scrollbar-width: thin;
+}
+
 .amundSideMenu { 
   min-height: 80vh; 
   height: 80vh;
@@ -777,14 +785,9 @@ a:hover {
 
 .amundSideMenu ul {
   list-style: none;
-  margin-left: .5em;
+  margin-left: 2px;
 }
-.amundLoadData { 
-  min-height: 80vh; 
-  height: 80vh;
-  overflow: scroll;
-  scrollbar-width: thin;
-}
+
 
 /* ----------------------------------------------------------- */
 /* ----------------------------------------------------------- */
