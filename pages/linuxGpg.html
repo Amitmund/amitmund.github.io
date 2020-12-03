@@ -30,10 +30,9 @@ gpg --help
 				If the system have gpg, you should get the output something like the following. 
 
 
-<details class="amundDetails">
-	<summary>gpg --help output</summary>
+<h5>gpg --help output</h5>
 <pre>
-<code>
+<code class="shell">
 $ gpg --help
 gpg (GnuPG) 2.2.21
 libgcrypt 1.8.6
@@ -123,7 +122,6 @@ Examples:
 Please report bugs to <https://bugs.gnupg.org>.
 </code>
 </pre>
-</details>	
 
 
 				<!-- For the note section -->
@@ -156,7 +154,7 @@ Please report bugs to <https://bugs.gnupg.org>.
 <b>To install on MAC</b>
 
 <pre>
-<code>
+<code class="shell">
 brew install gnupg
 </code>	
 </pre>
@@ -164,7 +162,7 @@ brew install gnupg
 <b>To install on Ubuntu Type system</b>
 
 <pre>
-<code>
+<code class="shell">
 sudo apt-get install gpg
 </code>
 </pre>
@@ -173,14 +171,14 @@ sudo apt-get install gpg
 
 <h5>To check the current public keys on your system</h5>
 <pre>
-<code>
+<code class="shell">
 gpg --list-keys
 </code>
 </pre>           
 				
 <h5>Tp check the current private keys on your system</h5>
 <pre>
-<code>
+<code class="shell">
 gpg --list-secret-keys
 </code>
 </pre>
@@ -188,7 +186,7 @@ gpg --list-secret-keys
 
 <h5>Output example</h5>
 <pre>
-<code>
+<code class="shell">
 $ gpg --list-keys
 /Users/amund/.gnupg/pubring.kbx
 -------------------------------
@@ -234,14 +232,14 @@ sub   rsa4096 2020-11-01 [E]
 
 <h5>To create your key pair</h5>
 <pre>
-<code>
+<code class="shell">
 gpg --full-generate-key
 </code>
 </pre>
 
 Or you might like to use just the following <code>command</code>
 <pre>
-<code>
+<code class="shell">
 gpg --gen-key
 </code>
 </pre>
@@ -251,7 +249,7 @@ gpg --gen-key
 
 <h5>Exporting your Public Key</h5>
 <pre>
-<code>
+<code class="shell">
 gpg --output public.pgp --armor <b>--export</b> username@email
 </code>
 </pre>
@@ -259,7 +257,7 @@ gpg --output public.pgp --armor <b>--export</b> username@email
 
 <h5>Exporting your Private Key</h5>
 <pre>
-<code>
+<code class="shell">
 gpg --output private.pgp --armor <b>--export-secret-key</b> username@email
 </code>
 </pre>
@@ -325,7 +323,7 @@ gpg --output private.pgp --armor <b>--export-secret-key</b> username@email
 
 <h5>Fetching public key</h5>
 <pre>
-<code>
+<code class="shell">
 
 gpg --keyserver keys.gnupg.net --recv-keys 6F4D1BEC8EF93D94
 gpg: key 6F4D1BEC8EF93D94: public key "AmitKumarMund < email id >" imported
@@ -349,7 +347,7 @@ gpg:               imported: 1
 </p>
 
 <pre>
-<code>
+<code class="shell">
 gpg --with-colons --import-options show-only --import --fingerprint < my-private-gpg-key.asc | awk -F: '$1 == "fpr" {print $10;}'
 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
@@ -396,7 +394,7 @@ xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
 
 <pre>
-<code>
+<code class="shell">
 # For Private keys:
 # Use the ID listed with --list-secret-keys
 gpg --delete-secret-keys XXXXXXXX
@@ -437,7 +435,7 @@ gpg --delete-keys XXXXXXXX
 
 
 <pre>
-<code>
+<code class="shell">
 # Quick example:
 gpg -r <b>email-id-of-recipent</b> -e -a<code>file-to-encrypt</code>
 </code>
@@ -449,7 +447,7 @@ gpg -r <b>email-id-of-recipent</b> -e -a<code>file-to-encrypt</code>
 
 <h5>To decrypt the file</h5>
 <pre>
-<code>
+<code class="shell">
 gpg -d<code>your-encrypted-file</code>
 </code>
 </pre>

@@ -9,5 +9,9 @@ $(document).ready(function(){
 		$('#loadData').load('/pages/linuxGpg.html');
 	});
 
+	$('#linuxOpenssl').click(function(){
+		$('#loadData').load('/pages/linuxOpenssl.html');
+	});
+	
 
 });
