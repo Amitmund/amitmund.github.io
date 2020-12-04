@@ -790,6 +790,8 @@ a:hover {
   height: 80vh;
   overflow: scroll;
   scrollbar-width: thin;
+  display: flex;
+  flex-direction: column;
 }
 
 .amundSideMenu ul {
@@ -798,7 +800,7 @@ a:hover {
 }
 
 .page-main-h1 h1, .subpage-main-h1 h1 {
-  text-align: center;
+  text-align: left;
   color: rgba(22, 147, 134);
 }
 
