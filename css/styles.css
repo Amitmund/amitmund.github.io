@@ -776,6 +776,15 @@ a:hover {
   scrollbar-width: thin;
 }
 
+/* To set min and max width subpages. */
+/* This will set the scroll bar at the end but content to be in  */
+.section {
+  min-width: 20ch;
+  max-width: 80vh;
+  /* to start the content to be from start of the viewport. */
+  position: absolute;
+}
+
 .amundSideMenu { 
   min-height: 80vh; 
   height: 80vh;
