@@ -13,7 +13,7 @@
 
   <html lang="en">
     
-  <title>Amit Mund</title>
+  <title>SRE Toolkit</title>
 
   <!-- For icon on the tab -->
   <link rel="shortcut icon" type="image/x-icon" href="/images/author_ioc_for_tab.ico" />
@@ -22,8 +22,9 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 
   <!-- highlight.js for syntax highlight -->
-	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/styles/atom-one-dark-reasonable.min.css">
-	  
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/styles/atom-one-dark-reasonable.min.css">
+
+  
   <!-- To link the your own css -->
   <link rel="stylesheet" href="/css/styles.css">
 
@@ -41,107 +42,90 @@
 		<!--Navigation -->
 
 		<div class="nav-menu"> 
+
       <div amitmund-include-html="/includes/navigation.html"></div>
+      
 		</div> 
 
 		<!--Navigation -->
 		<!-- Navigation: No changes needed for this article -->
 
+
 	<!-- ------------------------------------------------------------------------------------------------------------ -->  
-
-
+	<!-- ------------------------------------------------------------------------------------------------------------ -->  
 
 
 	<!-- page content -->
 
-	<!-- ------------------------------------------------------------------------------------------------------------ -->  
+  <div class="container-fluid p-3 my-3 amundPage">
 
-		<!-- Page Header  -->
-		<!-- You can do your changes, that is related to the current page and Subpages -->
-			<div class="container-fluid">
+
+      <!-- Page Header  -->
+		  <!-- You can do your changes, that is related to the current page and Subpages -->
 			
-				<!--
-					<div class="alert alert-info">
-					<strong>Note!</strong> We are still in development of this page.
-					</div>
-				
-        -->
-      
-			</div>
-		<!-- Page Header  -->
-
-
-
-	<!-- ------------------------------------------------------------------------------------------------------------ -->  
-
-		<!--For menuAndMain grid layout-->
-		<div class="grid-container">
-
-
-		<!-- ------------------------------------------------------------------------------------------------------------ -->
-        <!-- ------------------------------------------------------------------------------------------------------------ -->
-
-				<!-- This is the page you need to update, with regards to the links of your subpages -->
-          
-
-        <!--Fill the data that you want to be in left Menu  -->
-        <div class="container-fluid gridMenu">
-
-      <details>
-        <summary>es6</summary>
-        <ul>
-          <li><a id="jsEs6Chapter1">Chapter1</a></li>
-        </ul>
-      </details>
-
-
-      
+      <!-- <div class="alert alert-info">
+        <strong>Note!</strong> We are still in development of this page.
         </div>
-        <!--Fill the data that you want to be in left Menu  -->			
+       -->
+     
+    <!-- Page Header  -->
+
+    <!-- ------------------------------------------------------------------------------------------------------------ --> 
 
 
-		<!-- ------------------------------------------------------------------------------------------------------------ -->
-        <!-- ------------------------------------------------------------------------------------------------------------ -->
-
-				<!-- This is the article, where your subpages will be loaded. -->
-          
-          
-				<!-- id="loadData" get used in your related page js, to load the subpages. -->
-        <!--Fill the data that you want to be in Main Session-->
-        <div id="loadData" class="container-fluid gridMain">
+		<!-- row1 -->
+		<div class="row">
 
 
-					<!-- content of Main -->
-					<!-- This is where your loadData works, loading your mainpageSubpage -->
- 
-          
-            <div class="container-fluid section">
-            <section>      
+
+			<!-- row1/col1 -->
+			<div class="col-2 col-sm-offset-1 amundSideMenu pl-4 pt-5 amundBorder">
+
+        <details>
+          <summary>es6</summary>
+          <ul>
+            <li><a id="jsEs6Chapter1">Chapter1</a></li>
+          </ul>
+        </details>
+            
+
+			</div>
+			<!-- row1/col1 -->
+
+    <!-- ------------------------------------------------------------------------------------------------------------ --> 
+
+
+			<!-- row1/col2  -->
+			<div id="loadData" class="col-10 amundLoadData">
+
+        <section>      
               
-                <div class="container-fluid page-main-h1">
-                  <h1>JavaScript</h1>
-                </div> 
-              
-              
-              
-              <div class="container-fluid article">
-                <article>
+          <div class="container-fluid page-main-h1">
+            <h1>JavaScript</h1>
+          </div> 
+        
+        
+        
+        <div class="container-fluid article">
+          <article>
 
-                </article>
-              </div>
-              
-            </section>
-            </div>
+          </article>
+        </div>
+        
+      </section>
+
+			</div>
+			<!-- row1/col2  -->
+
+
+    <!-- ------------------------------------------------------------------------------------------------------------ --> 
 
 		</div>
+    <!-- row1 -->
+  
+  </div>
+  	<!-- page content -->
 
-
-		<!-- ------------------------------------------------------------------------------------------------------------ -->  
-
-
-		</div>
-		<!--For menuAndMain grid layout-->
-	<!-- ------------------------------------------------------------------------------------------------------------ -->  
 
 
 <!-- ------------------------------------------------------------------------------------------------------------ -->  
@@ -193,11 +177,12 @@
 
     <!-- ------------------------------------------------------------------------------------------------------------ -->  
 
+
   <!-- js -->
  
 </body>
 
-<!-- ------------------------------------------------------------------------------------------------------------ -->  
+
 <!-- ------------------------------------------------------------------------------------------------------------ -->  
   
 </html>

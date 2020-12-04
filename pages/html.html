@@ -8,18 +8,22 @@
 <head>
 
   <meta charset="utf-8">
-  
-  <html lang="en">
-
-  <title>Amit Mund</title>
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
+  <html lang="en">
+    
+  <title>SRE Toolkit</title>
+
   <!-- For icon on the tab -->
   <link rel="shortcut icon" type="image/x-icon" href="/images/author_ioc_for_tab.ico" />
-    
+  
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+  <!-- highlight.js for syntax highlight -->
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/styles/atom-one-dark-reasonable.min.css">
+
   
   <!-- To link the your own css -->
   <link rel="stylesheet" href="/css/styles.css">
@@ -38,94 +42,88 @@
 		<!--Navigation -->
 
 		<div class="nav-menu"> 
-			<div amitmund-include-html="/includes/navigation.html"></div>
+
+      <div amitmund-include-html="/includes/navigation.html"></div>
+      
 		</div> 
 
 		<!--Navigation -->
 		<!-- Navigation: No changes needed for this article -->
 
+
 	<!-- ------------------------------------------------------------------------------------------------------------ -->  
-
-
+	<!-- ------------------------------------------------------------------------------------------------------------ -->  
 
 
 	<!-- page content -->
 
-	<!-- ------------------------------------------------------------------------------------------------------------ -->  
+  <div class="container-fluid p-3 my-3 amundPage">
 
-		<!-- Page Header  -->
-		<!-- You can do your changes, that is related to the current page and Subpages -->
-			<div class="container-fluid">
+
+      <!-- Page Header  -->
+		  <!-- You can do your changes, that is related to the current page and Subpages -->
 			
-				
-					<!-- <div class="alert alert-info amundTextCenter">
-					<strong>Note!</strong> We are still in development of this page.
-					</div> -->
-				
-				
+      <!-- <div class="alert alert-info">
+        <strong>Note!</strong> We are still in development of this page.
+        </div>
+       -->
+     
+    <!-- Page Header  -->
+
+    <!-- ------------------------------------------------------------------------------------------------------------ --> 
 
 
+		<!-- row1 -->
+		<div class="row">
+
+
+
+			<!-- row1/col1 -->
+			<div class="col-2 col-sm-offset-1 amundSideMenu pl-4 pt-5 amundBorder">
+
+        <a id="htmlQuickNote">htmlQuickNote</a>
+        <a id="htmlCarouselSamvrita">htmlCarouselSamvrita</a>
+        <a id="htmlWasm1">htmlWasm1</a>
+        <a id="htmlWasm2">htmlWasm2</a>
+            
 
 			</div>
-		<!-- Page Header  -->
+			<!-- row1/col1 -->
+
+    <!-- ------------------------------------------------------------------------------------------------------------ --> 
 
 
+			<!-- row1/col2  -->
+			<div id="loadData" class="col-10 amundLoadData">
 
-	<!-- ------------------------------------------------------------------------------------------------------------ -->  
-
-		<!--For menuAndMain grid layout-->
-		<div class="grid-container">
-
-
-		<!-- ------------------------------------------------------------------------------------------------------------ -->  
-				<!-- This is the page you need to update, with regards to the links of your subpages -->
-
-        <!--Fill the data that you want to be in left Menu  -->
-            <div class="container-fluid gridMenu">
-              <a id="htmlQuickNote">htmlQuickNote</a>
-              <a id="htmlCarouselSamvrita">htmlCarouselSamvrita</a>
-              <a id="htmlWasm1">htmlWasm1</a>
-              <a id="htmlWasm2">htmlWasm2</a>
+        <section>      
               
-            </div>
-
-		<!-- ------------------------------------------------------------------------------------------------------------ -->  
-
-				<!-- This is the article, where your subpages will be loaded. -->
-				<!-- id="loadData" get used in your related page js, to load the subpages. -->
-        <!--Fill the data that you want to be in Main Session-->
-        <div id="loadData" class="container-fluid gridMain">
-          
           <div class="container-fluid page-main-h1">
             <h1>Quick Notes on HTML</h1>
-          </div>
-          
-            <div class="container-fluid section">
-            <section>
-              
-          
-              
-              <div class="container-fluid article">
-                <article>
+          </div> 
+        
+        
+        
+        <div class="container-fluid article">
+          <article>
 
-                  
-                </article>
-              </div>
-              
-              
-            </section>
-            </div>
-          
+          </article>
+        </div>
+        
+      </section>
 
-		</div>
+			</div>
+			<!-- row1/col2  -->
 
 
-		<!-- ------------------------------------------------------------------------------------------------------------ -->  
-
+    <!-- ------------------------------------------------------------------------------------------------------------ --> 
 
 		</div>
-		<!--For menuAndMain grid layout-->
-	<!-- ------------------------------------------------------------------------------------------------------------ -->  
+    <!-- row1 -->
+  
+  </div>
+  	<!-- page content -->
+
 
 
 <!-- ------------------------------------------------------------------------------------------------------------ -->  
@@ -155,6 +153,9 @@
       <!-- Latest compiled JavaScript -->
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
       
+      <!-- highlight.js for syntax highlight -->
+      <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js"></script>
+      
       <!-- To link the your own js -->
 			<script src="/js/includeHtml.js"></script>
 			
@@ -162,7 +163,8 @@
 	
  
 			<!-- Please update with the correct page related JS -->
-    <script src="/js/html.js"></script>
+		<script src="/js/html.js"></script>
+		
 
     <!-- ------------------------------------------------------------------------------------------------------------ -->  
 
@@ -173,11 +175,12 @@
 
     <!-- ------------------------------------------------------------------------------------------------------------ -->  
 
+
   <!-- js -->
  
 </body>
 
-<!-- ------------------------------------------------------------------------------------------------------------ -->  
+
 <!-- ------------------------------------------------------------------------------------------------------------ -->  
   
 </html>
