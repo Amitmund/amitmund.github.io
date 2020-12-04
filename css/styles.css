@@ -782,7 +782,7 @@ a:hover {
   min-width: 18ch;
   max-width: 78ch;
   /* to start the content to be from start of the viewport. */
-  position: absolute;
+  /* position: absolute; */
   font-size: 18px;
 }
 
@@ -801,7 +801,8 @@ a:hover {
 }
 
 .page-main-h1 h1, .subpage-main-h1 h1 {
-  text-align: left;
+  /* text-align: left; */
+  text-align: center;
   color: rgba(22, 147, 134);
 }
 
