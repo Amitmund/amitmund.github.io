@@ -672,13 +672,6 @@ a:hover {
 
 /* for amundQA */
 
-/* ----------------------------------------------------------- */
-
-.amundQA li, .amundPoint p {
-  margin-top: .1em !important;
-  margin-bottom: .1em !important;
-}
-
 
 /* ----------------------------------------------------------- */
 
@@ -711,6 +704,15 @@ a:hover {
   content: url('/images/icons/rightHand16.png');
   margin-right: 1em;
 }
+
+/* ----------------------------------------------------------- */
+
+.amundQA li, .amundPoint p {
+  margin-top: .1em !important;
+  margin-bottom: .1em !important;
+}
+
+
 /* ----------------------------------------------------------- */
 
 .amundTable thead {
@@ -849,7 +851,13 @@ a:hover {
   margin-left: 2px;
 }
 
-.page-main-h1 h1, .subpage-main-h1 h1 {
+.page-main-h1 h1 , .subpage-main-h1 h1 {
+  /* text-align: left; */
+  text-align: center;
+  color: rgba(22, 147, 134);
+}
+
+.page-main-h2 h2 , .subpage-main-h2 h2 {
   /* text-align: left; */
   text-align: center;
   color: rgba(22, 147, 134);

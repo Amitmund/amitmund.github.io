@@ -79,76 +79,69 @@
 						And its causes, duplicate of data.
 					</p>
 				
-					<p>
+
+					<div class="amundPoint">
 						<b>It don't scale:</b>
-						<br>
-						- Queries are unpredictable.
-						<br>
-						- Users are impatient.
-						<br>
-						- Data must be denormalized.
-						<br>
-						- If data > memory, its a big issue.
-						<br>
-						- Disk seeks are really bad too.
-		
-					</p>
 
-					<p>
+						<p>Queries are unpredictable.</p>
+						<p>Users are impatient.</p> 
+						<p>Data must be denormalized.</p> 
+						<p>If data > memory, its a big issue.</p> 
+						<p>Disk seeks are really bad too.</p> 
+					</div>
+
+
+					<div class="amundPoint">
 						<b>Sharding is a Nightmare:</b>
-						<br>
-						- Data is all over the place.
-						<br>
-						- No more joins.
-						<br>
-						- No more aggregations.
-						<br>
-						- denormalize all the things.
-						<br>
-						- Querying secondary indexes requires hitting every shard.
-						<br>
-						- Adding shards requires manually moving data.
-						<br>
-						- Schema changes.
-					</p>
 
+						<p>Data is all over the place.</p>
+						<p>No more joins.</p>
+						<p>No more aggregations.</p>
+						<p>denormalize all the things.</p>
+						<p>Querying secondary indexes requires hitting every shard.</p>
+						<p>Adding shards requires manually moving data.</p>
+						<p>Schema changes.</p>
+					</div>
 
-				<div class="amundPoint">
-					<!-- For multi level you can use something line following example -->
-					<b>High Availability...Not really, we can say Higher in place of High</b>
-					<p>Master failover...</p>
-					<p>Multi-DC is a mess..</p>
-					<p>Downtime is frequent..</p>
+					
+					<div class="amundPoint">
+						<b>High Availability...Not really, we can say Higher in place of High</b>
+
+						<p>Master failover...</p>
+						<p>Multi-DC is a mess..</p>
+						<p>Downtime is frequent..</p>
 					</div>
 
 				</div>
 
 
 				<!--  -->
+			
 
-				<div class="amundPoint">
-					<!-- For multi level you can use something line following example -->
-					<b>Summary of Failure (RDBMS)</b>
-					<p>Scaling is a pain.</p>
-					<p>ACID is naive at best.</p>
-					<p>Re-sharding is a manual process.</p>
-					<p>We're going to denormalize for performance.</p>
-					<p>High Availability is complicated, requires additional operational overhead.</p>
+					<div class="amundPoint">
+						<b>Summary of Failure (RDBMS)</b>
+
+						<p>Scaling is a pain.</p>
+						<p>ACID is naive at best.</p>
+						<p>Re-sharding is a manual process.</p>
+						<p>We're going to denormalize for performance.</p>
+						<p>High Availability is complicated, requires additional operational overhead.</p>
 					</div>
 
 
 					<div class="amundPoint">
-						<!-- For multi level you can use something line following example -->
 						<b>Lessons Learned from RDBMS</b>
+
 						<p>Consistency is not practical.</p>
 						<p>Manual sharding and rebalancing is hard.</p>
 						<p>Every moving part makes system more complex.</p>
 						<p>Scaling up is expensive.</p>
 						<p>Scatter/ Gather queries are not good.</p>
-						</div>
+					</div>
 
 
 					<!--  -->
+					<hr>
 
 					<div class="amundQA">
 						RDBMS is recommanded for big data applications?
@@ -201,19 +194,38 @@
 					</div>
 
 
-					<div class="amundQA">
-						Which one of the following is not an ACID component?
-						<ul>
-							<li>Durability</li>
-							<li>Atomicity</li>
-							<li>compliance <b>(Answer)</b></li>
-							<li>Isolation</li>
-						</ul>
-					</div>
-
-
+					<!--  -->
+					<hr>
 					<!--  -->
 
+					<div>
+
+						<div class="subpage-main-h2">
+							<h2>Introduction: Cassandr Overview</h2>
+						</div>
+						
+
+					<div class="amundPoint">
+						<b>What is Apache Cassandra?</b>
+						
+						<p>Fast Distributed Database</p>
+						<p>High Availability</p>
+						<p>Liner Scalability</p>
+						<p>Predictable Performance</p>
+						<p>No SPOF</p>
+						<p>Multi- DC</p>
+						<p>commodity Hardware</p>
+						<p>Easy to manage operationally</p>
+						<p>Not a drop in replacement for RDBMS</p>
+
+					</div>
+						
+
+
+
+				</div>
+
+				<!--  -->
 
 				<div class="amundKeyNote">
 					This is amundKeyNote.
