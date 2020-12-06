@@ -662,16 +662,29 @@ a:hover {
 }
 
 .amundQA::before {
-  content: "Questions And Answers:";
+  content: "Question(s) And Answer(s):";
   color: #169386;
   font-weight: bold;
   display: block;
   padding-bottom: 1em;
 }
 
+
 /* for amundQA */
 
 /* ----------------------------------------------------------- */
+
+.amundQA li, .amundPoint p {
+  margin-top: .1em !important;
+  margin-bottom: .1em !important;
+}
+
+
+/* ----------------------------------------------------------- */
+
+
+
+
 
 /* Working yee :)  */
 /* To have something like unorder list (ul) */
