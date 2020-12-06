@@ -863,6 +863,29 @@ a:hover {
   color: rgba(22, 147, 134);
 }
 
+.page-main-h2 h3 , .subpage-main-h2 h3 {
+  /* text-align: left; */
+  color: rgba(22, 147, 134);
+}
+
+
+span {
+  color: rgba(22, 147, 134);
+  text-decoration: underline;
+  padding-left: 2px;
+  padding-right: 2px;
+  /* font-size: 105%; */
+}
+
+/* span::after {
+  content: url(/images/icons/tooltip.png) ;
+} */
+
+span:hover {
+  transition: background-color 0.5s ease;
+  color: rgb(29, 238, 217); 
+}
+
 /* ----------------------------------------------------------- */
 /* ----------------------------------------------------------- */
 

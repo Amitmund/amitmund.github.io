@@ -205,8 +205,8 @@
 						</div>
 						
 
-					<div class="amundPoint">
-						<b>What is Apache Cassandra?</b>
+					<div class="amundPoint subpage-main-h3">
+						<h3>What is Apache Cassandra?</h3>
 						
 						<p>Fast Distributed Database</p>
 						<p>High Availability</p>
@@ -250,23 +250,166 @@
 						Its not a replacement for a <code>relational database</code>. And <code>Cassandra's data modeling</code> is the <code>key</code>.
 					</div>   
 
+
+					<div class="amundPoint subpage-main-h3" >
+						<h3>Hash Ring</h3>
+						<p>No master / slave /replica sets</p>
+						<p>No config servers, <code>zookeeper</code></p>
+						<p>Data is partitioned around the ring.</p>
+						<p>Data is replicated to <code>RF=N</code> servers</p>
+						<p>All nodes hold data and can answer queries (both reads and writes</p>
+						<p>Location of data on ring is determined by <span data-toggle="tooltip" title="The partition key is responsible for distributing data among nodes. A partition key is the same as the primary key when the primary key consists of a single column."> partition key</span>.</p>
+					</div>
+
+
+					<div class="amundNote">
+						Each node owns a <code>range of hashes </code> (a bucket of hashes)
+					</div>
+
+					<p>
+						So, we need to <code>define a datamodel</code> in <code>Cassandra</code>. When you <code>insert</code> data into <code>Cassandra</code>, the <code>value</code> of that <code>partition key</code> is run through a <code>consistent hashing function (murmur3) </code> and depending on the <code>output</code>, we can figure out, which <code>hash bucket</code> / <code>range of hashes </code> that value fits into and thus which node we need to talk to, to actually distribute the data around the cluster.
+					</p>
+
+					
+
+
 				</div>
 
 
 
 				<!--  -->
+				<hr>
+				<!--  -->
+
+				<div>
+
+					<div class="subpage-main-h2">
+						<h2>What is what</h2>
+					</div>
+
+
+					<div>
+						<b>This is one of the best link that explain about the Different Cassandra Key types along with example. </b>
+
+						<a href="https://stackoverflow.com/questions/24949676/difference-between-partition-key-composite-key-and-clustering-key-in-cassandra" target="_blank">Cassandra Key types</a>
+					</div>
+
+					<div class="amundKeyNote">
+						<b>Primary Key</b>
+
+						<p>
+							The primary key is a general concept to indicate one or more columns used to retrieve data from a Table.
+						</p>
+						
+						<p>
+							That means that it is made by a single column.
+						</p>
+
+						<p>
+							But the primary key can also be <em>COMPOSITE</em> <em>(aka COMPOUND)</em>, generated from more columns.
+						</p>
+
+
+<pre class="cassandra">
+create table example_composite (
+	key_part_one text,
+	key_part_two int,
+	data text,
+	PRIMARY KEY(key_part_one, key_part_two)      
+);
+</pre>
+
+						<p>
+							In a situation of <em>COMPOSITE</em> primary key, the "first part" of the key is called <em>PARTITION KEY</em> (in this example key_part_one is the <em>partition key</em>) and the second part of the key is the CLUSTERING KEY (in this example key_part_two)
+						</p>
+
+						<p>
+							Please note that the both partition and clustering key can be made by more columns,
+						</p>
+
+<pre>
+create table example_multiple (
+		k_part_one text,
+		k_part_two int,
+		k_clust_one text,
+		k_clust_two int,
+		k_clust_three uuid,
+		data text,
+		PRIMARY KEY((k_part_one, k_part_two), k_clust_one, k_clust_two, k_clust_three)      
+);
+</pre>						
+
+
+					</div>
+
+
+
+					<div class="amundKeyNote">
+						<b>partition key</b>
+
+						<p>The partition key is responsible for distributing data among nodes. A partition key is the same as the primary key when the primary key consists of a single column.</p>
+
+						<p>
+							The purpose of a <em>partition key</em> is to identify the <em>partition</em> or <em>node</em> in the cluster <em>that stores that row</em>.
+						</p>
+
+						<p>
+							When data is read or written from the cluster, a function called <em>Partitioner</em> is used to compute the <em>hash value</em> of the partition key. This hash value is used to determine the node/partition which contains that row. For example, rows whose partition key values range from 1000 to 1234 may reside in node A, and rows with partition key values range from 1235 to 2000 may reside in node B. If a row contains partition key whose hash value is 1233 then it will be stored in node A.
+						</p>
+
+					</div>
+
+
+					<div class="amundKeyNote">
+						<b>Compound Primary Key / composite key</b>
+
+						<p>As the name suggests, a <em>compound primary key</em> is comprised of <em>one or more columns</em> that are referenced in the primary key. One component of the compound primary key is called <em>partition key</em>, whereas the other component is called the <em>clustering key</em>..</p>
+
+						<p>It is important to note that when the compound key is C1, C2, C3, then the first key, C1, becomes the <em>partition key</em>, and the rest of the keys become part of the clustering key. In order to make <em>composite partition keys</em>, we have to specify keys in <em>parenthesis</em> such as: ( ( C1,C2) , C3, C4). In this case, <em>C1 and C2</em> are part of the <em>C1 and C2</em>>, and C3 and C4 are part of the <em>cluster key</em>.</p>
+					</div>
+
+
+					<div class="amundKeyNote">
+						<b>Clustering Key</b>
+
+						<p>The purpose of the <em>clustering key</em> is to store row data in a <em>sorted order</em>. The sorting of data is <em>based on columns</em>, which are included in the clustering key. This arrangement makes it efficient to retrieve data using the clustering key.</p>
+					</div>
+
+
+
+					<!--  -->
+
+					<div class="amundKeyNote">
+						<b> About different type of keys.</b>
+
+						<p>
+							The <em>Partition Key</em> is responsible for data distribution across your nodes.
+						</p>
+
+						<p>
+							The <em>Clustering Key</em> is responsible for data sorting within the partition.
+						</p>
+
+						<p>
+							The <em>Primary Key</em> is equivalent to the Partition Key in a single-field-key table (i.e. Simple).
+						</p>
+
+						<p>
+							The <em>Composite/Compound Key</em> is just any multiple-column key
+						</p>
+
+					</div>
+		
 
 
 
 
-    
+			</div>
 
-<div class="amundKeyNote">
-This is amundKeyNote.
-</div>
+
 
 <div class="amundAlert">
-This is amundAlert.
+	the <em>partition key</em> is the minimum-specifier needed to perform a query using a where clause. If you have a composite partition key, like the following
 </div>
 
 <div class="amundTodo">
@@ -300,6 +443,17 @@ This is amundHelp.
 				<a href="https://academy.datastax.com/" target="_blank">Cassandra Datastax Academy</a>
 				<br>
 
+				<a href="http://murmurhash.shorelabs.com/" target="_blank">murmur3 hash to find a range of hashes</a>
+				<br>
+
+				<a href="https://stackoverflow.com/questions/24949676/difference-between-partition-key-composite-key-and-clustering-key-in-cassandra" target="_blank">Cassandra Key types</a>
+				<br>
+
+				<a href="https://dzone.com/articles/cassandra-data-modeling-primary-clustering-partiti" target="_blank">Data modeling</a>
+				<br>
+
+
+				
 			</div>
 
 
