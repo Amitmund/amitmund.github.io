@@ -54,16 +54,6 @@
       <div class="container-fluid article">
       <article>
 
-
-				<div class="amundNote">
-					<b>Few Key Words:</b>
-					<br>
-					<code>RDBMS</code>: Relational Database Management System
-					<br>
-					<code>ACID</code>: Atomicity, Consistency, Isolation, Durability
-					</div>
-
-
 				<div>
 
 					<p>
@@ -194,14 +184,15 @@
 					</div>
 
 
-					<!--  -->
-					<hr>
-					<!--  -->
+				<!--  -->
+				<br>
+				<br>
+				<!--  -->
 
 					<div>
 
 						<div class="subpage-main-h2">
-							<h2>Introduction: Cassandr Overview</h2>
+							<h2>Introduction: Cassandra Overview</h2>
 						</div>
 						
 
@@ -247,53 +238,40 @@
 					</div>
 
 					<div class="amundNote">
-						Its not a replacement for a <code>relational database</code>. And <code>Cassandra's data modeling</code> is the <code>key</code>.
+						<p>
+							Its not a replacement for a <code>relational database</code>. And <code>Cassandra's data modeling</code> is the <code>key</code>.
+						</p>
+
 					</div>   
 
 
-					<div class="amundPoint subpage-main-h3" >
-						<h3>Hash Ring</h3>
-						<p>No master / slave /replica sets</p>
-						<p>No config servers, <code>zookeeper</code></p>
-						<p>Data is partitioned around the ring.</p>
-						<p>Data is replicated to <code>RF=N</code> servers</p>
-						<p>All nodes hold data and can answer queries (both reads and writes</p>
-						<p>Location of data on ring is determined by <span data-toggle="tooltip" title="The partition key is responsible for distributing data among nodes. A partition key is the same as the primary key when the primary key consists of a single column."> partition key</span>.</p>
-					</div>
 
-
-					<div class="amundNote">
-						Each node owns a <code>range of hashes </code> (a bucket of hashes)
-					</div>
-
-					<p>
-						So, we need to <code>define a datamodel</code> in <code>Cassandra</code>. When you <code>insert</code> data into <code>Cassandra</code>, the <code>value</code> of that <code>partition key</code> is run through a <code>consistent hashing function (murmur3) </code> and depending on the <code>output</code>, we can figure out, which <code>hash bucket</code> / <code>range of hashes </code> that value fits into and thus which node we need to talk to, to actually distribute the data around the cluster.
-					</p>
-
-					
-
-
-				</div>
 
 
 
 				<!--  -->
-				<hr>
+				<br>
+				<br>
 				<!--  -->
 
 				<div>
 
 					<div class="subpage-main-h2">
-						<h2>What is what</h2>
+						<h2>What is what?</h2>
 					</div>
 
 
-					<div>
+					
+					<div class="amundReferance">
 						<b>One of the best:</b>
 						<br>
 
 						<a href="https://stackoverflow.com/questions/24949676/difference-between-partition-key-composite-key-and-clustering-key-in-cassandra" target="_blank">Cassandra Key types</a>
+						<br>
 					</div>
+
+					<div>
+
 
 					<div class="amundKeyNote">
 						<b>Primary Key</b>
@@ -311,13 +289,15 @@
 						</p>
 
 
-<pre class="cassandra">
+<pre>
+<code class="cassandra">
 create table example_composite (
 	key_part_one text,
 	key_part_two int,
 	data text,
 	PRIMARY KEY(key_part_one, key_part_two)      
 );
+</code>
 </pre>
 
 						<p>
@@ -330,13 +310,13 @@ create table example_composite (
 
 <pre>
 create table example_multiple (
-		k_part_one text,
-		k_part_two int,
-		k_clust_one text,
-		k_clust_two int,
-		k_clust_three uuid,
-		data text,
-		PRIMARY KEY((k_part_one, k_part_two), k_clust_one, k_clust_two, k_clust_three)      
+	k_part_one text,
+	k_part_two int,
+	k_clust_one text,
+	k_clust_two int,
+	k_clust_three uuid,
+	data text,
+	PRIMARY KEY((k_part_one, k_part_two), k_clust_one, k_clust_two, k_clust_three)      
 );
 </pre>						
 
@@ -410,31 +390,234 @@ create table example_multiple (
 
 
 <div class="amundAlert">
-	the <em>partition key</em> is the minimum-specifier needed to perform a query using a where clause. If you have a composite partition key, like the following
+	the <em>partition key</em> is the minimum-specifier needed to perform a query using a where clause. If you have a composite partition key, like the following...
+	<br>
+	<br>
+	eg: <code>PRIMARY KEY((col1, col2), col10, col4))</code>
+	<br>
+	<br>
+	You can perform query only by passing at <em>least both col1 and col2</em>, these are the 2 columns that define the partition key. 
+	<br>
+	<br>
+	The "general" rule to make query is you have to pass <em>at least all partition key columns</em>, then you can add <em>optionally</em> each clustering key <em>in the order</em> they're set.
+<pre>
+<code class="cassandra">
+so the valid queries are (excluding secondary indexes)
+
+col1 and col2
+col1 and col2 and col10
+col1 and col2 and col10 and col 4
+Invalid:
+
+col1 and col2 and col4
+anything that does not contain both col1 and col2
+</code>
+</pre>
+
+
+<div class="amundKeyNote">
+	<b>What is Bucketing?</b>
+	<p>
+
+	</p>
 </div>
 
-<div class="amundTodo">
-This is amundTodo.
+
+<div class="amundKeyNote">
+	<b>hinted handoff?</b>
+	<p>
+
+	</p>
 </div>
 
 
 
-<div class="amundIdea">
-This is amundIdea.
-</div>
+		</div>
 
-<div class="amundCorrect">
-This is amundCorrect.
-</div>
 
-<div class="amundMessage">
-This is amundMessage.
-</div>
+		<!--  -->
+		<hr>
+		<!--  -->
 
-<div class="amundHelp">
-This is amundHelp.
-</div>
 
+		<div class="amundPoint subpage-main-h3" >
+
+
+			<h3>Hash Ring</h3>
+			<p>No master / slave /replica sets</p>
+			<p>No config servers, <code>zookeeper</code></p>
+			<p>Data is partitioned around the ring.</p>
+			<p>Data is replicated to <code>RF=N</code> servers</p>
+			<p>All nodes hold data and can answer queries (both reads and writes</p>
+			<p>Location of data on ring is determined by <span data-toggle="tooltip" title="The partition key is responsible for distributing data among nodes. A partition key is the same as the primary key when the primary key consists of a single column."> partition key</span>.</p>
+		</div>
+
+
+		<div class="amundNote">
+			Each node owns a <code>range of hashes </code> (a bucket of hashes)
+		</div>
+
+		<p>
+			So, we need to <code>define a datamodel</code> in <code>Cassandra</code>. When you <code>insert</code> data into <code>Cassandra</code>, the <code>value</code> of that <code>partition key</code> is run through a <code>consistent hashing function (murmur3) </code> and depending on the <code>output</code>, we can figure out, which <code>hash bucket</code> / <code>range of hashes </code> that value fits into and thus which node we need to talk to, to actually distribute the data around the cluster.
+		</p>
+
+	</div>
+
+
+			<div class="amundNote">
+				The Cassandra <code>token range</code>, is really really big number.
+				<br>
+				If we add more node, the <code>token range</code>, will automatically do the <code>re-balancing</code>.
+			</div>
+
+			<div class="amundAlert">
+				Make sure your <em>partition key</em> should be in designed such as the associate data for that hash taoen should not be very big. ( It should be within 100 MB, else you have to think for <em>Bucketing</em> )
+			</div>
+
+
+
+
+
+				<!--  -->
+				<hr>
+				<!--  -->
+		
+		
+				<div class="amundPoint subpage-main-h3" >
+		
+		
+					<h3>CAP Theorem / CAP Tradeoffs</h3>
+
+					<div class="amundNote">
+						C - Consistency		
+						<br>
+						A - Availability
+						<br>
+						P - Partitioning
+						<br>
+					</div>
+
+
+					<div class="amundPoint">
+
+						<b>Quick Note on CAP Theorem</b>
+
+						<p>
+							Impossible to be both <em>consistent</em> and <em>highly available</em> during a <em>network partition</em>.
+						</p>
+
+
+						<p>
+							Latency between data centers also makes consistency impractical
+						</p>
+
+						<p>
+							Cassandra chooses <em>Availability</em> on <em>Partition Tolerance</em> over <em>Consistency</em>. So Default is <em>PA</em>.
+						</p>
+
+						<p>
+							Partition Tolerance, mean: When a Node is note available, which have a set of replication data.
+						</p>
+
+					</div>
+
+					
+
+					<p>
+						<em>CAP theorem</em> says, that <em>during a network partition</em>, ( Which basically means, when <em>computers can not talk to each other</em>, either between data centers or on a single network), that you can either choose <em>consistency</em>, or actually you can't get consistency or you can get hight availability. So, by default Cassandra choose to be <em>availability</em> over <em>consistency</em>.
+					</p>
+
+
+					<div class="amundNote">
+						So, if we <em>give up</em> <em>consistency</em>, that means we can be <em>highly available</em>. And, thats what Cassandra chooses. It chooses to be <em>highly available</em> in a network partition.
+					</div>
+
+					<p>
+						Between DC, we want to <em>asynchronously</em> replicate our data, from one DC to another.
+					</p>
+
+					<div class="amundNote">
+						As a developer, you can choose, more <em>available</em> or more <em>consistency.</em> Can't be both togother.
+					</div>
+
+
+				</div>
+
+
+
+
+
+				<!--  -->
+				<hr>
+				<!--  -->
+		
+		
+				<div class="amundPoint subpage-main-h3" >
+		
+		
+					<h3>Replication</h3>
+
+					<div class="amundPoint">
+
+						<p>
+							Data is replicated automatically
+						</p>
+
+						<p>
+							You pick number of servers
+						</p>
+
+						<p>
+							Called <em>Replication factor</em> or <em>RF</em>>
+						</p>
+
+						<p>
+							Data is <em>ALWASY</em> replicated to each replica.
+						</p>
+
+						<p>
+							If a meachine is down, missing data is replayed via <em>hinted handoff</em>.
+						</p>
+
+						<p>
+							Replication happens <em>asynchronously</em>.
+						</p>
+
+					</div>
+
+
+						<p>
+							In general, people run the <em>production</em>, with <code>RF = 3</code>. It mean there should be <em>3 copies of each piece of data should</em> there be in your <em>DC / Cluster</em>. You can define this <code>RF</code>, in <em>per DC level</em>.
+						</p>
+
+						<!--  -->
+						<hr>
+						<!--  -->
+
+						<div class="amundIdea">
+							<em>Cluster</em> > <em>Ring</em> > <em>Node</em> > <em>Hash token range</em> / <em>Hash Bucket</em> > <em>Hash</em> > <em>Data</em>, based on <em> Partition Key</em> on a <em>Hash</em>.
+						</div>
+
+						<!--  -->
+						<hr>
+						<!--  -->
+
+						<h3>The RF get set, when you configure a <code>key space</code></h3>
+
+				</div>	
+
+
+
+
+<!-- key words -->
+<div class="amundNote">
+	<b>Few Key Words:</b>
+	<br>
+	<code>RDBMS</code>: Relational Database Management System
+	<br>
+	<code>ACID</code>: Atomicity, Consistency, Isolation, Durability
+	</div>
+<!-- key words -->
 
 
 
@@ -450,13 +633,38 @@ This is amundHelp.
 				<a href="https://stackoverflow.com/questions/24949676/difference-between-partition-key-composite-key-and-clustering-key-in-cassandra" target="_blank">Cassandra Key types</a>
 				<br>
 
+				<a href="https://www.bmc.com/blogs/cassandra-clustering-columns-partition-composite-key/" target="_blank">Cassandra Key types example 2</a>
+				<br>
+
 				<a href="https://dzone.com/articles/cassandra-data-modeling-primary-clustering-partiti" target="_blank">Data modeling</a>
 				<br>
 
-
+				<a href="https://shermandigital.com/blog/designing-a-cassandra-data-model/" target="_blank">Data modeling example 2</a>
+				<br>
+				
 				
 			</div>
 
+
+
+			<div class="amundTodo">
+				This is amundTodo.
+			</div>
+
+
+				
+				<div class="amundCorrect">
+				This is amundCorrect.
+				</div>
+				
+				<div class="amundMessage">
+				This is amundMessage.
+				</div>
+				
+				<div class="amundHelp">
+				This is amundHelp.
+				</div>
+				
 
 
       </article>
