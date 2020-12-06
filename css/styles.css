@@ -637,6 +637,42 @@ a:hover {
 
 /* ----------------------------------------------------------- */
 
+
+/* for amundQA */
+.amundQA {
+
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  background-image: url(/images/icons/qa.png);
+  background-position: 9px 9px;
+  background-repeat: no-repeat;
+
+  border-radius: 6px;
+  line-height: 1.6;
+  overflow: hidden;
+  padding: 15px 60px;
+  
+  margin-top: 2em;
+  margin-bottom: 2em;
+  font-weight: 300 !important;
+  
+  color: rgba(171, 178, 191);
+  box-shadow: rgba(0, 0, 0, 0.0980392) 0px 4px 12px;
+  font-size: 85%;
+}
+
+.amundQA::before {
+  content: "Questions And Answers:";
+  color: #169386;
+  font-weight: bold;
+  display: block;
+  padding-bottom: 1em;
+}
+
+/* for amundQA */
+
+/* ----------------------------------------------------------- */
+
 /* Working yee :)  */
 /* To have something like unorder list (ul) */
 .amundPoint {

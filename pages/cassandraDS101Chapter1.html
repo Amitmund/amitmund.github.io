@@ -43,19 +43,134 @@
       
 
       
-		<div class="container-fluid section">
-		<section>
+    <div class="container-fluid section">
+    <section>
+    
+        <div class="container-fluid subpage-main-h1">
+        <h1>Cassandra DS101 - Datastax Academy</h1>
+        </div>
+      
+      
+      <div class="container-fluid article">
+      <article>
+
+
+				<div class="amundNote">
+					<b>Few Key Words:</b>
+					<br>
+					<code>RDBMS</code>: Relational Database Management System
+					<br>
+					<code>ACID</code>: Atomicity, Consistency, Isolation, Durability
+					</div>
+
+
+				<div>
+
+					<p>
+						<b>RDBMS and its few limitations</b>
+						<br>
+						<br>
+						When Replication comes in place ACID is lie. When you have a <code>Master and Slave</code> design, the replication happen asynchronously, and which introduce a lag, called <code>Replication Lag</code>, and when client try to read data from Slave because of this lag it get an Old data. And hance ACID becomes a lie. So no more Consistency.
+					</p>
+				
+					<p>
+						And sometime, because of lots of Join, the database get locked and to solve this issue, we need to have a denormalized the data, having a different table, just for these type of queries.
+
+						And its causes, duplicate of data.
+					</p>
+				
+					<p>
+						<b>It don't scale:</b>
+						<br>
+						- Queries are unpredictable.
+						<br>
+						- Users are impatient.
+						<br>
+						- Data must be denormalized.
+						<br>
+						- If data > memory, its a big issue.
+						<br>
+						- Disk seeks are really bad too.
 		
-				<div class="container-fluid subpage-main-h1">
-				<h1>Template Introduction</h1>
+					</p>
+
+					<p>
+						<b>Sharding is a Nightmare:</b>
+						<br>
+						- Data is all over the place.
+						<br>
+						- No more joins.
+						<br>
+						- No more aggregations.
+						<br>
+						- denormalize all the things.
+						<br>
+						- Querying secondary indexes requires hitting every shard.
+						<br>
+						- Adding shards requires manually moving data.
+						<br>
+						- Schema changes.
+					</p>
+
+					<p>
+						<b>High Availability...Not really, we can say Higher in place of High</b>
+						<br>
+						- Master failover...
+						<br>
+						- Multi-DC is a mess.
+						<br>
+						- Downtime is frequent.
+					</p>
+
 				</div>
-			
-			
-			<div class="container-fluid article">
-			<article>
 
 
-				<h5>Example </h5>
+				<!--  -->
+
+				<div class="amundPoint">
+					<!-- For multi level you can use something line following example -->
+					<b>Summary of Failure (RDBMS)</b>
+					<p>Scaling is a pain.</p>
+					<p>ACID is naive at best.</p>
+					<p>Re-sharding is a manual process.</p>
+					<p>We're going to denormalize for performance.</p>
+					<p>High Availability is complicated, requires additional operational overhead.</p>
+					</div>
+
+
+					<div class="amundPoint">
+						<!-- For multi level you can use something line following example -->
+						<b>Lessons Learned from RDBMS</b>
+						<p>Consistency is not practical.</p>
+						<p>Manual sharding and rebalancing is hard.</p>
+						<p>Every moving part makes system more complex.</p>
+						<p>Scaling up is expensive.</p>
+						<p>Scatter/ Gather queries are not good.</p>
+						</div>
+
+
+					<!--  -->
+
+
+					<div class="amundQA">
+						<ul>
+							<li>RDBMS is recommanded for big data applications? - <b>False</b></li>
+						</ul>
+						
+						<br>
+
+					</div>
+
+
+				<div class="amundKeyNote">
+					This is amundKeyNote.
+				</div>   
+        
+
+
+
+
+<h5>Example </h5>
 <pre>
 <code class="golang">
 package main
@@ -68,28 +183,72 @@ func main() {
 fmt.Println("Hello Wold")
 }
 </code>
-</pre>           
-				
+</pre>      
 
-					<div class="amundNote">
-						If you are seeing this is for the note part using table to keep note section.
-					</div>
 
-			</article>
+<div class="amundKeyNote">
+This is amundKeyNote.
+</div>
+
+<div class="amundAlert">
+This is amundAlert.
+</div>
+
+<div class="amundTodo">
+This is amundTodo.
+</div>
+
+
+
+<div class="amundIdea">
+This is amundIdea.
+</div>
+
+<div class="amundCorrect">
+This is amundCorrect.
+</div>
+
+<div class="amundMessage">
+This is amundMessage.
+</div>
+
+<div class="amundHelp">
+This is amundHelp.
+</div>
+
+
+
+
+			<!-- Referance -->
+
+			<div class="amundReferance">
+				<a href="https://academy.datastax.com/" target="_blank">Cassandra Datastax Academy</a>
+				<br>
+
 			</div>
+
+
+
+      </article>
+      </div>
 			
-			
-			<div class="container-fluid article">
-			<article>
-			
-			</article>
-			</div>
-				
-		</section>
-		</div>
-		
-	<!-- write your subpage content over here -->
-	<!-- This will include your notes, images, programming data as pre -->
+			<!--  -->
+      
+      <div class="container-fluid article">
+      <article>
+      
+      </article>
+      </div>
+        
+    </section>
+    </div>
+    
+  <!-- write your subpage content over here -->
+  <!-- This will include your notes, images, programming data as pre -->
+
+
+
+
 
 </div>
 <!-- myContent div-->
