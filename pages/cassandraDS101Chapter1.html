@@ -483,7 +483,7 @@ anything that does not contain both col1 and col2
 				<!--  -->
 		
 		
-				<div class="amundPoint subpage-main-h3" >
+				<div class="subpage-main-h3">
 		
 		
 					<h3>CAP Theorem / CAP Tradeoffs</h3>
@@ -498,12 +498,13 @@ anything that does not contain both col1 and col2
 					</div>
 
 
+					<!--  -->
 					<div class="amundPoint">
 
 						<b>Quick Note on CAP Theorem</b>
 
 						<p>
-							Impossible to be both <em>consistent</em> and <em>highly available</em> during a <em>network partition</em>.
+							Impossible to be both consistent and highly available during a network partition.
 						</p>
 
 
@@ -512,7 +513,7 @@ anything that does not contain both col1 and col2
 						</p>
 
 						<p>
-							Cassandra chooses <em>Availability</em> on <em>Partition Tolerance</em> over <em>Consistency</em>. So Default is <em>PA</em>.
+							Cassandra chooses Availability on Partition Tolerance over Consistency. So Default is PA.
 						</p>
 
 						<p>
@@ -520,24 +521,23 @@ anything that does not contain both col1 and col2
 						</p>
 
 					</div>
-
+					<!--  -->
 					
-
 					<p>
-						<em>CAP theorem</em> says, that <em>during a network partition</em>, ( Which basically means, when <em>computers can not talk to each other</em>, either between data centers or on a single network), that you can either choose <em>consistency</em>, or actually you can't get consistency or you can get hight availability. So, by default Cassandra choose to be <em>availability</em> over <em>consistency</em>.
+						CAP theorem says, that during a network partition, ( Which basically means, when computers can not talk to each other, either between data centers or on a single network), that you can either choose consistency, or actually you can't get consistency or you can get hight availability. So, by default Cassandra choose to be availability over consistency.
 					</p>
 
 
 					<div class="amundNote">
-						So, if we <em>give up</em> <em>consistency</em>, that means we can be <em>highly available</em>. And, thats what Cassandra chooses. It chooses to be <em>highly available</em> in a network partition.
+						So, if we give up consistency, that means we can be highly available. And, thats what Cassandra chooses. It chooses to be highly available in a network partition.
 					</div>
 
 					<p>
-						Between DC, we want to <em>asynchronously</em> replicate our data, from one DC to another.
+						Between DC, we want to asynchronously replicate our data, from one DC to another.
 					</p>
 
 					<div class="amundNote">
-						As a developer, you can choose, more <em>available</em> or more <em>consistency.</em> Can't be both togother.
+						As a developer, you can choose, more available or more consistency. Can't be both togother.
 					</div>
 
 
@@ -552,7 +552,7 @@ anything that does not contain both col1 and col2
 				<!--  -->
 		
 		
-				<div class="amundPoint subpage-main-h3" >
+				<div class="subpage-main-h3" >
 		
 		
 					<h3>Replication</h3>
@@ -568,26 +568,26 @@ anything that does not contain both col1 and col2
 						</p>
 
 						<p>
-							Called <em>Replication factor</em> or <em>RF</em>>
+							Called Replication factor or RF>
 						</p>
 
 						<p>
-							Data is <em>ALWASY</em> replicated to each replica.
+							Data is ALWASY replicated to each replica.
 						</p>
 
 						<p>
-							If a meachine is down, missing data is replayed via <em>hinted handoff</em>.
+							If a meachine is down, missing data is replayed via hinted handoff.
 						</p>
 
 						<p>
-							Replication happens <em>asynchronously</em>.
+							Replication happens asynchronously.
 						</p>
 
 					</div>
 
 
 						<p>
-							In general, people run the <em>production</em>, with <code>RF = 3</code>. It mean there should be <em>3 copies of each piece of data should</em> there be in your <em>DC / Cluster</em>. You can define this <code>RF</code>, in <em>per DC level</em>.
+							In general, people run the production, with RF = 3. It mean there should be 3 copies of each piece of data should there be in your DC / Cluster. You can define this RF, in per DC level.
 						</p>
 
 						<!--  -->
@@ -598,16 +598,104 @@ anything that does not contain both col1 and col2
 							<em>Cluster</em> > <em>Ring</em> > <em>Node</em> > <em>Hash token range</em> / <em>Hash Bucket</em> > <em>Hash</em> > <em>Data</em>, based on <em> Partition Key</em> on a <em>Hash</em>.
 						</div>
 
+
 						<!--  -->
 						<hr>
 						<!--  -->
 
 						<h3>The RF get set, when you configure a <code>key space</code></h3>
 
+						<p>Think of the <em>Keyspace</em>, is similar as <em>Schema</em> in <em>Oracle</em> or similar as <em>Database</em> in <em>Mysql</em></p>
+
 				</div>	
 
 
+				<!--  -->
+					<hr>
+				<!--  -->			
+				
+				<div class="amundPoint">
+					<h3>Hinted Handoff</h3>
 
+					To be able to <em>replay</em> when down node comes backup. (Who should be <em>owning</em> the <em>data</em> or the <em>RF data</em>). And when the node <em>rejoins</em> the cluster, it would be able to <em>replay</em> all of the <em>writes</em>, when the node that was down missed.
+				</div>
+
+
+				<!--  -->
+				<hr>
+				<!--  -->		
+
+				<div class="amundPoint">
+					<h3>Consistency level</h3>
+
+					<p>per query consistency.</p>
+					<p><em>ALL</em>, <em>QUORUM</em>, <em>ONE</em></p>
+
+					<p><em>How many</em> replicas to check for the <em>query</em> to respond <em>OK</em></p>
+
+					<p>Two more popular <em>consistency level</em> is: <em>CL=ONE</em> and <em>CL=QUORUM</em></p>
+
+				</div>
+
+				<p>
+					So, <em>you have to set</em> this <em>consistency level</em> on per <em>read</em> and <em>write</em> <em>request</em> level.
+				</p>
+
+				<p>
+					So, <em>Consistency level</em> mean, how many replicas do I need to hear back, when I do a read or a write, before that read or that write is considered Successful.
+				</p>
+
+
+				<p>
+					So, when I do read, how many replicas do I need to hear from, before Cassandra gives the data back to the client.
+
+					<br>
+					<br>
+
+					Or, if I am doing a write, how many replicas need to say, "Yup, <em>we got your data</em>". We have written it to disk, before Cassandra replies to the client and says, that the data ig written Successfully.
+				</p>
+
+				<div class="amundNote">
+					<em>CL=ONE</em> and <em>RF=3</em>, So, When you write a date with <em>CL=ONE</em> on a keyspace, where you have defined <em>RF=3</em>, it mean, You (client) will get the reply back from Cassandra, as soon as 1 node has written your data to disk, but behind that, it will later replicate the same date to other 2 node, to make <em>RF=3</em>
+				</div>
+
+
+				<h5>QUORUM</h5>
+
+				<p>
+					Mean, <em>(RF/2)+1</em>. So, if for your keyspace the <em>RF=3</em> then the <em>Quorum</em>; would be (3/2)+1 => 1+1 => 2. ( You can ignore the value after the .5 over here.)
+				</p>
+
+
+				<div class="amundQA">
+					Can I set a default value to the <em>CL</em>, if not provided, in per query level? If, yes, where to do the same. And even if the default value is set, I believe in query time, we can overwride the same?
+
+					<br>
+					<br>
+
+					<ul>
+						<li>
+							If you just want to change consistency level for your current session, use <em>CONSISTENCY</em>
+						</li>
+
+						<li>
+							<a href="https://docs.datastax.com/en/archived/cql/3.3/cql/cql_reference/cqlshConsistency.html" target="_blank">Cqlsh Consistency level</a>
+						</li>
+
+						<li>
+							Consistency level is set in driver level just before running a query, so there is no such option in Cassandra.yaml file.
+						</li>
+
+						<li>
+							If you want to change the consistency level programamtically, use the cassandra driver for your client language.
+						</li>
+						<li>
+							As per my current understanding, you can't just set default <em>CL</em> in any configuration file. However, you can configure your Cassandra driver to do so.
+						</li>
+					</ul>
+					
+
+				</div>
 
 <!-- key words -->
 <div class="amundNote">

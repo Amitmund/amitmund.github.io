@@ -892,7 +892,33 @@ span:hover {
 .profile h5,b,em {
   margin-top: 10px !important;
   color: rgba(22, 147, 134);
+  padding-left: .2em;
+  padding-right: .2em;
 }
+
+/* Its working though :) */
+/* .profile h5:hover,b:hover,em:hover {
+  transition: background-color 0.5s ease;
+  color: rgb(11, 196, 177); 
+  animation: blink-animation 1s steps(5, start) infinite;
+  -webkit-animation: blink-animation 1s steps(5, start) infinite;
+}
+
+
+@keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}
+
+@-webkit-keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+} */
+
+/* Its working though :) */
+
 
 .profile a {
   padding-left: 2em;
