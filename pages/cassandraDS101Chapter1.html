@@ -432,6 +432,40 @@ anything that does not contain both col1 and col2
 
 
 
+<div class="amundKeyNote">
+	<b>What is coordinator?</b>
+	<p>
+
+	</p>
+</div>
+
+
+<div class="amundKeyNote">
+	<b>What is commit log?</b>
+	<p>
+
+	</p>
+</div>
+
+
+
+<div class="amundKeyNote">
+	<b>What is sstable?</b>
+	<p>
+
+	</p>
+</div>
+
+
+
+<div class="amundKeyNote">
+	<b>What is tombstone?</b>
+	<p>
+
+	</p>
+</div>
+
+
 		</div>
 
 
@@ -853,8 +887,143 @@ anything that does not contain both col1 and col2
 							<img class="img-fluid" src="/images/cassDB101Img3.png" style="width: 99vw;" alt="cassDB101Img3">
 
 
+							<!--  -->
+							<hr>
+							<hr>
+							<!--  -->
+
+
+							<h3>The Write Path</h3>
+
+							<div class="amundPoint">
+								<b>The Write Path</b>
+
+								<p>Writes are written to any node in the cluster <em>(Coordinator)</em></p>
+
+								<p>Writes are written to <em>commit log</em>, then to <em>memtable</em></p>
+
+								<p>Every write includes a <em>timestamp</em></p>
+
+								<p>Memtable flushed to disk periodically to a place called <em>(sstable)</em></p>
+
+								<p>New memtable is created in <em>memory</em></p>
+
+								<p>Deletes are a special <em>write case</em>, called a <em>tombstone</em></p>
+
+							</div>
+
+
+
+							<b>Coordinator node</b>
+
+							<p>
+								Its just a one (any) of the given node from the cluster, that got your request. Whatever node you are talking to for this request, is called as <em>Coordinator Node</em>. Thats because it will be doing the coordination for your request, for that particular request.
+								<br>
+								<br>
+								This is not any special node. Its just for that particular request.
+							</p>
+
+
+
+							<p>
+								<b>When the wite request reaches to the individual Node</b> (after doing the <em>murmur3</em> on the <em>partition key</em>). Two things happen. 1) That write request get written to <em>commit log</em> (Note: The commit log is a <em>append</em> only datastructure. So its very fast, as its sequential IO.). Once its witeen to <em>commit log</em>, 2) It marges the mutation (data) in to a in-memory representation of a table, called as <em>memtable</em>.
+
+							</p>
+
+							<p>
+								Then response back to the <em>coordinator node</em> (also based on your CL).
+							</p>
+
+							<p>
+								Because of the simple design of the Cassandra Write path, Cassandra is really fast on writing the data.
+							</p>
+
+
+							<div class="amundNote">
+								Cassandra don't do any <em>update</em> inplace or <em>delete</em> inplace.
+							</div>
+
+
+							<div class="amundNote">
+								<em>sstable</em> and <em>Commit log</em>is immutable. Once the sstable is created it can't be changed.
+							</div>
+
+
+
+							<div class="amundNote">
+								So, when there <em>delete</em>, its wite to a spicial kind of record called as <em>tombstone</em>. Its just like a marker, says, theres no more data at this place. And <em>tombstone</em> also get a regular timestamp.
+
+							</div>
+
+							<br>
+
+							<img class="img-fluid" src="/images/cassDB101Img4.png" style="width: 99vw;" alt="cassDB101Img4">
+
+
+
+							<div class="amundPoint">
+								<b>What is an SSTable?</b>
+
+								<p>Immutable data file for row storage.</p>
+
+								<p>Every write includes a timestap of when it was written.</p>
+
+								<p>Partition is spread across multiple SSTables.</p>
+
+								<p>Same column cab be in multiple SSTable.</p>
+
+								<p>Merged through <em>Compaction</em>, only latest timestamp is kept.</p>
+
+								<p>Deletes are written as <em>tombstones</em></p>
+
+								<p>Easy backups</p>
+
+							</div>
+
+
+							<div class="amundNote">
+								<em>Compaction</em> takes small SSTable and <em>merge</em> them to a <em>bigger</em> one.
+
+							</div>
+
+
+							<div class="amundNote">
+								The <em>backup</em> is very easy. Whenever a SSTable is written to the disk, we just need to back the same.
+
+							</div>
+
+
+							<!--  -->
+							<hr>
+							<hr>
+							<!--  -->
+
+							<h3>The <em>Read</em> Path at Cassandra</h3>
+
+
+							<br>
+
+							<img class="img-fluid" src="/images/cassDB101Img5.png" style="width: 99vw;" alt="cassDB101Img5">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 </div>
+
+
+
+
 
 
 <!-- key words -->
