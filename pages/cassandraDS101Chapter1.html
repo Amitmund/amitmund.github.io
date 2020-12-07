@@ -625,6 +625,8 @@ anything that does not contain both col1 and col2
 				<hr>
 				<!--  -->		
 
+
+
 				<div class="amundPoint">
 					<h3>Consistency level</h3>
 
@@ -635,7 +637,23 @@ anything that does not contain both col1 and col2
 
 					<p>Two more popular <em>consistency level</em> is: <em>CL=ONE</em> and <em>CL=QUORUM</em></p>
 
+					<br>
+
+					<img class="img-fluid" src="/images/cassDB101Img1.png" style="width: 99vw;" alt="cassDB101Img1">
+
+					<br>
+					<br>
+
+						In case of <em>Multi DC</em>, we also have local one <em>CL=LOCAL_ONE</em> or local quorum <em>CL=LOCAL_QUORUM</em> too.
+
+					<br>
+					<br>
+
+						<img class="img-fluid" src="/images/cassDB101Img2.png" style="width: 99vw;" alt="cassDB101Img2">
+
 				</div>
+
+				
 
 				<p>
 					So, <em>you have to set</em> this <em>consistency level</em> on per <em>read</em> and <em>write</em> <em>request</em> level.
@@ -645,6 +663,7 @@ anything that does not contain both col1 and col2
 					So, <em>Consistency level</em> mean, how many replicas do I need to hear back, when I do a read or a write, before that read or that write is considered Successful.
 				</p>
 
+				
 
 				<p>
 					So, when I do read, how many replicas do I need to hear from, before Cassandra gives the data back to the client.
@@ -680,6 +699,10 @@ anything that does not contain both col1 and col2
 
 						<li>
 							<a href="https://docs.datastax.com/en/archived/cql/3.3/cql/cql_reference/cqlshConsistency.html" target="_blank">Cqlsh Consistency level</a>
+
+							<a href="https://docs.datastax.com/en/cassandra-oss/3.0/cassandra/dml/dmlConfigConsistency.html" target="_blank">Consistency level</a>
+
+
 						</li>
 
 						<li>
@@ -697,6 +720,143 @@ anything that does not contain both col1 and col2
 
 				</div>
 
+
+
+				<!--  -->
+				<br>
+				<br>
+				<!--  -->
+
+<div>
+
+				<div class="subpage-main-h2">
+				 <h2> Questions and Answers </h2>
+				</div>
+
+
+					<div class="amundQA">
+						Where is Consistency Level (CL) set in Cassandra?
+						<ul>
+							<li>On a per-query basis <b>(Answer)</b></li>
+							<li>When creating a table</li>
+							<li>When creating a keyspace</li>
+							<li>In not configurable</li>
+						</ul>
+					</div>
+				
+
+					<div class="amundQA">
+						Consistency level can be set for?
+						<ul>
+							<li>Read requests</li>
+							<li>Write requests</li>
+							<li>Both read and write requests <b>(Answer)</b></li>
+							<li>In not configurable</li>
+						</ul>
+					</div>
+
+
+					<div class="amundQA">
+						Which of the following is *not* a feature of Cassandra?
+						<ul>
+							<li>No single point of failure</li>
+							<li>High availability</li>
+							<li>ACID compliance<b>(Answer)</b></li>
+							<li>Liner scalability</li>
+						</ul>
+					</div>
+
+					<div class="amundQA">
+						Read and write speed is *not* impacted by the consistency level chosen?
+						<ul>
+							<li>True</li>
+							<li>False<b>(Answer)</b></li>
+						</ul>
+					</div>
+
+					<div class="amundQA">
+						Cassandra supports multiple datacenters our of the box?
+						<ul>
+							<li>True<b>(Answer)</b></li>
+							<li>False</li>
+						</ul>
+					</div>
+
+					<div class="amundQA">
+						Replication Factor(RF) is how many copies of each piece of data should you have in your cluster?
+						<ul>
+							<li>True<b>(Answer)</b></li>
+							<li>False</li>
+						</ul>
+					</div>
+
+
+					<div class="amundQA">
+						With the CAP theorem, Cassandra is?
+						<ul>
+							<li>Available and partition tolerant<b>(Answer)</b></li>
+							<li>Consistent and partition tolerant</li>
+							<li>Available and Consistent</li>
+							<li>None of the above</li>
+						</ul>
+					</div>
+
+					<div class="amundQA">
+						Hinted Handoff is used when a node is down to replay all of the writes that occurred?
+						<ul>
+							<li>True<b>(Answer)</b></li>
+							<li>False</li>
+						</ul>
+					</div>
+
+
+					<div class="amundQA">
+						Which of the following statements about Cassandra is false?
+						<ul>
+							<li>All nodes hold data and can answer queries.</li>
+							<li>A master node determines who gets what data<b>(Answer)</b></li>
+							<li>Data is replicated on different nodes</li>
+							<li>Data is partitioned around the ring.</li>
+						</ul>
+					</div>
+
+
+					<div class="amundQA">
+						Where is Replication Factor (RF) set in Cassandra?
+						<ul>
+							<li>When creating a keyspace<b>(Answer)</b></li>
+							<li>When creating a table</li>
+							<li>On a per-query basis</li>
+							<li>In Cassandra configuratation file</li>
+						</ul>
+					</div>
+
+
+</div>
+
+
+
+								<!--  -->
+								<hr>
+								<hr>
+								<!--  -->
+
+
+<div>
+
+							<div class="subpage-main-h2">
+								<h2> Cassandra Read and Write </h2>
+							</div>
+
+							<br>
+
+							<img class="img-fluid" src="/images/cassDB101Img3.png" style="width: 99vw;" alt="cassDB101Img3">
+
+
+
+</div>
+
+
 <!-- key words -->
 <div class="amundNote">
 	<b>Few Key Words:</b>
@@ -704,6 +864,11 @@ anything that does not contain both col1 and col2
 	<code>RDBMS</code>: Relational Database Management System
 	<br>
 	<code>ACID</code>: Atomicity, Consistency, Isolation, Durability
+	<br>
+	<code>OLTP</code>: Online Transactional Processing
+	<br>
+	<code>OLAP</code>: Online analytical processing
+	<br>
 	</div>
 <!-- key words -->
 
