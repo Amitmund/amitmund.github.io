@@ -249,6 +249,31 @@ $( document ).mousemove(function() {
 
 ```
 
+
+```
+### Animation example:
+.amundAnimationText {
+  position: relative;
+  animation: mymove 20s infinite;
+}
+
+@keyframes mymove {
+  0%   {left: 35vw;}
+  50%  {left: -50vw;}
+  75% {left: 100vw;}
+   100%{left: -50vw;}
+}
+
+<div class="amundAnimationText">
+<h1>Topic1 this is a long text for checking</h1>
+</div>
+
+<div>
+<h2> test </h2>
+</div>
+
+```
+
 ### Quick git command
 > git add *; git status; git commit -m "update."; git push
 
