@@ -18,13 +18,25 @@
 
 $(document).ready(function(){
 
-	$('#cassandraDS101Chapter1').click(function(){
-		$('#loadData').load('/pages/cassandraDS101Chapter1.html');
-	});
-
 	$('#cassandraNodetoolRepair').click(function(){
 		$('#loadData').load('/pages/cassandraNodetoolRepair.html');
 	});
 
-	
+	$('#cassandraDS101').click(function(){
+		$('#loadData').load('/pages/cassandraDS101.html');
+	});
+
+	$('#cassandraDS101QA').click(function(){
+		$('#loadData').load('/pages/cassandraDS101QA.html');
+	});
+
+	$('#cassandraDS201').click(function(){
+		$('#loadData').load('/pages/cassandraDS201.html');
+	});
+
+	$('#cassandraDS201QA').click(function(){
+		$('#loadData').load('/pages/cassandraDS201QA.html');
+	});
+
+
 });
