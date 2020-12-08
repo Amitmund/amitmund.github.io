@@ -982,7 +982,7 @@ anything that does not contain both col1 and col2
 
 
 							<div class="amundNote">
-								<em>Compaction</em> takes small SSTable and <em>merge</em> them to a <em>bigger</em> one.
+								<em>Compaction</em> takes small SSTable and <em>merged</em> them to a <em>bigger</em> one.
 
 							</div>
 
@@ -1006,21 +1006,85 @@ anything that does not contain both col1 and col2
 							<img class="img-fluid" src="/images/cassDB101Img5.png" style="width: 99vw;" alt="cassDB101Img5">
 
 
+							<div class="amundPoint">
+
+								<p>Any server may be queried, it acts as the <em>coordinator.</em></p>
+
+								<p>Contacts nodes with the requested key.</p>
+
+								<p>On individual node level, Cassandra goes to the disk and it might have to look at multiple SSTables. Note: as compaction runs as a background process, the merged also looked through, and along with that it might have to look though multiple SSTables. </p>
+
+								<p>
+									I believe the merged happens after pulling the multiple SSTables into memory and based on the latest timestamp it merged them together, where the last write wins and any UN-FLUSHED data in the MEMTABLE, this too get merged (COMPACTION) over here as well. Then Cassandra send back the response back. 
+
+									<br>
+									<br>
+
+									If the CL is not ONE, it need to do the same process on rest of the Replicated nodes and this increase the time to get response back to the client.
+								</p>
+
+								<p>Also, NOTE, that, if the Consistency &lt ALL, performs read repair in background (read_repair_chance). As Cassandra is an eventually consistency database.</em>
+								</p>
+
+								<p>
+									Theres a configuration, when we create a table, called (read_repair_chance). This is where Cassandra try to get sync with rest on the data consistency level.
+									<br>
+									I believe the default setting is 10%. So, about of 10% of all your read, cassandra will do this on our behalf.
+
+								</p>
+
+							</div>
+
+
+							<!--  -->
+							<br>
+
+							<div class="amundAlert">
+
+								<p>
+									I believe the merged happens after pulling the multiple SSTables into memory and based on the latest timestamp it merged them together, where the last write wins and any UN-FLUSHED data in the MEMTABLE, this too get merged over here as well. Then Cassandra send back the response back. 
+
+									<br>
+									<br>
+
+									If the CL is not ONE, it need to do the same process on rest of the Replicated nodes and this increase the time to get response back to the client. So, please do select a good disk type.
+								</p>
+							</div>
 
 
 
+								<!--  -->
+								<hr>
+								<hr>
+								<!--  -->
+
+								<h5>Choosing a Distribution</h5>
+
+								<ul>
+									<li>Open Source</li>
+									<li>DataStax Enterprise</li>
+								</ul>
+
+								<br>
 
 
+								<h5>DataStax Enterprise</h5>
 
-
-
-
-
-
-
+								<ul>
+									<li>Integrated Multi-DC search</li>
+									<li>Integrated Spark for Analytics</li>
+									<li>Extended support</li>
+									<li>Additional QA</li>
+									<li>And few quick needed tools/supports..</li>
+								</ul>
 
 </div>
 
+
+	<!--  -->
+	<hr>
+	<hr>
+	<!--  -->
 
 
 
