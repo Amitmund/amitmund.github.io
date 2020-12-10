@@ -274,6 +274,77 @@ $( document ).mousemove(function() {
 
 ```
 
+### Few quick note that need to be updated as webpage later.
+
+```
+BAY LEAVES
+( Tej Patta )
+Many ladies add bay leaves to their foods, especially in the cooking of red meat and poultry. Many don't know why bay leaves are added to food!
+When a woman was  asked why, she said, "to flavor the food". If you boil the bay leaves in a glass of water and taste it, it will have no flavor.  So why do you put bay leaves in the meat or other food?
+
+The addition of bay leaves to meat converts triglycerides to monounsaturated fats and, for experimentation and confirmation:
+>Cut a chicken into two halves, cook each half in a separate pan and place on one a bay leaf, and cook the other without a bay leaf. Observe the amount of fat in both pans after cooking!
+
+If you have bay leaves, there is no need for a pharmacy, as recent scientific studies have shown that bay leaves have many benefits:
+
+They help to get rid of many serious health problems and illnesses.
+
+The benefits of bay leaf: 
+
+They - 
+▪Treat digestive disorders and help eliminate -
+   •Lumps
+   •Heartburn
+   •Acidity
+   •Constipation
+Hot bay tea regulates bowel movements - 
+   •lowers blood sugar
+   •is an antioxidant,
+▪by eating them, or by drinking bay tea for a month, the body is able to produce insulin 
+▪eliminates bad cholesterol and relieves the body of triglycerides.
+▪useful in treating colds, flu and severe coughs, as it is a rich source of vitamin "C". ▪you can boil the leaves and inhale steam to get rid of phlegm and reduce the severity of coughs.
+▪protects the heart from seizures and strokes, as they contain cardiovascular protective compounds.
+▪rich in acids such as caffeic acid, quercetin, eigonol and bartolinide, substances that prevent the formation of cancer cells in the body.
+▪eliminates insomnia and anxiety. If taken before bed, helps you relax and sleep peacefully.
+▪drinking a cup of boiled bay leaves twice a day breaks down kidney stones and cures infections.
+ ■Don't just read and leave in your in box. Forward, for others' benefit! 👍 Dr c a kishore #SwathaSamruddhaBharatha #IndaAyurvedaFoundation
+
+ ```
+
+## Azure face
+
+```
+# Working example:
+
+curl -H "Ocp-Apim-Subscription-Key: xxxx" "https://sretoolkittry1.cognitiveservices.azure.com/face/v1.0/detect?detectionModel=detection_02&returnFaceId=true&returnFaceLandmarks=false" -H "Content-Type: application/json" --data-ascii "{\"url\":\"https://pbs.twimg.com/profile_images/1260456676890742786/MzGhbLvr_400x400.jpg\"}"
+
+
+		a03b8ad8-87a0-434d-8457-b6dcd7a04501
+
+
+		curl -H "Ocp-Apim-Subscription-Key: xxxxxx" "https://sretoolkittry1.cognitiveservices.azure.com/face/v1.0/detect?detectionModel=detection_02&returnFaceId=true&returnFaceLandmarks=false" -H "Content-Type: application/json" --data-ascii "{\"url\":\"https://pbs.twimg.com/media/EoyFHuTXcAAQExc?format=jpg&name=900x900\"}"
+
+		b2acb508-5e45-4556-aef4-92eea685cbb0
+
+	
+		curl -H "Ocp-Apim-Subscription-Key: xxxxxx" "https://sretoolkittry1.cognitiveservices.azure.com/face/v1.0/detect?detectionModel=detection_02&returnFaceId=true&returnFaceLandmarks=false" -H "Content-Type: application/json" --data-ascii "{\"url\":\"https://pbs.twimg.com/media/EoY3iUiWMAMSD2o?format=jpg&name=900x900\"}"
+
+
+curl --location --request POST 'https://sretoolkittry1.cognitiveservices.azure.com/face/v1.0/findsimilars' \
+	--header 'Content-Type: application/json' \
+	--header 'Ocp-Apim-Subscription-Key: xxxxxx' \
+	--header 'Authorization: Basic YW1pdG11bmQ6UG9ydEBsZGV2b3Bz' \
+	--data-raw '{
+			"faceId": "a03b8ad8-87a0-434d-8457-b6dcd7a04501",
+			"faceIds": ["b2acb508-5e45-4556-aef4-92eea685cbb0", "0eed61a2-3a22-4047-b327-2efcfc46ac72"],
+			"maxNumOfCandidatesReturned": 10,
+			"mode": "matchPerson"
+	}'
+```
+
 ### Quick git command
 > git add *; git status; git commit -m "update."; git push
+
+
+
 
