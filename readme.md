@@ -316,7 +316,7 @@ Hot bay tea regulates bowel movements -
 ```
 # Working example:
 
-curl -H "Ocp-Apim-Subscription-Key: xxxx" "https://sretoolkittry1.cognitiveservices.azure.com/face/v1.0/detect?detectionModel=detection_02&returnFaceId=true&returnFaceLandmarks=false" -H "Content-Type: application/json" --data-ascii "{\"url\":\"https://pbs.twimg.com/profile_images/1260456676890742786/MzGhbLvr_400x400.jpg\"}"
+curl -H "Ocp-Apim-Subscription-Key: xxxx" "https://sretoolkittry1.cognitiveservices.azure.com/face/v1.0/detect?detectionModel=detection_02&returnFaceId=true&returnFaceLandmarks=false" -H "Content-Type: application/json" --data-ascii "{\"url\":\"https://www.sretoolkit.com/images/samvrita1Y1.jpg\"}"
 
 
 		a03b8ad8-87a0-434d-8457-b6dcd7a04501
@@ -341,6 +341,15 @@ curl --location --request POST 'https://sretoolkittry1.cognitiveservices.azure.c
 			"mode": "matchPerson"
 	}'
 ```
+
+
+```
+A professor gave a balloon to every student, who had to inflate it, write their name on it and throw it in the hallway. The professor then mixed all the balloons. The students were given 5 minutes to find their own balloon. Despite a hectic search, no one found their balloon. At that point the professor told the students to take the first balloon that they found and hand it to the person whose name was written on it. Within 5 minutes everyone had their own balloon.
+
+The professor said to the students: “These ballons are like happiness. We will never find it if everyone is looking for their own. But if we care about other people's happiness....we'll find ours too.
+
+```
+
 
 ### Quick git command
 > git add *; git status; git commit -m "update."; git push
