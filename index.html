@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SREToolkit</title>
+    <link rel="icon" type="image/x-icon" href="/images/SREtoolkit.svg">
+    <!-- Use the Inter font from Google Fonts -->
+    <link rel="stylesheet" href="footer.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Load Tailwind CSS from CDN for utility-first styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+   
+   <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f7f7f7;
+        }
+        /* Custom CSS for the submenu, hidden by default */
+        .submenu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #ffffff;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            min-width: 12rem;
+            z-index: 10;
+        }
+        /* Show the submenu on hover */
+        .group:hover .submenu {
+            display: block;
+        }
+    </style>
+
+    
+</head>
+<body class="flex flex-col min-h-screen">
+
+    <!-- NAVIGATION BAR -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <!-- Logo Section -->
+            <a href=# class="flex items-center text-2xl font-bold text-gray-800">
+                <img src="images/SREtoolkit.svg" alt="SREToolkit Logo" class="h-8 w-8 mr-2 text-ind" loading="lazy">
+                SRE toolkit
+            </a>
+
+
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex items-center space-x-6">
+                <a href="#" class="text-gray-600 hover:text-indigo-600 transition-colors duration-300 font-medium">Home</a>
+                
+                <!-- Menu Item with Sub-Menu -->
+                <div class="relative group">
+                    <button class="flex items-center text-gray-600 hover:text-indigo-600 transition-colors duration-300 font-medium">
+                        Services
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1 transform transition-transform duration-200 group-hover:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <!-- Sub-menu -->
+                    <div class="submenu rounded-xl p-2 space-y-1">
+                        <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors duration-200">Building Websites</a>
+                        <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors duration-200">Cloud Services</a>
+                        <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors duration-200">Linux Performence</a>
+                        <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors duration-200">Ansible Playbooks</a>  
+
+                    </div>
+                </div>
+
+                
+                <!-- Menu Item with Sub-Menu -->
+                <div class="relative group">
+                    <button class="flex items-center text-gray-600 hover:text-indigo-600 transition-colors duration-300 font-medium">
+                        System Design
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1 transform transition-transform duration-200 group-hover:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <!-- Sub-menu -->
+                    <div class="submenu rounded-xl p-2 space-y-1">
+                        <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors duration-200">API Gateways</a>
+                        <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors duration-200">Pubsubs</a>
+                    </div>
+                </div>
+
+                <!-- Menu Item with Sub-Menu -->
+                <div class="relative group">
+                    <button class="flex items-center text-gray-600 hover:text-indigo-600 transition-colors duration-300 font-medium">
+                        Teaching
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1 transform transition-transform duration-200 group-hover:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <!-- Sub-menu -->
+                    <div class="submenu rounded-xl p-2 space-y-1">
+                        <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors duration-200">Linux</a>
+                        <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors duration-200">Python</a>
+                        <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors duration-200">Django</a>
+                    </div>
+                </div>                
+
+                <!-- Menu Item with Sub-Menu -->
+                <div class="relative group">
+                    <button class="flex items-center text-gray-600 hover:text-indigo-600 transition-colors duration-300 font-medium">
+                        About
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1 transform transition-transform duration-200 group-hover:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <!-- Sub-menu -->
+                    <div class="submenu rounded-xl p-2 space-y-1">
+                        <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors duration-200">AmitMund</a>
+                        <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors duration-200">Works</a>
+                    </div>
+                </div>
+
+
+                <a href="#" class="text-gray-600 hover:text-indigo-600 transition-colors duration-300 font-medium">Contact</a>
+
+            </div>
+
+
+
+
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-button" class="md:hidden text-gray-600 hover:text-indigo-600 focus:outline-none">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+            </button>
+        </div>
+
+        <!-- Mobile Menu (hidden by default) -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white px-6 pb-4">
+
+            <a href="#" class="block py-2 text-gray-600 hover:text-indigo-600 font-medium border-b border-gray-200">Home</a>
+
+            <div class="relative py-2">
+                <button class="mobile-submenu-toggle w-full text-left flex justify-between items-center text-gray-600 hover:text-indigo-600 font-medium">
+                    Services
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 transform transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                    </svg>
+                </button>
+                <div class="pl-4 mt-2 hidden" id="mobile-submenu">
+                    <a href="#" class="block py-1 text-sm text-gray-700 hover:text-indigo-600">Building Websites</a>
+                    <a href="#" class="block py-1 text-sm text-gray-700 hover:text-indigo-600">Cloud Services</a>
+                    <a href="#" class="block py-1 text-sm text-gray-700 hover:text-indigo-600">Linux Performence</a>
+                    <a href="#" class="block py-1 text-sm text-gray-700 hover:text-indigo-600">Ansible Playbook</a>
+                    
+                </div>
+            </div>
+
+            <div class="relative py-2">
+                <button class="mobile-submenu-toggle w-full text-left flex justify-between items-center text-gray-600 hover:text-indigo-600 font-medium">
+                    System Design
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 transform transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                    </svg>
+                </button>
+                <div class="pl-4 mt-2 hidden" id="mobile-submenu">
+                    <a href="#" class="block py-1 text-sm text-gray-700 hover:text-indigo-600">API Gateways</a>
+                    <a href="#" class="block py-1 text-sm text-gray-700 hover:text-indigo-600">Pubsubs</a>
+                    
+                </div>
+            </div>
+
+
+            <div class="relative py-2">
+                <button class="mobile-submenu-toggle w-full text-left flex justify-between items-center text-gray-600 hover:text-indigo-600 font-medium">
+                    Teaching
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 transform transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                    </svg>
+                </button>
+                <div class="pl-4 mt-2 hidden" id="mobile-submenu">
+                    <a href="#" class="block py-1 text-sm text-gray-700 hover:text-indigo-600">Linux</a>
+                    <a href="#" class="block py-1 text-sm text-gray-700 hover:text-indigo-600">Python</a>
+                    <a href="#" class="block py-1 text-sm text-gray-700 hover:text-indigo-600">Django</a>
+                    
+                </div>
+            </div>
+
+
+            <div class="relative py-2">
+                <button class="mobile-submenu-toggle w-full text-left flex justify-between items-center text-gray-600 hover:text-indigo-600 font-medium">
+                    About
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 transform transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                    </svg>
+                </button>
+                <div class="pl-4 mt-2 hidden" id="mobile-submenu">
+                    <a href="#" class="block py-1 text-sm text-gray-700 hover:text-indigo-600">AmitMund</a>
+                    <a href="#" class="block py-1 text-sm text-gray-700 hover:text-indigo-600">Works</a>
+                    
+                </div>
+            </div>
+
+
+            <a href="#" class="block py-2 text-gray-600 hover:text-indigo-600 font-medium">Contact</a>
+        </div>
+    </nav>
+    
+
+
+
+
+    <!-- MAIN CONTENT AREA -->
+    <main class="flex-grow container mx-auto px-6 py-12">
+        <!-- Body Section -->
+        <section class="text-center mb-12">
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">Welcome to SRE toolkit</h1>
+            <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                Explore our amazing products and services. We are dedicated to providing the best experience possible.
+            </p>
+        </section>
+
+
+
+        <!-- with flex and flex-wrap options -->
+
+        <!-- Cards Section -->
+        <section class="flex flex-wrap justify-center md:justify-between gap-8">
+            <!-- Card 1 -->
+            <div class="w-full sm:w-80 bg-white rounded-xl shadow-lg overflow-hidden flex-shrink-0">
+                <img src="https://placehold.co/600x400/5C6BC0/FFFFFF?text=Card+Image+1" alt="Placeholder image 1" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Card Title One</h3>
+                    <p class="text-gray-600">This is a brief description for card number one. It provides a summary of the content or product. This is where you can add more details.</p>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="w-full sm:w-80 bg-white rounded-xl shadow-lg overflow-hidden flex-shrink-0">
+                <img src="https://placehold.co/600x400/5C6BC0/FFFFFF?text=Card+Image+2" alt="Placeholder image 2" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Card Title Two</h3>
+                    <p class="text-gray-600">This is a brief description for card number two. It provides a summary of the content or product. This is where you can add more details.</p>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="w-full sm:w-80 bg-white rounded-xl shadow-lg overflow-hidden flex-shrink-0">
+                <img src="https://placehold.co/600x400/5C6BC0/FFFFFF?text=Card+Image+3" alt="Placeholder image 3" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Card Title Three</h3>
+                    <p class="text-gray-600">This is a brief description for card number three. It provides a summary of the content or product. This is where you can add more details.</p>
+                </div>
+            </div>
+            
+            <!-- Card 4 (Added for demonstration) -->
+            <div class="w-full sm:w-80 bg-white rounded-xl shadow-lg overflow-hidden flex-shrink-0">
+                <img src="https://placehold.co/600x400/5C6BC0/FFFFFF?text=Card+Image+4" alt="Placeholder image 4" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Card Title Four</h3>
+                    <p class="text-gray-600">This is a brief description for card number four. It provides a summary of the content or product. This is where you can add more details.</p>
+                </div>
+            </div>
+        </section>
+    
+    </div>
+        
+    </main>
+
+    <!-- FOOTER -->
+    <!-- <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; 2024 MyCompany. All rights reserved.</p>
+            <div class="flex justify-center space-x-6 mt-4">
+                <a href="#" class="text-gray-400 hover:text-white transition-colors duration-200">Privacy Policy</a>
+                <a href="#" class="text-gray-400 hover:text-white transition-colors duration-200">Terms of Service</a>
+                <a href="#" class="text-gray-400 hover:text-white transition-colors duration-200">Contact Us</a>
+            </div>
+        </div>
+
+        
+    </footer> -->
+
+     <footer class="bg-#3586ff text-white py-6 mt-16">
+        <div class="waves">
+            <div class="wave" id="wave1"></div>
+            <div class="wave" id="wave2"></div>
+            <div class="wave" id="wave3"></div>
+            <div class="wave" id="wave4"></div>
+        </div>
+        <ul class="social_icon">
+           <li><a href="#"><ion-icon name="logo-facebook"></ion-icon></a></li>
+           <li><a href="#"><ion-icon name="logo-twitter"></ion-icon></a></li> 
+           <li><a href="https://www.youtube.com/user/Amitmund" target="_blank"><ion-icon name="logo-youtube"></ion-icon></a></li> 
+           <li><a href="https://in.linkedin.com/in/amit-mund-0b98843" target="_blank"><ion-icon name="logo-linkedin"></ion-icon></a></li> 
+        </ul>
+
+        <ul class="menu">
+            <li><a href='#'>Home</a></li>
+            <li><a href='#'>Services</a></li>
+            <li><a href='#'>About</a></li>
+            <li><a href='#'>Team</a></li>
+            <li><a href='#'>Contact</a></li>
+        </ul>
+        
+        <p>
+            ©2025 SREToolKit | All rights reserved.
+        </p>
+
+    </footer>
+
+
+    <!-- JavaScript to toggle the mobile menu (second submenu was not working) -->
+    <!-- <script>
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileSubmenuToggle = document.querySelector('#mobile-menu button');
+        const mobileSubmenu = document.getElementById('mobile-submenu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        mobileSubmenuToggle.addEventListener('click', () => {
+            mobileSubmenu.classList.toggle('hidden');
+        });
+    </script> -->
+
+
+    <!-- JavaScript to toggle the mobile menu -->
+    <!-- <script>
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Get all buttons that are toggles for a submenu
+        const mobileSubmenuToggles = document.querySelectorAll('.mobile-submenu-toggle');
+
+        // Loop through each toggle and add a click event listener
+        mobileSubmenuToggles.forEach(button => {
+            button.addEventListener('click', () => {
+                // Find the submenu that is the next sibling of the button
+                const submenu = button.nextElementSibling;
+                // Toggle the 'hidden' class to show/hide the submenu
+                if (submenu) {
+                    submenu.classList.toggle('hidden');
+                    // Also, find the SVG arrow and rotate it
+                    const arrowIcon = button.querySelector('svg');
+                    arrowIcon.classList.toggle('rotate-180');
+                }
+            });
+        });
+    </script> -->
+
+
+    <!-- JavaScript to toggle the mobile menu -->
+    <script>
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        // This toggles the main mobile menu's visibility
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Get all buttons that are toggles for a submenu
+        const mobileSubmenuToggles = document.querySelectorAll('.mobile-submenu-toggle');
+
+        // Loop through each toggle and add a click event listener to expand/collapse the submenu
+        mobileSubmenuToggles.forEach(button => {
+            button.addEventListener('click', () => {
+                const submenu = button.nextElementSibling;
+                if (submenu) {
+                    submenu.classList.toggle('hidden');
+                    const arrowIcon = button.querySelector('svg');
+                    arrowIcon.classList.toggle('rotate-180');
+                }
+            });
+        });
+
+        // Get all links inside the mobile menu
+        const mobileMenuLinks = document.querySelectorAll('#mobile-menu a');
+        
+        // Add a click event listener to each link to close the entire menu
+        mobileMenuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                // Close the main menu
+                mobileMenu.classList.add('hidden');
+                
+                // Close all submenus so they are collapsed when the menu is reopened
+                const openSubmenus = document.querySelectorAll('.mobile-submenu:not(.hidden)');
+                openSubmenus.forEach(submenu => {
+                    submenu.classList.add('hidden');
+                });
+                
+                // Reset all the submenu arrow icons to their default state
+                const rotatedArrows = document.querySelectorAll('.mobile-submenu-toggle svg.rotate-180');
+                rotatedArrows.forEach(arrow => {
+                    arrow.classList.remove('rotate-180');
+                });
+            });
+        });
+    </script>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+</body>
+</html>
